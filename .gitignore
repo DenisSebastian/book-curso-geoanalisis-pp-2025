@@ -18,5 +18,6 @@ Icon
 .Trashes
 
 
-data/shape/*
-data/socioeconomicos/*
+data
+data/
+data/*
