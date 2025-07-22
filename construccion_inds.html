@@ -1,0 +1,970 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.7.31">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>4&nbsp; Indicadores Territoriales – Curso de Geoanálisis</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<link href="./indicadores.html" rel="next">
+<link href="./inferencia.html" rel="prev">
+<script src="site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-e1a5c8363afafaef2c763b6775fbf3ca.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap-485d01fc63b59abcd3ee1bf1e8e2748d.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+
+<link rel="stylesheet" href="styles/style.css">
+</head>
+
+<body class="nav-sidebar floating slimcontent quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./construccion_inds.html"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Indicadores Territoriales</span></a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="./">Curso de Geoanálisis</a> 
+    </div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Antecedentes</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./intro_inds.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Introducción a Indicadores Territoriales</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./analisis_esp.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Análisis Espacial</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./inferencia.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Inferencia Espacial</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./construccion_inds.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Indicadores Territoriales</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./indicadores.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Inds. Socioeconómicos</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./proyecto.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Proyecto Final</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
+ <span class="menu-text">R Project</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./intro_r.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Introducción a R Project</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./variables.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Variables en R</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./funciones.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Funciones en R</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./datos_espaciales.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Datos Espaciales</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./dataframes.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Dataframes y Delitos en R</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./references.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">References</span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true">
+ <span class="menu-text">Appendices</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./recursos.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">A</span>&nbsp; <span class="chapter-title">Instalación de Recursos</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./control_r.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">B</span>&nbsp; <span class="chapter-title">Estructuras en R</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./tidyverse.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">C</span>&nbsp; <span class="chapter-title">Tidyverse en R</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./espacial_r.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Objetos Espaciales en R</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./john_snow.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Mapa de Cólera</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Contenidos</h2>
+   
+  <ul>
+  <li><a href="#problema-territorial" id="toc-problema-territorial" class="nav-link active" data-scroll-target="#problema-territorial"><span class="header-section-number">4.1</span> Problema Territorial</a>
+  <ul class="collapse">
+  <li><a href="#ejemplo-delincuencia-rural" id="toc-ejemplo-delincuencia-rural" class="nav-link" data-scroll-target="#ejemplo-delincuencia-rural">Ejemplo Delincuencia Rural</a></li>
+  </ul></li>
+  <li><a href="#marco-de-referencia" id="toc-marco-de-referencia" class="nav-link" data-scroll-target="#marco-de-referencia"><span class="header-section-number">4.2</span> Marco de Referencia</a>
+  <ul class="collapse">
+  <li><a href="#ejemplo-delincuencia-rural-1" id="toc-ejemplo-delincuencia-rural-1" class="nav-link" data-scroll-target="#ejemplo-delincuencia-rural-1">Ejemplo Delincuencia Rural</a></li>
+  </ul></li>
+  <li><a href="#definición-de-objetivos" id="toc-definición-de-objetivos" class="nav-link" data-scroll-target="#definición-de-objetivos"><span class="header-section-number">4.3</span> Definición de Objetivos</a>
+  <ul class="collapse">
+  <li><a href="#ejemplo-delincuencia-rural-2" id="toc-ejemplo-delincuencia-rural-2" class="nav-link" data-scroll-target="#ejemplo-delincuencia-rural-2">Ejemplo Delincuencia Rural</a></li>
+  </ul></li>
+  <li><a href="#recolección-de-datos" id="toc-recolección-de-datos" class="nav-link" data-scroll-target="#recolección-de-datos"><span class="header-section-number">4.4</span> Recolección de Datos</a>
+  <ul class="collapse">
+  <li><a href="#ejemplo-delincuencia-rural-3" id="toc-ejemplo-delincuencia-rural-3" class="nav-link" data-scroll-target="#ejemplo-delincuencia-rural-3">Ejemplo Delincuencia Rural</a></li>
+  <li><a href="#actividad" id="toc-actividad" class="nav-link" data-scroll-target="#actividad">Actividad:</a></li>
+  </ul></li>
+  <li><a href="#cálculo-de-indicadores" id="toc-cálculo-de-indicadores" class="nav-link" data-scroll-target="#cálculo-de-indicadores"><span class="header-section-number">4.5</span> Cálculo de Indicadores</a>
+  <ul class="collapse">
+  <li><a href="#ejemplo-delincuencia" id="toc-ejemplo-delincuencia" class="nav-link" data-scroll-target="#ejemplo-delincuencia">Ejemplo Delincuencia</a></li>
+  </ul></li>
+  <li><a href="#representación-espacial" id="toc-representación-espacial" class="nav-link" data-scroll-target="#representación-espacial"><span class="header-section-number">4.6</span> Representación Espacial</a>
+  <ul class="collapse">
+  <li><a href="#ejemplo-delincuencia-1" id="toc-ejemplo-delincuencia-1" class="nav-link" data-scroll-target="#ejemplo-delincuencia-1">Ejemplo Delincuencia</a></li>
+  </ul></li>
+  <li><a href="#análisis-de-resultados" id="toc-análisis-de-resultados" class="nav-link" data-scroll-target="#análisis-de-resultados"><span class="header-section-number">4.7</span> Análisis de Resultados</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content page-columns page-full" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Indicadores Territoriales</span></h1>
+<p class="subtitle lead">Parte 1</p>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/S2.png" class="img-fluid quarto-figure quarto-figure-center figure-img"></p>
+</figure>
+</div>
+<p><strong>Etapas para la construcción de indicadores territoriales</strong></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/pasos.png" class="img-fluid quarto-figure quarto-figure-center figure-img"></p>
+</figure>
+</div>
+<section id="problema-territorial" class="level2 page-columns page-full" data-number="4.1">
+<h2 data-number="4.1" class="anchored" data-anchor-id="problema-territorial"><span class="header-section-number">4.1</span> Problema Territorial</h2>
+<p>En esta etapa se debe explicar claramente el problema específico relacionado con el territorio que se quiere analizar. Esto puede involucrar desafíos sociales, económicos, ambientales, seguridad, o de planificación urbana.</p>
+<p>Es importante explicar explicar porque el problema es significativo para la comunidad y cómo los indicadores territoriales pueden ayudar a entenderlo y eventualmente a resolverlo.</p>
+<section id="ejemplo-delincuencia-rural" class="level3 unnumbered page-columns page-full">
+<h3 class="unnumbered anchored" data-anchor-id="ejemplo-delincuencia-rural">Ejemplo Delincuencia Rural</h3>
+<div class="quarto-figure quarto-figure-center page-columns page-full">
+<figure class="figure page-columns page-full">
+<p><img src="images/madera.jpg" class="img-fluid figure-img" width="400"></p>
+<figcaption class="margin-caption">Ejemplo de Delitos de robo de madera ocurridos en zonas rurales del sur de Chile</figcaption>
+</figure>
+</div>
+<p><strong>Antecedentes:</strong> La delincuencia rural ha ido en aumento en varias regiones del país, afectando la calidad de vida de los habitantes, la economía local y la percepción de seguridad.</p>
+<p><strong>Relevancia</strong>:</p>
+<p>La delincuencia en zonas rurales no solo impacta la seguridad de los residentes, sino que también tiene consecuencias económicas y sociales significativas.</p>
+<p><strong>objetivo preliminar</strong>:</p>
+<p>El objetivo (preliminar) es identificar y analizar los patrones espaciales y temporales de la delincuencia rural en esta región. Esto permitirá comprender mejor dónde ocurren los delitos, identificar factores de riesgo asociados y proponer medidas de mitigación efectivas.</p>
+<p><strong>Preguntas Relevantes</strong></p>
+<ul>
+<li>¿Cuáles son las áreas rurales más afectadas por la delincuencia?</li>
+<li>¿Qué factores socioeconómicos y geográficos están asociados con mayores niveles de delincuencia?</li>
+</ul>
+</section>
+</section>
+<section id="marco-de-referencia" class="level2" data-number="4.2">
+<h2 data-number="4.2" class="anchored" data-anchor-id="marco-de-referencia"><span class="header-section-number">4.2</span> Marco de Referencia</h2>
+<p>Establecer las teorías, conceptos y estudios previos que guiarán el análisis y la construcción de indicadores. El marco teórico proporciona la base conceptual y metodológica para entender el problema y justificar las decisiones tomadas en el proceso de investigación.</p>
+<p>Este incluye la revisión de literatura relevante, teorías geográficas, modelos de análisis espacial, y estudios previos que han abordado problemas similares.</p>
+<section id="ejemplo-delincuencia-rural-1" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="ejemplo-delincuencia-rural-1">Ejemplo Delincuencia Rural</h3>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/int_teorias.png" class="img-fluid quarto-figure quarto-figure-center figure-img"></p>
+</figure>
+</div>
+<p><strong>Contextualizar el Problema:</strong></p>
+<p>Entender cómo los conceptos y teorías de la desorganización social, actividades cotidianas y lugares críticos aplican a las áreas rurales.</p>
+<p><strong>Definir Indicadores:</strong></p>
+<p>Basándonos en la literatura y teorías, podemos definir indicadores clave de seguridad rural, como la tasa de delitos por población, la densidad de puntos calientes, y el nivel de cohesión social.</p>
+<p><strong>Guiar el Análisis:</strong></p>
+<p>Utilizar metodologías probadas para recolectar y analizar datos espaciales y socioeconómicos, asegurando que nuestro enfoque esté alineado con las mejores prácticas en el campo.</p>
+</section>
+</section>
+<section id="definición-de-objetivos" class="level2" data-number="4.3">
+<h2 data-number="4.3" class="anchored" data-anchor-id="definición-de-objetivos"><span class="header-section-number">4.3</span> Definición de Objetivos</h2>
+<p>Proporcionan clarificación de lo que se espera lograr con el estudio y la construcción de indicadores territoriales. Los objetivos proporcionan una guía clara y concisa para todo el proceso de investigación, asegurando que todas las actividades estén alineadas con el propósito del estudio.</p>
+<p>Se puede usar el framework de definición de objetivos <strong>SMART</strong> (Specific, Measurable, Achievable, Relevant, Time-bound) ayudan a estructurar el trabajo de manera que los resultados sean tangibles y evaluables.</p>
+<section id="ejemplo-delincuencia-rural-2" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="ejemplo-delincuencia-rural-2">Ejemplo Delincuencia Rural</h3>
+<ol type="1">
+<li><strong>Recopilar y analizar datos de denuncias policiales.</strong></li>
+</ol>
+<ul>
+<li><strong>Específico:</strong> Recolectar datos de delitos.</li>
+<li><strong>Medible:</strong> Número de denuncias y encuestas recopiladas y analizadas.</li>
+<li><strong>Alcanzable:</strong> Colaboración con autoridades locales y comunidad para obtener los datos.</li>
+<li><strong>Relevante:</strong> Proporciona una base de datos sólida para el análisis.</li>
+<li><strong>Temporal:</strong> Completar la recolección y análisis en 12 meses.</li>
+</ul>
+<ol start="2" type="1">
+<li><strong>Construir un Indicador Comunal de frecuencia de delitos rurales.</strong></li>
+</ol>
+<ul>
+<li><strong>Específico:</strong> Indicador de Frecuencia comunal.</li>
+<li><strong>Medible:</strong> Todas las comunas deben tener valores y ser mapeados.</li>
+<li><strong>Alcanzable:</strong> Mediante en herramientas SIG y acceso a software adecuado.</li>
+<li><strong>Relevante:</strong> Ayuda a focalizar recursos y estrategias de intervención.</li>
+<li><strong>Temporal:</strong> Completar indicador y su mapeo.</li>
+</ul>
+<ol start="3" type="1">
+<li><strong>Evaluar la relación entre factores socioeconómicos y la incidencia de delitos en áreas rurales.</strong></li>
+</ol>
+<ul>
+<li><strong>Específico:</strong> Análisis estadístico de la relación entre factores socioeconómicos y delincuencia.</li>
+<li><strong>Medible:</strong> Correlaciones y modelos estadísticos desarrollados.</li>
+<li><strong>Alcanzable:</strong> Acceso a datos socioeconómicos y uso de software estadístico.</li>
+<li><strong>Relevante:</strong> Identifica factores de riesgo asociados a la delincuencia.</li>
+<li><strong>Temporal:</strong> Completar la evaluación en x meses.</li>
+</ul>
+<ol start="4" type="1">
+<li><strong>Proponer estrategias de intervención basadas en los hallazgos del análisis territorial.</strong></li>
+</ol>
+<ul>
+<li><strong>Específico:</strong> Desarrollar recomendaciones para mejorar la seguridad rural.</li>
+<li><strong>Medible:</strong> Número de estrategias propuestas y evaluadas.</li>
+<li><strong>Alcanzable:</strong> Colaboración con expertos en seguridad y autoridades locales.</li>
+<li><strong>Relevante:</strong> Proporciona soluciones prácticas basadas en evidencia.</li>
+<li><strong>Temporal:</strong> Completar las propuestas de intervención en x meses.</li>
+</ul>
+</section>
+</section>
+<section id="recolección-de-datos" class="level2" data-number="4.4">
+<h2 data-number="4.4" class="anchored" data-anchor-id="recolección-de-datos"><span class="header-section-number">4.4</span> Recolección de Datos</h2>
+<p>Identificación y recopilación de los datos necesarios para calcular los indicadores territoriales. Esta etapa es crucial para asegurar que los datos utilizados sean de alta calidad y adecuados para el análisis.</p>
+<p>La recolección de datos implica la identificación de fuentes de datos abiertas y cerradas, así como la evaluación de diversas características que determinan la calidad de los datos. Estas características incluyen representatividad, pertinencia, precisión, actualidad, accesibilidad, y consistencia.</p>
+<section id="ejemplo-delincuencia-rural-3" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="ejemplo-delincuencia-rural-3">Ejemplo Delincuencia Rural</h3>
+<ol type="1">
+<li>Datos del Censo:</li>
+</ol>
+<ul>
+<li>Descripción: Información demográfica y socioeconómica recopilada por el gobierno.</li>
+<li>Característica: Representatividad (cubre toda la población), pertinencia (contiene variables relevantes), y actualidad (generalmente actualizados cada 10 años).</li>
+</ul>
+<ol start="2" type="1">
+<li>Datos de Delitos Públicos (SALA CEAD):</li>
+</ol>
+<ul>
+<li>Descripción: Bases de datos de delitos reportados, disponibles a través de portales de transparencia gubernamental.</li>
+<li>Característica: Pertinencia (específicos a la delincuencia), accesibilidad (disponibles públicamente), y consistencia (métodos uniformes de recolección).</li>
+</ul>
+</section>
+<section id="actividad" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="actividad">Actividad:</h3>
+<p><strong>Revisar fuente de datos abiertas</strong></p>
+<p><a href="https://cead.spd.gov.cl/estadisticas-delictuales/">Estadisticas Delictuales del Centro de Estudios y Análisis de Delitos - CEAD</a></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/filtros_cead.png" class="img-fluid quarto-figure quarto-figure-center figure-img"></p>
+</figure>
+</div>
+<p><strong>Otras fuentes de información nacionales</strong></p>
+<section id="censo-de-población-y-vivienda" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="censo-de-población-y-vivienda">Censo de Población y Vivienda</h4>
+<ul>
+<li><strong>Descripción</strong>: El Censo de Población y Vivienda se realiza cada diez años y ofrece un conteo exhaustivo de la población y sus características demográficas, económicas y de vivienda. Es una fuente crítica de datos para la planificación y desarrollo de políticas a nivel nacional y local.</li>
+<li><strong>Enlace</strong>: <a href="http://www.censo2017.cl/">Censo</a></li>
+</ul>
+</section>
+<section id="encuesta-nacional-de-uso-del-tiempo-enut" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="encuesta-nacional-de-uso-del-tiempo-enut">Encuesta Nacional de Uso del Tiempo (ENUT)</h4>
+<ul>
+<li><strong>Descripción</strong>: La Encuesta Nacional de Uso del Tiempo (ENUT) proporciona información detallada sobre cómo las personas distribuyen su tiempo en diversas actividades, incluyendo trabajo remunerado, trabajo no remunerado, educación, ocio y cuidados. Es una herramienta clave para analizar la distribución del trabajo y la desigualdad de género en el uso del tiempo.</li>
+<li><strong>Enlace</strong>: <a href="https://www.ine.gob.cl/enut">ENUT</a></li>
+</ul>
+</section>
+<section id="encuesta-de-caracterización-socioeconómica-nacional-casen" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="encuesta-de-caracterización-socioeconómica-nacional-casen">Encuesta de Caracterización Socioeconómica Nacional (CASEN)</h4>
+<ul>
+<li><strong>Descripción</strong>: La Encuesta de Caracterización Socioeconómica Nacional (CASEN) es la principal fuente de datos sobre las condiciones socioeconómicas de los hogares en Chile. Proporciona información sobre ingresos, educación, salud, vivienda y otras dimensiones del bienestar, siendo fundamental para el diseño y evaluación de políticas públicas.</li>
+<li><strong>Enlace</strong>: <a href="https://observatorio.ministeriodesarrollosocial.gob.cl/encuesta-casen-2022">CASEN</a></li>
+</ul>
+</section>
+<section id="encuesta-de-presupuestos-familiares-epf" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="encuesta-de-presupuestos-familiares-epf">Encuesta de Presupuestos Familiares (EPF)</h4>
+<ul>
+<li><strong>Descripción</strong>: La Encuesta de Presupuestos Familiares (EPF) proporciona información sobre los ingresos y gastos de los hogares chilenos, permitiendo el análisis de la estructura del consumo y las condiciones de vida de la población.</li>
+<li><strong>Enlace</strong>: <a href="https://www.ine.gob.cl/estadisticas/sociales/ingresos-y-gastos/encuesta-de-presupuestos-familiares">EPF</a></li>
+</ul>
+</section>
+<section id="encuesta-nacional-de-empleo-ene" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="encuesta-nacional-de-empleo-ene">Encuesta Nacional de Empleo (ENE)</h4>
+<ul>
+<li><strong>Descripción</strong>: La Encuesta Nacional de Empleo (ENE) ofrece datos sobre la situación laboral de la población, incluyendo tasas de empleo, desempleo y subempleo, así como características de la fuerza laboral.</li>
+<li><strong>Enlace</strong>: <a href="https://www.ine.gob.cl/estadisticas/sociales/mercado-laboral/ocupacion-y-desocupacion">ENE</a></li>
+</ul>
+</section>
+<section id="encuesta-de-victimización-enusc" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="encuesta-de-victimización-enusc">Encuesta de Victimización (ENUSC)</h4>
+<ul>
+<li><strong>Descripción</strong>: La Encuesta Nacional Urbana de Seguridad Ciudadana (ENUSC) proporciona datos sobre la percepción de seguridad y la prevalencia de delitos en la población urbana de Chile.</li>
+<li><strong>Enlace</strong>: <a href="https://www.ine.gob.cl/enusc">ENUSC</a></li>
+</ul>
+</section>
+<section id="sistema-nacional-de-información-municipal-sinim" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="sistema-nacional-de-información-municipal-sinim">Sistema Nacional de Información Municipal (SINIM)</h4>
+<ul>
+<li><strong>Descripción</strong>: El Sistema Nacional de Información Municipal (SINIM) ofrece información sobre la gestión y desempeño de los municipios en Chile, incluyendo datos financieros, de infraestructura y servicios.</li>
+<li><strong>Enlace</strong>: <a href="https://datos.sinim.gov.cl/">SINIM</a></li>
+</ul>
+</section>
+<section id="datos.gob" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="datos.gob">Datos.gob</h4>
+<ul>
+<li><strong>Descripción</strong>: Datos.gob el repositorio de datos abiertos centralizado del Estado. En este portal encontrarás datos y estadísticas del sector público, para distintos fines, como aplicaciones, visualizaciones, investigación, etc.</li>
+<li><strong>Enlace</strong>: <a href="https://datos.gob.cl/">datos.gob.cl</a></li>
+</ul>
+</section>
+<section id="ide-chile" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="ide-chile">IDE Chile</h4>
+<ul>
+<li><strong>Descripción</strong>: La Infraestructura de Datos Geoespaciales de Chile (IDE Chile), dependiente del Ministerio de Bienes Nacionales.</li>
+<li><strong>Enlace</strong>: <a href="https://www.geoportal.cl/catalog">IDE Chile</a></li>
+</ul>
+<p>Estas fuentes de datos proporcionan una base sólida para el análisis de diversas dimensiones del desarrollo en Chile, siendo de gran utilidad para investigadores, planificadores y tomadores de decisiones.</p>
+</section>
+</section>
+</section>
+<section id="cálculo-de-indicadores" class="level2 page-columns page-full" data-number="4.5">
+<h2 data-number="4.5" class="anchored" data-anchor-id="cálculo-de-indicadores"><span class="header-section-number">4.5</span> Cálculo de Indicadores</h2>
+<p>El cálculo de indicadores territoriales es un proceso fundamental en la geografía y el análisis espacial, ya que permite transformar datos brutos en información específica que describe una condición, situación, actividad o resultado dentro de un área geográfica delimitada. Este proceso es crucial para modelar y entender el comportamiento de las personas en un territorio, ya que los indicadores territoriales sintetizan complejas interacciones espaciales en métricas que pueden ser fácilmente interpretadas y utilizadas en la toma de decisiones.</p>
+<p>Este proceso no solo proporciona una visión cuantitativa del territorio, sino que también resalta patrones espaciales que pueden no ser evidentes a simple vista. La importancia de los indicadores territoriales radica en su capacidad para ofrecer una representación concisa y útil de realidades complejas, facilitando la identificación de problemas y oportunidades a nivel local o regional.</p>
+<section id="ejemplo-delincuencia" class="level3 unnumbered page-columns page-full">
+<h3 class="unnumbered anchored" data-anchor-id="ejemplo-delincuencia">Ejemplo Delincuencia</h3>
+<div class="quarto-figure quarto-figure-center page-columns page-full">
+<figure class="figure page-columns page-full">
+<p><img src="images/del_violentos_R09.png" class="img-fluid figure-img" width="500"></p>
+<figcaption class="margin-caption">Ejemplo de cálculo de indicadores de delincuencia visto en <a href="#sec-dataframes" class="quarto-xref"><span class="quarto-unresolved-ref">sec-dataframes</span></a></figcaption>
+</figure>
+</div>
+<p>Revisar el capítulo <a href="#sec-dataframes" class="quarto-xref"><span class="quarto-unresolved-ref">sec-dataframes</span></a> que contiene el flujo de trabajo para construcción de un indicador territorial de delitos a nivel comuna utilizando R. Que contempla desde la lectura de la base de información (excel de delitos), agregar información de categorías, hacer filtros, resúmenes estadísticos (tablas dinámicas) y finalmente visualizaciones gráficas y espaciales.</p>
+</section>
+</section>
+<section id="representación-espacial" class="level2 page-columns page-full" data-number="4.6">
+<h2 data-number="4.6" class="anchored" data-anchor-id="representación-espacial"><span class="header-section-number">4.6</span> Representación Espacial</h2>
+<p>La representación espacial es el proceso de visualización de datos geográficos en mapas, gráficos o modelos que permiten comprender la distribución y relación de fenómenos en un territorio. Este paso es crucial en el análisis de indicadores territoriales, ya que transforma datos abstractos en representaciones visuales claras y accesibles, facilitando así la interpretación y comunicación de información compleja.</p>
+<p>Una comunicación visual clara y precisa no solo mejora la comprensión de los resultados, sino que también facilita el diagnóstico de situaciones problemáticas y la identificación de oportunidades.</p>
+<section id="ejemplo-delincuencia-1" class="level3 unnumbered page-columns page-full">
+<h3 class="unnumbered anchored" data-anchor-id="ejemplo-delincuencia-1">Ejemplo Delincuencia</h3>
+<div class="quarto-figure quarto-figure-center page-columns page-full">
+<figure class="figure page-columns page-full">
+<p><img src="images/map_del_violentos_R09.png" class="img-fluid figure-img" width="500"></p>
+<figcaption class="margin-caption">Ejemplo de representación espacial del indicadores de violencia visto en <a href="#sec-dataframes" class="quarto-xref"><span class="quarto-unresolved-ref">sec-dataframes</span></a></figcaption>
+</figure>
+</div>
+<p>Revisar el capítulo <a href="#sec-dataframes" class="quarto-xref"><span class="quarto-unresolved-ref">sec-dataframes</span></a> que contiene el flujo de trabajo para construcción de un indicador territorial de delitos a nivel comuna utilizando R.</p>
+</section>
+</section>
+<section id="análisis-de-resultados" class="level2" data-number="4.7">
+<h2 data-number="4.7" class="anchored" data-anchor-id="análisis-de-resultados"><span class="header-section-number">4.7</span> Análisis de Resultados</h2>
+<p>La etapa de análisis de resultados en la construcción de indicadores territoriales es crucial, ya que conecta directamente con la definición inicial del problema territorial y los objetivos planteados. Durante este análisis, se examinan los patrones y tendencias revelados por los indicadores para evaluar si se han cumplido los objetivos propuestos y para extraer información relevante sobre el territorio. Este proceso implica no solo la interpretación de los valores numéricos y visuales, sino también la comprensión profunda de las dinámicas espaciales y cómo estas reflejan la realidad del territorio. Al comparar los resultados obtenidos con la situación planteada en el problema, se pueden identificar áreas de alta prioridad, desigualdades territoriales o comportamientos inesperados que requieren una atención particular.</p>
+<p>El análisis de resultados proporciona una base sólida para la toma de decisiones informadas. Al evidenciar información relevante sobre el territorio, los responsables de la planificación y gestión pueden proponer soluciones focalizadas y basadas en evidencia. Además, este análisis puede ayudar a explicar y entender fenómenos complejos, permitiendo no solo descartar hipótesis iniciales, sino también crear nuevas que reflejen de manera más precisa la realidad observada.</p>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+        const codeEl = trigger.previousElementSibling.cloneNode(true);
+        for (const childEl of codeEl.children) {
+          if (isCodeAnnotation(childEl)) {
+            childEl.remove();
+          }
+        }
+        return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="./inferencia.html" class="pagination-link" aria-label="Inferencia Espacial">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Inferencia Espacial</span></span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="./indicadores.html" class="pagination-link" aria-label="Inds. Socioeconómicos">
+        <span class="nav-page-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Inds. Socioeconómicos</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+<p>Copyright 2025, Denis Berroeta</p>
+</div>   
+    <div class="nav-footer-center">
+      &nbsp;
+    </div>
+    <div class="nav-footer-right">
+      &nbsp;
+    </div>
+  </div>
+</footer>
+
+
+
+
+</body></html>

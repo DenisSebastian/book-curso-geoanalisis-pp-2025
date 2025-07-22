@@ -1,0 +1,374 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Curso de Geoanálisis",
+    "section": "",
+    "text": "Syllabus",
+    "crumbs": [
+      "Syllabus"
+    ]
+  },
+  {
+    "objectID": "index.html#resumen",
+    "href": "index.html#resumen",
+    "title": "Curso de Geoanálisis",
+    "section": "Resumen",
+    "text": "Resumen\nEste curso está diseñado para proporcionar a los estudiantes una sólida base teórica y competencias técnicas para realizar análisis espacial de variables territoriales en múltiples áreas de aplicación. Se destaca el uso del lenguaje de programación R para implementar metodologías analíticas y automatizadas, con un enfoque en resolver desafíos complejos en políticas públicas, facilitando la toma de decisiones informadas por evidencia territorial.",
+    "crumbs": [
+      "Syllabus"
+    ]
+  },
+  {
+    "objectID": "index.html#objetivos",
+    "href": "index.html#objetivos",
+    "title": "Curso de Geoanálisis",
+    "section": "Objetivos",
+    "text": "Objetivos\n\nObjetivo General\nEl objetivo general es proporcionar a los estudiantes los fundamentos, técnicas y aspectos básicos para analizar, modelar y representar información espacial, para apoyar la toma de decisiones con evidencia territorial robusta.\n\n\nObjetivos específicos\n\nConocer los conceptos básicos del geoanálisis.\nManipular datos espaciales en R.\nAplicar las técnicas a problemas de interés público.",
+    "crumbs": [
+      "Syllabus"
+    ]
+  },
+  {
+    "objectID": "index.html#metodología",
+    "href": "index.html#metodología",
+    "title": "Curso de Geoanálisis",
+    "section": "Metodología",
+    "text": "Metodología\nLas clases se dividirán en partes teóricas y prácticas. La primera de ellas se pretende entregar un marco conceptual metodológico y teórico del geoanálisis y sus aplicaciones en las políticas públicas, que será la base para afrontar la segunda parte del módulo, que se basará en ejercicios aplicados utilizando lenguaje de programación R Project, dirigido a internalizar los conceptos teóricos, además de generar productos de análisis espacial útiles para gestión eventual de políticas públicas. Requerimiento tener instalado R Project y Rstudio en su computador personal.",
+    "crumbs": [
+      "Syllabus"
+    ]
+  },
+  {
+    "objectID": "index.html#normas-en-clases",
+    "href": "index.html#normas-en-clases",
+    "title": "Curso de Geoanálisis",
+    "section": "Normas en clases",
+    "text": "Normas en clases\nPresencia Activa: Este curso, por su metodología experiencial, requiere de una participación activa de los participantes. Es importante descubrir las fuentes de distracción y evitarlas. Las más usuales son lectura o escritura de e-mails, navegar por internet o utilizar redes sociales. Esto distrae a quien lo hace y restringe al resto del curso de su participación activa.\nPuntualidad y Asistencia: Será necesario ingresar a clases en forma puntual y permanecer en la misma sin salir, a menos que haya una urgencia. Se requerirá como mínimo un 75% de asistencia). Es importante que quien tuviera problemas para estar a tiempo o para asistir, se ponga en contacto lo antes posible con la coordinadora del curso. Los alumnos que lleguen más de 15 minutos tarde serán considerados ausentes de ese segmento de la sesión. Grabación de la clase: La clase se graba como respaldo en caso haya fallas de internet, y se disponibiliza en la plataforma virtual del curso sin posibilidad de descarga. Está disponible únicamente por 60 días en el servidor de Zoom y posterior a esa fecha se elimina. La visualización posterior de la clase no se considera como asistencia.\nReunión Zoom recurrente: https://uai-cl.zoom.us/j/98936792371?jst=1",
+    "crumbs": [
+      "Syllabus"
+    ]
+  },
+  {
+    "objectID": "index.html#contenidos",
+    "href": "index.html#contenidos",
+    "title": "Curso de Geoanálisis",
+    "section": "Contenidos",
+    "text": "Contenidos\nLos contenidos de cada clase se detallan a continuación:\n\n\n\n\n\n\n\n\n\n\n\nSesión\nFecha\nInicio\nTérmino\nSesiones\nHoras\n\n\n\n\nS1\nmartes, 22 de julio de 2025\n17:30\n20:50\nIntroducción a R\n3\n\n\nS2\nmartes, 29 de julio de 2025\n17:30\n20:50\nManipulación de datos\n3\n\n\nS3\nmartes, 5 de agosto de 2025\n17:30\n20:50\nVisualización con R\n3\n\n\nS4\nmartes, 12 de agosto de 2025\n17:30\n20:50\nManipulación de datos espaciales\n3\n\n\nS5\nmartes, 19 de agosto de 2025\n17:30\n20:50\nGeocoding\n3\n\n\nS6\nmartes, 26 de agosto de 2025\n17:30\n20:50\nInferencia Espacial: Interpolación y mapas de calor\n3\n\n\nS7\nmartes, 2 de septiembre de 2025\n17:30\n20:50\nConstrucción de indicadores territoriales\n3\n\n\nS8\nmartes, 9 de septiembre de 2025\n17:30\n20:50\nReporte y Proyecto\n3",
+    "crumbs": [
+      "Syllabus"
+    ]
+  },
+  {
+    "objectID": "index.html#evaluación",
+    "href": "index.html#evaluación",
+    "title": "Curso de Geoanálisis",
+    "section": "Evaluación",
+    "text": "Evaluación\nLas evaluaciones consisten en 2 tareas de programación, la primera individual y la segunda grupal. A continuación se detallan las evaluaciones:\n\n\n\n\n\n\n\nConcepto\nDetalle\n\n\n\n\nTipo(s) de evaluación\nTareas\n\n\nForma de entrega\nEn documento escrito (PDF o HTML) y código en R\n\n\nCálculo de la nota final\nTarea 1: 40% - Tarea 2: 60%\n\n\nFecha Evaluación 1\n22-AGO-2025\n\n\nFecha Evaluación 2\n16-SEP-2025",
+    "crumbs": [
+      "Syllabus"
+    ]
+  },
+  {
+    "objectID": "index.html#docentes",
+    "href": "index.html#docentes",
+    "title": "Curso de Geoanálisis",
+    "section": "Docentes",
+    "text": "Docentes\n\nProfesor: Denis Berroeta (denis.berroeta@uai.cl)\nMaster y PhD (cursando) in Data Scicence, Magister en Inteligencia Artificial, Universidad Adolfo Ibáñez. Coordinador de Investigación Centro Inteligencia Territorial, UAI. Tiene experiencia en modelamiento y análisis de datos espaciales, trabajando en diferentes proyectos de investigación públicos y privados en el Centro de Inteligencia Territorial de la Universidad Adolfo Ibáñez, diseñando y gestionando la implementación de metodologías de análisis de datos territoriales. Posee experiencia como profesor en Geoestadísticas; Análisis Criminal, Análisis de imágenes satelitales para el monitoreo ambiental y gestión de desastres naturales; y Data Science.\n\n\nAyudante Docente: Jorge Aravena (jorge.aravena@edu.uai.cl)\nAnalista Espacial en el Centro de Inteligencia Territorial de la Universidad Adolfo Ibáñez. Geógrafo de la Universidad Austral de Chile, con diplomado en Planificación y Gestión Urbana Integrada de la Pontificia Universidad Católica de Chile. Su enfoque abarca la geografía urbana crítica y los sistemas de información geográfica.",
+    "crumbs": [
+      "Syllabus"
+    ]
+  },
+  {
+    "objectID": "index.html#contactos",
+    "href": "index.html#contactos",
+    "title": "Curso de Geoanálisis",
+    "section": "Contactos",
+    "text": "Contactos\n\n\n\nCargo\nNombre\nCorreo\n\n\n\n\nDirector de Programa\nClaudio Aracena\nclaudio.aracena.c@edu.uai.cl\n\n\nCoordinadora Académica\nGabriela Nuñez\ngabriela.nunez.s@uai.cl\n\n\nDocente\nDenis Berroeta\ndenisberroeta@uai.cl\n\n\nAyudante\nJorge Aravena\njorge.aravena@edu.uai.cl",
+    "crumbs": [
+      "Syllabus"
+    ]
+  },
+  {
+    "objectID": "index.html#bibliografía",
+    "href": "index.html#bibliografía",
+    "title": "Curso de Geoanálisis",
+    "section": "Bibliografía",
+    "text": "Bibliografía\nOpcional:\n\nLovelace, R., Nowosad, J., & Muenchow, J. (2019). Welcome | Geocomputation with R. https://geocompr.robinlovelace.net/.\nPaez, A. (s. f.). An Introduction to Spatial Data Analysis and Statistics: A Course in R. https://paezha.github.io/spatial-analysis-r/\nMas, J.-F.(2018). Análisis espacial con R. 151. http://eujournal.org/files/journals/1/books/JeanFrancoisMas.pdf\nGarreton, M., Basauri, A., & Valenzuela, L. (2020). Exploring the correlation between city size and residential segregation: Comparing Chilean cities with spatially unbiased indexes. Environment and Urbanization, 1-20.https://doi.org/10.1177/0956247820918983\nR para la Ciencia de Datos, https://es.r4ds.hadley.nz/",
+    "crumbs": [
+      "Syllabus"
+    ]
+  },
+  {
+    "objectID": "geoanalisis.html",
+    "href": "geoanalisis.html",
+    "title": "Introducción al Geoanálisis",
+    "section": "",
+    "text": "Breve Historia del Pensamiento Geográfico y Estadístico\nEl espacio no es neutro. Las decisiones que tomamos, como individuos y como sociedades, se distribuyen de manera desigual en el territorio. Las políticas públicas moldean y son moldeadas por esa realidad espacial. Comprender esta interacción entre datos, territorio y decisiones es la esencia del geoanálisis, una disciplina cada vez más relevante en un mundo interconectado.\nEste capítulo ofrece una introducción al geoanálisis desde una perspectiva histórica, conceptual y aplicada, subrayando su valor para diseñar políticas públicas que mejoren la calidad de vida y el bienestar.\nEl término estadística deriva del italiano statista (“hombre de Estado”), y desde la antigüedad ha servido para estimar capacidades de un reino y facilitar la gestión tributaria. Por ejemplo, en Egipto ya se realizaban censos hacia el 3050 a.C. Durante la expansión colonial europea (siglos XVI–XIX), la estadística se desarrolló en estrecha relación con la cartografía, como herramienta para administrar y dominar territorios.\nEn el siglo XX, con la llegada de la estadística espacial y la computación, se superaron las limitaciones del cálculo manual y se hizo posible analizar grandes volúmenes de datos georreferenciados. Hoy, gracias a R, QGIS y otras herramientas abiertas, el análisis espacial es accesible a todos.",
+    "crumbs": [
+      "Introducción al Geoanálisis"
+    ]
+  },
+  {
+    "objectID": "geoanalisis.html#la-primera-ley-de-la-geografía-y-su-relevancia-social",
+    "href": "geoanalisis.html#la-primera-ley-de-la-geografía-y-su-relevancia-social",
+    "title": "Introducción al Geoanálisis",
+    "section": "La Primera Ley de la Geografía y su Relevancia Social",
+    "text": "La Primera Ley de la Geografía y su Relevancia Social\nWaldo Tobler (1931–2018) formuló en 1970 su célebre Primera Ley de la Geografía:\n\n“Todas las cosas están relacionadas entre sí, pero las cosas más próximas en el espacio tienen una relación mayor que las distantes.”\n\nEste principio refleja cómo las interacciones humanas y sociales están condicionadas por la proximidad espacial. En política pública esto significa, por ejemplo, que las intervenciones en un barrio tienen efectos directos en los barrios vecinos, y que ignorar la dimensión espacial conduce a políticas sesgadas.\nO como lo resume Cervantes en El Quijote:\n\n“Dime con quién andas y te diré quién eres.”\n\n⸻",
+    "crumbs": [
+      "Introducción al Geoanálisis"
+    ]
+  },
+  {
+    "objectID": "geoanalisis.html#el-espacio-y-el-tiempo-coproducción-espacio-temporal-del-bienestar",
+    "href": "geoanalisis.html#el-espacio-y-el-tiempo-coproducción-espacio-temporal-del-bienestar",
+    "title": "Introducción al Geoanálisis",
+    "section": "El Espacio y el Tiempo: Coproducción Espacio-Temporal del Bienestar",
+    "text": "El Espacio y el Tiempo: Coproducción Espacio-Temporal del Bienestar\nEl bienestar social es resultado de una coproducción espacio-temporal: las políticas, las acciones colectivas y las dinámicas naturales configuran el territorio, que a su vez influye en las oportunidades y limitaciones de sus habitantes.\nHenri Lefebvre (1901–1991) lo expresó así:\n\n“La historia, el espacio y la sociedad se co-producen, por lo que el espacio tiene un rol activo en la reproducción y acumulación de fenómenos sociales.”\n\nEl espacio no es simplemente un escenario pasivo, sino un actor en las dinámicas sociales. Por ejemplo, la segregación urbana o la concentración delictual en ciertas áreas no son casualidad, sino resultado de una autoproducción espacial donde factores históricos, económicos y sociales se retroalimentan.",
+    "crumbs": [
+      "Introducción al Geoanálisis"
+    ]
+  },
+  {
+    "objectID": "geoanalisis.html#por-qué-medir-la-importancia-de-las-estadísticas-territoriales",
+    "href": "geoanalisis.html#por-qué-medir-la-importancia-de-las-estadísticas-territoriales",
+    "title": "Introducción al Geoanálisis",
+    "section": "Por Qué Medir: La Importancia de las Estadísticas Territoriales",
+    "text": "Por Qué Medir: La Importancia de las Estadísticas Territoriales\n\nLo que no se mide, no se gestiona.\n\nLas estadísticas territoriales permiten entender y actuar sobre el territorio con evidencia. Sin embargo, presentan desafíos particulares. La inferencia estadística clásica asume independencia entre observaciones y aleatoriedad, pero los datos espaciales violan ambos supuestos: • Las observaciones cercanas tienden a estar correlacionadas (Ley de Tobler). • El espacio actúa como un soporte material indispensable para las relaciones sociales.\nAdemás, fenómenos como el MAUP (Modifiable Areal Unit Problem) advierten que los resultados pueden cambiar si modificamos las unidades territoriales de agregación.\nPor eso, es clave aplicar técnicas robustas que cuantifiquen y corrijan la dependencia espacial en los datos.",
+    "crumbs": [
+      "Introducción al Geoanálisis"
+    ]
+  },
+  {
+    "objectID": "geoanalisis.html#el-geoanálisis-hoy-herramientas-y-capacidades-para-la-toma-de-decisiones",
+    "href": "geoanalisis.html#el-geoanálisis-hoy-herramientas-y-capacidades-para-la-toma-de-decisiones",
+    "title": "Introducción al Geoanálisis",
+    "section": "El Geoanálisis Hoy: Herramientas y Capacidades para la Toma de Decisiones",
+    "text": "El Geoanálisis Hoy: Herramientas y Capacidades para la Toma de Decisiones\nEl geoanálisis combina datos, teoría espacial y herramientas computacionales para explicar y predecir fenómenos territoriales. No se trata solo de mapear, sino de interpretar y modelar.\nLas herramientas modernas —como R y sus paquetes especializados— permiten: • trabajar con datos vectoriales y raster, • calcular indicadores territoriales, • inferir patrones espaciales (mapas de calor, interpolaciones), • detectar autocorrelación y clusters espaciales, • y modelar relaciones (regresiones espaciales).",
+    "crumbs": [
+      "Introducción al Geoanálisis"
+    ]
+  },
+  {
+    "objectID": "geoanalisis.html#impacto-en-las-políticas-públicas-del-siglo-xxi",
+    "href": "geoanalisis.html#impacto-en-las-políticas-públicas-del-siglo-xxi",
+    "title": "Introducción al Geoanálisis",
+    "section": "Impacto en las Políticas Públicas del Siglo XXI",
+    "text": "Impacto en las Políticas Públicas del Siglo XXI\nHoy, las políticas públicas más innovadoras incluyen una perspectiva territorial para abordar problemas como el cambio climático, la segregación socioeconómica, la delincuencia o la justicia ambiental.\nLos indicadores territoriales son instrumentos esenciales para cuantificar y comparar condiciones, actividades o resultados en diferentes espacios y tiempos. Permiten definir puntos de comparación que guían la toma de decisiones.",
+    "crumbs": [
+      "Introducción al Geoanálisis"
+    ]
+  },
+  {
+    "objectID": "intro_r.html",
+    "href": "intro_r.html",
+    "title": "1  Introducción a R Project",
+    "section": "",
+    "text": "1.1 Motivación\nEn el mundo del análisis de datos espaciales, R se convierte en tu mejor aliado. Este lenguaje de programación, con su poderosa capacidad de manipulación de datos y una abundancia de paquetes especializados, te abrirá las puertas a muchas posibilidades de análisis. Al aprender R, estarás equipado para explorar, visualizar y modelar datos espaciales de manera efectiva y precisa. El dominio de R te permitirá desbloquear información valiosa a partir de datos geoespaciales, y, además, te proporcionará una ventaja competitiva en un campo en constante crecimiento. El análisis espacial con R te permitirá descubrir patrones, tomar decisiones informadas y hacer contribuciones significativas a tu labor diaria.\n¿Por qué usar un lenguaje de programción para análisis espacial?\nEn resumen, aprender R es una inversión valiosa para cualquier profesional que se dedique al análisis de datos espaciales. Te brinda las herramientas necesarias para abordar problemas complejos y contribuir al avance del conocimiento en este campo.\nTodos los indicadores en el Centro de Inteligencia Territorial UAI se construyeron utilizando herramientas de programación.",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Introducción a R Project</span>"
+    ]
+  },
+  {
+    "objectID": "intro_r.html#motivación",
+    "href": "intro_r.html#motivación",
+    "title": "1  Introducción a R Project",
+    "section": "",
+    "text": "Abundancia de paquetes especializados:\n\nR cuenta con una amplia gama de paquetes diseñados específicamente para el análisis de datos espaciales, como ‘sf’, ‘raster’ y ‘leaflet’. Esto facilita la implementación de técnicas espaciales sin necesidad de reinventar la rueda.\n\n\n\nVisualización avanzada:\n\nR ofrece herramientas gráficas de alta calidad para la representación visual de datos espaciales. Paquetes como ggplot2, tmap y leaflet permiten crear mapas y gráficos personalizados con facilidad.\n\n\n\nAnálisis estadístico y geoespacial integrado:\n\nR combina capacidades estadísticas sólidas con análisis espaciales. Puedes realizar análisis espaciales avanzados, como interpolación, análisis de clusters y modelado de datos geoespaciales, todo en un entorno coherente.\n\n\n\nComunidad activa y recursos educativos:\n\nLa comunidad R es activa y solidaria. Existe una amplia oferta de recursos educativos, foros y tutoriales en línea que te ayudarán a aprender y resolver problemas de análisis espacial en R.\n\n\n\nColaboración interdisciplinaria:\n\nA medida que la ciencia de datos espaciales se integra en diversas disciplinas, dominar R te permitirá colaborar con expertos en campos como geografía, ecología, urbanismo y epidemiología, ampliando tus oportunidades de investigación.\n\n\n\nReproducibilidad y documentación:\n\nR fomenta la reproducibilidad de tu trabajo. Puedes documentar tus análisis y visualizaciones de manera efectiva, lo que es esencial en proyectos de investigación.",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Introducción a R Project</span>"
+    ]
+  },
+  {
+    "objectID": "intro_r.html#r-project",
+    "href": "intro_r.html#r-project",
+    "title": "1  Introducción a R Project",
+    "section": "1.2 R Project",
+    "text": "1.2 R Project\n\n\n\n\n\nR Project es un lenguaje programación multiparadigma (procedural, imperativo, orientado a objetos y funcional enfocado a aplicaciones estadísticas. Por estadísticas se debe entender también los campos de estudio que se basan o las utilizan como economía, finanzas, ciencia de datos, machine learning, etc.\nPara la instalación de seguir las instrucción indicadas en Section A.1.\n\n1.2.1 Ventajas de Utilizar R Project\n1. R es un software libre\n\nLa libertad de ejecutar el programa como desee y con cualquier propósito\nEstudiar el funcionamiento del programa y adaptarlo a sus necesidades.\nRescribir copias para ayudar a los demás.\nManejar el programa y publicar las mejorar, de manera que toda comunidad se beneficie.\n\n2. R es multiplataforma\n\nR funciona en Mac, Windows y en numerosos sistemas UNIX. Esto significa que cualquier persona puede trabajar con tus datos, figuras, análisis y más importante aún usar tus instrucciones (también conocido como scripts o código) para generar las figuras y el análisis. Así que cualquier persona, y en cualquier lugar del mundo, con acceso a cualquier Sistema Operativo puede usar R Project sin ninguna licencia.\n\n3. R es de código abierto\n\nExiste una gran comunidad de voluntarios trabajando para mejorarlo, lo cual permite ser moldeado y dirigido a cuestiones específicas. Creando así programas y paquetes que funcionen en el entorno R. Programas tales como RStudio, Java GUI for R, R-commander, RKWard, entre otros, y con más de 19.000 paquetes indexados en CRAN (Comprehensive R Archive Network), Bioconductor, Github y R-Forge.\n\n4. Todo dentro de un mismo entorno\n\nR remplaza la combinación de varios programas para el proceso de análisis de datos, por ejemplo Excel, ArcGis, QGis, SigmaPlot, entre otros. Esto no solo resulta en el alto costo de las licencias de múltiples programas, si no también, en la gran cantidad de archivos con diferentes formatos que no podrían leer otros programas. En cambio con solo utilizar R, puedes realizar todo el análisis de datos e inclusive leer archivos de diferentes formatos.\n\n\n\n\nRstudio Ejecutándose",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Introducción a R Project</span>"
+    ]
+  },
+  {
+    "objectID": "intro_r.html#rstudio",
+    "href": "intro_r.html#rstudio",
+    "title": "1  Introducción a R Project",
+    "section": "1.3 Rstudio",
+    "text": "1.3 Rstudio\n\n\n\n\n\nRStudio es un entorno de desarrollo integrado (IDE) para R Project y Python. Incluye una consola, un editor que resalta la sintaxis y admite la ejecución directa del código, y herramientas para graficar, el historial, la depuración y la gestión del espacio de trabajo. RStudio está disponible en ediciones comerciales y de código abierto y se ejecuta en el escritorio (Windows, Mac y Linux).\nPara instalar RStudio se debe seguir las instrucciones señaladas en el apéndice Section A.2",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Introducción a R Project</span>"
+    ]
+  },
+  {
+    "objectID": "intro_r.html#librerías-en-r",
+    "href": "intro_r.html#librerías-en-r",
+    "title": "1  Introducción a R Project",
+    "section": "1.4 Librerías en R",
+    "text": "1.4 Librerías en R\nEn R, una librería es un conjunto de funciones, datos y recursos adicionales que se agrupan para facilitar tareas específicas de programación, análisis de datos o visualización. Estas librerías son paquetes de software que amplían las funcionalidades básicas de R y permiten a los usuarios realizar tareas más avanzadas de manera eficiente.\nExisten una gran variedad de librerías disponibles en R, cada una diseñada para abordar un campo o área de aplicación particular. A continuación, mencionaré algunos de los campos más comunes en los que se utilizan las librerías de R:\n\nAnálisis de datos:\n\nR es ampliamente utilizado en el análisis de datos y estadísticas. Librerías como “dplyr”, “tidyr” y “ggplot2” son muy populares en este campo. Estas librerías proporcionan funciones para el manejo de datos, filtrado, transformación, agregación y visualización.\n\nAprendizaje automático (Machine Learning):\n\nR es una opción popular para aplicar algoritmos de aprendizaje automático. Librerías como “caret”, “randomForest” y “glmnet” ofrecen una amplia gama de algoritmos y herramientas para entrenar modelos de machine learning, realizar validación cruzada, seleccionar características y evaluar el rendimiento de los modelos.\n\nProcesamiento de texto y lenguaje natural:\n\nPara el análisis de texto y procesamiento del lenguaje natural, existen librerías como “tm”, “stringr” y “text2vec”. Estas librerías permiten realizar tareas como tokenización, limpieza de texto, extracción de características y modelado de temas.\n\nVisualización de datos:\n\nR es conocido por su capacidad para generar gráficos y visualizaciones de datos. Librerías como “ggplot2”, “plotly” y “lattice” ofrecen herramientas para crear gráficos estáticos y dinámicos, mapas, diagramas de dispersión y muchas otras visualizaciones.\n\n\nEstos son solo algunos ejemplos de los campos en los que se utilizan las librerías de R. Es importante destacar que la comunidad de R es muy activa y constantemente se desarrollan nuevas librerías para abordar diferentes necesidades en diversos campos de aplicación. El uso de estas librerías no solo ahorra tiempo y esfuerzo, sino que también permite a los programadores y analistas aprovechar las mejores prácticas y métodos establecidos en sus respectivos campos.\n\n1.4.1 Ejemplo de Instalación de Librerías desde R\nPodemos instalar paquetes usando la función install.packages(), dando como argumento el nombre del paquete que deseamos instalar, entre comillas.\nPara instalar librerías se puede hacer directamente desde la consola de RStudio, por ejemplo:\n\ninstall.packages(\"dplyr\") # Se puede instalar más de una librería a la vez\n\n\n\n1.4.2 Ejemplo de Instalación de Librerías desde Rstudio\nTambién se pude instalar librerías del Panel “Packages”\n\n\n\nY por último se puede instalar desde Pestaña “Tools” -&gt; “Install Packages”:",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Introducción a R Project</span>"
+    ]
+  },
+  {
+    "objectID": "intro_r.html#directorios-de-trabajos",
+    "href": "intro_r.html#directorios-de-trabajos",
+    "title": "1  Introducción a R Project",
+    "section": "1.5 Directorios de Trabajos",
+    "text": "1.5 Directorios de Trabajos\nUn directorio de trabajo, también conocido como carpeta de trabajo, es una ubicación específica en un sistema de archivos donde se almacenan y organizan los archivos relacionados con un proyecto o una tarea determinada. Estos directorios son esenciales para mantener un entorno de desarrollo ordenado y estructurado. Aquí tienes algunas razones por las que son importantes:\n\nOrganización:\n\nLos directorios de trabajo permiten organizar y clasificar los archivos de un proyecto. Puedes crear subdirectorios para agrupar archivos relacionados, como código fuente, recursos multimedia, documentación, pruebas, entre otros. Esto facilita la búsqueda y el acceso a los archivos necesarios, lo que ahorra tiempo y evita la confusión.\n\nMantenimiento:\n\nAl utilizar directorios de trabajo adecuados, es más sencillo realizar tareas de mantenimiento en un proyecto. Puedes realizar actualizaciones, realizar pruebas, corregir errores y agregar nuevas funcionalidades de manera más eficiente. Además, si trabajas en equipo, un directorio de trabajo bien estructurado permite a los miembros del equipo colaborar de manera más fluida y reducir posibles conflictos al fusionar sus cambios.\n\nPortabilidad:\n\nLos directorios de trabajo facilitan la portabilidad de un proyecto. Si necesitas mover o copiar tu proyecto a otro lugar, simplemente tendrás que llevar el directorio principal y todos los subdirectorios y archivos asociados estarán incluidos. Esto garantiza que no falten archivos esenciales y que el proyecto se pueda ejecutar sin problemas en un nuevo entorno.\n\n\n\n1.5.1 Directorios de Trabajo en RStudio\nDefinir directorio de Trabajo con RStudio se puede hacer de varias formas:\n\nDesde Rstudio.\n\nSession -&gt; Set Working Directory -&gt; Choose Directory\n\n\n\n\n\n\n\n\nMediante Códigos.\n\nDefinir Directorio de Trabajo con una función\n\nsetwd(\"/Users/denisberroeta/Library/CloudStorage/OneDrive-UniversidadAdolfoIbanez/CIT/DOCENCIA/DIPLOMADOS/DGET_2023/compartir_DGET\")\n\nConsultar Directorio de Trabajo\n\ngetwd()",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Introducción a R Project</span>"
+    ]
+  },
+  {
+    "objectID": "intro_r.html#referencias",
+    "href": "intro_r.html#referencias",
+    "title": "1  Introducción a R Project",
+    "section": "1.6 Referencias:",
+    "text": "1.6 Referencias:\n\nR para Ciencia de Datos\nRStudio para Estadística Descriptiva en Ciencias Sociales",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Introducción a R Project</span>"
+    ]
+  },
+  {
+    "objectID": "variables.html",
+    "href": "variables.html",
+    "title": "2  Variables en R",
+    "section": "",
+    "text": "2.1 Tipos de Objetos en R\nLos Datos en R se pueden clasificar por su dimensiones y los tipos de Datos que permiten almacenar, como se muestra en la siguiente tabla:\nFuente: http://adv-r.had.co.nz/Data-structures.html\nR nos permite definir variables que pueden ser luego usadas en las distintas operaciones. El lenguaje no solo permite definir escalares (variable de un numero), si no también variables que sean un conjunto de numero o caracteres ordenados.",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Variables en R</span>"
+    ]
+  },
+  {
+    "objectID": "variables.html#tipos-de-objetos-en-r",
+    "href": "variables.html#tipos-de-objetos-en-r",
+    "title": "2  Variables en R",
+    "section": "",
+    "text": "Dimensiones\nHomogéneos\nHeterogéneos\n\n\n\n\n1d\nAtomic vector\nList\n\n\n2d\nMatrix\nData frame\n\n\nnd\nArray\n\n\n\n\n\n\n\n2.1.1 Variables Numéricas\n\n# La asignación en R son válidos 2 métodos '&lt;-' o '='\nx &lt;- 7 # Definir variable (escalar) x que sea igual a 7\nx # Mostrar que es x\n\n[1] 7\n\ny &lt;- 3 + 2 * x # Crear y como funcion de x \ny\n\n[1] 17\n\nclass(y)\n\n[1] \"numeric\"\n\n\nNúmeros Random con decimales\n\nru &lt;- runif(n = 100, min = 1, max = 10)\nru\n\n  [1] 1.304770 8.790952 5.921598 9.421803 8.311178 4.984835 3.984811 9.551914\n  [9] 4.551725 8.808889 5.223004 1.395018 1.239081 4.726648 5.117789 5.184368\n [17] 2.828244 8.869851 9.539666 6.721974 8.627671 6.916689 9.186017 4.010241\n [25] 5.090365 8.950389 5.153148 2.950995 1.759574 8.343076 5.357338 6.664365\n [33] 9.882202 3.755985 1.336066 6.687393 2.270471 9.722462 4.986412 7.220662\n [41] 3.377227 8.411334 7.501333 2.797032 5.031712 4.044963 8.394083 3.277793\n [49] 2.004089 3.024439 1.796685 1.028165 8.005553 9.673615 2.146100 8.746929\n [57] 7.741270 3.429656 7.724972 6.530980 6.600612 7.771709 1.632076 9.326374\n [65] 2.375996 1.340106 3.095349 9.165916 6.502911 2.897769 8.010492 3.291159\n [73] 1.025209 3.338114 2.788227 7.309985 2.819249 4.535930 1.003585 3.775972\n [81] 2.671721 2.411200 8.548286 5.858578 6.780649 8.324136 5.115090 6.829292\n [89] 7.298573 4.123001 3.283679 7.153963 1.306336 7.572118 3.661246 6.188538\n [97] 3.905880 1.970328 7.179451 6.717174\n\n\n\nhist(ru, breaks = 20, col = \"orange\", border = \"gray60\", \n     main = \"Histograma de valores Random\")\n\n\n\n\n\n\n\n\nNúmeros Random Enteros\nSimular los lanzamientos de un dado\n\nsample.int(n = 6, size = 10, replace = T)\n\n [1] 6 2 5 2 2 2 1 6 5 4\n\n\n\n\n2.1.2 Variables de Caracter\n\nch &lt;- \"Chile\" # Definir variable (objeto) ch que sea la palabra \"Chile\"\nsn &lt;- \"Santiago\"\nch # Mostrar ch\n\n[1] \"Chile\"\n\nsn\n\n[1] \"Santiago\"\n\n\nUnir variables de texto con paste()\n\nch &lt;- \"Chile\" # Definir variable (objeto) ch que sea la palabra \"Chile\"\nsn &lt;- \"Santiago\"\nunion &lt;- paste(sn,ch, sep = \", \")\nunion\n\n[1] \"Santiago, Chile\"\n\n\nUtilizar paste0()\n\nunion &lt;- paste(\"Provincia de \", sn,ch, sep = \", \")\nunion\n\n[1] \"Provincia de , Santiago, Chile\"\n\nunion0 &lt;- paste0(\"Provincia de \", sn, \", \", ch)\nunion0\n\n[1] \"Provincia de Santiago, Chile\"\n\n\nBuscar y reemplazar con gsub\n\nav &lt;- \"Av. Apoquindo\"\ncomuna &lt;- \"comuna de Las Condes\"\ncalle &lt;- paste(av, comuna, union0, sep = \", \")\ncalle\n\n[1] \"Av. Apoquindo, comuna de Las Condes, Provincia de Santiago, Chile\"\n\n# reemplazar Av. por Avenida\ncalle_new &lt;- gsub(pattern = \"Av.\", replacement = \"Avenida\", x = calle)\ncalle_new\n\n[1] \"Avenida Apoquindo, comuna de Las Condes, Provincia de Santiago, Chile\"",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Variables en R</span>"
+    ]
+  },
+  {
+    "objectID": "variables.html#estructuras-de-datos",
+    "href": "variables.html#estructuras-de-datos",
+    "title": "2  Variables en R",
+    "section": "2.2 Estructuras de Datos",
+    "text": "2.2 Estructuras de Datos\nLas variables pueden ser un conjunto de números y caracteres ordenados de varias maneras. El orden que se les da depende de lo que queremos lograr con estos.\n\nVector\nMatrices\nDataframes\nFactores\nListas\n\n\n2.2.1 Vectores\nVector Cadenas unidimensionales (es decir una sola columna o fila) de un tipo único de valores (numéricos, caracteres, etc.)\n\nvec &lt;-  c(4, 3, 1, 5, 8, 16)\nvec\n\n[1]  4  3  1  5  8 16\n\nclass(vec)\n\n[1] \"numeric\"\n\nstr(vec)\n\n num [1:6] 4 3 1 5 8 16\n\n\nPodemos seleccionar parte del vector:\n\n# EL primer índice en R es 1 (en otros lenguajes de programación es 0)\nvec[3]\n\n[1] 1\n\n\nLa selección también puede ser hecha con una condición, de tal manera que solo seleccione aquella parte del vector que cumple con la condición.\nMayor a:\n\nvec[vec &gt;= 4]\n\n[1]  4  5  8 16\n\n\nContenido en:\n\nvec[vec %in% c(3, 8, 7, 29)]\n\n[1] 3 8\n\n\nNegación de la condición:\n\nvec[!vec &lt;= 3]\n\n[1]  4  5  8 16\n\n\nTambién podemos realizar operaciones matemáticas simples aplicadas al vector, por ejemplo una suma:\n\nvec2  &lt;-  c(7, 10, 1)\nvec + vec2\n\n[1] 11 13  2 12 18 17\n\n\n\n\n2.2.2 Listas\nSon estructuras eficientes y flexibles, que permiten combinar distintas clases de elementos :\n\nlista &lt;-  list(1, 2, 3, \"cosa\", x, y)\nlista\n\n[[1]]\n[1] 1\n\n[[2]]\n[1] 2\n\n[[3]]\n[1] 3\n\n[[4]]\n[1] \"cosa\"\n\n[[5]]\n[1] 7\n\n[[6]]\n[1] 17\n\nstr(lista)\n\nList of 6\n $ : num 1\n $ : num 2\n $ : num 3\n $ : chr \"cosa\"\n $ : num 7\n $ : num 17\n\n\n\n#Tambien se puede seleccionar parte de una lista, usando el doble corchete:\nlista[[3]]\n\n[1] 3\n\n\nComo inspeccionar una lista con Rstudio\n\n\n\n\n\n2.2.3 Matrices\nSon estructuras de datos con 2 dimensiones, horizontal y la vertical (filas y columnas). Podemos construirlas usando la función “matrix”, con un vector inicial y sus dimensiones:\n\nn &lt;- matrix(c(1.3, 2.8, 3.5, \n              6.4, 5.3, 6.2, \n              7, 4.5, 2.4, \n              6.3, 5.6, 5.3, \n              6.6, 7, 4.3),\n            nrow = 5, ncol = 3, byrow = TRUE)\nn\n\n     [,1] [,2] [,3]\n[1,]  1.3  2.8  3.5\n[2,]  6.4  5.3  6.2\n[3,]  7.0  4.5  2.4\n[4,]  6.3  5.6  5.3\n[5,]  6.6  7.0  4.3\n\n\nLa matriz tiene 2 dimensiones, por lo que para seleccionar partes de ella es necesario declarar dos dimensiones separadas por una coma. A la izquierda van las filas y a la derecha las columnas. Un valor vacío indica que se seleccionan todos los valores posibles.\n\nn[1,2]\n\n[1] 2.8\n\n\n\nn[,3]\n\n[1] 3.5 6.2 2.4 5.3 4.3\n\n\n\n\n2.2.4 Dataframes\nEstructura mas clásica de datos, es una matriz pero con mas atributos como nombres de columna y/o fila. Es lo mas similar en R a una tabla excel o la tabla de atributos. La manera mas simple de crear un dataframe es a partir de una matriz usando la función as.data.frame() :\n\ndf &lt;- as.data.frame(n)\ndf\n\n   V1  V2  V3\n1 1.3 2.8 3.5\n2 6.4 5.3 6.2\n3 7.0 4.5 2.4\n4 6.3 5.6 5.3\n5 6.6 7.0 4.3\n\n\nCrear un dataframe desde cero\n\ndf  &lt;- data.frame(control_a = c(1.3, 6.4, 7, 6.3, 6.6), \n                  control_b = c(2.8, 5.3, 4.5, 5.6, 7), \n                  control_c = c(3.5, 6.2, 2.4, 5.3, 4.3)) \n\ndf\n\n  control_a control_b control_c\n1       1.3       2.8       3.5\n2       6.4       5.3       6.2\n3       7.0       4.5       2.4\n4       6.3       5.6       5.3\n5       6.6       7.0       4.3\n\n\nPodemos consultar nombres a las columnas del dataframe\n\n#consultar nombres de columans\nnames(df)\n\n[1] \"control_a\" \"control_b\" \"control_c\"\n\n# reasignar nombres de columnas\nnames(df)&lt;- c(\"control_1\",\"control_2\",\"examen\")\ndf\n\n  control_1 control_2 examen\n1       1.3       2.8    3.5\n2       6.4       5.3    6.2\n3       7.0       4.5    2.4\n4       6.3       5.6    5.3\n5       6.6       7.0    4.3\n\n\nY a las filas del dataframe\n\ndf$alumno &lt;- c(\"Sofia\",\"Tomas\",\"Luciano\",\"Julian\",\"Gabriela\")\ndf\n\n  control_1 control_2 examen   alumno\n1       1.3       2.8    3.5    Sofia\n2       6.4       5.3    6.2    Tomas\n3       7.0       4.5    2.4  Luciano\n4       6.3       5.6    5.3   Julian\n5       6.6       7.0    4.3 Gabriela\n\n\nTambién podemos realizar operaciones entre vectores del dataframe:\n\ndf$promedio_final &lt;-  0.3*df$control_1 + 0.3*df$control_2 + 0.4*df$examen\ndf\n\n  control_1 control_2 examen   alumno promedio_final\n1       1.3       2.8    3.5    Sofia           2.63\n2       6.4       5.3    6.2    Tomas           5.99\n3       7.0       4.5    2.4  Luciano           4.41\n4       6.3       5.6    5.3   Julian           5.69\n5       6.6       7.0    4.3 Gabriela           5.80",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Variables en R</span>"
+    ]
+  },
+  {
+    "objectID": "funciones.html",
+    "href": "funciones.html",
+    "title": "3  Funciones en R",
+    "section": "",
+    "text": "3.1 Operaciones Básicas en R",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Funciones en R</span>"
+    ]
+  },
+  {
+    "objectID": "funciones.html#operaciones-básicas-en-r",
+    "href": "funciones.html#operaciones-básicas-en-r",
+    "title": "3  Funciones en R",
+    "section": "",
+    "text": "3.1.1 Operaciones Matemáticas\nEn R, es posible realizar operaciones matemáticas básicas utilizando los operadores aritméticos estándar. Estos operadores incluyen:\n\nSuma (+): se utiliza para sumar dos valores.\nResta (-): se utiliza para restar un valor de otro.\nMultiplicación (*): se utiliza para multiplicar dos valores.\nDivisión (/): se utiliza para dividir un valor por otro.\nExponenciación (^): se utiliza para elevar un valor a una potencia.\nMódulo (%%): se utiliza para encontrar el resto de la división de un valor por otro.\n\nEstos operadores se pueden utilizar con números enteros, decimales y variables numéricas. Además, también se pueden utilizar paréntesis para especificar el orden de las operaciones.\nA continuación, se presentan algunos ejemplos de operaciones matemáticas básicas en R:\n\n# Suma\n2 + 3 # resultado: 5\n\n[1] 5\n\n# Resta\n5 - 2 # resultado: 3\n\n[1] 3\n\n# Multiplicación\n2 * 4 # resultado: 8\n\n[1] 8\n\n# División\n10 / 2 # resultado: 5\n\n[1] 5\n\n# Exponenciación\n2^3 # resultado: 8\n\n[1] 8\n\n# Módulo\n15 %% 4 # resultado: 3\n\n[1] 3\n\n# Utilizando paréntesis para especificar el orden de las operaciones\n(2 + 3) * 4 # resultado: 20\n\n[1] 20\n\n\nEs importante tener en cuenta que R sigue las reglas de precedencia de las operaciones matemáticas. Esto significa que las operaciones dentro de los paréntesis se evalúan primero, seguidas de la exponenciación, la multiplicación y la división, y finalmente la suma y la resta. Si se requiere un orden específico de operaciones, se deben utilizar paréntesis para indicarlo.\nAdemás, R también cuenta con una variedad de funciones matemáticas incorporadas, como “sin”, “cos”, “tan”, “log”, “exp”, entre otras, que se pueden utilizar para realizar operaciones más complejas.\nTambién se pueden aplica a un elemento a al objeto espacial completo\n\na &lt;- 13\nb &lt;- c(20,30,22,2,1)\n\nsum(b) # suma\n\n[1] 75\n\nsqrt(b) # find the square root of x\n\n[1] 4.472136 5.477226 4.690416 1.414214 1.000000\n\n\n\nmean(b)\n\n[1] 15\n\nmin(b)\n\n[1] 1\n\nmax(b)\n\n[1] 30\n\n\n\n\n3.1.2 Funciones Útiles de propósito general\n\nrep(1, 10)\n\n [1] 1 1 1 1 1 1 1 1 1 1\n\nrep(\"HAHA\", 10)\n\n [1] \"HAHA\" \"HAHA\" \"HAHA\" \"HAHA\" \"HAHA\" \"HAHA\" \"HAHA\" \"HAHA\" \"HAHA\" \"HAHA\"\n\nseq(1, 10)\n\n [1]  1  2  3  4  5  6  7  8  9 10\n\nseq(1, 10, by = 2)\n\n[1] 1 3 5 7 9\n\nifelse(3 &gt; 5, 1, \"this is false\")\n\n[1] \"this is false\"\n\n\n\npaste(\"Hola\", \"amigo\")\n\n[1] \"Hola amigo\"\n\npaste(\"Hello\", \"amigo\", sep = \"--\")\n\n[1] \"Hello--amigo\"\n\npaste0(\"Hello\", \"amigo\")\n\n[1] \"Helloamigo\"\n\ntolower(\"HAHAHAHAH\")\n\n[1] \"hahahahah\"\n\ntoupper(\"hueuehuehuheuhe\")\n\n[1] \"HUEUEHUEHUHEUHE\"",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Funciones en R</span>"
+    ]
+  },
+  {
+    "objectID": "funciones.html#operaciones-lógicas",
+    "href": "funciones.html#operaciones-lógicas",
+    "title": "3  Funciones en R",
+    "section": "3.2 Operaciones Lógicas",
+    "text": "3.2 Operaciones Lógicas\nEn R, los operadores lógicos se utilizan para realizar comparaciones lógicas entre valores o expresiones. Estos operadores devuelven valores booleanos (TRUE o FALSE) según se cumpla o no la condición.\nA continuación se presentan los operadores lógicos en R:\n\n\n\n\n\nOperador\nSignificado\nEjemplo\n\n\n\n\n==\nIgual a\n2 == 2 (TRUE)\n\n\n!=\nDiferente a\n2 != 3 (TRUE)\n\n\n&gt;\nMayor que\n3 &gt; 2 (TRUE)\n\n\n&lt;\nMenor que\n2 &lt; 3 (TRUE)\n\n\n&gt;=\nMayor o igual que\n3 &gt;= 2 (TRUE)\n\n\n&lt;=\nMenor o igual que\n2 &lt;= 3 (TRUE)\n\n\n&\nOperador lógico AND\n2 &lt; 3 & 3 &gt; 1 (TRUE)\n\n\n|\nOperador lógico OR\n2 &lt; 3 | 3 &lt; 1 (TRUE)\n\n\n!\nOperador lógico NOT\n!(2 == 3) (TRUE)\n\n\n\n\n\n\n3.2.1 Operador de igualdad: (==)\nEste operador se utiliza para comparar si dos valores son iguales. Retorna TRUE si la condición se cumple y FALSE en caso contrario.\n\na &lt;- 2\nb &lt;- 3\na == b # FALSE\n\n[1] FALSE\n\n\n\n\n3.2.2 Operador de desigualdad: (!=)\nEste operador se utiliza para comparar si dos valores son diferentes. Retorna TRUE si la condición se cumple y FALSE en caso contrario.\n\na &lt;- 2\nb &lt;- 3\na != b # TRUE\n\n[1] TRUE\n\n\n\n\n3.2.3 Operador de mayor que: (&gt;)\nEste operador se utiliza para comparar si un valor es mayor que otro. Retorna TRUE si la condición se cumple y FALSE en caso contrario.\n\na &lt;- 2\nb &lt;- 3\nb &gt; a # TRUE\n\n[1] TRUE\n\n\n\n\n3.2.4 Operador de menor que: (&lt;)\nEste operador se utiliza para comparar si un valor es menor que otro. Retorna TRUE si la condición se cumple y FALSE en caso contrario.\n\na &lt;- 2\nb &lt;- 3\na &lt; b # TRUE\n\n[1] TRUE\n\n\n\n\n3.2.5 Operador de mayor o igual que: (&gt;=)\nEste operador se utiliza para comparar si un valor es mayor o igual que otro. Retorna TRUE si la condición se cumple y FALSE en caso contrario.\n\na &lt;- 2\nb &lt;- 3\nb &gt;= a # TRUE\n\n[1] TRUE\n\n\n\n\n3.2.6 Operador de menor o igual que: (&lt;=)\nEste operador se utiliza para comparar si un valor es menor o igual que otro. Retorna TRUE si la condición se cumple y FALSE en caso contrario.\n\na &lt;- 2\nb &lt;- 3\na &lt;= b # TRUE\n\n[1] TRUE\n\n\n\n\n3.2.7 Operador lógico AND: (&)\nEste operador se utiliza para evaluar dos o más condiciones y retornar TRUE si todas se cumplen, de lo contrario retorna FALSE.\n\na &lt;- 2\nb &lt;- 3\nc &lt;- 4\na &lt; b & b &lt; c # TRUE\n\n[1] TRUE\n\n\n\n\n3.2.8 Operador lógico OR: (|)\nEste operador se utiliza para evaluar dos o más condiciones y retornar TRUE si al menos una se cumple, de lo contrario retorna FALSE.\n\na &lt;- 2\nb &lt;- 3\nc &lt;- 4\na &gt; b | b &lt; c # TRUE\n\n[1] TRUE\n\n\nOperador lógico NOT: (!) Este operador se utiliza para negar una condición. Si la condición es TRUE, retorna FALSE, y si la condición es FALSE, retorna TRUE.\n\na &lt;- 2\nb &lt;- 3\n!(a == b) # TRUE\n\n[1] TRUE\n\n\nEs importante tener en cuenta que los operadores lógicos se pueden utilizar en combinación para crear expresiones lógicas más complejas. Además, los operadores lógicos también se pueden utilizar en las estructuras de control condicionales, como if/else y switch, para tomar decisiones basadas en condiciones lógicas.",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Funciones en R</span>"
+    ]
+  },
+  {
+    "objectID": "funciones.html#crear-funciones-propias",
+    "href": "funciones.html#crear-funciones-propias",
+    "title": "3  Funciones en R",
+    "section": "3.3 Crear Funciones Propias",
+    "text": "3.3 Crear Funciones Propias\nEn R, es posible crear funciones propias para realizar tareas específicas y reutilizarlas en diferentes partes de un programa. Para crear una función en R, se utiliza la siguiente estructura:\n\nnombre_de_la_funcion &lt;- function(argumentos) {\n  cuerpo_de_la_funcion\n}\n\nPor ejemplo, se puede crear una función que calcule la suma de dos números:\n\nsuma &lt;- function(a, b) {\n  resultado &lt;- a + b\n  return(resultado)\n}\n\nresultado_suma &lt;- suma(2, 3)\nprint(resultado_suma) # 5\n\n[1] 5\n\n\nPor ejemplo, se puede crear una función que eleve al cuadrado:\n\ncuadrado &lt;- function(x) { # x = parámetro\n    y = x ^ 2 # asiganción de variables solo dentro de la función\n    return(y) # especificar valor retornado (no necesario completamente)\n}\n\n\na &lt;- 13\nb &lt;- c(20,30,22,2,1)\ncuadrado(a)\n\n[1] 169\n\ncuadrado(b)\n\n[1] 400 900 484   4   1\n\n\nEs importante tener en cuenta que los nombres de las funciones en R deben cumplir las mismas reglas que los nombres de las variables. Además, es recomendable incluir comentarios explicativos dentro del cuerpo de la función para facilitar su comprensión y uso posterior.\nActividad:\nActividad: Crear una función que calcule la hipotenusa de un triángulo rectángulo (Teorema de Pitágoras):\n\n\n\nEstablece que el cuadrado de la longitud de la hipotenusa es igual a la suma de los cuadrados de las longitudes de los catetos.\nc^2 = {a^2}+{b^2}\nPor lo cual:\nc = \\sqrt{{a^2}+{b^2}}\n\n\n\n\n\n\nAyuda\n\n\n\n\nhipotenusa &lt;- function(a, b){\n  #h &lt;-     # En esta parte escribir la función\n  return(h)\n}\nr1 &lt;-  hipotenusa(a = 5,  b = 5)\n\n\n\nEncontrar la Hipotenusa de:\nh=?, a = 10, b = 6\nh=?, a = 5, b = 4\nh=?, a = 3, b = 4",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Funciones en R</span>"
+    ]
+  },
+  {
+    "objectID": "funciones.html#referencias",
+    "href": "funciones.html#referencias",
+    "title": "3  Funciones en R",
+    "section": "3.4 Referencias:",
+    "text": "3.4 Referencias:\n\nhttps://bookdown.org/jboscomendoza/r-principiantes4/estructuras-de-control.html\nLoops y funciones en R",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Funciones en R</span>"
+    ]
+  },
+  {
+    "objectID": "control_r.html",
+    "href": "control_r.html",
+    "title": "4  Estructuras en R",
+    "section": "",
+    "text": "4.1 Estructuras condicionales\nLas estructuras de control en R son herramientas que permiten controlar el flujo de ejecución de un programa. Las estructuras de control son esenciales para cualquier lenguaje de programación, ya que permiten que el programa tome decisiones y realice acciones en función de ciertas condiciones.\nEstas estructuras de control son muy útiles para crear programas que respondan a diferentes situaciones y condiciones, y permiten que los programadores puedan crear soluciones más eficientes y complejas.\nEn R, existen tres estructuras de control principales:\nLas estructuras condicionales son una de las tres estructuras de control principales en R. Estas estructuras permiten ejecutar un bloque de código solo si se cumple una condición determinada.\nLa estructura condicional más común en R es “if”. La sintaxis básica de la estructura “if” es la siguiente:\nif(Condición) {\n  operaciones_si_la_condición_es_TRUE\n}\nLa “condición” es una expresión lógica que evalúa a verdadero o falso. Si la condición es verdadera, el bloque de código dentro del “if” se ejecutará. Si la condición es falsa, el bloque de código dentro del “if” se ignorará.\nPor ejemplo, le pedimos a R que nos muestre el texto “Verdadero” si la condición se cumple.\n# Se cumple la condición y se muestra \"verdadero\"\nif(4 &gt; 3) {\n  \"Verdadero\"\n}\n\n[1] \"Verdadero\"\n# No se cumple la condición y no pasa nada\nif(4 &gt; 5) {\n  \"Verdadero\"\n}\nTambién se puede agregar un bloque de código opcional para el caso en que la condición sea falsa utilizando la estructura “else”. La sintaxis básica de la estructura “if” con “else” es la siguie\nSI esta condición es es cierta, ENTONCES haz estas operaciones, DE OTRO MODO haz estas otras operaciones.\nif(condición) {\n  operaciones_si_la_condición_es_TRUE\n} else {\n  operaciones_si_la_condición_es_FALSE\n}\nUsando los ejemplos anteriores, podemos mostrar “Falso” si no se cumple la condición, en lugar de que no ocurra nada\n# Se cumple la condición y se muestra \"Verdadero\"\nif(4 &gt; 3) {\n  \"Verdadero\"\n} else {\n  \"Falso\"\n}\n\n[1] \"Verdadero\"\nLa estructura “ifelse” es otra forma de estructura condicional que permite ejecutar diferentes bloques de código en función de la condición. La sintaxis básica de la estructura “ifelse” es la siguiente:\nifelse(condición, expresión1, expresión2)\nSi la “condición” es verdadera, se ejecutará “expresión1”. Si la “condición” es falsa, se ejecutará “expresión2”.\nAdemás, se pueden anidar varias estructuras condicionales utilizando la sintaxis de “if” y “else”. Por ejemplo:\nif (condición1) {\n  # Código a ejecutar si la condición1 es verdadera\n} else if (condición2) {\n  # Código a ejecutar si la condición1 es falsa y la condición2 es verdadera\n} else {\n  # Código a ejecutar si todas las condiciones son falsas\n}\nEn resumen, las estructuras condicionales en R son herramientas muy útiles para controlar el flujo de ejecución de un programa en función de ciertas condiciones. Estas estructuras permiten crear soluciones más eficientes y complejas al permitir que los programas tomen decisiones y realicen acciones en función de las condiciones que se presenten.",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Estructuras en R</span>"
+    ]
+  },
+  {
+    "objectID": "control_r.html#sec-bucles",
+    "href": "control_r.html#sec-bucles",
+    "title": "4  Estructuras en R",
+    "section": "4.2 Estructuras de bucles",
+    "text": "4.2 Estructuras de bucles\nLas estructuras de bucles son una de las tres estructuras de control principales en R. Estas estructuras permiten ejecutar un bloque de código repetidamente mientras se cumpla una condición determinada. En R, existen tres estructuras de bucles principales: “while”, “for” y “repeat”.\nBeneficios\n\nEs más fácil ver el objetivo de tu código; lo diferente llama más atención a la vista que aquello que permanece igual.\nEs más sencillo responder a cambios en los requerimientos. A medida que tus necesidades cambian, solo necesitarás realizar cambios en un lugar, en vez de recordar cambiar en cada lugar donde copiaste y pegaste el código.\nEs probable que tengas menos errores porque cada línea de código es utilizada en más lugares.\n\n\n4.2.1 Estructura de bucle “for”:\nLa estructura “for” permite repetir la ejecución de un bloque de código un número determinado de veces. La sintaxis básica de la estructura “for” es la siguiente:\n\nfor (variable in secuencia) {\n  # Código a ejecutar para cada elemento en la secuencia\n}\n\nLa “secuencia” es un objeto que contiene una serie de elementos. La “variable” toma el valor de cada elemento de la secuencia en cada iteración del bucle. En cada iteración, se ejecutará el bloque de código dentro del “for” para ese valor de la variable.\nEjemplo simple: print una secuencia\n\nfor (i in 1:5){\n  print(i)\n}\n\n[1] 1\n[1] 2\n[1] 3\n[1] 4\n[1] 5\n\n\nEjemplo 2: Guardando los resultados en un vector\n\ndado &lt;- 1:6\nmi_vector &lt;- NULL\nfor(cara in dado) {\n  mi_vector[cara] &lt;- cara ^ 2\n}\nmi_vector\n\n[1]  1  4  9 16 25 36\n\n\nEjemplo 3: Loops con vectores\n\nalumnos &lt;- c(\"Carmen\", \"Adriana\", \"Marco\", \"Fabi\", \"Brenda\")\n\nfor(i in 1:length(alumnos)) {\n  print(paste(\"Hola,\", alumnos[i], sep = \" \"))\n}\n\n[1] \"Hola, Carmen\"\n[1] \"Hola, Adriana\"\n[1] \"Hola, Marco\"\n[1] \"Hola, Fabi\"\n[1] \"Hola, Brenda\"\n\n\nEjemplo 4: loops en Dataframes\n\ndf &lt;- data.frame(a = rnorm(10), b = rnorm(10),\n                 c = rnorm(10), d = rnorm(10))\n\nfor(i in 1:ncol(df)){\n  promedio = mean(df[,i])\n  print(promedio)\n}\n\n[1] 0.06080081\n[1] -0.2667959\n[1] -0.2629536\n[1] 0.03954944\n\n\n\n\n4.2.2 Estructura de bucle “while”:\nLa estructura “while” permite repetir la ejecución de un bloque de código mientras se cumpla una condición determinada. La sintaxis básica de la estructura “while” es la siguiente:\n\nwhile (condición) {\n  # Código a ejecutar mientras se cumpla la condición\n}\n\nLa “condición” es una expresión lógica que evalúa a verdadero o falso. Si la condición es verdadera, se ejecutará el bloque de código dentro del “while”. Este proceso se repetirá hasta que la condición sea falsa.\n\n\n4.2.3 Estructura de bucle “repeat”:\n\nrepeat {\n  # Código a ejecutar de manera indefinida\n  if (condición) {\n    break\n  }\n}\n\nEl bloque de código dentro del “repeat” se ejecutará de manera indefinida hasta que se encuentre la sentencia “break”, que permite salir del bucle. La “condición” es una expresión lógica que evalúa a verdadero o falso. Si la condición es verdadera, se ejecutará la sentencia “break” y se saldrá del bucle.",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Estructuras en R</span>"
+    ]
+  },
+  {
+    "objectID": "control_r.html#estructuras-de-control-de-flujo",
+    "href": "control_r.html#estructuras-de-control-de-flujo",
+    "title": "4  Estructuras en R",
+    "section": "4.3 Estructuras de control de flujo",
+    "text": "4.3 Estructuras de control de flujo\n“next” y “break” son palabras clave importantes en R que se utilizan en las estructuras de control de flujo, específicamente en las estructuras de bucle. “next” se utiliza para saltar a la siguiente iteración del bucle sin ejecutar el resto del código dentro del bucle, mientras que “break” se utiliza para detener el bucle de forma abrupta, incluso si la condición del bucle todavía se cumple.\n\n4.3.1 Estructuras de control “next”:\n“next” se utiliza en una estructura de bucle para saltar a la siguiente iteración del bucle sin ejecutar el resto del código dentro del bucle. Es decir, si se encuentra la palabra clave “next” dentro de un bucle, se omitirá el código que viene después y el bucle pasará inmediatamente a la siguiente iteración. La palabra clave “next” es útil cuando se desea saltar una iteración específica del bucle, sin afectar el resto del código.\nPor ejemplo, en el siguiente código se utiliza la palabra clave “next” para omitir la impresión del número 3 dentro del bucle “for”:\n\nfor (i in 1:5) {\n  if (i == 3) {\n    next\n  }\n  print(i)\n}\n\n[1] 1\n[1] 2\n[1] 4\n[1] 5\n\n\n\n\n4.3.2 Estructuras de control “break”:\n“break”, por otro lado, se utiliza en una estructura de bucle para detener el bucle de forma abrupta, incluso si la condición del bucle todavía se cumple. Es decir, si se encuentra la palabra clave “break” dentro de un bucle, se detendrá el bucle de inmediato y se continuará con la ejecución del código que viene después del bucle. La palabra clave “break” es útil cuando se desea detener el bucle en un punto específico sin tener que esperar a que la condición del bucle se deje de cumplir.\nPor ejemplo, en el siguiente código se utiliza la palabra clave “break” para detener el bucle “while” cuando el valor de “i” es mayor que 5:\n\ni &lt;- 1\nwhile (i &lt; 10) {\n  if (i &gt; 5) {\n    break\n  }\n  print(i)\n  i &lt;- i + 1\n}\n\n[1] 1\n[1] 2\n[1] 3\n[1] 4\n[1] 5",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Estructuras en R</span>"
+    ]
+  },
+  {
+    "objectID": "control_r.html#referencias",
+    "href": "control_r.html#referencias",
+    "title": "4  Estructuras en R",
+    "section": "4.4 Referencias:",
+    "text": "4.4 Referencias:\n\nLoops y funciones en R",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Estructuras en R</span>"
+    ]
+  },
+  {
+    "objectID": "recursos.html",
+    "href": "recursos.html",
+    "title": "Appendix A — Instalación de Recursos",
+    "section": "",
+    "text": "A.1 Instalación de R Project\nPrimero se debe instalar R Project desde su sitio oficial https://cran.r-project.org/index.html, la versión puede variar, recomendablemente siempre instalar la última versión. Luego se ejecuta el instalador que se descarga dependiendo del sistema operativo de su computador, como se muestra en las siguientes figuras:\nInstalación de R para Windows\nInstalar Rtools (solo Sistema Operativo Windows)\nInstalación de R para Mac\nR Project Ejecutándose",
+    "crumbs": [
+      "Appendices",
+      "<span class='chapter-number'>A</span>  <span class='chapter-title'>Instalación de Recursos</span>"
+    ]
+  },
+  {
+    "objectID": "recursos.html#sec-installRStudio",
+    "href": "recursos.html#sec-installRStudio",
+    "title": "Appendix A — Instalación de Recursos",
+    "section": "A.2 Instalación de RStudio",
+    "text": "A.2 Instalación de RStudio\n\n\n\n\n\nSe recomienta instalar RStudio desde el siguiente link, que es Interfaz de Usuario de R Project, desde su sitio web oficial, el cual permite acceder con mayor facilidad a sus funciones y potencialidades de R.\n\n\n\n\n\n\n\n\n\nA.2.1 RStudio Cloud (No recomendado para el curso)\nRStudio Cloud es una versión ligera del IDE RStudio alojada en la la nube que permite a cualquiera hacer, compartir, enseñar y aprender Ciencias de Datos Online. Tiene una versión gratuita limitada.\n\nA.2.1.1 Características:\n\nAnalyze your data using the RStudio IDE, directly from your browser.\nShare projects with your team, class, workshop or the world.\nTeach data science with R to your students or colleagues.\nLearn data science in an instructor-led environment or with interactive tutorials.",
+    "crumbs": [
+      "Appendices",
+      "<span class='chapter-number'>A</span>  <span class='chapter-title'>Instalación de Recursos</span>"
+    ]
+  }
+]
