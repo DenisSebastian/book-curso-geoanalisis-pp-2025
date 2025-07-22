@@ -1,5 +1,9 @@
 # Introducción al Geoanálisis {.unnumbered}
 
+
+![](images/lefebvre.png){fig-align="center"}
+
+
 El espacio no es neutro. Las decisiones que tomamos, como individuos y como sociedades, se distribuyen de manera desigual en el territorio. Las políticas públicas moldean y son moldeadas por esa realidad espacial. Comprender esta interacción entre datos, territorio y decisiones es la esencia del geoanálisis, una disciplina cada vez más relevante en un mundo interconectado.
 
 Este capítulo ofrece una introducción al geoanálisis desde una perspectiva histórica, conceptual y aplicada, subrayando su valor para diseñar políticas públicas que mejoren la calidad de vida y el bienestar.

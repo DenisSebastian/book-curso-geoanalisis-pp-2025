@@ -8,6 +8,7 @@ editor:
 
 ![](images/logo-CIT-GOBLAB.png){fig-align="center" width="350"}
 
+
 ## Resumen
 
 Este curso está diseñado para proporcionar a los estudiantes una sólida
