@@ -1,282 +1,162 @@
 [
   {
-    "objectID": "intro_inds.html",
-    "href": "intro_inds.html",
-    "title": "1  Introducción a Indicadores Territoriales",
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Curso de Geoanálisis",
     "section": "",
-    "text": "1.1 Introducción\nLos indicadores territoriales son herramientas esenciales en el análisis espacial y la planificación territorial, proporcionando una representación cuantitativa de diversas dimensiones del desarrollo en un área geográfica específica. Estos indicadores son fundamentales para entender y evaluar el estado actual y las tendencias de los territorios en aspectos económicos, sociales, ambientales y de bienestar. Al ofrecer una visión integral y detallada del territorio, los indicadores territoriales permiten a los tomadores de decisiones, planificadores urbanos y académicos identificar fortalezas, debilidades, oportunidades y amenazas en sus respectivas áreas de interés.\nEn esta primera sesión del curso, exploraremos los conceptos básicos y la importancia de los indicadores territoriales, así como introduciremos algunas de las principales herramientas y recursos disponibles para el análisis de estos indicadores. La sesión también incluirá una revisión de aplicaciones prácticas de indicadores territoriales a través de estudios de caso, destacando cómo se han utilizado en proyectos reales para evaluar políticas públicas y proyectos de desarrollo.",
+    "text": "Syllabus",
     "crumbs": [
-      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Introducción a Indicadores Territoriales</span>"
+      "Syllabus"
     ]
   },
   {
-    "objectID": "intro_inds.html#definición-y-conceptos-básicos",
-    "href": "intro_inds.html#definición-y-conceptos-básicos",
-    "title": "1  Introducción a Indicadores Territoriales",
-    "section": "1.2 Definición y Conceptos Básicos",
-    "text": "1.2 Definición y Conceptos Básicos\n\n1.2.1 Indicadores\nUn indicador es un instrumento que proporciona información sobre una condición, situación, actividad o resultado específico. Este instrumento permite definir un punto de comparación para establecer diferencias entre individuos o respecto a sí mismo en diferentes momentos en el tiempo. Los indicadores se construyen mediante análisis y operaciones técnicas que entregan una medida cuantitativa (valor) o una descripción cualitativa (caracterización) de la magnitud o criterio que se pretende medir u observar.\n\n\n1.2.2 Indicadores territoriales.\n\n\n\n\n\nUn indicador territorial es un instrumento que proporciona información específica sobre una condición, situación, actividad o resultado en un área geográfica delimitada. A diferencia de un indicador general, un indicador territorial integra la dimensión espacial en su análisis, permitiendo evaluar y comparar aspectos económicos, sociales, ambientales y de bienestar dentro de un territorio particular.",
+    "objectID": "index.html#resumen",
+    "href": "index.html#resumen",
+    "title": "Curso de Geoanálisis",
+    "section": "Resumen",
+    "text": "Resumen\nEste curso está diseñado para proporcionar a los estudiantes una sólida base teórica y competencias técnicas para realizar análisis espacial de variables territoriales en múltiples áreas de aplicación. Se destaca el uso del lenguaje de programación R para implementar metodologías analíticas y automatizadas, con un enfoque en resolver desafíos complejos en políticas públicas, facilitando la toma de decisiones informadas por evidencia territorial.",
     "crumbs": [
-      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Introducción a Indicadores Territoriales</span>"
+      "Syllabus"
     ]
   },
   {
-    "objectID": "intro_inds.html#tipos-de-indicadores-territoriales",
-    "href": "intro_inds.html#tipos-de-indicadores-territoriales",
-    "title": "1  Introducción a Indicadores Territoriales",
-    "section": "1.3 Tipos de Indicadores Territoriales",
-    "text": "1.3 Tipos de Indicadores Territoriales\n\n\n\n\n\n\nIndicadores Accesibilidad\nIndicadores sociodemográficos\nIndicadores seguridad\nIndicadores ambientales",
+    "objectID": "index.html#objetivos",
+    "href": "index.html#objetivos",
+    "title": "Curso de Geoanálisis",
+    "section": "Objetivos",
+    "text": "Objetivos\n\nObjetivo General\nEl objetivo general es proporcionar a los estudiantes los fundamentos, técnicas y aspectos básicos para analizar, modelar y representar información espacial, para apoyar la toma de decisiones con evidencia territorial robusta.\n\n\nObjetivos específicos\n\nConocer los conceptos básicos del geoanálisis.\nManipular datos espaciales en R.\nAplicar las técnicas a problemas de interés público.",
     "crumbs": [
-      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Introducción a Indicadores Territoriales</span>"
+      "Syllabus"
     ]
   },
   {
-    "objectID": "intro_inds.html#pasos-para-la-construcción-de-indicadores-t.",
-    "href": "intro_inds.html#pasos-para-la-construcción-de-indicadores-t.",
-    "title": "1  Introducción a Indicadores Territoriales",
-    "section": "1.4 Pasos para la Construcción de Indicadores T.",
-    "text": "1.4 Pasos para la Construcción de Indicadores T.\n\n\n\n\n\n\nPresentación del Problema: Introducción al contexto y naturaleza del problema que se desea abordar con los indicadores territoriales.\nDefinir un Marco Teórico o de Referencia: Establecer las teorías, conceptos y estudios previos que guiarán el análisis y la construcción de indicadores.\nDefinición de Objetivos: Clarificación de lo que se espera lograr con el estudio y la construcción de indicadores territoriales.\nRecolección de datos: Identificación y recopilación de los datos necesarios para calcular los indicadores territoriales.\nCálculo de Indicador Territorial: Proceso de cálculo del indicador territorial a partir de los datos recolectados.\nRepresentación Espacial: Visualización de los indicadores territoriales mediante cartografía.\nAnálisis de Resultados: Interpretación y evaluación de los resultados obtenidos a partir de los indicadores territoriales.",
+    "objectID": "index.html#metodología",
+    "href": "index.html#metodología",
+    "title": "Curso de Geoanálisis",
+    "section": "Metodología",
+    "text": "Metodología\nLas clases se dividirán en partes teóricas y prácticas. La primera de ellas se pretende entregar un marco conceptual metodológico y teórico del geoanálisis y sus aplicaciones en las políticas públicas, que será la base para afrontar la segunda parte del módulo, que se basará en ejercicios aplicados utilizando lenguaje de programación R Project, dirigido a internalizar los conceptos teóricos, además de generar productos de análisis espacial útiles para gestión eventual de políticas públicas. Requerimiento tener instalado R Project y Rstudio en su computador personal.",
     "crumbs": [
-      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Introducción a Indicadores Territoriales</span>"
+      "Syllabus"
     ]
   },
   {
-    "objectID": "intro_inds.html#aplicaciones-de-indicadores-territoriales",
-    "href": "intro_inds.html#aplicaciones-de-indicadores-territoriales",
-    "title": "1  Introducción a Indicadores Territoriales",
-    "section": "1.5 Aplicaciones de Indicadores Territoriales",
-    "text": "1.5 Aplicaciones de Indicadores Territoriales\n\n\n\n\n\n\nDiagnóstico Territorial\nEvolución Territorial\nEvaluación de Escenarios\nEvaluación de Proyectos (impacto a largo plazo)",
+    "objectID": "index.html#normas-en-clases",
+    "href": "index.html#normas-en-clases",
+    "title": "Curso de Geoanálisis",
+    "section": "Normas en clases",
+    "text": "Normas en clases\nPresencia Activa: Este curso, por su metodología experiencial, requiere de una participación activa de los participantes. Es importante descubrir las fuentes de distracción y evitarlas. Las más usuales son lectura o escritura de e-mails, navegar por internet o utilizar redes sociales. Esto distrae a quien lo hace y restringe al resto del curso de su participación activa.\nPuntualidad y Asistencia: Será necesario ingresar a clases en forma puntual y permanecer en la misma sin salir, a menos que haya una urgencia. Se requerirá como mínimo un 75% de asistencia). Es importante que quien tuviera problemas para estar a tiempo o para asistir, se ponga en contacto lo antes posible con la coordinadora del curso. Los alumnos que lleguen más de 15 minutos tarde serán considerados ausentes de ese segmento de la sesión. Grabación de la clase: La clase se graba como respaldo en caso haya fallas de internet, y se disponibiliza en la plataforma virtual del curso sin posibilidad de descarga. Está disponible únicamente por 60 días en el servidor de Zoom y posterior a esa fecha se elimina. La visualización posterior de la clase no se considera como asistencia.\nReunión Zoom recurrente: https://uai-cl.zoom.us/j/98936792371?jst=1",
     "crumbs": [
-      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Introducción a Indicadores Territoriales</span>"
+      "Syllabus"
     ]
   },
   {
-    "objectID": "intro_inds.html#herramientas-y-recursos-para-el-análisis-de-indicadores-t.",
-    "href": "intro_inds.html#herramientas-y-recursos-para-el-análisis-de-indicadores-t.",
-    "title": "1  Introducción a Indicadores Territoriales",
-    "section": "1.6 Herramientas y Recursos para el Análisis de Indicadores T.",
-    "text": "1.6 Herramientas y Recursos para el Análisis de Indicadores T.\nEste conjunto de herramientas proporciona una base robusta para llevar a cabo análisis espaciales complejos, cada una con sus propias ventajas y aplicaciones específicas.\n\nPlataformas de Análisis Espacial\n\nQGIS\n\nDescripción: QGIS (Quantum GIS) es un Sistema de Información Geográfica (SIG) de código abierto que permite visualizar, editar y analizar datos espaciales. Es ampliamente utilizado por su capacidad de integrar diversos formatos de datos y su flexibilidad a través de complementos.\nCaracterísticas:\n\nSoporte para múltiples formatos de datos vectoriales y raster.\nAmplia gama de herramientas de análisis espacial.\nComunidad activa y numerosos complementos disponibles.\nInterfaz personalizable y amigable.\n\nEnlace: QGIS\n\n\n\nArcGIS\n\nDescripción: ArcGIS es una plataforma integral de SIG desarrollada por Esri. Es conocida por sus potentes herramientas de análisis, cartografía y gestión de datos espaciales, siendo una de las más utilizadas en entornos profesionales.\nCaracterísticas:\n\nHerramientas avanzadas de análisis espacial y geoprocesamiento.\nAmplia biblioteca de datos y modelos preconfigurados.\nSoporte para aplicaciones móviles y web.\nCapacidades robustas de visualización y creación de mapas.\n\nEnlace: ArcGIS\n\n\n\n\nLenguajes de Programaciónm Análisis Espacial\n\nR\n\nDescripción: R es un entorno y lenguaje de programación especializado en estadísticas y análisis de datos. A través de paquetes específicos, se utiliza ampliamente para análisis espacial y creación de mapas.\nCaracterísticas:\n\nPaquetes como sf, sp, rgdal para análisis espacial.\nggplot2 para visualización de datos y mapas.\nraster y terra para manipulación de datos raster.\nIntegración con otros lenguajes y herramientas de análisis.\n\nEnlace: R\n\n\n\nPython\n\nDescripción: Python es un lenguaje de programación versátil que, a través de diversas bibliotecas, se ha convertido en una herramienta poderosa para el análisis espacial y el manejo de datos geoespaciales.\nCaracterísticas:\n\nBibliotecas como geopandas, shapely, fiona para manipulación de datos espaciales.\nmatplotlib y seaborn para visualización de datos.\nscikit-learn y tensorflow para integración de aprendizaje automático.\nComunidad extensa y abundante documentación.\n\nEnlace: Python\n\n\n\n\nSource: Carto - What is Spatial Data Science?",
+    "objectID": "index.html#contenidos",
+    "href": "index.html#contenidos",
+    "title": "Curso de Geoanálisis",
+    "section": "Contenidos",
+    "text": "Contenidos\nLos contenidos de cada clase se detallan a continuación:\n\n\n\n\n\n\n\n\n\n\n\nSesión\nFecha\nInicio\nTérmino\nSesiones\nHoras\n\n\n\n\nS1\nmartes, 22 de julio de 2025\n17:30\n20:50\nIntroducción a R\n3\n\n\nS2\nmartes, 29 de julio de 2025\n17:30\n20:50\nManipulación de datos\n3\n\n\nS3\nmartes, 5 de agosto de 2025\n17:30\n20:50\nVisualización con R\n3\n\n\nS4\nmartes, 12 de agosto de 2025\n17:30\n20:50\nManipulación de datos espaciales\n3\n\n\nS5\nmartes, 19 de agosto de 2025\n17:30\n20:50\nGeocoding\n3\n\n\nS6\nmartes, 26 de agosto de 2025\n17:30\n20:50\nInferencia Espacial: Interpolación y mapas de calor\n3\n\n\nS7\nmartes, 2 de septiembre de 2025\n17:30\n20:50\nConstrucción de indicadores territoriales\n3\n\n\nS8\nmartes, 9 de septiembre de 2025\n17:30\n20:50\nReporte y Proyecto\n3",
     "crumbs": [
-      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Introducción a Indicadores Territoriales</span>"
+      "Syllabus"
     ]
   },
   {
-    "objectID": "intro_inds.html#discusión",
-    "href": "intro_inds.html#discusión",
-    "title": "1  Introducción a Indicadores Territoriales",
-    "section": "1.7 Discusión",
-    "text": "1.7 Discusión\n¿Existen consideraciones éticas en procesode construción de Indicadores que pudiera inducir a sesgos?",
+    "objectID": "index.html#evaluación",
+    "href": "index.html#evaluación",
+    "title": "Curso de Geoanálisis",
+    "section": "Evaluación",
+    "text": "Evaluación\nLas evaluaciones consisten en 2 tareas de programación, la primera individual y la segunda grupal. A continuación se detallan las evaluaciones:\n\n\n\n\n\n\n\nConcepto\nDetalle\n\n\n\n\nTipo(s) de evaluación\nTareas\n\n\nForma de entrega\nEn documento escrito (PDF o HTML) y código en R\n\n\nCálculo de la nota final\nTarea 1: 40% - Tarea 2: 60%\n\n\nFecha Evaluación 1\n22-AGO-2025\n\n\nFecha Evaluación 2\n16-SEP-2025",
     "crumbs": [
-      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Introducción a Indicadores Territoriales</span>"
+      "Syllabus"
     ]
   },
   {
-    "objectID": "intro_inds.html#estudios-de-caso",
-    "href": "intro_inds.html#estudios-de-caso",
-    "title": "1  Introducción a Indicadores Territoriales",
-    "section": "1.8 Estudios de caso",
-    "text": "1.8 Estudios de caso",
+    "objectID": "index.html#docentes",
+    "href": "index.html#docentes",
+    "title": "Curso de Geoanálisis",
+    "section": "Docentes",
+    "text": "Docentes\n\nProfesor: Denis Berroeta (denis.berroeta@uai.cl)\nMaster y PhD (cursando) in Data Scicence, Magister en Inteligencia Artificial, Universidad Adolfo Ibáñez. Coordinador de Investigación Centro Inteligencia Territorial, UAI. Tiene experiencia en modelamiento y análisis de datos espaciales, trabajando en diferentes proyectos de investigación públicos y privados en el Centro de Inteligencia Territorial de la Universidad Adolfo Ibáñez, diseñando y gestionando la implementación de metodologías de análisis de datos territoriales. Posee experiencia como profesor en Geoestadísticas; Análisis Criminal, Análisis de imágenes satelitales para el monitoreo ambiental y gestión de desastres naturales; y Data Science.\n\n\nAyudante Docente: Jorge Aravena (jorge.aravena@edu.uai.cl)\nAnalista Espacial en el Centro de Inteligencia Territorial de la Universidad Adolfo Ibáñez. Geógrafo de la Universidad Austral de Chile, con diplomado en Planificación y Gestión Urbana Integrada de la Pontificia Universidad Católica de Chile. Su enfoque abarca la geografía urbana crítica y los sistemas de información geográfica.",
     "crumbs": [
-      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Introducción a Indicadores Territoriales</span>"
+      "Syllabus"
     ]
   },
   {
-    "objectID": "intro_inds.html#lecturas-y-recursos-adicionales",
-    "href": "intro_inds.html#lecturas-y-recursos-adicionales",
-    "title": "1  Introducción a Indicadores Territoriales",
-    "section": "1.9 Lecturas y Recursos Adicionales",
-    "text": "1.9 Lecturas y Recursos Adicionales\n\nPlataforma de MBHT",
+    "objectID": "index.html#contactos",
+    "href": "index.html#contactos",
+    "title": "Curso de Geoanálisis",
+    "section": "Contactos",
+    "text": "Contactos\n\n\n\nCargo\nNombre\nCorreo\n\n\n\n\nDirector de Programa\nClaudio Aracena\nclaudio.aracena.c@edu.uai.cl\n\n\nCoordinadora Académica\nGabriela Nuñez\ngabriela.nunez.s@uai.cl\n\n\nDocente\nDenis Berroeta\ndenisberroeta@uai.cl\n\n\nAyudante\nJorge Aravena\njorge.aravena@edu.uai.cl",
     "crumbs": [
-      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Introducción a Indicadores Territoriales</span>"
+      "Syllabus"
     ]
   },
   {
-    "objectID": "analisis_esp.html",
-    "href": "analisis_esp.html",
-    "title": "3  Análisis Espacial",
+    "objectID": "index.html#bibliografía",
+    "href": "index.html#bibliografía",
+    "title": "Curso de Geoanálisis",
+    "section": "Bibliografía",
+    "text": "Bibliografía\nOpcional:\n\nLovelace, R., Nowosad, J., & Muenchow, J. (2019). Welcome | Geocomputation with R. https://geocompr.robinlovelace.net/.\nPaez, A. (s. f.). An Introduction to Spatial Data Analysis and Statistics: A Course in R. https://paezha.github.io/spatial-analysis-r/\nMas, J.-F.(2018). Análisis espacial con R. 151. http://eujournal.org/files/journals/1/books/JeanFrancoisMas.pdf\nGarreton, M., Basauri, A., & Valenzuela, L. (2020). Exploring the correlation between city size and residential segregation: Comparing Chilean cities with spatially unbiased indexes. Environment and Urbanization, 1-20.https://doi.org/10.1177/0956247820918983\nR para la Ciencia de Datos, https://es.r4ds.hadley.nz/",
+    "crumbs": [
+      "Syllabus"
+    ]
+  },
+  {
+    "objectID": "geoanalisis.html",
+    "href": "geoanalisis.html",
+    "title": "Introducción al Geoanálisis",
     "section": "",
-    "text": "3.1 Relaciones Espaciales",
+    "text": "Breve Historia del Pensamiento Geográfico y Estadístico\nEl espacio no es neutro. Las decisiones que tomamos, como individuos y como sociedades, se distribuyen de manera desigual en el territorio. Las políticas públicas moldean y son moldeadas por esa realidad espacial. Comprender esta interacción entre datos, territorio y decisiones es la esencia del geoanálisis, una disciplina cada vez más relevante en un mundo interconectado.\nEste capítulo ofrece una introducción al geoanálisis desde una perspectiva histórica, conceptual y aplicada, subrayando su valor para diseñar políticas públicas que mejoren la calidad de vida y el bienestar.\nEl término estadística deriva del italiano statista (“hombre de Estado”), y desde la antigüedad ha servido para estimar capacidades de un reino y facilitar la gestión tributaria. Por ejemplo, en Egipto ya se realizaban censos hacia el 3050 a.C. Durante la expansión colonial europea (siglos XVI–XIX), la estadística se desarrolló en estrecha relación con la cartografía, como herramienta para administrar y dominar territorios.\nEn el siglo XX, con la llegada de la estadística espacial y la computación, se superaron las limitaciones del cálculo manual y se hizo posible analizar grandes volúmenes de datos georreferenciados. Hoy, gracias a R, QGIS y otras herramientas abiertas, el análisis espacial es accesible a todos.",
     "crumbs": [
-      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Análisis Espacial</span>"
+      "Introducción al Geoanálisis"
     ]
   },
   {
-    "objectID": "analisis_esp.html#relaciones-espaciales",
-    "href": "analisis_esp.html#relaciones-espaciales",
-    "title": "3  Análisis Espacial",
-    "section": "",
-    "text": "Orígenes del Análisis Espacial\nEstadística deriva del italiano statista (hombre de Estado) y se desarrolla desde la antigüedad para facilitar la gestión tributaria y estimar la capacidad bélica de un reino. Ej: censos egipcios desde el 3050 a.C.\nDurante la expansión de los imperios coloniales (siglos XVI - XIX) se desarrolla la estadística en estrecha relación con la cartografía, principalmente para la administración y dominio de territorios.\n\n\n\nOrigen de la Estadística\n\n\nLa estadística es una herramienta fundamental en la ciencia de datos que nos permite comprender y analizar datos para obtener información significativa. En términos simples, es como un lenguaje que utilizamos para describir, resumir y tomar decisiones basadas en la información que los datos nos proporcionan. Al aplicar métodos estadísticos, podemos identificar patrones, tendencias y relaciones en los datos, lo que es esencial tanto para la investigación académica como para la toma de decisiones en el mundo real.\n\n\n3.1.1 Estadística vs Estadística Espacial\nLa estadística en general es una disciplina amplia que se aplica a diversos tipos de datos y problemas, utilizando métodos estadísticos convencionales. La estadística espacial, por otro lado, se enfoca en datos con ubicaciones geográficas explícitas y se especializa en el análisis de la dependencia espacial y la modelización de patrones espaciales.\nEstadística:\n\nAnálisis de la estructura de datos representativos de una población (en áreas arbitrarias)\nSe basa en matemáticas relativamente complejas\n\n\n\n\nDistribución normal en estadística\n\n\nGeoestadística\n\nAnálisis de relaciones de dependencia espacial entre datos georreferenciados y modelamiento de datos espacilizados.\nComplejidad de cálculo que hacía inviable su uso masivo\n\n\n\n\nDependencia espacial en geoestadística\n\n\n\n\n3.1.2 Condideraciones generales\nLa inferencia estadística convencional se basa en dos supuestos fundamentales\n\nLos valores de una variable se distribuyen de forma aleatoria\nLos valores de una variable son independientes unos de otros\n\nPero ninguno de estos dos supuestos se cumple al utilizar datos espaciales, ya que:\n\nLos fenómenos más próximos en el espacio están más estrechamente relacionados entre sí. Ley de Tobler (1970)\nLa historia, el espacio y la sociedad se co-producen, por lo que el espacio tiene un rol activo en la reproducción y acumulación de fenómenos sociales. Lefebvre (1974)\n\nPara resolver esta limitación existen dos enfoques principales\n\nLa econometría espacial, que trata el efecto espacial como un error y lo elimina para generar estimaciones sin sesgo\nLa geoestadística, que identifica y cuantifica el efecto que el espacio genera en la estructura de la información",
+    "objectID": "geoanalisis.html#la-primera-ley-de-la-geografía-y-su-relevancia-social",
+    "href": "geoanalisis.html#la-primera-ley-de-la-geografía-y-su-relevancia-social",
+    "title": "Introducción al Geoanálisis",
+    "section": "La Primera Ley de la Geografía y su Relevancia Social",
+    "text": "La Primera Ley de la Geografía y su Relevancia Social\nWaldo Tobler (1931–2018) formuló en 1970 su célebre Primera Ley de la Geografía:\n \nEste principio refleja cómo las interacciones humanas y sociales están condicionadas por la proximidad espacial. En política pública esto significa, por ejemplo, que las intervenciones en un barrio tienen efectos directos en los barrios vecinos, y que ignorar la dimensión espacial conduce a políticas sesgadas.\nO como lo resume Cervantes en El Quijote:\n \n⸻",
     "crumbs": [
-      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Análisis Espacial</span>"
+      "Introducción al Geoanálisis"
     ]
   },
   {
-    "objectID": "analisis_esp.html#ejemplos-de-correlación-espacial",
-    "href": "analisis_esp.html#ejemplos-de-correlación-espacial",
-    "title": "3  Análisis Espacial",
-    "section": "3.2 Ejemplos de Correlación Espacial",
-    "text": "3.2 Ejemplos de Correlación Espacial\n\n3.2.1 Autoproducción: Tráfico de Drogas\n\n\n\nAutoproducción Espacial en tráfico de Drogas\n\n\n\n\n3.2.2 Co-producción: Mercado inmobiliario local\n\n\n\nCo-producción Espacial en Mercado inmobiliario local\n\n\n\n\n3.2.3 Segregación y delincuencia\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nSegregación y delincuencia\n\n\n\n\n3.2.4 Valores de Vivienda\n\n\n\nValores de Vivienda",
+    "objectID": "geoanalisis.html#el-espacio-y-el-tiempo-coproducción-espacio-temporal-del-bienestar",
+    "href": "geoanalisis.html#el-espacio-y-el-tiempo-coproducción-espacio-temporal-del-bienestar",
+    "title": "Introducción al Geoanálisis",
+    "section": "El Espacio y el Tiempo: Coproducción Espacio-Temporal del Bienestar",
+    "text": "El Espacio y el Tiempo: Coproducción Espacio-Temporal del Bienestar\nEl bienestar social es resultado de una coproducción espacio-temporal: las políticas, las acciones colectivas y las dinámicas naturales configuran el territorio, que a su vez influye en las oportunidades y limitaciones de sus habitantes.\nHenri Lefebvre (1901–1991) lo expresó así:\n \nEl espacio no es simplemente un escenario pasivo, sino un actor en las dinámicas sociales. Por ejemplo, la segregación urbana o la concentración delictual en ciertas áreas no son casualidad, sino resultado de una autoproducción espacial donde factores históricos, económicos y sociales se retroalimentan.",
     "crumbs": [
-      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Análisis Espacial</span>"
+      "Introducción al Geoanálisis"
     ]
   },
   {
-    "objectID": "analisis_esp.html#inconsistencia-estadística-de-datos-espaciales-agregados-maup",
-    "href": "analisis_esp.html#inconsistencia-estadística-de-datos-espaciales-agregados-maup",
-    "title": "3  Análisis Espacial",
-    "section": "3.3 Inconsistencia estadística de datos espaciales agregados: MAUP",
-    "text": "3.3 Inconsistencia estadística de datos espaciales agregados: MAUP\nModifiable Areal Unit Problem: inconsistencia de indicadores estadísticos al modificar los perímetros de agregación (Gehlke & Biehl 1934, Openshaw & Taylor 1979)\n\n\n\nModifiable Areal Unit Problem\n\n\nEn general, es recomendable trabajar con datos a la menor escala posible, o agregarlos en zonas homogéneas\n\n\n\n\nLefebvre, Henri. 1974. “La Production de lespace.” L Homme Et La Société 31 (1): 15–32. https://doi.org/10.3406/homso.1974.1855.\n\n\nTobler, W. R. 1970. “A Computer Movie Simulating Urban Growth in the Detroit Region.” Economic Geography 46 (June): 234. https://doi.org/10.2307/143141.",
+    "objectID": "geoanalisis.html#por-qué-medir-la-importancia-de-las-estadísticas-territoriales",
+    "href": "geoanalisis.html#por-qué-medir-la-importancia-de-las-estadísticas-territoriales",
+    "title": "Introducción al Geoanálisis",
+    "section": "Por Qué Medir: La Importancia de las Estadísticas Territoriales",
+    "text": "Por Qué Medir: La Importancia de las Estadísticas Territoriales\n\nLo que no se mide, no se gestiona.\n\nLas estadísticas territoriales permiten entender y actuar sobre el territorio con evidencia. Sin embargo, presentan desafíos particulares. La inferencia estadística clásica asume independencia entre observaciones y aleatoriedad, pero los datos espaciales violan ambos supuestos:\n\nLas observaciones cercanas tienden a estar correlacionadas (Ley de Tobler).\nEl espacio actúa como un soporte material indispensable para las relaciones sociales.\n\nAdemás, fenómenos como el MAUP (Modifiable Areal Unit Problem) advierten que los resultados pueden cambiar si modificamos las unidades territoriales de agregación.\n\n\n\n\n\nPor eso, es clave aplicar técnicas robustas que cuantifiquen y corrijan la dependencia espacial en los datos.",
     "crumbs": [
-      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Análisis Espacial</span>"
+      "Introducción al Geoanálisis"
     ]
   },
   {
-    "objectID": "indicadores.html",
-    "href": "indicadores.html",
-    "title": "6  Inds. Socioeconómicos",
-    "section": "",
-    "text": "6.1 Objetivos del Módulo",
+    "objectID": "geoanalisis.html#el-geoanálisis-hoy-herramientas-y-capacidades-para-la-toma-de-decisiones",
+    "href": "geoanalisis.html#el-geoanálisis-hoy-herramientas-y-capacidades-para-la-toma-de-decisiones",
+    "title": "Introducción al Geoanálisis",
+    "section": "El Geoanálisis Hoy: Herramientas y Capacidades para la Toma de Decisiones",
+    "text": "El Geoanálisis Hoy: Herramientas y Capacidades para la Toma de Decisiones\nEl geoanálisis combina datos, teoría espacial y herramientas computacionales para explicar y predecir fenómenos territoriales. No se trata solo de mapear, sino de interpretar y modelar.\nLas herramientas modernas —como R y sus paquetes especializados— permiten:\n\ntrabajar con datos vectoriales y raster,\ncalcular indicadores territoriales,\ninferir patrones espaciales (mapas de calor, interpolaciones),\ndetectar autocorrelación y clusters espaciales,",
     "crumbs": [
-      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Inds. Socioeconómicos</span>"
+      "Introducción al Geoanálisis"
     ]
   },
   {
-    "objectID": "indicadores.html#objetivos-del-módulo",
-    "href": "indicadores.html#objetivos-del-módulo",
-    "title": "6  Inds. Socioeconómicos",
-    "section": "",
-    "text": "Definición de Indicadores Territoriales\nConstrucción de Indicadores Socioeconómicos\n\n\n\n\nObjetivos",
+    "objectID": "geoanalisis.html#impacto-en-las-políticas-públicas-del-siglo-xxi",
+    "href": "geoanalisis.html#impacto-en-las-políticas-públicas-del-siglo-xxi",
+    "title": "Introducción al Geoanálisis",
+    "section": "Impacto en las Políticas Públicas del Siglo XXI",
+    "text": "Impacto en las Políticas Públicas del Siglo XXI\nHoy, las políticas públicas más innovadoras incluyen una perspectiva territorial para abordar problemas como el cambio climático, la segregación socioeconómica, la delincuencia o la justicia ambiental.\n\n\n\n\n\nLos indicadores territoriales son instrumentos esenciales para cuantificar y comparar condiciones, actividades o resultados en diferentes espacios y tiempos. Permiten definir puntos de comparación que guían la toma de decisiones.",
     "crumbs": [
-      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Inds. Socioeconómicos</span>"
-    ]
-  },
-  {
-    "objectID": "indicadores.html#indicadores-territoriales",
-    "href": "indicadores.html#indicadores-territoriales",
-    "title": "6  Inds. Socioeconómicos",
-    "section": "6.2 Indicadores Territoriales",
-    "text": "6.2 Indicadores Territoriales\n\n6.2.1 Definición de Indicadores\n\n¿Qué es un Indicador?:\n\nUn indicador es un instrumento que provee información de una determinada condición, situación, actividad o resultado. Este instrumento nos permite definir un punto de comparación para establecer diferencias entre individuos o respecto a sí mismo en diferentes tiempos. Son construidos a través de análisis y operaciones técnicas y nos entregan una medida cuantitativa (valor) o una descripción cualitativa (caracterización) de la magnitud o criterio que se pretende medir u observar.\n\n\n\n\n6.2.2 Indicadores Territoriales\nEl Centro de Inteligencia Territorial de la Universidad Adolfo Ibáñez, bajo proyecto denominado Matriz de Bienestar Humano Territorial (MBHT) construyó una serie indicadores territoriales, que buscan comprender las condiciones de los entornos urbanos y rurales, para construir soluciones que impacten positivamente en el bienestar de las personas y su hábitat.\n\n\n\n\n\n\nFigure 6.1: Centro de Inteligencia Territorial - UAI\n\n\n\nEl sistema MBHT consiste en 18 indicadores territoriales agrupados en 4 dimensiones, que corresponde a las dimensiones de Accesibilidad, Ambiental, Seguridad y Socoeconómicas, siendo esta última a la se replicará.\n\n\n\n\n\n\nFigure 6.2: Dimensiones de la Matriz de Bienestar Humano Territorial",
-    "crumbs": [
-      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Inds. Socioeconómicos</span>"
-    ]
-  },
-  {
-    "objectID": "indicadores.html#sec-indsoc",
-    "href": "indicadores.html#sec-indsoc",
-    "title": "6  Inds. Socioeconómicos",
-    "section": "6.3 Construcción de Indicadores Socioconómicos",
-    "text": "6.3 Construcción de Indicadores Socioconómicos\nLas ciudades de Chile presentan altos índices de segregación (Sabatini, 2002), que reflejan la separación espacial de distintos grupos sociales (Ruiz-Tagle, 2014). La intensidad de este fenómeno hace imperativo el considerar la condición social como una dimensión estructurante en la evaluación de Políticas Públicas.\n\n\n\n\n\n\nFigure 6.3: Indicadores Socioconómicos\n\n\n\n\n6.3.1 Censo 2017\nPara la construcción de los indicadores territoriales que componen la dimensión seocioeconómica, se utiliza íntegramente información del Censo 2017.\n¿Que es Censo 2017?:\n\n\n\n\n\n\nFigure 6.4: Censo 2017 - Instituto Nacional de Estadísticas de Chile\n\n\n\nEl censo de población y vivienda es la operación estadística más importante que realiza el INE y en la cual participan todos los habitantes del país, ya que este es un insumo esencial para elaborar estimaciones y proyecciones de población tanto para el país, las regiones y las comunas.\nEl censo permite contar con información esencial para el adecuado diseño de políticas públicas y toma de decisiones privadas y públicas. El último censo de población y vivienda realizado fue en 2017. Sus resultados indican que la población efectivamente censada llegó a un total de 17.574.003 personas.\nDe ellas, 8.601.989 (48,9%) son hombres y 8.972.014 (51,1%), mujeres. El número de viviendas, en tanto, fue 6.499.355, de las cuales 6.486.533 (99,8%) corresponden a viviendas particulares y 12.822 (0,2%) a colectivas.\nPara estos fines, se utilizaremos información censal agregada a nivel de manzanas obtenidos del Censo 2017, a continuación se explorará los insumos utilizados.\nFunciones del Censo\n\nUna de las principales fuentes de información del Sistema Estadístico Nacional (SEN): permite la elaboración del marco muestral de viviendas, que sirve de base para llevar a cabo diversas encuestas de hogares que se realizan en el país.\nReferencia clave para la generación de políticas públicas: el censo entrega antecedentes y características sobre las viviendas, hogares y personas en territorios específicos. Esto permite resguardar la distribución de los recursos públicos dirigidos a las regiones y comunas, y entregar servicios a la población, como educación, salud y transporte.\nReferencia para la investigación: los datos del censo proporcionan información sobre el total de la población censada, por lo que constituyen una base para la estimación de las proyecciones de población. Estas permiten saber el total de la población del país en el corto y mediano plazo, además de su distribución por sexo y edad.\nGeneración de estadísticas en áreas menores y grupos de población: es la única fuente de información que proporciona datos actualizados de población y vivienda al menor nivel de desagregación geográfica del país. Esto permite focalizar en las decisiones de política pública.\n\nCaracterísticas del Censo\n\nEmpadronamiento individual: se registra a cada persona, hogar y vivienda de forma individual, al igual que sus características.\nTerritorio definido y universalidad: se establece de manera clara el territorio considerado, ya que se busca registrar a todas las personas, hogares y viviendas de un área en un momento determinado.\n﻿﻿Simultaneidad: se recoge información de toda la población del territorio establecido en un mismo momento.\n﻿﻿Periodicidad y continuidad: se promueve que los censos se realicen de manera regular en el tiempo, para así generar información comparable entre un período y otro.\n\n\n\n6.3.2 Cargar Insumos del Censo\nPara los indicadores que se crearán a continuación se utilizará una base proveniente de la consolidación de las bases del censo, denominadas microdatos de Personas, Viviendas y Hogares provenientes de los resultados de la Encuesta del Censo 2017 del Instituto Nacional de Estadísticas, Chile.\n\nlibrary(sf)\nlibrary(dplyr)\n\n# ruta de insumos\npath_insumos &lt;- \"data/socioeconomicos/insumos/\"\n\nLectura de Insumos y selección de región de estudio, en este caso seleccionará la Región de Coquimbo compuesta por las provincias de Elqui, Limarí y Choapa. Sus principales centros urbanos son la Conurbación La Serena-Coquimbo con 506 391 habitantes, seguida de Ovalle con 121.269 habitantes según el Censo chileno de 2017.\n\n# selección de región\nreg &lt;-  \"R04\"\n\n# Lectura de insumo espacial\npath_file &lt;- paste0(path_insumos, reg, \"_INSUMO_SOCIOECONOMICO.shp\")\ncenso &lt;- st_read(path_file, quiet = T)\n\nVisualización de Tabla de Información head()\n\n\n\n\nTable 6.1: Visualización de registros de insumos del Censo 2017 para indicadores socioeconómicos\n\n\n\n\n\n\nID_MANZ\nMANZ_EN\nNOM_COM\nCOD_COM\nNOM_REG\nCOD_REG\nNOM_PROV\nCOD_PROV\nZONA\nID_MANZCIT\nAREA\nTOTAL_V\nHOG_N\nPERSONAS\nE4A18\nE15A24\nESCOLAR\nP03A_4\nP03A_5\nP03A_6\nP03B_4\nP03B_6\nP03B_7\nP03C_4\nP03C_5\nNIV_HAC2\nNIV_HAC3\nHOMBRES\nMUJERES\nMONOPAR\nP17_ACT\nP17_4\nJ_NINI\nJH_HASTA_P\nJH_HASTA_S\ngeometry\n\n\n\n\n4101071001900\nURBANO\nLA SERENA\n4101\nREGIÓN DE COQUIMBO\n4\nELQUI\n41\n4101071001\n4101071001900001\n2873.376\n0\n0\n0\n0\n0\n0\n0\n0\n0\n0\n0\n0\n0\n0\n0\n0\n0\n0\n0\n0\n0\n0\n0\n0\nPOLYGON ((292811 6685815, 2...\n\n\n4101071001900\nURBANO\nLA SERENA\n4101\nREGIÓN DE COQUIMBO\n4\nELQUI\n41\n4101071001\n4101071001900002\n1256.480\n0\n0\n0\n0\n0\n0\n0\n0\n0\n0\n0\n0\n0\n0\n0\n0\n0\n0\n0\n0\n0\n0\n0\n0\nPOLYGON ((293056 6685511, 2...\n\n\n4102101001900\nURBANO\nCOQUIMBO\n4102\nREGIÓN DE COQUIMBO\n4\nELQUI\n41\n4102101001\n4102101001900001\n1230.344\n0\n0\n0\n0\n0\n0\n0\n0\n0\n0\n0\n0\n0\n0\n0\n0\n0\n0\n0\n0\n0\n0\n0\n0\nPOLYGON ((285917.8 6664517,...\n\n\n4102101001900\nURBANO\nCOQUIMBO\n4102\nREGIÓN DE COQUIMBO\n4\nELQUI\n41\n4102101001\n4102101001900002\n3877.142\n0\n0\n0\n0\n0\n0\n0\n0\n0\n0\n0\n0\n0\n0\n0\n0\n0\n0\n0\n0\n0\n0\n0\n0\nPOLYGON ((286085 6664254, 2...\n\n\n4102101001900\nURBANO\nCOQUIMBO\n4102\nREGIÓN DE COQUIMBO\n4\nELQUI\n41\n4102101001\n4102101001900003\n34392.873\n0\n0\n0\n0\n0\n0\n0\n0\n0\n0\n0\n0\n0\n0\n0\n0\n0\n0\n0\n0\n0\n0\n0\n0\nPOLYGON ((286082.4 6663489,...\n\n\n4106101001900\nURBANO\nVICUÑA\n4106\nREGIÓN DE COQUIMBO\n4\nELQUI\n41\n4106101001\n4106101001900001\n4033.107\n0\n0\n0\n0\n0\n0\n0\n0\n0\n0\n0\n0\n0\n0\n0\n0\n0\n0\n0\n0\n0\n0\n0\n0\nPOLYGON ((310231.6 6684580,...",
-    "crumbs": [
-      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Inds. Socioeconómicos</span>"
-    ]
-  },
-  {
-    "objectID": "indicadores.html#indicador-de-escolaridad-del-jefe-de-hogar-iej",
-    "href": "indicadores.html#indicador-de-escolaridad-del-jefe-de-hogar-iej",
-    "title": "6  Inds. Socioeconómicos",
-    "section": "6.4 Indicador de Escolaridad del jefe de hogar (IEJ)",
-    "text": "6.4 Indicador de Escolaridad del jefe de hogar (IEJ)\nPara la construcción de este indicador se utilizó el promedio de años de estudio de jefes de hogar (EJH), que es una variable censal numérica (“ESCOLARIDAD”, en tabla de personas del censo 2017) que registra el nivel del curso más alto aprobado, medida en años sucesivos desde la enseñanza básica hasta estudios de postgrado.\nSe calcula el promedio de esta variable para todos los jefes de hogar en cada manzana. Esta variable es representativa del capital cultural de cada hogar y está altamente correlacionada con el nivel de ingresos en Chile (Agostini et al, 2016).\nIEJ = ESCOLAR\nCálculo Indicador de Escolaridad del jefe de hogar (IEJ)\n\ncenso &lt;- censo %&gt;% \n  mutate( IEJ = ifelse(PERSONAS ==0, NA, ESCOLAR))\n\nPara efectos de visualización se enfocará los resultados en las zonas urbanas de la comuna de La Serena en todos los indicadores que se presentarán.\n\nla_serena_urb &lt;- censo %&gt;% \n  filter(COD_COM == 4101 & MANZ_EN == \"URBANO\")\n\nVisualizar la Variable de IEJ comuna de La Serena URBANO:\n\nggplot() +\n  geom_sf(data = la_serena_urb, aes(fill = IEJ), color =NA, \n          alpha=0.8,  size= 0.1)+\n  scale_fill_distiller(palette= \"YlGnBu\", direction = 1)+\n  ggtitle(\"Indicador de Escolaridad del jefe de hogar (IEJ) - Urbano\" ) +\n  theme_bw() +\n  theme(panel.grid.major = element_line(colour = \"gray80\"), \n        panel.grid.minor = element_line(colour = \"gray80\"))\n\n\n\n\n\n\n\nFigure 6.5: Indicador de Escolaridad del jefe de hogar (IEJ) - Urbano\n\n\n\n\n\n\n# mapview::mapview(censo %&gt;% filter(COD_COM == 4101 & MANZ_EN == \"URBANO\"),\n                 # zcol = \"IEJ\", layer.name = \"IEJ\")\n\nVisualizar la Variable de IEJ comuna de La Serena RURAL:\n\nla_serena_rural &lt;- censo %&gt;% filter(COD_COM == 4101 & MANZ_EN == \"RURAL\")\n\nggplot() +\n  geom_sf(data = la_serena_rural, aes(fill = IEJ), color =NA, \n          alpha=0.8,  size= 0.1)+\n  scale_fill_distiller(palette= \"YlGnBu\", direction = 1)+\n  ggtitle(\"Indicador de Escolaridad del jefe de hogar (IEJ) - Rural\" ) +\n  theme_bw() +\n  theme(panel.grid.major = element_line(colour = \"gray80\"), \n        panel.grid.minor = element_line(colour = \"gray80\"))\n# mapview::mapview(censo %&gt;% filter(COD_COM == 4101 & MANZ_EN == \"RURAL\"),\n                 # zcol = \"IEJ\", layer.name = \"IEJ\")\n\n\n\n\n\n\n\nFigure 6.6: Indicador de Escolaridad del jefe de hogar (IEJ) - Rural",
-    "crumbs": [
-      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Inds. Socioeconómicos</span>"
-    ]
-  },
-  {
-    "objectID": "indicadores.html#indicador-de-empleo-iem",
-    "href": "indicadores.html#indicador-de-empleo-iem",
-    "title": "6  Inds. Socioeconómicos",
-    "section": "6.5 Indicador de Empleo (IEM)",
-    "text": "6.5 Indicador de Empleo (IEM)\nPara este indicador se usó la proporción de población activa sin empleo que es la fracción de las personas que no tienen empleo y están buscando uno, respecto al total de personas en condiciones y con deseo de trabajar en cada manzana.\nEsta variable es similar al cálculo de desempleo, pero calculada a escala de manzanas y en un tiempo específico, por lo que representa las brechas potenciales que existen para acceder al empleo en barrios específicos (MDS, 2019).\nIEM = 1- \\left(\\frac{P17\\_4}{P17\\_ACT} \\right) \nCálculo Indicador de Empleo (IEM)\nP17_4: Trabajo la semana pasada, opción 4: “Se encontraba buscando empleo”\nP17_ACT: Total de Actividades Remuneradas (no es pregunta del Censo)\n\n# P17: Trabajo la semana pasada\n# opción `4`: \"Se encontraba buscando empleo\"\n# P17_ACT: Total de Actividades Remuneradas\n\ncenso &lt;- censo %&gt;% mutate( CESA_DENS = P17_4 / P17_ACT)\n\n# Invertir el valor de indicador 1\ncenso &lt;- censo %&gt;% mutate( IEM = 1 - CESA_DENS )\n\nDe aquí continuación se realizarán cartografías solo a zonas urbanas a efecto de limitar la extensión del presente documento, pero el cálculo urbano se puede efectuar perfectamente aplicando un filtro como se ejemplifico en el indicador anterior. Ahora, se procede a filtrar por zonas urbanas\n\nla_serena_urb &lt;- censo %&gt;% filter(COD_COM == 4101 & MANZ_EN == \"URBANO\")\n\nVisualizar la Variable de IEM comuna de La Serena URBANO:\n\nggplot() +\n  geom_sf(data = la_serena_urb, aes(fill = IEM), color =NA, \n          alpha=0.8,  size= 0.1)+\n  scale_fill_distiller(palette= \"PuBu\", direction = 1)+\n  ggtitle(\"Indicador de Empleo (IEM) - Urbano\" ) +\n  theme_bw() +\n  theme(panel.grid.major = element_line(colour = \"gray80\"), \n        panel.grid.minor = element_line(colour = \"gray80\"))\n\n\n\n\n\n\n\nFigure 6.7: Indicador de Empleo (IEM) - Urbano\n\n\n\n\n\n\n# mapview::mapview(la_serena_urb, \n#                  zcol = \"IEM\", layer.name = \"IEM\")",
-    "crumbs": [
-      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Inds. Socioeconómicos</span>"
-    ]
-  },
-  {
-    "objectID": "indicadores.html#indicador-de-participacion-juvenil-en-empleo-y-estudio-ipj",
-    "href": "indicadores.html#indicador-de-participacion-juvenil-en-empleo-y-estudio-ipj",
-    "title": "6  Inds. Socioeconómicos",
-    "section": "6.6 Indicador de Participación Juvenil en empleo y estudio (IPJ)",
-    "text": "6.6 Indicador de Participación Juvenil en empleo y estudio (IPJ)\nPara la construcción de este indicador se utilizó la proporción de jóvenes entre 14 y 24 años que no trabajan ni estudian: es la fracción de jóvenes en este rango edad que no trabajan ni estudian, respecto al total de este segmento etario en cada manzana.\nEsta variable representa un riesgo de exclusión socioeconómica en el período de transición entre el ambiente educativo y el laboral, siendo característico de trayectorias de deserción escolar que conducen al desempleo y que podrían incrementar el riesgo de adopción de comportamientos delictivos (MDS, 2019).\nLuego, el indicador se normalizó con su inverso aditivo, para asegurar que el valor máximo, sea lo más deseable y el 0 lo menos deseable, convirtiéndose así en un indicador de empleo.\nIPJ = 1 - \\left(\\frac{J\\_NINI}{E15A24} \\right)\nCálculo Indicador de Participación Juvenil en empleo y estudio (IPJ)\nJ_NINI: Jóvenes que no trabajan ni estudian P17 E15A24: Jóvenes entre 15 y 24 años de edad\n\ncenso &lt;- censo %&gt;% mutate( NINI_DENS = J_NINI / E15A24)  \ncenso &lt;- censo %&gt;% mutate( NINI_DENS = ifelse(NINI_DENS &gt; 1, 1, NINI_DENS))  \ncenso &lt;- censo %&gt;% mutate( IPJ = 1 - NINI_DENS )\n\n\nla_serena_urb &lt;- censo %&gt;% filter(COD_COM == 4101 & MANZ_EN == \"URBANO\")\n\nVisualizar la Variable de IPJ comuna de La Serena URBANO:\n\nggplot() +\n  geom_sf(data = la_serena_urb, aes(fill = IPJ), color =NA, \n          alpha=0.8,  size= 0.1)+\n  scale_fill_distiller(palette= \"Purples\", direction = 1)+\n  ggtitle(\"Indicador de Participación Juvenil en empleo y estudio (IPJ) - Urbano\" ) +\n  theme_bw() +\n  theme(panel.grid.major = element_line(colour = \"gray80\"), \n        panel.grid.minor = element_line(colour = \"gray80\"))\n\n\n\n\n\n\n\nFigure 6.8: Indicador de Participación Juvenil enempleo y estudio (IPJ) - Urbano\n\n\n\n\n\n\n# mapview::mapview(la_serena_urb, \n#                  zcol = \"IPJ\", layer.name = \"IPJ\")",
-    "crumbs": [
-      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Inds. Socioeconómicos</span>"
-    ]
-  },
-  {
-    "objectID": "indicadores.html#indicador-de-resiliencia-de-hogares-irh",
-    "href": "indicadores.html#indicador-de-resiliencia-de-hogares-irh",
-    "title": "6  Inds. Socioeconómicos",
-    "section": "6.7 Indicador de Resiliencia de Hogares (IRH)",
-    "text": "6.7 Indicador de Resiliencia de Hogares (IRH)\nEn particular, la monoparentalidad es ampliamente reconocida en la literatura internacional como una situación familiar frágil, que puede afectar las trayectorias de vida de los hijos, en términos de un mayor riesgo de mortalidad (Amato & Patterson, 2017), inestabilidad psicológica (Theodoritsi, Daliana & Antoniou, 2018), problemas de salud (Duriancik & Goff, 2019) y otros.\nEn suma, el Indicador de Resiliencia de Hogares (en base a la monoparentalidad), en complemento a otras variables, es conceptualmente relevante para evaluar riesgos no monetarios de condiciones sociales.\nEste indicador es el inverso aditivo de la proporción de hogares monoparentales dentro de una manzana. Los hogares monoparentales son aquellos con hijos que viven con un solo progenitor, lo que se asocia en diversas formas a la condición social, que abarcan desde un menor ingreso, problemas de salud y delincuencia, entre otros (MDS, 2019).\nAl contrario, los hogares biparentales permiten el apoyo entre progenitores y los hogares sin hijos tienen menores exigencias de gasto y tiempo relacionadas con la paternidad, por lo que se considera que en general son más resilientes.\nIRH = 1 - \\left(\\frac{MONOPAR}{HOG\\_N} \\right)\nCálculo de Indicador de Resiliencia de Hogares (IRH)\nMONOPAR: Hogares Monoparentales\nHOG_N: Número de Hogares\n\ncenso &lt;- censo %&gt;% mutate( MONO_DENS = MONOPAR / HOG_N)\ncenso &lt;- censo %&gt;% mutate( MONO_DENS = ifelse(MONO_DENS &gt; 1, 1, MONO_DENS))  \ncenso &lt;- censo %&gt;% mutate( IRH = 1 - MONO_DENS)\n\n\nla_serena_urb &lt;- censo %&gt;% filter(COD_COM == 4101 & MANZ_EN == \"URBANO\")\n\nVisualizar la Variable de IRH comuna de La Serena URBANO:\n\nggplot() +\n  geom_sf(data = la_serena_urb, aes(fill = IRH), color =NA, \n          alpha=0.8,  size= 0.1)+\n  scale_fill_distiller(palette= \"PuRd\", direction = 1)+\n  ggtitle(\"Indicador de Resiliencia de Hogares (IRH) - Urbano\") +\n  theme_bw() +\n  theme(panel.grid.major = element_line(colour = \"gray80\"), \n        panel.grid.minor = element_line(colour = \"gray80\"))\n\n\n\n\n\n\n\nFigure 6.9: Indicador de Resiliencia de Hogares (IRH) - Urbano\n\n\n\n\n\n\n# mapview::mapview(la_serena_urb, \n#                  zcol = \"IRH\", layer.name = \"IRH\")",
-    "crumbs": [
-      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Inds. Socioeconómicos</span>"
-    ]
-  },
-  {
-    "objectID": "indicadores.html#indicador-de-calidad-de-la-vivienda-ivi",
-    "href": "indicadores.html#indicador-de-calidad-de-la-vivienda-ivi",
-    "title": "6  Inds. Socioeconómicos",
-    "section": "6.8 Indicador de Calidad de la Vivienda (IVI)",
-    "text": "6.8 Indicador de Calidad de la Vivienda (IVI)\nEl indicador de calidad de vivienda es una variable sintética de todas las materialidades de la vivienda. Inicialmente, se construyó como un indicador de mala calidad, tomando un valor más alto cuando la calidad de la vivienda es peor y es más bajo cuando es mejor. Fue elaborado como un promedio lineal del 3 sub-indicadores de paredes, suelo y techo. Cada uno de estos sub-indicadores registra el porcentaje de viviendas de la manzana que tienen paredes, suelo o techo considerado insuficiente. Las construcciones consideradas insuficientes son las siguientes:\nParedes: Material de los muros exteriores\nparedes= \\frac{(P03A\\_4 + P03A\\_5 + P03A\\_6)}{TOTAL\\_V}\n\nP03A_4: Tabique sin forro interior (madera u otro)\nP03A_5: Adobe, barro, quincha, pirca u otro artesanal tradicional\nP03A_6: Materiales precarios (lata, cartón, plástico, etc.)\n\nTecho: Material en la cubierta del techo\ntecho= \\frac{(P03B\\_4 + P03B\\_6 + P03B\\_7)}{TOTAL\\_V}\n\nP03B_4: Fonolita o plancha de fieltro embreado\nP03B_6: Materiales precarios (lata, cartón, plásticos, etc.)\nP03B_7: Sin cubierta sólida de techo\n\nSuelo: Material de construcción del piso\nsuelo= \\frac{(P03C\\_4 +  P03C\\_5)}{TOTAL\\_V}\n\nP03C_4: Capa de cemento sobre tierra\nP03C_5: Tierra\n\n\ncenso &lt;- censo %&gt;%\n  mutate(paredes = (P03A_4 + P03A_5 + P03A_6)/TOTAL_V,\n         techo = (P03B_4 + P03B_6 + P03B_7)/TOTAL_V,\n         suelo = (P03C_4 +  P03C_5)/TOTAL_V)\n\n# eliminar valores infinitos de la división anterior\ncenso &lt;- censo %&gt;%\n  mutate(paredes = ifelse(paredes &gt; 1, 1, paredes), \n         techo = ifelse(techo &gt; 1, 1, techo), \n         suelo = ifelse(suelo &gt; 1, 1, suelo))\n\nCálculo Indicador de Calidad de la Vivienda (IVI)\nIVI= 1 - \\left(\\frac{paredes+ suelo+ techo}{3}\\right)\n\ncenso &lt;- censo %&gt;%  mutate(IVI = (paredes+ suelo+ techo)/3)\ncenso &lt;- censo %&gt;%  mutate(IVI =  1 - IVI) # invertir sentido\n\n\nla_serena_urb &lt;- censo %&gt;% filter(COD_COM == 4101 & MANZ_EN == \"URBANO\")\n\nVisualizar la Variable de IVI comuna de La Serena URBANO:\n\nggplot() +\n  geom_sf(data = la_serena_urb, aes(fill = IVI), color =NA, \n          alpha=0.8,  size= 0.1)+\n  scale_fill_distiller(palette= \"YlOrRd\", direction = 1)+\n  ggtitle(\"Indicador de Calidad de la Vivienda (IVI) - Urbano\") +\n  theme_bw() +\n  theme(panel.grid.major = element_line(colour = \"gray80\"), \n        panel.grid.minor = element_line(colour = \"gray80\"))\n\n\n\n\n\n\n\nFigure 6.10: Indicador de Calidad de la Vivienda (IVI) - Urbano\n\n\n\n\n\n\n# mapview::mapview(la_serena_urb, \n#                  zcol = \"IVI\", layer.name = \"IVI\")",
-    "crumbs": [
-      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Inds. Socioeconómicos</span>"
-    ]
-  },
-  {
-    "objectID": "indicadores.html#indicador-de-suficiencia-de-viviendas-isv",
-    "href": "indicadores.html#indicador-de-suficiencia-de-viviendas-isv",
-    "title": "6  Inds. Socioeconómicos",
-    "section": "6.9 Indicador de Suficiencia de Viviendas (ISV)",
-    "text": "6.9 Indicador de Suficiencia de Viviendas (ISV)\nEl indicador de Suficiencia de Viviendas se construyó inicialmente como un indicador de hacinamiento. Se realizó a partir de 2 variables que indican el número de viviendas que se encuentran en situación de hacinamiento y el número de viviendas que se encuentran en situación de hacinamiento severo. El indicador corresponde a la suma de 2 veces las viviendas en situación de hacinamiento severo con las viviendas en situación de hacinamiento normal, dividido por el total de viviendas.\nLuego, el indicador se normalizó con su inverso aditivo, para asegurar que el valor máximo, sea lo más deseable y el 0 lo menos deseable. Con esto se obtuvo el indicador de suficiencia de viviendas.\nEl indicador de sificiencia de la vivienda debe ser normalizado, por lo cual se usará la función de normalización minmax (Equation 6.1) que se describe a continuación:\nx^{\\prime}=\\frac{x-min(x)}{max(x)-min(x)} \\tag{6.1}\n\n# función de normalización\nminmax &lt;- function(x) {\n  x &lt;- (x - min(x, na.rm = TRUE)) / \n    (max(x, na.rm = TRUE) - min(x, na.rm = TRUE))\n  return(x)\n}\n\nCálculo de Indicador de Suficiencia de Viviendas (ISV)\nISV = 1 - minmax(NIV\\_HAC2 + (2 \\times  NIV\\_HAC3)\nNIV_HAC2: &gt;= 2.5 personas por habitación (Hacinamiento)\nNIV_HAC3: &gt;= 5 personas por habitación (Hacinamiento severo)\n\ncenso &lt;- censo %&gt;% mutate(ISV = NIV_HAC2 + (2 * NIV_HAC3))\ncenso &lt;- censo %&gt;% mutate(ISV = 1 - minmax(ISV))\n\n\nla_serena_urb &lt;- censo %&gt;% filter(COD_COM == 4101 & MANZ_EN == \"URBANO\")\n\nVisualizar la Variable de ISV comuna de La Serena URBANO:\n\nggplot() +\n  geom_sf(data = la_serena_urb, aes(fill = ISV), color =NA, \n          alpha=0.8,  size= 0.1)+\n  scale_fill_distiller(palette= \"YlOrRd\", direction = 1)+\n  ggtitle(\" Indicador de Suficiencia de Viviendas (ISV) - Urbano\") +\n  theme_bw() +\n  theme(panel.grid.major = element_line(colour = \"gray80\"), \n        panel.grid.minor = element_line(colour = \"gray80\"))\n\n\n\n\n\n\n\nFigure 6.11: Indicador de Suficiencia de Viviendas (ISV) - Urbano\n\n\n\n\n\n\n# mapview::mapview(la_serena_urb, \n#                  zcol = \"ISV\", layer.name = \"ISV\")",
-    "crumbs": [
-      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Inds. Socioeconómicos</span>"
-    ]
-  },
-  {
-    "objectID": "indicadores.html#consolidación-de-dimensión-socioeconómica",
-    "href": "indicadores.html#consolidación-de-dimensión-socioeconómica",
-    "title": "6  Inds. Socioeconómicos",
-    "section": "6.10 Consolidación de Dimensión Socioeconómica",
-    "text": "6.10 Consolidación de Dimensión Socioeconómica\nSelección de Variables de Interés\n\n# names(censo)\nsoc &lt;- censo %&gt;% \n  dplyr::select(ID_MANZ:PERSONAS, IEJ, IEM, IPJ, IRH, IVI, ISV)\n\nVisualización de los Indicadores\n\ncomuna &lt;- soc %&gt;% filter(COD_COM == 4101 & MANZ_EN == \"URBANO\")\nmapview(comuna, zcol = \"IEJ\") + mapview(comuna, zcol = \"IEM\")+\n  mapview(comuna, zcol = \"IPJ\") + mapview(comuna, zcol = \"IRH\")+\n  mapview(comuna, zcol = \"IVI\") + mapview(comuna, zcol = \"ISV\")\n\nGuardar Resultados\n\n# guardar shapefile\npath_file_out &lt;- paste0(\"../data/socioeconomicos/resultados/\",\n                    reg, \"_ind_socioeconomicos.shp\")\nst_write(soc, path_file_out)\n\n#guardar en RDS\npath_file_out_rds &lt;- paste0(\"../data/socioeconomicos/resultados/\",\n                    reg, \"_ind_socioeconomicos.rds\")\nsaveRDS(soc, path_file_out_rds)",
-    "crumbs": [
-      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Inds. Socioeconómicos</span>"
-    ]
-  },
-  {
-    "objectID": "indicadores.html#referencias",
-    "href": "indicadores.html#referencias",
-    "title": "6  Inds. Socioeconómicos",
-    "section": "6.11 Referencias",
-    "text": "6.11 Referencias\n\nR para Ciencia de Datos\nRStudio para Estadística Descriptiva en Ciencias Sociales\nR para Principiantes4/\nColores en Ggplot2",
-    "crumbs": [
-      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Inds. Socioeconómicos</span>"
-    ]
-  },
-  {
-    "objectID": "proyecto.html",
-    "href": "proyecto.html",
-    "title": "7  Proyecto Final",
-    "section": "",
-    "text": "7.1 Enunciado\nEn este proyecto final, su grupo se pondrá en el rol de investigadores territoriales encargados de diseñar y construir un indicador territorial que aborde un problema específico dentro de un área geográfica delimitada.\nA lo largo del proyecto, deberán pasar por todas las etapas del proceso de construcción de indicadores territoriales: desde la presentación del problema y la definición del marco teórico, hasta la recolección de datos, cálculo del indicador, representación espacial y análisis de resultados. Se espera que su grupo identifique una problemática territorial relevante y desarrolle un indicador que permita evaluar y diagnosticar esta situación con base en evidencia.",
-    "crumbs": [
-      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Proyecto Final</span>"
-    ]
-  },
-  {
-    "objectID": "proyecto.html#presentación",
-    "href": "proyecto.html#presentación",
-    "title": "7  Proyecto Final",
-    "section": "7.2 Presentación",
-    "text": "7.2 Presentación\nEl día 23-08-2024 cada grupo de 4 participantes máximo, tendrá un tiempo máximo de 15 minutos para presentar y 5 minutos para responder preguntas.\nContenidos a evaluar\n\n\n\n\n\n\n1. Presentación del Problema (0.5 pts.)\n\n\n\n\n\nEn esta etapa se debe explicar claramente el problema específico relacionado con el territorio que se quiere analizar. Es importante explicar explicar porque el problema es significativo para la comunidad y cómo los indicadores territoriales pueden ayudar a entenderlo y eventualmente a resolverlo.\nEn esta etapa se necesita tener definir el problema pero también el área de estudio, puede ser una comuna o toda una región.\n\n\n\n\n\n\n\n\n\n2. Marco de Referencia (0.5 pts.)\n\n\n\n\n\nEstablecer las teorías, conceptos y estudios previos que guiarán el análisis y la construcción de indicadores.\nEs recomendable definir keywords para facilitar la búsqueda de librerías en páginas como google scholar. Se debe dejar constancia de la referencia bibliográfica, citar la fuente.\n\n\n\n\n\n\n\n\n\n3. Definición de Objetivos (0.5 pts.)\n\n\n\n\n\nSe debe entregar una definición clara de lo que se espera lograr con el proyecto y la construcción de indicadores territoriales.\n\n\n\n\n\n\n\n\n\n4. Recolección de Datos (0.5 pts.)\n\n\n\n\n\nSeñalar fuente utilizadapara calcular los indicadores territoriales. Describiendo sus características y elementos relevantes para el cálculo e intepretación de resultados.\nEjemplo:\nCenso de Población y Vivienda : El Censo de Población y Vivienda se realiza cada diez años y ofrece un conteo exhaustivo de la población y sus características demográficas, económicas y de vivienda. Es una fuente crítica de datos para la planificación y desarrollo de políticas a nivel nacional y local. Link Censo.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n5. Cálculo de Indicador (1 pts.)\n\n\n\n\n\nExplicar la metodología de cálculo, la ecuación y una interpretación de los valores bajos y altos.\n\n\n\n\n\n\n\n\n\n6. Representación Espacial (1 pts.)\n\n\n\n\n\nPresentar un mapa de la comuna seleccionada, dar un un contexto para interpretar los valores y los colores. Señalar las zonas donde existen concentraciones o patrones espaciales de niveles altos y bajos.\nTip: Asuma que el público no conoce el área de estudio por lo tanto aproveche de dar un contexto sociodemográfico o económico.\n\n\n\n\n\n\n\n\n\n7. Análisis de Resultados (1 pts.)\n\n\n\n\n\nEn estapa presente sus conclusiones generales destacando sus impresiones o hallazgos importantes que le entregó el indicador territorial. Puede proponer medidas, programas o proyectos focalizados que atiendan una necesidad social.",
-    "crumbs": [
-      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Proyecto Final</span>"
-    ]
-  },
-  {
-    "objectID": "proyecto.html#entregable",
-    "href": "proyecto.html#entregable",
-    "title": "7  Proyecto Final",
-    "section": "7.3 Entregable",
-    "text": "7.3 Entregable\nSe subirá la presentación en formato PDF en un buzón de webcursos el mismo día de la presentación (23-08-2024). Si se requiere complementar contenidos con otros documentos esta permitido.",
-    "crumbs": [
-      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Proyecto Final</span>"
+      "Introducción al Geoanálisis"
     ]
   },
   {
@@ -364,7 +244,7 @@
     "href": "variables.html#tipos-de-objetos-en-r",
     "title": "2  Variables en R",
     "section": "",
-    "text": "Dimensiones\nHomogéneos\nHeterogéneos\n\n\n\n\n1d\nAtomic vector\nList\n\n\n2d\nMatrix\nData frame\n\n\nnd\nArray\n\n\n\n\n\n\n\n2.1.1 Variables Numéricas\n\n# La asignación en R son válidos 2 métodos '&lt;-' o '='\nx &lt;- 7 # Definir variable (escalar) x que sea igual a 7\nx # Mostrar que es x\n\n[1] 7\n\ny &lt;- 3 + 2 * x # Crear y como funcion de x \ny\n\n[1] 17\n\nclass(y)\n\n[1] \"numeric\"\n\n\nNúmeros Random con decimales\n\nru &lt;- runif(n = 100, min = 1, max = 10)\nru\n\n  [1] 6.553132 3.599535 8.653596 8.881421 9.724194 6.136948 4.790868 7.373773\n  [9] 6.791948 5.046438 3.630710 4.485580 2.288209 7.301688 3.122095 7.965791\n [17] 6.418941 2.699728 8.853720 7.745023 7.234776 3.641579 4.587922 7.210218\n [25] 3.779781 7.239659 9.920854 1.617924 2.215314 3.000044 4.315645 3.270622\n [33] 7.708269 9.696973 8.386828 9.548268 8.806882 9.880402 2.901706 1.413625\n [41] 6.645622 4.224319 2.054692 8.111689 3.775082 6.210791 6.155974 3.644676\n [49] 3.030738 5.012292 3.349297 7.116233 8.512062 6.151094 6.807646 1.026924\n [57] 3.071527 3.116155 9.536874 3.803257 7.931241 5.287908 8.869869 4.945589\n [65] 9.710899 4.168477 9.034541 7.358230 6.734690 7.542626 5.108545 6.217798\n [73] 5.049754 2.998955 9.167000 7.680184 1.706473 7.761068 1.534237 6.892610\n [81] 2.245180 5.378672 6.439052 4.923690 3.840161 7.032519 5.339060 2.356259\n [89] 6.023121 5.669019 4.146348 3.933099 3.942575 1.406423 9.799803 7.746552\n [97] 2.765453 5.187887 2.405173 2.624170\n\n\n\nhist(ru, breaks = 20, col = \"orange\", border = \"gray60\", \n     main = \"Histograma de valores Random\")\n\n\n\n\n\n\n\n\nNúmeros Random Enteros\nSimular los lanzamientos de un dado\n\nsample.int(n = 6, size = 10, replace = T)\n\n [1] 6 1 3 4 1 6 3 3 1 1\n\n\n\n\n2.1.2 Variables de Caracter\n\nch &lt;- \"Chile\" # Definir variable (objeto) ch que sea la palabra \"Chile\"\nsn &lt;- \"Santiago\"\nch # Mostrar ch\n\n[1] \"Chile\"\n\nsn\n\n[1] \"Santiago\"\n\n\nUnir variables de texto con paste()\n\nch &lt;- \"Chile\" # Definir variable (objeto) ch que sea la palabra \"Chile\"\nsn &lt;- \"Santiago\"\nunion &lt;- paste(sn,ch, sep = \", \")\nunion\n\n[1] \"Santiago, Chile\"\n\n\nUtilizar paste0()\n\nunion &lt;- paste(\"Provincia de \", sn,ch, sep = \", \")\nunion\n\n[1] \"Provincia de , Santiago, Chile\"\n\nunion0 &lt;- paste0(\"Provincia de \", sn, \", \", ch)\nunion0\n\n[1] \"Provincia de Santiago, Chile\"\n\n\nBuscar y reemplazar con gsub\n\nav &lt;- \"Av. Apoquindo\"\ncomuna &lt;- \"comuna de Las Condes\"\ncalle &lt;- paste(av, comuna, union0, sep = \", \")\ncalle\n\n[1] \"Av. Apoquindo, comuna de Las Condes, Provincia de Santiago, Chile\"\n\n# reemplazar Av. por Avenida\ncalle_new &lt;- gsub(pattern = \"Av.\", replacement = \"Avenida\", x = calle)\ncalle_new\n\n[1] \"Avenida Apoquindo, comuna de Las Condes, Provincia de Santiago, Chile\"",
+    "text": "Dimensiones\nHomogéneos\nHeterogéneos\n\n\n\n\n1d\nAtomic vector\nList\n\n\n2d\nMatrix\nData frame\n\n\nnd\nArray\n\n\n\n\n\n\n\n2.1.1 Variables Numéricas\n\n# La asignación en R son válidos 2 métodos '&lt;-' o '='\nx &lt;- 7 # Definir variable (escalar) x que sea igual a 7\nx # Mostrar que es x\n\n[1] 7\n\ny &lt;- 3 + 2 * x # Crear y como funcion de x \ny\n\n[1] 17\n\nclass(y)\n\n[1] \"numeric\"\n\n\nNúmeros Random con decimales\n\nru &lt;- runif(n = 100, min = 1, max = 10)\nru\n\n  [1] 8.795992 4.098422 1.741700 5.874088 5.474847 5.961194 9.567627 1.416945\n  [9] 3.819825 1.290336 9.604657 6.230469 1.093337 7.257869 4.862370 1.251018\n [17] 7.082911 7.627566 7.366792 7.633204 2.519835 8.817072 3.128428 4.055886\n [25] 1.086135 9.374656 8.293692 8.181102 6.385502 7.106907 2.118172 7.182299\n [33] 3.117257 4.484336 5.665373 4.420126 6.247241 3.123625 7.675367 1.089979\n [41] 3.520678 8.554141 7.812649 9.737917 8.130462 7.410018 1.077180 3.605288\n [49] 4.157996 1.716901 2.815277 5.099307 1.041396 3.736329 3.540381 5.926456\n [57] 2.236646 2.989614 5.215106 9.525455 3.534475 4.407949 6.947734 8.496995\n [65] 2.077136 9.996475 2.966561 8.534952 5.297982 3.036924 9.030597 1.154987\n [73] 4.229834 3.859890 3.461986 3.608742 3.397122 2.361243 1.539009 2.877388\n [81] 6.844391 3.494256 1.523010 5.621427 8.621959 8.844913 1.342128 6.783979\n [89] 1.166826 9.325641 5.706431 2.697186 1.481027 3.407975 4.031835 7.869649\n [97] 8.707133 2.822938 1.576997 1.172584\n\n\n\nhist(ru, breaks = 20, col = \"orange\", border = \"gray60\", \n     main = \"Histograma de valores Random\")\n\n\n\n\n\n\n\n\nNúmeros Random Enteros\nSimular los lanzamientos de un dado\n\nsample.int(n = 6, size = 10, replace = T)\n\n [1] 1 2 6 6 6 6 1 6 2 2\n\n\n\n\n2.1.2 Variables de Caracter\n\nch &lt;- \"Chile\" # Definir variable (objeto) ch que sea la palabra \"Chile\"\nsn &lt;- \"Santiago\"\nch # Mostrar ch\n\n[1] \"Chile\"\n\nsn\n\n[1] \"Santiago\"\n\n\nUnir variables de texto con paste()\n\nch &lt;- \"Chile\" # Definir variable (objeto) ch que sea la palabra \"Chile\"\nsn &lt;- \"Santiago\"\nunion &lt;- paste(sn,ch, sep = \", \")\nunion\n\n[1] \"Santiago, Chile\"\n\n\nUtilizar paste0()\n\nunion &lt;- paste(\"Provincia de \", sn,ch, sep = \", \")\nunion\n\n[1] \"Provincia de , Santiago, Chile\"\n\nunion0 &lt;- paste0(\"Provincia de \", sn, \", \", ch)\nunion0\n\n[1] \"Provincia de Santiago, Chile\"\n\n\nBuscar y reemplazar con gsub\n\nav &lt;- \"Av. Apoquindo\"\ncomuna &lt;- \"comuna de Las Condes\"\ncalle &lt;- paste(av, comuna, union0, sep = \", \")\ncalle\n\n[1] \"Av. Apoquindo, comuna de Las Condes, Provincia de Santiago, Chile\"\n\n# reemplazar Av. por Avenida\ncalle_new &lt;- gsub(pattern = \"Av.\", replacement = \"Avenida\", x = calle)\ncalle_new\n\n[1] \"Avenida Apoquindo, comuna de Las Condes, Provincia de Santiago, Chile\"",
     "crumbs": [
       "<span class='chapter-number'>2</span>  <span class='chapter-title'>Variables en R</span>"
     ]
@@ -430,93 +310,43 @@
     ]
   },
   {
-    "objectID": "dataframes.html",
-    "href": "dataframes.html",
-    "title": "5  Dataframes y Delitos en R",
+    "objectID": "control_r.html",
+    "href": "control_r.html",
+    "title": "4  Estructuras en R",
     "section": "",
-    "text": "5.1 Introducción\nEn esta sessión se realizará un flujo de trabajo de construcción de un indicador territorial de delitos a nivel comuna utilizando R. Que contempla desde la lectura de la base de información (excel de delitos), agregar información de categorías, hacer filtros, resúmenes estadísticos (tablas dinámicas) y finalmente visualizaciones gráficas y espaciales.",
+    "text": "4.1 Estructuras condicionales\nLas estructuras de control en R son herramientas que permiten controlar el flujo de ejecución de un programa. Las estructuras de control son esenciales para cualquier lenguaje de programación, ya que permiten que el programa tome decisiones y realice acciones en función de ciertas condiciones.\nEstas estructuras de control son muy útiles para crear programas que respondan a diferentes situaciones y condiciones, y permiten que los programadores puedan crear soluciones más eficientes y complejas.\nEn R, existen tres estructuras de control principales:\nLas estructuras condicionales son una de las tres estructuras de control principales en R. Estas estructuras permiten ejecutar un bloque de código solo si se cumple una condición determinada.\nLa estructura condicional más común en R es “if”. La sintaxis básica de la estructura “if” es la siguiente:\nif(Condición) {\n  operaciones_si_la_condición_es_TRUE\n}\nLa “condición” es una expresión lógica que evalúa a verdadero o falso. Si la condición es verdadera, el bloque de código dentro del “if” se ejecutará. Si la condición es falsa, el bloque de código dentro del “if” se ignorará.\nPor ejemplo, le pedimos a R que nos muestre el texto “Verdadero” si la condición se cumple.\n# Se cumple la condición y se muestra \"verdadero\"\nif(4 &gt; 3) {\n  \"Verdadero\"\n}\n\n[1] \"Verdadero\"\n# No se cumple la condición y no pasa nada\nif(4 &gt; 5) {\n  \"Verdadero\"\n}\nTambién se puede agregar un bloque de código opcional para el caso en que la condición sea falsa utilizando la estructura “else”. La sintaxis básica de la estructura “if” con “else” es la siguie\nSI esta condición es es cierta, ENTONCES haz estas operaciones, DE OTRO MODO haz estas otras operaciones.\nif(condición) {\n  operaciones_si_la_condición_es_TRUE\n} else {\n  operaciones_si_la_condición_es_FALSE\n}\nUsando los ejemplos anteriores, podemos mostrar “Falso” si no se cumple la condición, en lugar de que no ocurra nada\n# Se cumple la condición y se muestra \"Verdadero\"\nif(4 &gt; 3) {\n  \"Verdadero\"\n} else {\n  \"Falso\"\n}\n\n[1] \"Verdadero\"\nLa estructura “ifelse” es otra forma de estructura condicional que permite ejecutar diferentes bloques de código en función de la condición. La sintaxis básica de la estructura “ifelse” es la siguiente:\nifelse(condición, expresión1, expresión2)\nSi la “condición” es verdadera, se ejecutará “expresión1”. Si la “condición” es falsa, se ejecutará “expresión2”.\nAdemás, se pueden anidar varias estructuras condicionales utilizando la sintaxis de “if” y “else”. Por ejemplo:\nif (condición1) {\n  # Código a ejecutar si la condición1 es verdadera\n} else if (condición2) {\n  # Código a ejecutar si la condición1 es falsa y la condición2 es verdadera\n} else {\n  # Código a ejecutar si todas las condiciones son falsas\n}\nEn resumen, las estructuras condicionales en R son herramientas muy útiles para controlar el flujo de ejecución de un programa en función de ciertas condiciones. Estas estructuras permiten crear soluciones más eficientes y complejas al permitir que los programas tomen decisiones y realicen acciones en función de las condiciones que se presenten.",
     "crumbs": [
-      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Dataframes y Delitos en R</span>"
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Estructuras en R</span>"
     ]
   },
   {
-    "objectID": "dataframes.html#librerías",
-    "href": "dataframes.html#librerías",
-    "title": "5  Dataframes y Delitos en R",
-    "section": "5.2 Librerías",
-    "text": "5.2 Librerías\n\nlibrary(dplyr) # manipular tablas de datos\nlibrary(sf) #manipular objetos espaciales\nlibrary(openxlsx) # trabajar con archivos Excel\nlibrary(ggplot2) # graficos estáticos \nlibrary(plotly) # gráficos dinámicos",
+    "objectID": "control_r.html#sec-bucles",
+    "href": "control_r.html#sec-bucles",
+    "title": "4  Estructuras en R",
+    "section": "4.2 Estructuras de bucles",
+    "text": "4.2 Estructuras de bucles\nLas estructuras de bucles son una de las tres estructuras de control principales en R. Estas estructuras permiten ejecutar un bloque de código repetidamente mientras se cumpla una condición determinada. En R, existen tres estructuras de bucles principales: “while”, “for” y “repeat”.\nBeneficios\n\nEs más fácil ver el objetivo de tu código; lo diferente llama más atención a la vista que aquello que permanece igual.\nEs más sencillo responder a cambios en los requerimientos. A medida que tus necesidades cambian, solo necesitarás realizar cambios en un lugar, en vez de recordar cambiar en cada lugar donde copiaste y pegaste el código.\nEs probable que tengas menos errores porque cada línea de código es utilizada en más lugares.\n\n\n4.2.1 Estructura de bucle “for”:\nLa estructura “for” permite repetir la ejecución de un bloque de código un número determinado de veces. La sintaxis básica de la estructura “for” es la siguiente:\n\nfor (variable in secuencia) {\n  # Código a ejecutar para cada elemento en la secuencia\n}\n\nLa “secuencia” es un objeto que contiene una serie de elementos. La “variable” toma el valor de cada elemento de la secuencia en cada iteración del bucle. En cada iteración, se ejecutará el bloque de código dentro del “for” para ese valor de la variable.\nEjemplo simple: print una secuencia\n\nfor (i in 1:5){\n  print(i)\n}\n\n[1] 1\n[1] 2\n[1] 3\n[1] 4\n[1] 5\n\n\nEjemplo 2: Guardando los resultados en un vector\n\ndado &lt;- 1:6\nmi_vector &lt;- NULL\nfor(cara in dado) {\n  mi_vector[cara] &lt;- cara ^ 2\n}\nmi_vector\n\n[1]  1  4  9 16 25 36\n\n\nEjemplo 3: Loops con vectores\n\nalumnos &lt;- c(\"Carmen\", \"Adriana\", \"Marco\", \"Fabi\", \"Brenda\")\n\nfor(i in 1:length(alumnos)) {\n  print(paste(\"Hola,\", alumnos[i], sep = \" \"))\n}\n\n[1] \"Hola, Carmen\"\n[1] \"Hola, Adriana\"\n[1] \"Hola, Marco\"\n[1] \"Hola, Fabi\"\n[1] \"Hola, Brenda\"\n\n\nEjemplo 4: loops en Dataframes\n\ndf &lt;- data.frame(a = rnorm(10), b = rnorm(10),\n                 c = rnorm(10), d = rnorm(10))\n\nfor(i in 1:ncol(df)){\n  promedio = mean(df[,i])\n  print(promedio)\n}\n\n[1] 0.3109333\n[1] 0.09394498\n[1] -0.0224162\n[1] 0.2481102\n\n\n\n\n4.2.2 Estructura de bucle “while”:\nLa estructura “while” permite repetir la ejecución de un bloque de código mientras se cumpla una condición determinada. La sintaxis básica de la estructura “while” es la siguiente:\n\nwhile (condición) {\n  # Código a ejecutar mientras se cumpla la condición\n}\n\nLa “condición” es una expresión lógica que evalúa a verdadero o falso. Si la condición es verdadera, se ejecutará el bloque de código dentro del “while”. Este proceso se repetirá hasta que la condición sea falsa.\n\n\n4.2.3 Estructura de bucle “repeat”:\n\nrepeat {\n  # Código a ejecutar de manera indefinida\n  if (condición) {\n    break\n  }\n}\n\nEl bloque de código dentro del “repeat” se ejecutará de manera indefinida hasta que se encuentre la sentencia “break”, que permite salir del bucle. La “condición” es una expresión lógica que evalúa a verdadero o falso. Si la condición es verdadera, se ejecutará la sentencia “break” y se saldrá del bucle.",
     "crumbs": [
-      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Dataframes y Delitos en R</span>"
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Estructuras en R</span>"
     ]
   },
   {
-    "objectID": "dataframes.html#lectura-de-una-tabla",
-    "href": "dataframes.html#lectura-de-una-tabla",
-    "title": "5  Dataframes y Delitos en R",
-    "section": "5.3 Lectura de una tabla",
-    "text": "5.3 Lectura de una tabla\nSe leerá el archivo excel que se vio la semana pasada de delitos comunales.\n\ndelitos_tbl &lt;- read.xlsx(\"data/excel/delitos_comunales.xlsx\")\n\n# str(delitos_tbl)\n\nver los primeros 6 registros\n\nhead(delitos_tbl)\n\n  REGION                       NOM_REGION PROVINCIA  NOM_PROVIN COMUNA\n1     05             REGIÓN DE VALPARAÍSO       056 SAN ANTONIO  05602\n2     13 REGIÓN METROPOLITANA DE SANTIAGO       135   MELIPILLA  13502\n3     08                REGIÓN DEL BIOBÍO       083      BIOBÍO  08314\n4     01               REGIÓN DE TARAPACÁ       011     IQUIQUE  01107\n5     03                REGIÓN DE ATACAMA       033      HUASCO  03302\n6     10              REGIÓN DE LOS LAGOS       102      CHILOÉ  10202\n       NOM_COMUNA PERSONAS Tipo.Participante Subgrupo HOMBRE_delitos\n1       ALGARROBO    13794           VICTIMA Abigeato              0\n2           ALHUÉ     6365           VICTIMA Abigeato              1\n3     ALTO BIOBÍO     5823           VICTIMA Abigeato              2\n4   ALTO HOSPICIO   106297           VICTIMA Abigeato              0\n5 ALTO DEL CARMEN     5280           VICTIMA Abigeato              0\n6           ANCUD    38845           VICTIMA Abigeato              9\n  MUJER_delitos TOTAL_delitos\n1             0             0\n2             0             1\n3             3             5\n4             0             0\n5             0             0\n6             1            10",
+    "objectID": "control_r.html#estructuras-de-control-de-flujo",
+    "href": "control_r.html#estructuras-de-control-de-flujo",
+    "title": "4  Estructuras en R",
+    "section": "4.3 Estructuras de control de flujo",
+    "text": "4.3 Estructuras de control de flujo\n“next” y “break” son palabras clave importantes en R que se utilizan en las estructuras de control de flujo, específicamente en las estructuras de bucle. “next” se utiliza para saltar a la siguiente iteración del bucle sin ejecutar el resto del código dentro del bucle, mientras que “break” se utiliza para detener el bucle de forma abrupta, incluso si la condición del bucle todavía se cumple.\n\n4.3.1 Estructuras de control “next”:\n“next” se utiliza en una estructura de bucle para saltar a la siguiente iteración del bucle sin ejecutar el resto del código dentro del bucle. Es decir, si se encuentra la palabra clave “next” dentro de un bucle, se omitirá el código que viene después y el bucle pasará inmediatamente a la siguiente iteración. La palabra clave “next” es útil cuando se desea saltar una iteración específica del bucle, sin afectar el resto del código.\nPor ejemplo, en el siguiente código se utiliza la palabra clave “next” para omitir la impresión del número 3 dentro del bucle “for”:\n\nfor (i in 1:5) {\n  if (i == 3) {\n    next\n  }\n  print(i)\n}\n\n[1] 1\n[1] 2\n[1] 4\n[1] 5\n\n\n\n\n4.3.2 Estructuras de control “break”:\n“break”, por otro lado, se utiliza en una estructura de bucle para detener el bucle de forma abrupta, incluso si la condición del bucle todavía se cumple. Es decir, si se encuentra la palabra clave “break” dentro de un bucle, se detendrá el bucle de inmediato y se continuará con la ejecución del código que viene después del bucle. La palabra clave “break” es útil cuando se desea detener el bucle en un punto específico sin tener que esperar a que la condición del bucle se deje de cumplir.\nPor ejemplo, en el siguiente código se utiliza la palabra clave “break” para detener el bucle “while” cuando el valor de “i” es mayor que 5:\n\ni &lt;- 1\nwhile (i &lt; 10) {\n  if (i &gt; 5) {\n    break\n  }\n  print(i)\n  i &lt;- i + 1\n}\n\n[1] 1\n[1] 2\n[1] 3\n[1] 4\n[1] 5",
     "crumbs": [
-      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Dataframes y Delitos en R</span>"
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Estructuras en R</span>"
     ]
   },
   {
-    "objectID": "dataframes.html#agregar-categoría",
-    "href": "dataframes.html#agregar-categoría",
-    "title": "5  Dataframes y Delitos en R",
-    "section": "5.4 Agregar Categoría",
-    "text": "5.4 Agregar Categoría\nCategorizar los Delitos:\nPrimeros veremos los tipos de delitos que existen, contenidos en la columna Subgrupo:\n\nunique(delitos_tbl$Subgrupo)\n\n\n\n[1] \"Abigeato\"                           \"Abusos sexuales\"                   \n[3] \"Amenazas con armas\"                 \"Amenazas o riña\"                   \n[5] \"Animales sueltos en la vía pública\" \"Auxilio al suicidio\"               \n\n\n\nSe muestran los primeros 6 solo para buena visualización en el libro digital, en la práctica deben existir 50 categorias de delitos.\n\nCrear una categoría de delitos\nSe debe crear un grupo de delitos de su interés (Puede elegir los que usted quiera). Para este ejemplo se seleccionarán los delitos de violentos.\n\n#guardo los delitos violentos en un vector\nd_agrupados &lt;- c( \"Lesiones graves o gravísimas\", \"Lesiones menos graves\",\n                  \"Microtráfico de sustancias\", \"Otros homicidios\",\n                  \"Robo con homicidio\", \"Robo violento de vehículo motorizado\",\n                  \"Robos con violencia o intimidación\", \"Tráfico de sustancias\")\n\n# leves o incivilidades\n# d_agrupados &lt;- c( \"Amenazas con armas\", \"Amenazas o riña\", \n#                   \"Desórdenes públicos\", \"Comercio ilegal\" , \n#                   \"Consumo de alcohol y drogas en la vía pública\", \n#                   \"Daños\", \"Lesiones leves\" , \"Desórdenes públicos\",\n#                   \"Desórdenes públicos\", \"Ofensas al pudor\",\n#                   \"Porte de arma cortante o punzante\",\"Receptación\",\n#                   \"Robo de objetos de o desde vehículo\",\n#                   \"Robo por sorpresa\" )\n\nAgregar Categoría de delitos\nPara esto crearemos una nueva columna con la función mutate()\n\ndelitos_tbl &lt;- delitos_tbl %&gt;% \n  mutate(grupo = ifelse(Subgrupo %in% d_agrupados, TRUE, FALSE))\n\n\n# head(delitos_tbl)\n\ncount(delitos_tbl, grupo)\n\n  grupo     n\n1 FALSE 28980\n2  TRUE  5520\n\ndim(delitos_tbl)\n\n[1] 34500    13",
+    "objectID": "control_r.html#referencias",
+    "href": "control_r.html#referencias",
+    "title": "4  Estructuras en R",
+    "section": "4.4 Referencias",
+    "text": "4.4 Referencias\n\nLoops y funciones en R",
     "crumbs": [
-      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Dataframes y Delitos en R</span>"
-    ]
-  },
-  {
-    "objectID": "dataframes.html#filtros",
-    "href": "dataframes.html#filtros",
-    "title": "5  Dataframes y Delitos en R",
-    "section": "5.5 Filtros",
-    "text": "5.5 Filtros\nFiltrar por Tipo de Participante\n\ndelitos_filtered &lt;- delitos_tbl %&gt;% \n  filter(Tipo.Participante == \"VICTIMA\")\n\nFiltrar por Región\n\ndelitos_filtered &lt;- delitos_filtered %&gt;% \n  filter(NOM_REGION == \"REGIÓN DE LA ARAUCANÍA\")\n\nFiltrar por Categortía\n\ndelitos_filtered &lt;- delitos_filtered %&gt;% \n  filter(grupo == T)",
-    "crumbs": [
-      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Dataframes y Delitos en R</span>"
-    ]
-  },
-  {
-    "objectID": "dataframes.html#generar-resúmenes-similar-a-tablas-dinámicas",
-    "href": "dataframes.html#generar-resúmenes-similar-a-tablas-dinámicas",
-    "title": "5  Dataframes y Delitos en R",
-    "section": "5.6 Generar Resúmenes (similar a tablas dinámicas)",
-    "text": "5.6 Generar Resúmenes (similar a tablas dinámicas)\n\n\n\nSe buscarà replicar desde R las operaciones correspondientes a esta tabla dinámica\n\n\n\ntabla_resumen &lt;- delitos_filtered %&gt;% \n  group_by(NOM_COMUNA) %&gt;% \n  summarise(total_delitos = sum(TOTAL_delitos),\n            pob = min(PERSONAS))\n  \ntabla_resumen\n\n# A tibble: 32 × 3\n   NOM_COMUNA total_delitos   pob\n   &lt;chr&gt;              &lt;dbl&gt; &lt;dbl&gt;\n 1 ANGOL                147 52958\n 2 CARAHUE               38 24458\n 3 CHOLCHOL              33 11581\n 4 COLLIPULLI           108 24439\n 5 CUNCO                 19 17275\n 6 CURACAUTÍN            33 17253\n 7 CURARREHUE            13  7361\n 8 ERCILLA               53  7704\n 9 FREIRE                67 24390\n10 GALVARINO             31 11914\n# ℹ 22 more rows\n\n\nPonderar por población\n\ntabla_resumen &lt;- tabla_resumen %&gt;% \n  mutate(pond_poblacion = total_delitos / pob) %&gt;% \n  mutate(del_10000_hab = pond_poblacion * 10000) %&gt;% \n  mutate(del_10000_hab = round(del_10000_hab,2))  # redondear con 2 decimales\n\nhead(tabla_resumen)\n\n# A tibble: 6 × 5\n  NOM_COMUNA total_delitos   pob pond_poblacion del_10000_hab\n  &lt;chr&gt;              &lt;dbl&gt; &lt;dbl&gt;          &lt;dbl&gt;         &lt;dbl&gt;\n1 ANGOL                147 52958        0.00278          27.8\n2 CARAHUE               38 24458        0.00155          15.5\n3 CHOLCHOL              33 11581        0.00285          28.5\n4 COLLIPULLI           108 24439        0.00442          44.2\n5 CUNCO                 19 17275        0.00110          11  \n6 CURACAUTÍN            33 17253        0.00191          19.1",
-    "crumbs": [
-      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Dataframes y Delitos en R</span>"
-    ]
-  },
-  {
-    "objectID": "dataframes.html#visualización-gráfica",
-    "href": "dataframes.html#visualización-gráfica",
-    "title": "5  Dataframes y Delitos en R",
-    "section": "5.7 Visualización gráfica",
-    "text": "5.7 Visualización gráfica\n\nlibrary(ggplot2)\n\n\ng_barra &lt;- ggplot(tabla_resumen, aes(x = NOM_COMUNA, y = del_10000_hab)) +\n  geom_bar(fill = \"#6a51a3\", color =  \"gray90\", stat = \"identity\", width = 0.7)+\n  coord_flip()+\n  theme_bw()+\n  labs(title=\"Delitos Violentos en la Región de la Araucanía\", \n       y =\"Delitos Violentos / 10000 hebitantes\", x = \"Nombre de Comuna\")+\n  theme(plot.title = element_text(face = \"bold\",colour= \"gray20\", size=12)) \n  \ng_barra\n\n\n\n\n\n\n\n\nGuardar el gráfico de barras como imagen\n\nggsave(plot = g_barra, filename = \"images/del_violentos_R09.png\", width = 8, height = 7)\n\nGenerar gráfico dinámico\n\nlibrary(plotly)\n\n\nggplotly(g_barra)",
-    "crumbs": [
-      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Dataframes y Delitos en R</span>"
-    ]
-  },
-  {
-    "objectID": "dataframes.html#visualización-espacial",
-    "href": "dataframes.html#visualización-espacial",
-    "title": "5  Dataframes y Delitos en R",
-    "section": "5.8 Visualización Espacial",
-    "text": "5.8 Visualización Espacial\nPrimero se debe unir la tabla resumen delitos con Shapefile de comunas del INE.\nLeer Shapefile de comunas\n\ncomunas_r09 &lt;- st_read(\"data/shape/Comunas_Chile.shp\") %&gt;% \n  filter(NOM_REGION == \"REGIÓN DE LA ARAUCANÍA\")\n\nReading layer `Comunas_Chile' from data source \n  `/Users/denisberroeta/Documents/Docencia/geoanalisis/cgeoa-book/data/shape/Comunas_Chile.shp' \n  using driver `ESRI Shapefile'\nSimple feature collection with 346 features and 9 fields\nGeometry type: MULTIPOLYGON\nDimension:     XY\nBounding box:  xmin: -3701691 ymin: 3734031 xmax: 705926.2 ymax: 8065316\nProjected CRS: WGS 84 / UTM zone 19S\n\nhead(comunas_r09)\n\nSimple feature collection with 6 features and 9 fields\nGeometry type: MULTIPOLYGON\nDimension:     XY\nBounding box:  xmin: 105710.9 ymin: 5678347 xmax: 264088.7 ymax: 5814662\nProjected CRS: WGS 84 / UTM zone 19S\n  OBJECTID REGION             NOM_REGION PROVINCIA NOM_PROVIN COMUNA NOM_COMUNA\n1      196     09 REGIÓN DE LA ARAUCANÍA       091     CAUTÍN  09102    CARAHUE\n2      197     09 REGIÓN DE LA ARAUCANÍA       091     CAUTÍN  09116   SAAVEDRA\n3      198     09 REGIÓN DE LA ARAUCANÍA       091     CAUTÍN  09121   CHOLCHOL\n4      199     09 REGIÓN DE LA ARAUCANÍA       091     CAUTÍN  09106  GALVARINO\n5      200     09 REGIÓN DE LA ARAUCANÍA       092    MALLECO  09211   VICTORIA\n6      201     09 REGIÓN DE LA ARAUCANÍA       092    MALLECO  09202 COLLIPULLI\n  Shape_Leng Shape_Area                       geometry\n1   2.906029 0.13808364 MULTIPOLYGON (((121386.1 57...\n2   1.208166 0.04046546 MULTIPOLYGON (((116508.5 57...\n3   1.231271 0.04440834 MULTIPOLYGON (((154657.2 57...\n4   1.466943 0.05865461 MULTIPOLYGON (((169736.5 57...\n5   2.049851 0.12969648 MULTIPOLYGON (((200422.2 57...\n6   2.832457 0.13410231 MULTIPOLYGON (((195536.1 58...\n\n\nUnir shafile con tabla resumen\nSe utilizará la función left_join\n\ncomunas_r09 &lt;- comunas_r09 %&gt;% \n  left_join(tabla_resumen, by = \"NOM_COMUNA\")\n\nhead(comunas_r09)\n\nSimple feature collection with 6 features and 13 fields\nGeometry type: MULTIPOLYGON\nDimension:     XY\nBounding box:  xmin: 105710.9 ymin: 5678347 xmax: 264088.7 ymax: 5814662\nProjected CRS: WGS 84 / UTM zone 19S\n  OBJECTID REGION             NOM_REGION PROVINCIA NOM_PROVIN COMUNA NOM_COMUNA\n1      196     09 REGIÓN DE LA ARAUCANÍA       091     CAUTÍN  09102    CARAHUE\n2      197     09 REGIÓN DE LA ARAUCANÍA       091     CAUTÍN  09116   SAAVEDRA\n3      198     09 REGIÓN DE LA ARAUCANÍA       091     CAUTÍN  09121   CHOLCHOL\n4      199     09 REGIÓN DE LA ARAUCANÍA       091     CAUTÍN  09106  GALVARINO\n5      200     09 REGIÓN DE LA ARAUCANÍA       092    MALLECO  09211   VICTORIA\n6      201     09 REGIÓN DE LA ARAUCANÍA       092    MALLECO  09202 COLLIPULLI\n  Shape_Leng Shape_Area total_delitos   pob pond_poblacion del_10000_hab\n1   2.906029 0.13808364            38 24458    0.001553684         15.54\n2   1.208166 0.04046546            32 12380    0.002584814         25.85\n3   1.231271 0.04440834            33 11581    0.002849495         28.49\n4   1.466943 0.05865461            31 11914    0.002601981         26.02\n5   2.049851 0.12969648           107 34103    0.003137554         31.38\n6   2.832457 0.13410231           108 24439    0.004419166         44.19\n                        geometry\n1 MULTIPOLYGON (((121386.1 57...\n2 MULTIPOLYGON (((116508.5 57...\n3 MULTIPOLYGON (((154657.2 57...\n4 MULTIPOLYGON (((169736.5 57...\n5 MULTIPOLYGON (((200422.2 57...\n6 MULTIPOLYGON (((195536.1 58...\n\n\n\n5.8.1 Generar Mapa\n\nlibrary(viridis)\ndel_r09_m &lt;- ggplot() +\n  geom_sf(data = comunas_r09, aes(fill = del_10000_hab), alpha=0.8,  size= 0.5)+\n  scale_fill_viridis_c()+\n  ggtitle(\"Delitos Violentos en la Región de la Araucanía\" ) +\n  theme_bw() +\n  # theme(legend.position=\"none\")+\n  theme(panel.grid.major = element_line(colour = \"gray80\"), \n        panel.grid.minor = element_line(colour = \"gray80\"))\n\ndel_r09_m\n\n\n\n\n\n\n\n\nGuardar el Mapa como imagen\n\nggsave(plot = del_r09_m, filename = \"images/map_del_violentos_R09.png\", width = 8, height = 7)\n\nMapa Dinámico\n\nlibrary(mapview)\n\nmapview(comunas_r09, zcol = \"del_10000_hab\", alpha.regions = 0.9)",
-    "crumbs": [
-      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Dataframes y Delitos en R</span>"
-    ]
-  },
-  {
-    "objectID": "dataframes.html#guardar-resultados",
-    "href": "dataframes.html#guardar-resultados",
-    "title": "5  Dataframes y Delitos en R",
-    "section": "5.9 Guardar Resultados",
-    "text": "5.9 Guardar Resultados\n\n# Excel\nwrite.xlsx(tabla_resumen, file = \"data/excel/R09_del_violentos.xlsx\")\n\n# Shapefile \nst_write(comunas_r09, \"data/shape/R09_del_violentos.shp\", delete_dsn = T)\n\n# rds\nsaveRDS(object = comunas_r09,file = \"data/rds/R09_del_violentos.rds\")",
-    "crumbs": [
-      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Dataframes y Delitos en R</span>"
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Estructuras en R</span>"
     ]
   },
   {
@@ -539,479 +369,6 @@
     "crumbs": [
       "Appendices",
       "<span class='chapter-number'>A</span>  <span class='chapter-title'>Instalación de Recursos</span>"
-    ]
-  },
-  {
-    "objectID": "control_r.html",
-    "href": "control_r.html",
-    "title": "4  Estructuras en R",
-    "section": "",
-    "text": "4.1 Estructuras condicionales\nLas estructuras de control en R son herramientas que permiten controlar el flujo de ejecución de un programa. Las estructuras de control son esenciales para cualquier lenguaje de programación, ya que permiten que el programa tome decisiones y realice acciones en función de ciertas condiciones.\nEstas estructuras de control son muy útiles para crear programas que respondan a diferentes situaciones y condiciones, y permiten que los programadores puedan crear soluciones más eficientes y complejas.\nEn R, existen tres estructuras de control principales:\nLas estructuras condicionales son una de las tres estructuras de control principales en R. Estas estructuras permiten ejecutar un bloque de código solo si se cumple una condición determinada.\nLa estructura condicional más común en R es “if”. La sintaxis básica de la estructura “if” es la siguiente:\nif(Condición) {\n  operaciones_si_la_condición_es_TRUE\n}\nLa “condición” es una expresión lógica que evalúa a verdadero o falso. Si la condición es verdadera, el bloque de código dentro del “if” se ejecutará. Si la condición es falsa, el bloque de código dentro del “if” se ignorará.\nPor ejemplo, le pedimos a R que nos muestre el texto “Verdadero” si la condición se cumple.\n# Se cumple la condición y se muestra \"verdadero\"\nif(4 &gt; 3) {\n  \"Verdadero\"\n}\n\n[1] \"Verdadero\"\n# No se cumple la condición y no pasa nada\nif(4 &gt; 5) {\n  \"Verdadero\"\n}\nTambién se puede agregar un bloque de código opcional para el caso en que la condición sea falsa utilizando la estructura “else”. La sintaxis básica de la estructura “if” con “else” es la siguie\nSI esta condición es es cierta, ENTONCES haz estas operaciones, DE OTRO MODO haz estas otras operaciones.\nif(condición) {\n  operaciones_si_la_condición_es_TRUE\n} else {\n  operaciones_si_la_condición_es_FALSE\n}\nUsando los ejemplos anteriores, podemos mostrar “Falso” si no se cumple la condición, en lugar de que no ocurra nada\n# Se cumple la condición y se muestra \"Verdadero\"\nif(4 &gt; 3) {\n  \"Verdadero\"\n} else {\n  \"Falso\"\n}\n\n[1] \"Verdadero\"\nLa estructura “ifelse” es otra forma de estructura condicional que permite ejecutar diferentes bloques de código en función de la condición. La sintaxis básica de la estructura “ifelse” es la siguiente:\nifelse(condición, expresión1, expresión2)\nSi la “condición” es verdadera, se ejecutará “expresión1”. Si la “condición” es falsa, se ejecutará “expresión2”.\nAdemás, se pueden anidar varias estructuras condicionales utilizando la sintaxis de “if” y “else”. Por ejemplo:\nif (condición1) {\n  # Código a ejecutar si la condición1 es verdadera\n} else if (condición2) {\n  # Código a ejecutar si la condición1 es falsa y la condición2 es verdadera\n} else {\n  # Código a ejecutar si todas las condiciones son falsas\n}\nEn resumen, las estructuras condicionales en R son herramientas muy útiles para controlar el flujo de ejecución de un programa en función de ciertas condiciones. Estas estructuras permiten crear soluciones más eficientes y complejas al permitir que los programas tomen decisiones y realicen acciones en función de las condiciones que se presenten.",
-    "crumbs": [
-      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Estructuras en R</span>"
-    ]
-  },
-  {
-    "objectID": "control_r.html#sec-bucles",
-    "href": "control_r.html#sec-bucles",
-    "title": "4  Estructuras en R",
-    "section": "4.2 Estructuras de bucles",
-    "text": "4.2 Estructuras de bucles\nLas estructuras de bucles son una de las tres estructuras de control principales en R. Estas estructuras permiten ejecutar un bloque de código repetidamente mientras se cumpla una condición determinada. En R, existen tres estructuras de bucles principales: “while”, “for” y “repeat”.\nBeneficios\n\nEs más fácil ver el objetivo de tu código; lo diferente llama más atención a la vista que aquello que permanece igual.\nEs más sencillo responder a cambios en los requerimientos. A medida que tus necesidades cambian, solo necesitarás realizar cambios en un lugar, en vez de recordar cambiar en cada lugar donde copiaste y pegaste el código.\nEs probable que tengas menos errores porque cada línea de código es utilizada en más lugares.\n\n\n4.2.1 Estructura de bucle “for”:\nLa estructura “for” permite repetir la ejecución de un bloque de código un número determinado de veces. La sintaxis básica de la estructura “for” es la siguiente:\n\nfor (variable in secuencia) {\n  # Código a ejecutar para cada elemento en la secuencia\n}\n\nLa “secuencia” es un objeto que contiene una serie de elementos. La “variable” toma el valor de cada elemento de la secuencia en cada iteración del bucle. En cada iteración, se ejecutará el bloque de código dentro del “for” para ese valor de la variable.\nEjemplo simple: print una secuencia\n\nfor (i in 1:5){\n  print(i)\n}\n\n[1] 1\n[1] 2\n[1] 3\n[1] 4\n[1] 5\n\n\nEjemplo 2: Guardando los resultados en un vector\n\ndado &lt;- 1:6\nmi_vector &lt;- NULL\nfor(cara in dado) {\n  mi_vector[cara] &lt;- cara ^ 2\n}\nmi_vector\n\n[1]  1  4  9 16 25 36\n\n\nEjemplo 3: Loops con vectores\n\nalumnos &lt;- c(\"Carmen\", \"Adriana\", \"Marco\", \"Fabi\", \"Brenda\")\n\nfor(i in 1:length(alumnos)) {\n  print(paste(\"Hola,\", alumnos[i], sep = \" \"))\n}\n\n[1] \"Hola, Carmen\"\n[1] \"Hola, Adriana\"\n[1] \"Hola, Marco\"\n[1] \"Hola, Fabi\"\n[1] \"Hola, Brenda\"\n\n\nEjemplo 4: loops en Dataframes\n\ndf &lt;- data.frame(a = rnorm(10), b = rnorm(10),\n                 c = rnorm(10), d = rnorm(10))\n\nfor(i in 1:ncol(df)){\n  promedio = mean(df[,i])\n  print(promedio)\n}\n\n[1] -0.4093032\n[1] -0.09718187\n[1] 0.1186782\n[1] -0.5297514\n\n\n\n\n4.2.2 Estructura de bucle “while”:\nLa estructura “while” permite repetir la ejecución de un bloque de código mientras se cumpla una condición determinada. La sintaxis básica de la estructura “while” es la siguiente:\n\nwhile (condición) {\n  # Código a ejecutar mientras se cumpla la condición\n}\n\nLa “condición” es una expresión lógica que evalúa a verdadero o falso. Si la condición es verdadera, se ejecutará el bloque de código dentro del “while”. Este proceso se repetirá hasta que la condición sea falsa.\n\n\n4.2.3 Estructura de bucle “repeat”:\n\nrepeat {\n  # Código a ejecutar de manera indefinida\n  if (condición) {\n    break\n  }\n}\n\nEl bloque de código dentro del “repeat” se ejecutará de manera indefinida hasta que se encuentre la sentencia “break”, que permite salir del bucle. La “condición” es una expresión lógica que evalúa a verdadero o falso. Si la condición es verdadera, se ejecutará la sentencia “break” y se saldrá del bucle.",
-    "crumbs": [
-      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Estructuras en R</span>"
-    ]
-  },
-  {
-    "objectID": "control_r.html#estructuras-de-control-de-flujo",
-    "href": "control_r.html#estructuras-de-control-de-flujo",
-    "title": "4  Estructuras en R",
-    "section": "4.3 Estructuras de control de flujo",
-    "text": "4.3 Estructuras de control de flujo\n“next” y “break” son palabras clave importantes en R que se utilizan en las estructuras de control de flujo, específicamente en las estructuras de bucle. “next” se utiliza para saltar a la siguiente iteración del bucle sin ejecutar el resto del código dentro del bucle, mientras que “break” se utiliza para detener el bucle de forma abrupta, incluso si la condición del bucle todavía se cumple.\n\n4.3.1 Estructuras de control “next”:\n“next” se utiliza en una estructura de bucle para saltar a la siguiente iteración del bucle sin ejecutar el resto del código dentro del bucle. Es decir, si se encuentra la palabra clave “next” dentro de un bucle, se omitirá el código que viene después y el bucle pasará inmediatamente a la siguiente iteración. La palabra clave “next” es útil cuando se desea saltar una iteración específica del bucle, sin afectar el resto del código.\nPor ejemplo, en el siguiente código se utiliza la palabra clave “next” para omitir la impresión del número 3 dentro del bucle “for”:\n\nfor (i in 1:5) {\n  if (i == 3) {\n    next\n  }\n  print(i)\n}\n\n[1] 1\n[1] 2\n[1] 4\n[1] 5\n\n\n\n\n4.3.2 Estructuras de control “break”:\n“break”, por otro lado, se utiliza en una estructura de bucle para detener el bucle de forma abrupta, incluso si la condición del bucle todavía se cumple. Es decir, si se encuentra la palabra clave “break” dentro de un bucle, se detendrá el bucle de inmediato y se continuará con la ejecución del código que viene después del bucle. La palabra clave “break” es útil cuando se desea detener el bucle en un punto específico sin tener que esperar a que la condición del bucle se deje de cumplir.\nPor ejemplo, en el siguiente código se utiliza la palabra clave “break” para detener el bucle “while” cuando el valor de “i” es mayor que 5:\n\ni &lt;- 1\nwhile (i &lt; 10) {\n  if (i &gt; 5) {\n    break\n  }\n  print(i)\n  i &lt;- i + 1\n}\n\n[1] 1\n[1] 2\n[1] 3\n[1] 4\n[1] 5",
-    "crumbs": [
-      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Estructuras en R</span>"
-    ]
-  },
-  {
-    "objectID": "control_r.html#referencias",
-    "href": "control_r.html#referencias",
-    "title": "4  Estructuras en R",
-    "section": "4.4 Referencias:",
-    "text": "4.4 Referencias:\n\nLoops y funciones en R",
-    "crumbs": [
-      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Estructuras en R</span>"
-    ]
-  },
-  {
-    "objectID": "tidyverse.html",
-    "href": "tidyverse.html",
-    "title": "Appendix C — Tidyverse en R",
-    "section": "",
-    "text": "C.1 Introducción a Tidyverse\nTidyverse es una colección de paquetes diseñados para Ciencia de Datos.\n# instalación\ninstall.packages(\"tidyverse\")\nTodos los paquetes comparten una filosofía de diseño, una gramática y estructuras de datos.\nEsta filosofía promueve",
-    "crumbs": [
-      "Appendices",
-      "<span class='chapter-number'>C</span>  <span class='chapter-title'>Tidyverse en R</span>"
-    ]
-  },
-  {
-    "objectID": "tidyverse.html#introducción-a-tidyverse",
-    "href": "tidyverse.html#introducción-a-tidyverse",
-    "title": "Appendix C — Tidyverse en R",
-    "section": "",
-    "text": "En Pipes, navegarás dentro del pipe, %&gt;%, para anidar instrucciones\nSi bien copiar-y-pegar (copy-and-paste) es una herramienta poderosa, deberías evitar utilizarla más de dos veces. Repetir el código es peligroso porque puede llevar a errores e inconsistencias.\nA medida que comiences a escribir funciones más potentes, necesitarás una base sólida acerca de las estructuras de datos.\nLas funciones nos permiten evitar la repetición de código; sin embargo, muchas veces necesitas repertir las mismas acciones con diferentes inputs. Puedes hacer esto con herramientas de iteración.",
-    "crumbs": [
-      "Appendices",
-      "<span class='chapter-number'>C</span>  <span class='chapter-title'>Tidyverse en R</span>"
-    ]
-  },
-  {
-    "objectID": "tidyverse.html#estructura-de-un-dataframe",
-    "href": "tidyverse.html#estructura-de-un-dataframe",
-    "title": "Appendix C — Tidyverse en R",
-    "section": "C.2 Estructura de un dataframe",
-    "text": "C.2 Estructura de un dataframe\n\n\n\nLectura de Base de SII\n\nsuppressPackageStartupMessages(library(dplyr))\nsuppressPackageStartupMessages(library(sf))\ntbl_sii  &lt;- readRDS(\"data/sii/mz_constru_SII.rds\") %&gt;% \n  st_drop_geometry() # descartar geometrias solo usar la tabla de datos\n\nhead(tbl_sii)\n\n# A tibble: 6 × 10\n  n_com   manzana   reg cod_com num_manz oficinas comercio vivienda total   AREA\n  &lt;chr&gt;   &lt;chr&gt;   &lt;dbl&gt;   &lt;dbl&gt;    &lt;dbl&gt;    &lt;dbl&gt;    &lt;dbl&gt;    &lt;dbl&gt; &lt;dbl&gt;  &lt;dbl&gt;\n1 IQUIQUE 1201-0      1    1201        0        0        0        0     0   585.\n2 IQUIQUE 1201-0      1    1201        0        0        0        0     0 17291.\n3 ALTO H… 1211-0      1    1211        0        0        0        0     0  1859.\n4 ALTO H… 1211-0      1    1211        0        0        0        0     0   442.\n5 ALTO H… 1211-0      1    1211        0        0        0        0     0   205.\n6 ALTO H… 1211-0      1    1211        0        0        0        0     0  1200.",
-    "crumbs": [
-      "Appendices",
-      "<span class='chapter-number'>C</span>  <span class='chapter-title'>Tidyverse en R</span>"
-    ]
-  },
-  {
-    "objectID": "tidyverse.html#funciones-básicas-dplyr",
-    "href": "tidyverse.html#funciones-básicas-dplyr",
-    "title": "Appendix C — Tidyverse en R",
-    "section": "C.3 Funciones básicas dplyr",
-    "text": "C.3 Funciones básicas dplyr\n\n\n\n\nC.3.1 Select\nselect Seleccionar variables relevantes\n\n# seleccionar nomnres de columnas que deseo conservar\ntbl_sii %&gt;%\n  select(n_com, oficinas, comercio, vivienda)\n\n# A tibble: 210,662 × 4\n   n_com         oficinas comercio vivienda\n   &lt;chr&gt;            &lt;dbl&gt;    &lt;dbl&gt;    &lt;dbl&gt;\n 1 IQUIQUE              0        0        0\n 2 IQUIQUE              0        0        0\n 3 ALTO HOSPICIO        0        0        0\n 4 ALTO HOSPICIO        0        0        0\n 5 ALTO HOSPICIO        0        0        0\n 6 ALTO HOSPICIO        0        0        0\n 7 ALTO HOSPICIO        0        0        0\n 8 ALTO HOSPICIO        0        0        0\n 9 ALTO HOSPICIO        0        0        0\n10 ALTO HOSPICIO        0        0        0\n# ℹ 210,652 more rows\n\n# seleccionar nomnres de columnas que deseo eliminar anteponiendo un \"-\"\ntbl_sii %&gt;%\n  select(-cod_com)\n\n# A tibble: 210,662 × 9\n   n_com         manzana   reg num_manz oficinas comercio vivienda total   AREA\n   &lt;chr&gt;         &lt;chr&gt;   &lt;dbl&gt;    &lt;dbl&gt;    &lt;dbl&gt;    &lt;dbl&gt;    &lt;dbl&gt; &lt;dbl&gt;  &lt;dbl&gt;\n 1 IQUIQUE       1201-0      1        0        0        0        0     0   585.\n 2 IQUIQUE       1201-0      1        0        0        0        0     0 17291.\n 3 ALTO HOSPICIO 1211-0      1        0        0        0        0     0  1859.\n 4 ALTO HOSPICIO 1211-0      1        0        0        0        0     0   442.\n 5 ALTO HOSPICIO 1211-0      1        0        0        0        0     0   205.\n 6 ALTO HOSPICIO 1211-0      1        0        0        0        0     0  1200.\n 7 ALTO HOSPICIO 1211-0      1        0        0        0        0     0  4548.\n 8 ALTO HOSPICIO 1211-0      1        0        0        0        0     0   130.\n 9 ALTO HOSPICIO 1211-0      1        0        0        0        0     0   300.\n10 ALTO HOSPICIO 1211-0      1        0        0        0        0     0  6488.\n# ℹ 210,652 more rows\n\n\n\n\nC.3.2 Filter\n\nmi_comuna &lt;- \"LAS CONDES\" \n\nsii_com &lt;- tbl_sii %&gt;%\n  filter(n_com == mi_comuna) \n \nhead(sii_com, 5)\n\n# A tibble: 5 × 10\n  n_com    manzana   reg cod_com num_manz oficinas comercio vivienda total  AREA\n  &lt;chr&gt;    &lt;chr&gt;   &lt;dbl&gt;   &lt;dbl&gt;    &lt;dbl&gt;    &lt;dbl&gt;    &lt;dbl&gt;    &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;\n1 LAS CON… 15108-…    13   15108     2358        0        0     1316  1390 2358.\n2 LAS CON… 15108-…    13   15108     2360        0        0     1590  1622 2280.\n3 LAS CON… 15108-…    13   15108     2362        0        0     1436  1502 2659.\n4 LAS CON… 15108-…    13   15108     2364        0        0     1926  1926 3348.\n5 LAS CON… 15108-…    13   15108     2366        0        0     2584  2656 4390.\n\n\nfilter: Operadores Lógicos\n\n\n\n\n\n\n\n\n\n\n\nOperador\nComparación\nEjemplo\nResultado\n\n\n\n\nx | y\nx Ó y es verdadero\nTRUE | FALSE\nTRUE\n\n\nx & y\nx Y y son verdaderos\nTRUE & FALSE\nFALSE\n\n\n!x\nx no es verdadero (negación)\n!TRUE\nFALSE\n\n\nisTRUE(x)\nx es verdadero (afirmación)\nisTRUE(TRUE)\nTRUE\n\n\n\n\n\nFiltrar las manzanas que tengan valores de oficina y comercio mayores a 0\n\nsii_com %&gt;%\n  filter(oficinas &gt; 0 & comercio &gt; 0) \n\n# A tibble: 493 × 10\n   n_com manzana   reg cod_com num_manz oficinas comercio vivienda  total   AREA\n   &lt;chr&gt; &lt;chr&gt;   &lt;dbl&gt;   &lt;dbl&gt;    &lt;dbl&gt;    &lt;dbl&gt;    &lt;dbl&gt;    &lt;dbl&gt;  &lt;dbl&gt;  &lt;dbl&gt;\n 1 LAS … 15108-…    13   15108     2400     322     3388    65422  1.22e5 1.06e5\n 2 LAS … 15108-…    13   15108     2407   30864     2518        0  7.50e4 4.04e3\n 3 LAS … 15108-…    13   15108     1392     424     9902        0  1.58e4 1.27e4\n 4 LAS … 15108-…    13   15108      336   45190     1432        0  8.28e4 3.24e3\n 5 LAS … 15108-…    13   15108      338     424.     244.    9993. 1.17e4 1.11e4\n 6 LAS … 15108-…    13   15108      338     414.     238.    9765. 1.14e4 1.06e4\n 7 LAS … 15108-…    13   15108      339    1120     5274     7748  1.49e4 9.38e3\n 8 LAS … 15108-…    13   15108      340     250       72    55206  7.23e4 1.22e4\n 9 LAS … 15108-…    13   15108      342     494     1914    47690  6.97e4 1.62e4\n10 LAS … 15108-…    13   15108      349   17826     1568        0  3.38e4 1.84e3\n# ℹ 483 more rows",
-    "crumbs": [
-      "Appendices",
-      "<span class='chapter-number'>C</span>  <span class='chapter-title'>Tidyverse en R</span>"
-    ]
-  },
-  {
-    "objectID": "tidyverse.html#resúmenes-estadísticos-con-dplyr",
-    "href": "tidyverse.html#resúmenes-estadísticos-con-dplyr",
-    "title": "Appendix C — Tidyverse en R",
-    "section": "C.4 Resúmenes Estadísticos con dplyr",
-    "text": "C.4 Resúmenes Estadísticos con dplyr\n\n\n\nContabilizar cuantos metros cuadrados de oficina por cada comuna.\n\ntbl_resumen &lt;-  tbl_sii %&gt;%\n  group_by(n_com) %&gt;%\n  summarise(Cantidad_mz = n(),\n            Total_of = sum(oficinas)) %&gt;%\n  arrange(desc(Total_of)) # Ordenar\n\ntbl_resumen\n\n# A tibble: 170 × 3\n   n_com           Cantidad_mz Total_of\n   &lt;chr&gt;                 &lt;int&gt;    &lt;dbl&gt;\n 1 SANTIAGO CENTRO         686  6105996\n 2 LAS CONDES             2310  4248336\n 3 PROVIDENCIA             885  3495426\n 4 HUECHURABA             1160  1006138\n 5 QUILICURA              2592   751874\n 6 VITACURA                950   743734\n 7 SANTIAGO SUR            623   669270\n 8 Ã‘UÃ‘OA                1337   637982\n 9 SANTIAGO OESTE          586   586724\n10 PUDAHUEL               2775   561868\n# ℹ 160 more rows\n\n\nActividad\n\nContabilizar cuantos metros cuadrados de Comercio hay por cada comuna rdenar de mayor a menor.\nCrear tabla con las 10 comunas que tienen mayor densisdad de Comercio\n\n\n\n\n\n\n\nDensidad de comercio\n\n\n\nSe puede entender como la división de la cantidad de metros cuadrados de comercio dividido por el total de metros cuadrados.",
-    "crumbs": [
-      "Appendices",
-      "<span class='chapter-number'>C</span>  <span class='chapter-title'>Tidyverse en R</span>"
-    ]
-  },
-  {
-    "objectID": "tidyverse.html#visualización-de-variables",
-    "href": "tidyverse.html#visualización-de-variables",
-    "title": "Appendix C — Tidyverse en R",
-    "section": "C.5 Visualización de Variables",
-    "text": "C.5 Visualización de Variables\n\nC.5.1 Función Plot\n\noptions(scipen = 999) # evitas notación cientiífica\nhist(sii_com$vivienda, breaks = 50,\n     main = \"Histograma mt2 de Viviendas\", col = \"#225ea8\")\n\n\n\n\n\n\n\n# colores:https://colorbrewer2.org/#type=sequential&scheme=BuGn&n=3\n\n\n\nC.5.2 Package ggplot2\n\nlibrary(ggplot2)\nggplot(sii_com, aes(x = vivienda)) + \n  geom_histogram(bins = 50, fill = \"#225ea8\", color =\"black\")\n\n\n\n\n\n\n\n\nggplot2 con estilos y características\n\nggplot(sii_com, aes(x = vivienda)) +\n  geom_histogram(bins = 50, color = \"#c7e9b4\", fill = \"#1d91c0\")+\n  theme_bw()+\n  labs(title=\"Histograma mt2 de Viviendas\", x =\"Mt2. Viviendas\", y = \"Frecuencias\")+\n  theme(plot.title = element_text(face = \"bold\",colour= \"gray60\", size=10))",
-    "crumbs": [
-      "Appendices",
-      "<span class='chapter-number'>C</span>  <span class='chapter-title'>Tidyverse en R</span>"
-    ]
-  },
-  {
-    "objectID": "tidyverse.html#referencias",
-    "href": "tidyverse.html#referencias",
-    "title": "Appendix C — Tidyverse en R",
-    "section": "C.6 Referencias:",
-    "text": "C.6 Referencias:\n\nTidyverse\nPaletas de colores",
-    "crumbs": [
-      "Appendices",
-      "<span class='chapter-number'>C</span>  <span class='chapter-title'>Tidyverse en R</span>"
-    ]
-  },
-  {
-    "objectID": "john_snow.html",
-    "href": "john_snow.html",
-    "title": "Mapa de Cólera",
-    "section": "",
-    "text": "Historia\nEn el siglo XIX, un médico inglés llamado John Snow dejó una huella indeleble en la historia de la epidemiología, convirtiéndose en el padre de esta disciplina. Aunque sus contribuciones al campo de la anestesia son notables, es su trabajo pionero en el análisis de datos y la visualización lo que lo hace memorable. Su hazaña más destacada: el mapa de las muertes en el Soho durante el brote de cólera de 1854. Este brote, que causó estragos en la población de Londres, se atribuyó en su mayoría al comercio de la marina mercante, al hacinamiento y a la insalubridad de las calles de una ciudad cuya población superaba los dos millones de habitantes. Sin embargo, John Snow se destacó por desafiar la creencia común de su época, sosteniendo que el cólera se transmitía a través de fuentes de agua contaminadas en lugar de la propagación por el aire.\nExploraremos la increíble odisea de John Snow mientras trataba de probar su teoría, demostrando la verdadera causa del brote de cólera de 1854 en Soho. Su famoso mapa, que trazaba las defunciones, reveló un patrón sorprendente: la mayoría de las muertes se concentraban en las cercanías de una bomba de agua pública. Este episodio no solo marcó un hito en la historia de la epidemiología, sino que también ilustra las complejidades y desafíos de superar el sesgo de confirmación arraigado en la teoría predominante de la transmisión del cólera por miasmas1.\nEn el libro “The Ghost Map”, de Steven Johnson, se relata la actuación de Snow en la identificación del origen del brote de cólera del Soho de 1854, destaca el ingenio y la perseverancia de John Snow en la búsqueda de la verdad científica, trascendiendo las barreras de la creencia convencional. Esta es la historia de un médico que no solo cambió la forma en que entendemos las enfermedades, sino también la importancia del análisis espacial y la visualización de datos en la ciencia.",
-    "crumbs": [
-      "Appendices",
-      "Mapa de Cólera"
-    ]
-  },
-  {
-    "objectID": "john_snow.html#importancia-del-mapa",
-    "href": "john_snow.html#importancia-del-mapa",
-    "title": "Mapa de Cólera",
-    "section": "Importancia del Mapa",
-    "text": "Importancia del Mapa\nA principios de septiembre de 1854, un pequeño sector de Londres llamado Golden Square fue escenario de un brote epidémico de cólera de inusual intensidad, costando la vida a cerca de 500 personas en tan sólo 10 días. Snow planteó que el severo brote de cólera en Golden Square se debía a la ingestión de aguas contaminadas provenientes de esta bomba y se propuso, firmemente, demostrarlo. (L and C 2007).\nJohn Snow venía utilizando desde hacía tiempo mapas en sus artículos y exposiciones como ayuda a la hora de argumentar sus hipótesis, por lo que aprovechó para comprar un mapa del barrio y, ayudado del párroco local Henry Whitehead, ir anotando en él las muertes que se habían producido por cólera en el mes de septiembre. Para ello recurrió al trabajo de campo, visitando uno por uno los edificios del área afectada, y ayudándose de los registros del hospital de Middlesex, a donde se trasladaban muchas de las víctimas.\n\n\n\nMapa en el cual Jonh Snow fue registrando las muertes por cólera en Septiembre de 1984\n\n\nEl mapa recogía las defunciones con unas finas líneas de color negro que se iban apilando unas sobre las otras a medida que el número de decesos aumentaba. Con esta simple representación el mapa de John Snow trasmitía un claro mensaje visual al conectar incidencia con concentración. El resultado fue clarificador: la mayor parte de las muertes se habían producido en las proximidades de Broad Street. De igual manera Snow georreferenció sobre el mapa los pozos de agua, viéndose claramente como una gran cantidad de víctimas se concentraban en torno a la bomba de agua de Broad Street (L and C 2007).\nComo vecino del área, Snow sabía que la mayoría de los residentes del sector extraían el agua a partir de una bomba de uso público ubicada en Broad Street. Prontamente, confirmó que la mayoría de los moradores se abastecían de agua extraída de la bomba de Broad Street. Calculó la distancia entre la residencia de cada difunto y la bomba de agua más cercana, observando que en 73 de 83 casos era la bomba de Broad Street y que 61 de 83 difuntos bebían de sus aguas contaminadas en forma constante u ocasional.\nEntusiasmado por los hallazgos de su investigación, presentó los resultados ante la autoridad sanitaria local, quien decidió inhabilitar la bomba de Broad Street mediante la remoción de su palanca. La inhabilitación de la bomba de agua fue una medida altamente impopular entre los habitantes del sector, quienes no comprendían el sentido de la misma. Si la incidencia de casos de cólera disminuía, su teoría quedaría finalmente demostrad\nEn su planteamiento, no hacía sentido la ausencia de muertes entre los trabajadores de Lion Brewery -una cervecería aledaña a la bomba de agua- al igual que el escaso número de defunciones ocurrido en una hospedería para gente pobre, también cercana a la fuente y en la que solamente fallecieron cinco de sus 500 huéspedes. Snow averiguó que los trabajadores de la cervecería, temerosos de beber del agua de la bomba, únicamente bebían cerveza. De igual forma, la hospedería contaba con un arroyo privado para el suministro de agua potable, no necesitando del agua de la bomba. Finalmente, Snow logró recabar antecedentes de algunas personas que abandonaron el sector al inicio de la epidemia y que posteriormente fallecieron en otros puntos de la ciudad libres de cólera, demostrando que habían bebido agua extraída de la bomba de Broad Street días antes de morir.",
-    "crumbs": [
-      "Appendices",
-      "Mapa de Cólera"
-    ]
-  },
-  {
-    "objectID": "john_snow.html#conclusiones",
-    "href": "john_snow.html#conclusiones",
-    "title": "Mapa de Cólera",
-    "section": "Conclusiones",
-    "text": "Conclusiones\n\n\n\nRéplica de la bomba de agua situada muy cerca de la ubicación original, en Broadwick Street (la moderna Broad Street). Fue erigida en 1992 en memoria de John Snow\n\n\nTras la inhabilitación de la polémica bomba, se observó una reducción en la incidencia y mortalidad por cólera, sin embargo, esto no fue suficiente para controlar el brote epidémico. Lamentablemente, la incredulidad de las autoridades sanitarias -quienes apoyaban la teoría miasmática- y la presión popular fue más fuerte, habilitándose nuevamente su uso. Snow intentó hasta su muerte en 1858 convencer a la comunidad médica que el cólera se transmitía mediante la ingestión de una “materia mórbida” presente en las aguas contaminadas del río Támesis, pero sus esfuerzos fueron infructuosos. Su teoría debió esperar la cuarta epidemia de cólera de Londres, ocurrida en 1866, para ser finalmente aceptada. Al poco tiempo, experimentos realizados por Louis Pasteur demostraron que son microorganismos presentes en el ambiente (y no “miasmas”) los causantes de las enfermedades transmisibles. Casi tres décadas después de la muerte de Snow, Robert Koch aisló y cultivó el Vibrio cholerae, la “materia mórbida” a la cual recurrentemente se refería Snow, dándole total crédito a su hipótesis(L and C 2007).\nEn Londres, hoy en día es posible encontrar una réplica de la bomba de agua de Broad Street (actualmente Broadwick Street). Anualmente, la John Snow Society (Ramsay 2006) rinde un homenaje a su persona, retirando y reposicionando la palanca de la bomba de agua, como una forma de recordar los múltiples desafíos que enfrenta continuamente la Salud Pública alrededor del mundo.\nSin disponer de un cuerpo de conocimientos microbiológicos y epidemiológicos como el existente hoy en día, Snow apeló a sus mejores virtudes -un agudo sentido de observación, razonamiento lógico y perseverancia- para caracterizar un problema de salud, desafiando a la comunidad médica y a la autoridad sanitaria, pensando únicamente en el bienestar de la comunidad. Con justa razón John Snow es considerado el padre de la epidemiología moderna, ejemplo del espíritu que todo médico investigador debe poseer (L and C 2007).",
-    "crumbs": [
-      "Appendices",
-      "Mapa de Cólera"
-    ]
-  },
-  {
-    "objectID": "john_snow.html#replicar-estudio",
-    "href": "john_snow.html#replicar-estudio",
-    "title": "Mapa de Cólera",
-    "section": "Replicar Estudio",
-    "text": "Replicar Estudio\nEn un intento de rendir homenaje a la obra de John Snow y aplicar sus principios en la era de la Ciencia de Datos, se busca replicar la icónica investigación de Snow, pero con un enfoque moderno y la técnica de estimación de densidad mediante kernels (KDE).\nUtilizando los datos muertes de Cólera de esta época se buscará determinar las concentraciones espaciales y hacer una relación de proximidad con las fuentes de agua pública, a modo de determinar origen del brode Cólera de 1854.\nEste enfoque actualizado busca demostrat cómo la ciencia de datos y la programación pueden continuar el legado de Snow en la exploración de problemas de salud pública y epidemiología a través de análisis espacial y visualización de datos avanzados.\n\nLectura de inusmos y librerías\n\n# install.packages(\"HistData\")\nlibrary(HistData)\nlibrary(dplyr)\nlibrary(sf)\nlibrary(mapview)\nlibrary(ggplot2)\nlibrary(raster)\nlibrary(ggspatial) # get basemaps\nlibrary(SpatialKDE)\n\n\nsnow_deaths &lt;- st_read(\"data/SnowGIS_SHP/Cholera_Deaths.shp\")\n\nReading layer `Cholera_Deaths' from data source \n  `/Users/denisberroeta/Documents/Docencia/geoanalisis/cgeoa-book/data/SnowGIS_SHP/Cholera_Deaths.shp' \n  using driver `ESRI Shapefile'\nSimple feature collection with 250 features and 2 fields\nGeometry type: POINT\nDimension:     XY\nBounding box:  xmin: 529160.3 ymin: 180857.9 xmax: 529655.9 ymax: 181306.2\nProjected CRS: OSGB36 / British National Grid\n\nsnow_pumps &lt;- st_read(\"data/SnowGIS_SHP/Pumps.shp\")\n\nReading layer `Pumps' from data source \n  `/Users/denisberroeta/Documents/Docencia/geoanalisis/cgeoa-book/data/SnowGIS_SHP/Pumps.shp' \n  using driver `ESRI Shapefile'\nSimple feature collection with 8 features and 1 field\nGeometry type: POINT\nDimension:     XY\nBounding box:  xmin: 529183.7 ymin: 180660.5 xmax: 529748.9 ymax: 181193.7\nProjected CRS: OSGB36 / British National Grid\n\n# epsg:27700\n# mapview(snow_deaths)+ mapview(snow_pumps, col.region = \"red\")\n\n\n\nVisualización del muertes por Cólera 1854\n\nlibrary(viridis)\ncolors = c('#f768a1','#dd3497','#7a0177','#49006a')\npal_death&lt;- colorRampPalette(colors)( max(snow_deaths$Count) )\n\nmap_snow &lt;-  ggplot(snow_deaths) +\n    annotation_map_tile(zoom = 17, \"cartolight\") +\n    geom_sf(aes(color =  Count), \n          alpha=0.5,  size= 2.5,\n            show.legend = \"point\", inherit.aes = FALSE) +\n  scale_colour_gradientn(name = \"Count Death\", \n                         colours = pal_death)+\n  geom_sf(data = snow_pumps,  color =  \"#1d91c0\", \n          alpha=0.8,  size= 4)+\n  ggtitle(\"Muertes por Cólera 1854\") +\n    # coord_sf(datum = NA) +\n  theme_minimal()\nmap_snow\n\n\n\n\n\n\n\n\n\n\nCálculo de Kernel Density Estimation de Muertes\nRegión de Estudio\n\nroi &lt;- st_convex_hull(st_union(snow_deaths))  %&gt;% st_as_sf()\n# mapview(roi)+mapview(snow_deaths)\n\nParámetros de KDE\n\n#Definirán Parámemetros de Estudio\ncell_size &lt;- 10 # Tamaño de Celda\nband_width &lt;- 50\n\n# grilla vacía\nraster_death &lt;- roi %&gt;% \n  create_raster(cell_size = cell_size, side_offset = band_width)\n\nCálculo de KDE\n\nkde_raster &lt;- snow_deaths %&gt;% \n  kde(band_width = band_width, kernel = \"quartic\",\n      grid = raster_death, \n      weights = snow_deaths$Count,\n      quiet = T)\n\nFiltrar valores de baja densidad\nPrimeramente se realizará un histograma para tomar una decición informada sobre el umbral mínimo de densidad.\n\nhist(kde_raster, breaks = 30, \n     col=\"#f768a1\", \n     main=\"Histograma KDE\",\n     ylab=\"Número de Pixeles\", xlab=\"valor KDE\")\n\n\n\n\n\n\n\nkde_raster[kde_raster&lt;10] &lt;- NA\n\n\nmapview(snow_deaths, col.region = \"#cb181d\", hide = T)+ \n  mapview(snow_pumps, col.region = \"#1d91c0\")+\n  mapview(kde_raster)\n\n\n\nVisualización de Resultados\nSe observa claramente la fuente de agua sobre la mayor densidad de muertes por cólera, pudiendo hacer una relación espacial.\n\n# rastero to df (na omit)\nkde_df &lt;- raster::as.data.frame(kde_raster, xy = TRUE) %&gt;%\n  na.omit()\n\nmap_snow_kde &lt;-  ggplot() +\n  geom_tile(data = kde_df ,\n            aes(x = x, y = y,\n                fill = layer)) +\n  scale_fill_gradientn(name = \"Density Death\",\n                       colours = pal_death) +\n  geom_sf(\n    data = snow_pumps,\n    color =  \"#1d91c0\",\n    alpha = 0.8,\n    size = 4\n  ) +\n  ggtitle(label = \"Muertes por cólera en Broad Street (1984)\",\n          subtitle = \"Kernel Density Estimation\") +\n  theme_bw() +\n  theme(\n    panel.grid.major = element_line(colour = \"gray80\"),\n    panel.grid.minor = element_line(colour = \"gray80\")\n  )\n\nmap_snow_kde",
-    "crumbs": [
-      "Appendices",
-      "Mapa de Cólera"
-    ]
-  },
-  {
-    "objectID": "john_snow.html#referencias",
-    "href": "john_snow.html#referencias",
-    "title": "Mapa de Cólera",
-    "section": "Referencias",
-    "text": "Referencias\n\nJohn Snow, la epidemia de cólera y el nacimiento de la epidemiología moderna\n(Mostly Clinical) Epidemiology with R\nFloursh: Masters series: John Snow’s cholera map\nJohn Snow 210th Birthday Map Competition\nHistData R Package\n\n\n\n\n\nL, Jaime Cerda, and Gonzalo Valdivia C. 2007. “John Snow, La Epidemia de cólera y El Nacimiento de La Epidemiologı́a Moderna.” Revista Chilena de Infectologı́a 24 (4). https://doi.org/10.4067/s0716-10182007000400014.\n\n\nRamsay, Michael A. E. 2006. “John Snow, MD: Anaesthetist to the Queen of England and Pioneer Epidemiologist.” Baylor University Medical Center Proceedings 19 (1): 24–28. https://doi.org/10.1080/08998280.2006.11928120.",
-    "crumbs": [
-      "Appendices",
-      "Mapa de Cólera"
-    ]
-  },
-  {
-    "objectID": "john_snow.html#footnotes",
-    "href": "john_snow.html#footnotes",
-    "title": "Mapa de Cólera",
-    "section": "",
-    "text": "Según creencias o teorías antiguas el miasma es la sustancia fétida y perjudicial que emana de los cuerpos de seres enfermos o en estado de descomposición.↩︎",
-    "crumbs": [
-      "Appendices",
-      "Mapa de Cólera"
-    ]
-  },
-  {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Curso de Geoanálisis",
-    "section": "",
-    "text": "Syllabus",
-    "crumbs": [
-      "Syllabus"
-    ]
-  },
-  {
-    "objectID": "index.html#introducción",
-    "href": "index.html#introducción",
-    "title": "Curso de Geoanálisis",
-    "section": "Introducción",
-    "text": "Introducción\nEste curso está diseñado para proporcionar a los estudiantes una sólida base teórica y competencias técnicas para realizar análisis espacial de variables territoriales en múltiples áreas de aplicación. Se destaca el uso del lenguaje de programación R para implementar metodologías avanzadas y automatizadas, con un enfoque en resolver desafíos complejos en políticas públicas, facilitando la toma de decisiones informadas por evidencia territorial.",
-    "crumbs": [
-      "Antecedentes"
-    ]
-  },
-  {
-    "objectID": "index.html#objetivos",
-    "href": "index.html#objetivos",
-    "title": "Curso de Geoanálisis",
-    "section": "Objetivos",
-    "text": "Objetivos\n\nObjetivo General\nEl objetivo general es proporcionar a los estudiantes los fundamentos, técnicas y aspectos básicos para analizar, modelar y representar información espacial, para apoyar la toma de decisiones con evidencia territorial robusta.\n\n\nObjetivos específicos\n\nConocer los conceptos básicos del geoanálisis.\nManipular datos espaciales en R.\nAplicar las técnicas a problemas de interés público.",
-    "crumbs": [
-      "Syllabus"
-    ]
-  },
-  {
-    "objectID": "index.html#modulos",
-    "href": "index.html#modulos",
-    "title": "Curso de Geoanálisis",
-    "section": "Modulos",
-    "text": "Modulos\n\n\n\nModulos\n\n\n\nIntroducción a la Estadística Espacial y a Datos Espaciales\nManejo y Representación de datos vectoriales, construcción de indicadores\nManejo y Representación de datos raster, construcción de indicadores\nInferencia Espacial: Interpolación y mapas de calor\nRelaciones de Vecindad y autocorrelación espacial\nModelos de Regresión Espacial",
-    "crumbs": [
-      "Antecedentes"
-    ]
-  },
-  {
-    "objectID": "index.html#docentes",
-    "href": "index.html#docentes",
-    "title": "Curso de Geoanálisis",
-    "section": "Docentes",
-    "text": "Docentes\n\nProfesor: Denis Berroeta (denis.berroeta@uai.cl)\nMaster y PhD (cursando) in Data Scicence, Magister en Inteligencia Artificial, Universidad Adolfo Ibáñez. Coordinador de Investigación Centro Inteligencia Territorial, UAI. Tiene experiencia en modelamiento y análisis de datos espaciales, trabajando en diferentes proyectos de investigación públicos y privados en el Centro de Inteligencia Territorial de la Universidad Adolfo Ibáñez, diseñando y gestionando la implementación de metodologías de análisis de datos territoriales. Posee experiencia como profesor en Geoestadísticas; Análisis Criminal, Análisis de imágenes satelitales para el monitoreo ambiental y gestión de desastres naturales; y Data Science.\n\n\nAyudante Docente: Jorge Aravena (jorge.aravena@edu.uai.cl)\nAnalista Espacial en el Centro de Inteligencia Territorial de la Universidad Adolfo Ibáñez. Geógrafo de la Universidad Austral de Chile, con diplomado en Planificación y Gestión Urbana Integrada de la Pontificia Universidad Católica de Chile. Su enfoque abarca la geografía urbana crítica y los sistemas de información geográfica.",
-    "crumbs": [
-      "Syllabus"
-    ]
-  },
-  {
-    "objectID": "syllabus.html",
-    "href": "syllabus.html",
-    "title": "Syllabus",
-    "section": "",
-    "text": "Resumen\nEste curso está diseñado para proporcionar a los estudiantes una sólida base teórica y competencias técnicas para realizar análisis espacial de variables territoriales en múltiples áreas de aplicación. Se destaca el uso del lenguaje de programación R para implementar metodologías analíticas y automatizadas, con un enfoque en resolver desafíos complejos en políticas públicas, facilitando la toma de decisiones informadas por evidencia territorial.",
-    "crumbs": [
-      "Syllabus"
-    ]
-  },
-  {
-    "objectID": "syllabus.html#objetivos",
-    "href": "syllabus.html#objetivos",
-    "title": "Syllabus",
-    "section": "OBjetivos",
-    "text": "OBjetivos\n\nObjetivo General\nEl objetivo general es proporcionar a los estudiantes los fundamentos, técnicas y aspectos básicos para analizar, modelar y representar información espacial, para apoyar la toma de decisiones con evidencia territorial robusta.\n\n\nObjetivos específicos\n\nConocer los conceptos básicos del geoanálisis.\nManipular datos espaciales en R.\nAplicar las técnicas a problemas de interés público.",
-    "crumbs": [
-      "Syllabus"
-    ]
-  },
-  {
-    "objectID": "syllabus.html#metodología",
-    "href": "syllabus.html#metodología",
-    "title": "Syllabus",
-    "section": "Metodología",
-    "text": "Metodología\nLas clases se dividirán en partes teóricas y prácticas. La primera de ellas se pretende entregar un marco conceptual metodológico y teórico del geoanálisis y sus aplicaciones en las políticas públicas, que será la base para afrontar la segunda parte del módulo, que se basará en ejercicios aplicados utilizando lenguaje de programación R Project, dirigido a internalizar los conceptos teóricos, además de generar productos de análisis espacial útiles para gestión eventual de políticas públicas. Requerimiento tener instalado R Project y Rstudio en su computador personal.",
-    "crumbs": [
-      "Syllabus"
-    ]
-  },
-  {
-    "objectID": "syllabus.html#normas-de-buen-funcionamiento",
-    "href": "syllabus.html#normas-de-buen-funcionamiento",
-    "title": "Syllabus",
-    "section": "Normas de Buen funcionamiento",
-    "text": "Normas de Buen funcionamiento\nPresencia Activa: Este curso, por su metodología experiencial, requiere de una participación activa de los participantes. Es importante descubrir las fuentes de distracción y evitarlas. Las más usuales son lectura o escritura de e-mails, navegar por internet o utilizar redes sociales. Esto distrae a quien lo hace y restringe al resto del curso de su participación activa.\nPuntualidad y Asistencia: Será necesario ingresar a clases en forma puntual y permanecer en la misma sin salir, a menos que haya una urgencia. Se requerirá como mínimo un 75% de asistencia). Es importante que quien tuviera problemas para estar a tiempo o para asistir, se ponga en contacto lo antes posible con la coordinadora del curso. Los alumnos que lleguen más de 15 minutos tarde serán considerados ausentes de ese segmento de la sesión. Grabación de la clase: La clase se graba como respaldo en caso haya fallas de internet, y se disponibiliza en la plataforma virtual del curso sin posibilidad de descarga. Está disponible únicamente por 60 días en el servidor de Zoom y posterior a esa fecha se elimina. La visualización posterior de la clase no se considera como asistencia.",
-    "crumbs": [
-      "Syllabus"
-    ]
-  },
-  {
-    "objectID": "syllabus.html#contenidos",
-    "href": "syllabus.html#contenidos",
-    "title": "Syllabus",
-    "section": "Contenidos",
-    "text": "Contenidos\nLos contenidos de cada clase se detallan a continuación:\nNúmero de Clase Contenidos 1 Introducción a R 2 Manipulación de datos 3 Visualización con R 4 Manipulación de datos espaciales 5 Geocoding 6 Inferencia Espacial: Interpolación y mapas de calor 7 Construcción de indicadores territoriales 8 Reporte y Proyecto",
-    "crumbs": [
-      "Syllabus"
-    ]
-  },
-  {
-    "objectID": "syllabus.html#evaluación",
-    "href": "syllabus.html#evaluación",
-    "title": "Syllabus",
-    "section": "Evaluación",
-    "text": "Evaluación\nLas evaluaciones consisten en 2 tareas de programación, la primera individual y la segunda grupal. A continuación se detallan las evaluaciones:\nTipo(s) de evaluación Tareas Forma de entrega En documento escrito (PDF o HTML) y código en R Cálculo de la nota final Tarea 1: 40%. - Tarea 2: 60% Fecha Evaluación 1 22-AGO-2025 Fecha Evaluación 2 16-SEP-2025",
-    "crumbs": [
-      "Syllabus"
-    ]
-  },
-  {
-    "objectID": "syllabus.html#docentes",
-    "href": "syllabus.html#docentes",
-    "title": "Syllabus",
-    "section": "Docentes",
-    "text": "Docentes\n\nProfesor: Denis Berroeta (denis.berroeta@uai.cl)\nMaster y PhD (cursando) in Data Scicence, Magister en Inteligencia Artificial, Universidad Adolfo Ibáñez. Coordinador de Investigación Centro Inteligencia Territorial, UAI. Tiene experiencia en modelamiento y análisis de datos espaciales, trabajando en diferentes proyectos de investigación públicos y privados en el Centro de Inteligencia Territorial de la Universidad Adolfo Ibáñez, diseñando y gestionando la implementación de metodologías de análisis de datos territoriales. Posee experiencia como profesor en Geoestadísticas; Análisis Criminal, Análisis de imágenes satelitales para el monitoreo ambiental y gestión de desastres naturales; y Data Science.\n\n\nAyudante: Jorge Aravena (jorge.aravena@edu.uai.cl)\nAnalista Espacial en el Centro de Inteligencia Territorial de la Universidad Adolfo Ibáñez. Geógrafo de la Universidad Austral de Chile, con diplomado en Planificación y Gestión Urbana Integrada de la Pontificia Universidad Católica de Chile. Su enfoque abarca la geografía urbana crítica y los sistemas de información geográfica.",
-    "crumbs": [
-      "Syllabus"
-    ]
-  },
-  {
-    "objectID": "syllabus.html#bibliografía",
-    "href": "syllabus.html#bibliografía",
-    "title": "Syllabus",
-    "section": "Bibliografía",
-    "text": "Bibliografía\nOpcional:\n\nLovelace, R., Nowosad, J., & Muenchow, J. (2019). Welcome | Geocomputation with R. https://geocompr.robinlovelace.net/.\nPaez, A. (s. f.). An Introduction to Spatial Data Analysis and Statistics: A Course in R. https://paezha.github.io/spatial-analysis-r/\nMas, J.-F.(2018). Análisis espacial con R. 151. http://eujournal.org/files/journals/1/books/JeanFrancoisMas.pdf\nGarreton, M., Basauri, A., & Valenzuela, L. (2020). Exploring the correlation between city size and residential segregation: Comparing Chilean cities with spatially unbiased indexes. Environment and Urbanization, 1-20.https://doi.org/10.1177/0956247820918983\nR para la Ciencia de Datos, https://es.r4ds.hadley.nz/",
-    "crumbs": [
-      "Syllabus"
-    ]
-  },
-  {
-    "objectID": "index.html#resumen",
-    "href": "index.html#resumen",
-    "title": "Curso de Geoanálisis",
-    "section": "Resumen",
-    "text": "Resumen\nEste curso está diseñado para proporcionar a los estudiantes una sólida base teórica y competencias técnicas para realizar análisis espacial de variables territoriales en múltiples áreas de aplicación. Se destaca el uso del lenguaje de programación R para implementar metodologías analíticas y automatizadas, con un enfoque en resolver desafíos complejos en políticas públicas, facilitando la toma de decisiones informadas por evidencia territorial.",
-    "crumbs": [
-      "Syllabus"
-    ]
-  },
-  {
-    "objectID": "index.html#metodología",
-    "href": "index.html#metodología",
-    "title": "Curso de Geoanálisis",
-    "section": "Metodología",
-    "text": "Metodología\nLas clases se dividirán en partes teóricas y prácticas. La primera de ellas se pretende entregar un marco conceptual metodológico y teórico del geoanálisis y sus aplicaciones en las políticas públicas, que será la base para afrontar la segunda parte del módulo, que se basará en ejercicios aplicados utilizando lenguaje de programación R Project, dirigido a internalizar los conceptos teóricos, además de generar productos de análisis espacial útiles para gestión eventual de políticas públicas. Requerimiento tener instalado R Project y Rstudio en su computador personal.",
-    "crumbs": [
-      "Syllabus"
-    ]
-  },
-  {
-    "objectID": "index.html#normas-de-buen-funcionamiento",
-    "href": "index.html#normas-de-buen-funcionamiento",
-    "title": "Curso de Geoanálisis",
-    "section": "Normas de Buen funcionamiento",
-    "text": "Normas de Buen funcionamiento\nPresencia Activa: Este curso, por su metodología experiencial, requiere de una participación activa de los participantes. Es importante descubrir las fuentes de distracción y evitarlas. Las más usuales son lectura o escritura de e-mails, navegar por internet o utilizar redes sociales. Esto distrae a quien lo hace y restringe al resto del curso de su participación activa.\nPuntualidad y Asistencia: Será necesario ingresar a clases en forma puntual y permanecer en la misma sin salir, a menos que haya una urgencia. Se requerirá como mínimo un 75% de asistencia). Es importante que quien tuviera problemas para estar a tiempo o para asistir, se ponga en contacto lo antes posible con la coordinadora del curso. Los alumnos que lleguen más de 15 minutos tarde serán considerados ausentes de ese segmento de la sesión. Grabación de la clase: La clase se graba como respaldo en caso haya fallas de internet, y se disponibiliza en la plataforma virtual del curso sin posibilidad de descarga. Está disponible únicamente por 60 días en el servidor de Zoom y posterior a esa fecha se elimina. La visualización posterior de la clase no se considera como asistencia.",
-    "crumbs": [
-      "Syllabus"
-    ]
-  },
-  {
-    "objectID": "index.html#contenidos",
-    "href": "index.html#contenidos",
-    "title": "Curso de Geoanálisis",
-    "section": "Contenidos",
-    "text": "Contenidos\nLos contenidos de cada clase se detallan a continuación:\n\n\n\n\n\n\n\n\n\n\n\nSesión\nFecha\nInicio\nTérmino\nSesiones\nHoras\n\n\n\n\nS1\nmartes, 22 de julio de 2025\n17:30\n20:50\nIntroducción a R\n3\n\n\nS2\nmartes, 29 de julio de 2025\n17:30\n20:50\nManipulación de datos\n3\n\n\nS3\nmartes, 5 de agosto de 2025\n17:30\n20:50\nVisualización con R\n3\n\n\nS4\nmartes, 12 de agosto de 2025\n17:30\n20:50\nManipulación de datos espaciales\n3\n\n\nS5\nmartes, 19 de agosto de 2025\n17:30\n20:50\nGeocoding\n3\n\n\nS6\nmartes, 26 de agosto de 2025\n17:30\n20:50\nInferencia Espacial: Interpolación y mapas de calor\n3\n\n\nS7\nmartes, 2 de septiembre de 2025\n17:30\n20:50\nConstrucción de indicadores territoriales\n3\n\n\nS8\nmartes, 9 de septiembre de 2025\n17:30\n20:50\nReporte y Proyecto\n3",
-    "crumbs": [
-      "Syllabus"
-    ]
-  },
-  {
-    "objectID": "index.html#evaluación",
-    "href": "index.html#evaluación",
-    "title": "Curso de Geoanálisis",
-    "section": "Evaluación",
-    "text": "Evaluación\nLas evaluaciones consisten en 2 tareas de programación, la primera individual y la segunda grupal. A continuación se detallan las evaluaciones:\n\n\n\n\n\n\n\nConcepto\nDetalle\n\n\n\n\nTipo(s) de evaluación\nTareas\n\n\nForma de entrega\nEn documento escrito (PDF o HTML) y código en R\n\n\nCálculo de la nota final\nTarea 1: 40% - Tarea 2: 60%\n\n\nFecha Evaluación 1\n22-AGO-2025\n\n\nFecha Evaluación 2\n16-SEP-2025",
-    "crumbs": [
-      "Syllabus"
-    ]
-  },
-  {
-    "objectID": "index.html#bibliografía",
-    "href": "index.html#bibliografía",
-    "title": "Curso de Geoanálisis",
-    "section": "Bibliografía",
-    "text": "Bibliografía\nOpcional:\n\nLovelace, R., Nowosad, J., & Muenchow, J. (2019). Welcome | Geocomputation with R. https://geocompr.robinlovelace.net/.\nPaez, A. (s. f.). An Introduction to Spatial Data Analysis and Statistics: A Course in R. https://paezha.github.io/spatial-analysis-r/\nMas, J.-F.(2018). Análisis espacial con R. 151. http://eujournal.org/files/journals/1/books/JeanFrancoisMas.pdf\nGarreton, M., Basauri, A., & Valenzuela, L. (2020). Exploring the correlation between city size and residential segregation: Comparing Chilean cities with spatially unbiased indexes. Environment and Urbanization, 1-20.https://doi.org/10.1177/0956247820918983\nR para la Ciencia de Datos, https://es.r4ds.hadley.nz/",
-    "crumbs": [
-      "Syllabus"
-    ]
-  },
-  {
-    "objectID": "index.html#contactos",
-    "href": "index.html#contactos",
-    "title": "Curso de Geoanálisis",
-    "section": "Contactos",
-    "text": "Contactos\n\n\n\nCargo\nNombre\nCorreo\n\n\n\n\nDirector de Programa\nClaudio Aracena\nclaudio.aracena.c@edu.uai.cl\n\n\nCoordinadora Académica\nGabriela Nuñez\ngabriela.nunez.s@uai.cl\n\n\nDocente\nDenis Berroeta\ndenisberroeta@uai.cl\n\n\nAyudante\nJorge Aravena\njorge.aravena@edu.uai.cl",
-    "crumbs": [
-      "Syllabus"
-    ]
-  },
-  {
-    "objectID": "index.html#normas",
-    "href": "index.html#normas",
-    "title": "Curso de Geoanálisis",
-    "section": "Normas",
-    "text": "Normas\nPresencia Activa: Este curso, por su metodología experiencial, requiere de una participación activa de los participantes. Es importante descubrir las fuentes de distracción y evitarlas. Las más usuales son lectura o escritura de e-mails, navegar por internet o utilizar redes sociales. Esto distrae a quien lo hace y restringe al resto del curso de su participación activa.\nPuntualidad y Asistencia: Será necesario ingresar a clases en forma puntual y permanecer en la misma sin salir, a menos que haya una urgencia. Se requerirá como mínimo un 75% de asistencia). Es importante que quien tuviera problemas para estar a tiempo o para asistir, se ponga en contacto lo antes posible con la coordinadora del curso. Los alumnos que lleguen más de 15 minutos tarde serán considerados ausentes de ese segmento de la sesión. Grabación de la clase: La clase se graba como respaldo en caso haya fallas de internet, y se disponibiliza en la plataforma virtual del curso sin posibilidad de descarga. Está disponible únicamente por 60 días en el servidor de Zoom y posterior a esa fecha se elimina. La visualización posterior de la clase no se considera como asistencia.",
-    "crumbs": [
-      "Syllabus"
-    ]
-  },
-  {
-    "objectID": "index.html#normas-en-clases",
-    "href": "index.html#normas-en-clases",
-    "title": "Curso de Geoanálisis",
-    "section": "Normas en clases",
-    "text": "Normas en clases\nPresencia Activa: Este curso, por su metodología experiencial, requiere de una participación activa de los participantes. Es importante descubrir las fuentes de distracción y evitarlas. Las más usuales son lectura o escritura de e-mails, navegar por internet o utilizar redes sociales. Esto distrae a quien lo hace y restringe al resto del curso de su participación activa.\nPuntualidad y Asistencia: Será necesario ingresar a clases en forma puntual y permanecer en la misma sin salir, a menos que haya una urgencia. Se requerirá como mínimo un 75% de asistencia). Es importante que quien tuviera problemas para estar a tiempo o para asistir, se ponga en contacto lo antes posible con la coordinadora del curso. Los alumnos que lleguen más de 15 minutos tarde serán considerados ausentes de ese segmento de la sesión. Grabación de la clase: La clase se graba como respaldo en caso haya fallas de internet, y se disponibiliza en la plataforma virtual del curso sin posibilidad de descarga. Está disponible únicamente por 60 días en el servidor de Zoom y posterior a esa fecha se elimina. La visualización posterior de la clase no se considera como asistencia.\nReunión Zoom recurrente: https://uai-cl.zoom.us/j/98936792371?jst=1",
-    "crumbs": [
-      "Syllabus"
-    ]
-  },
-  {
-    "objectID": "geoanalisis.html",
-    "href": "geoanalisis.html",
-    "title": "Introducción al Geoanálisis",
-    "section": "",
-    "text": "Breve Historia del Pensamiento Geográfico y Estadístico\nEl espacio no es neutro. Las decisiones que tomamos, como individuos y como sociedades, se distribuyen de manera desigual en el territorio. Las políticas públicas moldean y son moldeadas por esa realidad espacial. Comprender esta interacción entre datos, territorio y decisiones es la esencia del geoanálisis, una disciplina cada vez más relevante en un mundo interconectado.\nEste capítulo ofrece una introducción al geoanálisis desde una perspectiva histórica, conceptual y aplicada, subrayando su valor para diseñar políticas públicas que mejoren la calidad de vida y el bienestar.\nEl término estadística deriva del italiano statista (“hombre de Estado”), y desde la antigüedad ha servido para estimar capacidades de un reino y facilitar la gestión tributaria. Por ejemplo, en Egipto ya se realizaban censos hacia el 3050 a.C. Durante la expansión colonial europea (siglos XVI–XIX), la estadística se desarrolló en estrecha relación con la cartografía, como herramienta para administrar y dominar territorios.\nEn el siglo XX, con la llegada de la estadística espacial y la computación, se superaron las limitaciones del cálculo manual y se hizo posible analizar grandes volúmenes de datos georreferenciados. Hoy, gracias a R, QGIS y otras herramientas abiertas, el análisis espacial es accesible a todos.",
-    "crumbs": [
-      "Introducción al Geoanálisis"
-    ]
-  },
-  {
-    "objectID": "geoanalisis.html#la-primera-ley-de-la-geografía-y-su-relevancia-social",
-    "href": "geoanalisis.html#la-primera-ley-de-la-geografía-y-su-relevancia-social",
-    "title": "Introducción al Geoanálisis",
-    "section": "La Primera Ley de la Geografía y su Relevancia Social",
-    "text": "La Primera Ley de la Geografía y su Relevancia Social\nWaldo Tobler (1931–2018) formuló en 1970 su célebre Primera Ley de la Geografía:\n\n“Todas las cosas están relacionadas entre sí, pero las cosas más próximas en el espacio tienen una relación mayor que las distantes.”\n\nEste principio refleja cómo las interacciones humanas y sociales están condicionadas por la proximidad espacial. En política pública esto significa, por ejemplo, que las intervenciones en un barrio tienen efectos directos en los barrios vecinos, y que ignorar la dimensión espacial conduce a políticas sesgadas.\nO como lo resume Cervantes en El Quijote:\n\n“Dime con quién andas y te diré quién eres.”\n\n⸻",
-    "crumbs": [
-      "Introducción al Geoanálisis"
-    ]
-  },
-  {
-    "objectID": "geoanalisis.html#el-espacio-y-el-tiempo-coproducción-espacio-temporal-del-bienestar",
-    "href": "geoanalisis.html#el-espacio-y-el-tiempo-coproducción-espacio-temporal-del-bienestar",
-    "title": "Introducción al Geoanálisis",
-    "section": "El Espacio y el Tiempo: Coproducción Espacio-Temporal del Bienestar",
-    "text": "El Espacio y el Tiempo: Coproducción Espacio-Temporal del Bienestar\nEl bienestar social es resultado de una coproducción espacio-temporal: las políticas, las acciones colectivas y las dinámicas naturales configuran el territorio, que a su vez influye en las oportunidades y limitaciones de sus habitantes.\nHenri Lefebvre (1901–1991) lo expresó así:\n\n“La historia, el espacio y la sociedad se co-producen, por lo que el espacio tiene un rol activo en la reproducción y acumulación de fenómenos sociales.”\n\nEl espacio no es simplemente un escenario pasivo, sino un actor en las dinámicas sociales. Por ejemplo, la segregación urbana o la concentración delictual en ciertas áreas no son casualidad, sino resultado de una autoproducción espacial donde factores históricos, económicos y sociales se retroalimentan.",
-    "crumbs": [
-      "Introducción al Geoanálisis"
-    ]
-  },
-  {
-    "objectID": "geoanalisis.html#por-qué-medir-la-importancia-de-las-estadísticas-territoriales",
-    "href": "geoanalisis.html#por-qué-medir-la-importancia-de-las-estadísticas-territoriales",
-    "title": "Introducción al Geoanálisis",
-    "section": "Por Qué Medir: La Importancia de las Estadísticas Territoriales",
-    "text": "Por Qué Medir: La Importancia de las Estadísticas Territoriales\n\nLo que no se mide, no se gestiona.\n\nLas estadísticas territoriales permiten entender y actuar sobre el territorio con evidencia. Sin embargo, presentan desafíos particulares. La inferencia estadística clásica asume independencia entre observaciones y aleatoriedad, pero los datos espaciales violan ambos supuestos: • Las observaciones cercanas tienden a estar correlacionadas (Ley de Tobler). • El espacio actúa como un soporte material indispensable para las relaciones sociales.\nAdemás, fenómenos como el MAUP (Modifiable Areal Unit Problem) advierten que los resultados pueden cambiar si modificamos las unidades territoriales de agregación.\nPor eso, es clave aplicar técnicas robustas que cuantifiquen y corrijan la dependencia espacial en los datos.",
-    "crumbs": [
-      "Introducción al Geoanálisis"
-    ]
-  },
-  {
-    "objectID": "geoanalisis.html#el-geoanálisis-hoy-herramientas-y-capacidades-para-la-toma-de-decisiones",
-    "href": "geoanalisis.html#el-geoanálisis-hoy-herramientas-y-capacidades-para-la-toma-de-decisiones",
-    "title": "Introducción al Geoanálisis",
-    "section": "El Geoanálisis Hoy: Herramientas y Capacidades para la Toma de Decisiones",
-    "text": "El Geoanálisis Hoy: Herramientas y Capacidades para la Toma de Decisiones\nEl geoanálisis combina datos, teoría espacial y herramientas computacionales para explicar y predecir fenómenos territoriales. No se trata solo de mapear, sino de interpretar y modelar.\nLas herramientas modernas —como R y sus paquetes especializados— permiten: • trabajar con datos vectoriales y raster, • calcular indicadores territoriales, • inferir patrones espaciales (mapas de calor, interpolaciones), • detectar autocorrelación y clusters espaciales, • y modelar relaciones (regresiones espaciales).",
-    "crumbs": [
-      "Introducción al Geoanálisis"
-    ]
-  },
-  {
-    "objectID": "geoanalisis.html#impacto-en-las-políticas-públicas-del-siglo-xxi",
-    "href": "geoanalisis.html#impacto-en-las-políticas-públicas-del-siglo-xxi",
-    "title": "Introducción al Geoanálisis",
-    "section": "Impacto en las Políticas Públicas del Siglo XXI",
-    "text": "Impacto en las Políticas Públicas del Siglo XXI\nHoy, las políticas públicas más innovadoras incluyen una perspectiva territorial para abordar problemas como el cambio climático, la segregación socioeconómica, la delincuencia o la justicia ambiental.\nLos indicadores territoriales son instrumentos esenciales para cuantificar y comparar condiciones, actividades o resultados en diferentes espacios y tiempos. Permiten definir puntos de comparación que guían la toma de decisiones.",
-    "crumbs": [
-      "Introducción al Geoanálisis"
-    ]
-  },
-  {
-    "objectID": "geoanalisis.html#un-llamado-a-pensar-espacialmente",
-    "href": "geoanalisis.html#un-llamado-a-pensar-espacialmente",
-    "title": "Introducción al Geoanálisis",
-    "section": "Un Llamado a Pensar Espacialmente",
-    "text": "Un Llamado a Pensar Espacialmente\nPensar espacialmente no es solo un ejercicio académico, sino una forma de ver el mundo con nuevos ojos. Comprender cómo los fenómenos se distribuyen en el territorio permite diseñar políticas más eficaces y justas.\nEste curso te invita a sumergirte en el geoanálisis, explorando cómo las herramientas estadísticas aplicadas al espacio pueden transformar nuestras sociedades y mejorar la vida de las personas.",
-    "crumbs": [
-      "Introducción al Geoanálisis"
     ]
   }
 ]

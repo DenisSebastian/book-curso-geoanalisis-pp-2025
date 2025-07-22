@@ -3,7 +3,7 @@
     "path": "~/Documents/Docencia/geoanalisis/cgeoa-book/index.qmd",
     "project_path": "index.qmd",
     "type": "quarto_markdown",
-    "hash": "2838002545",
+    "hash": "0",
     "contents": "",
     "dirty": false,
     "created": 1752964077438.0,
@@ -13,7 +13,7 @@
         "rmdVisualMode": "false",
         "source_window_id": "",
         "Source": "Source",
-        "cursorPosition": "9,0",
+        "cursorPosition": "8,51",
         "scrollLine": "1",
         "rmdVisualModeLocation": "219:0",
         "rmdVisualWrapConfigured": "true",
@@ -21,11 +21,11 @@
         "rmdVisualCollapsedChunks": ""
     },
     "folds": "",
-    "lastKnownWriteTime": 1753202539,
+    "lastKnownWriteTime": 1753214570,
     "encoding": "UTF-8",
     "collab_server": "",
     "source_window": "",
-    "last_content_update": 1753202539358,
+    "last_content_update": 1753214570,
     "read_only": false,
     "read_only_alternatives": []
 }

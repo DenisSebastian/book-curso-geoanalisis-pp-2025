@@ -249,11 +249,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="images/S3.png" class="img-fluid quarto-figure quarto-figure-center figure-img"></p>
-</figure>
-</div>
+<!-- ![](images/S3.png){fig-align="center"} -->
 <section id="tipos-de-objetos-en-r" class="level2" data-number="2.1">
 <h2 data-number="2.1" class="anchored" data-anchor-id="tipos-de-objetos-en-r"><span class="header-section-number">2.1</span> Tipos de Objetos en R</h2>
 <p>Los Datos en R se pueden clasificar por su dimensiones y los tipos de Datos que permiten almacenar, como se muestra en la siguiente tabla:</p>
@@ -309,19 +305,19 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>ru <span class="ot">&lt;-</span> <span class="fu">runif</span>(<span class="at">n =</span> <span class="dv">100</span>, <span class="at">min =</span> <span class="dv">1</span>, <span class="at">max =</span> <span class="dv">10</span>)</span>
 <span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>ru</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>  [1] 6.553132 3.599535 8.653596 8.881421 9.724194 6.136948 4.790868 7.373773
-  [9] 6.791948 5.046438 3.630710 4.485580 2.288209 7.301688 3.122095 7.965791
- [17] 6.418941 2.699728 8.853720 7.745023 7.234776 3.641579 4.587922 7.210218
- [25] 3.779781 7.239659 9.920854 1.617924 2.215314 3.000044 4.315645 3.270622
- [33] 7.708269 9.696973 8.386828 9.548268 8.806882 9.880402 2.901706 1.413625
- [41] 6.645622 4.224319 2.054692 8.111689 3.775082 6.210791 6.155974 3.644676
- [49] 3.030738 5.012292 3.349297 7.116233 8.512062 6.151094 6.807646 1.026924
- [57] 3.071527 3.116155 9.536874 3.803257 7.931241 5.287908 8.869869 4.945589
- [65] 9.710899 4.168477 9.034541 7.358230 6.734690 7.542626 5.108545 6.217798
- [73] 5.049754 2.998955 9.167000 7.680184 1.706473 7.761068 1.534237 6.892610
- [81] 2.245180 5.378672 6.439052 4.923690 3.840161 7.032519 5.339060 2.356259
- [89] 6.023121 5.669019 4.146348 3.933099 3.942575 1.406423 9.799803 7.746552
- [97] 2.765453 5.187887 2.405173 2.624170</code></pre>
+<pre><code>  [1] 8.795992 4.098422 1.741700 5.874088 5.474847 5.961194 9.567627 1.416945
+  [9] 3.819825 1.290336 9.604657 6.230469 1.093337 7.257869 4.862370 1.251018
+ [17] 7.082911 7.627566 7.366792 7.633204 2.519835 8.817072 3.128428 4.055886
+ [25] 1.086135 9.374656 8.293692 8.181102 6.385502 7.106907 2.118172 7.182299
+ [33] 3.117257 4.484336 5.665373 4.420126 6.247241 3.123625 7.675367 1.089979
+ [41] 3.520678 8.554141 7.812649 9.737917 8.130462 7.410018 1.077180 3.605288
+ [49] 4.157996 1.716901 2.815277 5.099307 1.041396 3.736329 3.540381 5.926456
+ [57] 2.236646 2.989614 5.215106 9.525455 3.534475 4.407949 6.947734 8.496995
+ [65] 2.077136 9.996475 2.966561 8.534952 5.297982 3.036924 9.030597 1.154987
+ [73] 4.229834 3.859890 3.461986 3.608742 3.397122 2.361243 1.539009 2.877388
+ [81] 6.844391 3.494256 1.523010 5.621427 8.621959 8.844913 1.342128 6.783979
+ [89] 1.166826 9.325641 5.706431 2.697186 1.481027 3.407975 4.031835 7.869649
+ [97] 8.707133 2.822938 1.576997 1.172584</code></pre>
 </div>
 </div>
 <div class="cell" data-layout-align="center">
@@ -340,7 +336,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="cell">
 <div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sample.int</span>(<span class="at">n =</span> <span class="dv">6</span>, <span class="at">size =</span> <span class="dv">10</span>, <span class="at">replace =</span> T)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code> [1] 6 1 3 4 1 6 3 3 1 1</code></pre>
+<pre><code> [1] 1 2 6 6 6 6 1 6 2 2</code></pre>
 </div>
 </div>
 </section>

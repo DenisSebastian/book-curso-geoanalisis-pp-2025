@@ -1,7 +1,7 @@
 # Introducción al Geoanálisis {.unnumbered}
 
 
-![](images/lefebvre.png){fig-align="center"}
+
 
 
 El espacio no es neutro. Las decisiones que tomamos, como individuos y como sociedades, se distribuyen de manera desigual en el territorio. Las políticas públicas moldean y son moldeadas por esa realidad espacial. Comprender esta interacción entre datos, territorio y decisiones es la esencia del geoanálisis, una disciplina cada vez más relevante en un mundo interconectado.
@@ -14,6 +14,8 @@ Este capítulo ofrece una introducción al geoanálisis desde una perspectiva hi
 
 El término estadística deriva del italiano statista (“hombre de Estado”), y desde la antigüedad ha servido para estimar capacidades de un reino y facilitar la gestión tributaria. Por ejemplo, en Egipto ya se realizaban censos hacia el 3050 a.C. Durante la expansión colonial europea (siglos XVI–XIX), la estadística se desarrolló en estrecha relación con la cartografía, como herramienta para administrar y dominar territorios.
 
+![](images/mapa-antiguo.png){fig-align="center" width="450"}
+
 En el siglo XX, con la llegada de la estadística espacial y la computación, se superaron las limitaciones del cálculo manual y se hizo posible analizar grandes volúmenes de datos georreferenciados. Hoy, gracias a R, QGIS y otras herramientas abiertas, el análisis espacial es accesible a todos.
 
 
@@ -22,13 +24,15 @@ En el siglo XX, con la llegada de la estadística espacial y la computación, se
 
 Waldo Tobler (1931–2018) formuló en 1970 su célebre Primera Ley de la Geografía:
 
-> “Todas las cosas están relacionadas entre sí, pero las cosas más próximas en el espacio tienen una relación mayor que las distantes.”
+![](images/tobler-frase.png){fig-align="center" width="600"}
+<!-- > “Todas las cosas están relacionadas entre sí, pero las cosas más próximas en el espacio tienen una relación mayor que las distantes.” -->
 
 Este principio refleja cómo las interacciones humanas y sociales están condicionadas por la proximidad espacial. En política pública esto significa, por ejemplo, que las intervenciones en un barrio tienen efectos directos en los barrios vecinos, y que ignorar la dimensión espacial conduce a políticas sesgadas.
 
 O como lo resume Cervantes en El Quijote:
 
-> “Dime con quién andas y te diré quién eres.”
+![](images/cervantes-frase.png){fig-align="center" width="600"}
+<!-- > “Dime con quién andas y te diré quién eres.” -->
 
 ⸻
 
@@ -38,9 +42,11 @@ El bienestar social es resultado de una coproducción espacio-temporal: las pol�
 
 Henri Lefebvre (1901–1991) lo expresó así:
 
-> “La historia, el espacio y la sociedad se co-producen, por lo que el espacio tiene un rol activo en la reproducción y acumulación de fenómenos sociales.”
+![](images/lefebvre-frase.png){fig-align="center" width="600"}
+<!-- > “La historia, el espacio y la sociedad se co-producen, por lo que el espacio tiene un rol activo en la reproducción y acumulación de fenómenos sociales.” -->
 
 El espacio no es simplemente un escenario pasivo, sino un actor en las dinámicas sociales. Por ejemplo, la segregación urbana o la concentración delictual en ciertas áreas no son casualidad, sino resultado de una autoproducción espacial donde factores históricos, económicos y sociales se retroalimentan.
+
 
 
 
@@ -49,10 +55,13 @@ El espacio no es simplemente un escenario pasivo, sino un actor en las dinámica
 > Lo que no se mide, no se gestiona.
 
 Las estadísticas territoriales permiten entender y actuar sobre el territorio con evidencia. Sin embargo, presentan desafíos particulares. La inferencia estadística clásica asume independencia entre observaciones y aleatoriedad, pero los datos espaciales violan ambos supuestos:
-	•	Las observaciones cercanas tienden a estar correlacionadas (Ley de Tobler).
-	•	El espacio actúa como un soporte material indispensable para las relaciones sociales.
+
+* Las observaciones cercanas tienden a estar correlacionadas (Ley de Tobler).
+* El espacio actúa como un soporte material indispensable para las relaciones sociales.
 
 Además, fenómenos como el MAUP (Modifiable Areal Unit Problem) advierten que los resultados pueden cambiar si modificamos las unidades territoriales de agregación.
+
+![](images/maup_2.png){fig-align="center"}
 
 Por eso, es clave aplicar técnicas robustas que cuantifiquen y corrijan la dependencia espacial en los datos.
 
@@ -63,16 +72,20 @@ Por eso, es clave aplicar técnicas robustas que cuantifiquen y corrijan la depe
 El geoanálisis combina datos, teoría espacial y herramientas computacionales para explicar y predecir fenómenos territoriales. No se trata solo de mapear, sino de interpretar y modelar.
 
 Las herramientas modernas —como R y sus paquetes especializados— permiten:
-	•	trabajar con datos vectoriales y raster,
-	•	calcular indicadores territoriales,
-	•	inferir patrones espaciales (mapas de calor, interpolaciones),
-	•	detectar autocorrelación y clusters espaciales,
-	•	y modelar relaciones (regresiones espaciales).
+
+* trabajar con datos vectoriales y raster,
+* calcular indicadores territoriales,
+* inferir patrones espaciales (mapas de calor, interpolaciones),
+* detectar autocorrelación y clusters espaciales,
+
 
 
 
 ## Impacto en las Políticas Públicas del Siglo XXI
 
 Hoy, las políticas públicas más innovadoras incluyen una perspectiva territorial para abordar problemas como el cambio climático, la segregación socioeconómica, la delincuencia o la justicia ambiental.
+
+![](images/lc_vulnerabilidad.png){fig-align="center"}
+
 
 Los indicadores territoriales son instrumentos esenciales para cuantificar y comparar condiciones, actividades o resultados en diferentes espacios y tiempos. Permiten definir puntos de comparación que guían la toma de decisiones.
