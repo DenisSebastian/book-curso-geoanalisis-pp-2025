@@ -1,0 +1,634 @@
+---
+title: "Datos tipo Raster"
+subtitle: "Aplicado a Percepción Remota"
+editor_options: 
+  chunk_output_type: console
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+suppressPackageStartupMessages(library(dplyr))
+suppressPackageStartupMessages(library(sf))
+suppressPackageStartupMessages(library(raster))
+suppressPackageStartupMessages(library(mapview))
+suppressPackageStartupMessages(library(ggplot2))
+options(scipen = 999)
+```
+
+
+![Objetivos del Módulo](images/m3_geoanalisis.png)
+
+## Objetivos del Módulo
+
+- Definición de Raster como Objeto Espacial
+- Raster en R
+- Manipulación de datos Raster de imágenes satelitales.
+- Construcción de Indicadores ambientales
+
+
+## Raster como objeto espacial
+
+### Definición de Raster
+
+Los objetos raster representan entidades geográficas dividiendo el espacio físico en celdas discretas cuadradas o rectangulares dispuestas en una cuadrícula.
+
+![Raster espacial](images/raster_concept.png){fig-align="center" width="500"}
+
+### Matriz de un Raster
+
+Un ráster consta de una matriz de celdas (o píxeles) organizadas en filas y columnas (o una cuadrícula) en la que cada celda contiene un valor que representa información.
+
+![Matirz de datos de un Raster](images/matriz.gif){fig-align="center" width="600"}
+
+
+### Resolución Espacial de un Raster
+
+Cuanto más pequeño sea el tamaño de celda, más suave o más detallado será el ráster. Sin embargo, cuanto mayor sea el número de celdas, más tiempo tardará en procesar, aumentándose a su vez la demanda de espacio de almacenamiento.
+
+![Resolución espacial de un raster](images/raster_resolucion.gif){fig-align="center" width="400"}
+
+### Referencia Espacial de un Raster
+
+La matriz queda representada por un Sistema de coordenadas cartesianas, en las que las filas de la matriz son paralelas al eje x y las columnas al eje y del plano cartesiano
+
+![Referencia espacial](images/crs_raster.gif){fig-align="center" width="400"}
+
+
+
+## Raster en R 
+
+A continuación haremos una revisión rápida de manipulación de datos tipo Raster en R para lo cual lo utilizaremos en la librería `raster` que se encuentra en CRAN.
+
+### Creación de un Objeto Raster
+
+```{r}
+library(raster)
+r <- raster(ncol=10, nrow=10)
+values(r) <- 1:ncell(r)
+r
+```
+
+**Visualización de los creado**
+
+```{r}
+plot(r)
+```
+
+
+### Operaciones Básicas sobre un Raster
+
+Los objetos Raster en R se le puede aplicar operaciones directamente como las detalladas a continuación:
+
+- Operaciones Básicas : `+, -, *, /`
+- Operadores Lógicos: `>, >=, <, ==, !`
+- Otras Funciones: `abs`, `round`, `ceiling`, `floor`, `trunc`, `sqrt`, `log`, `log10`, `exp`, `cos`, `sin`, `atan`, `tan`, `max`, `min`, `range`, `prod`, `sum`, `any`, `all.`
+
+Algunos ejemplos
+```{r}
+s <- r + 10
+s <- sqrt(s)
+s <- s * r + 5
+```
+
+Una forma de asignar valores honraste de forma aleatoria
+
+```{r}
+r[] <- runif(ncell(r))
+r <- round(r)
+```
+
+
+### Apilar Layers en un Raster
+
+![Referencia espacial](images/single_multi_raster.png){fig-align="center" width="600"}
+
+```{r}
+r <- raster(ncol=5, nrow=5)
+r[] <- 1
+s <- stack(r, r+1)
+q <- stack(r, r+2, r+4, r+6)
+x <- r + s + q
+x
+
+```
+
+
+
+### Funciones Básicas sobre un Raster
+
+**Calc**
+
+Con la librería Raster uno puede aplicar funciones propias utilizando la función `calc()` cómo veremos a continuación:
+
+
+```{r}
+r <- raster(ncol=3, nrow=2)
+r[] <- 1:ncell(r)
+getValues(r)
+
+
+# cambiar los valores menores de 4 a NA
+s <- calc(r, fun=function(x){ x[x < 4] <- NA; return(x)} )
+as.matrix(s) # solo para visualizar la respuesta en el libro digital
+```
+
+
+
+**Overlay**
+
+En el caso que quisiera hacer una operación sobre dos o más Raster podría utilizar la función `overlay()` cómo se observa a continuación:
+
+
+
+```{r}
+# Overlay
+w <- overlay(r, s, fun=function(x, y){ x / (2 * sqrt(y)) + 5 } )
+as.matrix(w)
+```
+
+**Reclassify**
+
+La función reclassify de la librería `raster` (parte del ecosistema de la librería `terra` en versiones más recientes) se utiliza para reasignar valores en un conjunto de datos raster, de acuerdo a un conjunto de reglas de reclasificación. Esto es útil cuando deseamos agrupar o reasignar valores específicos en rangos definidos a nuevos valores. Para entender esta función, es importante comprender la notación de intervalos, que define los rangos de valores que serán reclasificados.
+
+En la notación de intervalos, los subconjuntos se describen utilizando paréntesis redondos o corchetes cuadrados para indicar si los extremos de los intervalos están incluidos o excluidos. Un corchete cuadrado `[ ]` significa que el valor extremo está incluido en el intervalo, mientras que un paréntesis redondo `( )` indica que el valor no está incluido.
+
+En el contexto de la función `reclassify()`, los intervalos se manejan de manera que el valor máximo del intervalo está incluido en dicho intervalo, representado por corchetes cuadrados `[ ]`, mientras que en el intervalo siguiente, ese valor no se incluye, como si estuviera delimitado por un paréntesis redondo `( ]`. Por ejemplo, en el código `c(0,2,1)`, se está reclasificando el intervalo `[0, 2]`, lo que significa que los valores 0, 1 y 2 se reclasifican a 1. Sin embargo, el siguiente intervalo `c(2,4,2)` reclasifica el intervalo `(2, 4]`, donde el 2 no está incluido, pero el 4 sí.
+
+
+
+```{r}
+# Cambiar los valores entre 0 y 2 a 1, etc.
+w <- raster(ncol=3, nrow=2)
+w[] <- 1:ncell(w)
+as.matrix(w)
+x <- reclassify(w, c(0,2,1, # [0 a 2] = 1
+                     2,4,2, # (2 a 4] = 2
+                     4,6,3)) # (4 a 6] = 3
+as.matrix(x)
+```
+
+
+Esta convención es importante para garantizar que no haya solapamiento entre intervalos consecutivos y se defina claramente cómo se gestionan los valores límites en el proceso de reclasificación.
+
+## Definición de Conceptos en Percepción Remotra
+
+Percepción Remota:
+: Percepción Remota o en una disciplina científica que entrega un amplio conjunto de conocimientos y tecnologías utilizadas para observación, análisis, la interpretación de fenómenos en el territorio. La percepción remota nos permite efectuar observaciones y mediciones de la superficie terrestre mediante dispositivos remotos instalados sobre plataformas como satélites, aviones y actualmente hasta en drones. Los sensores instalados en estas plataformas miden una gran variedad de datos como radiaciones electromagnéticas, espectro electromagnético, perturbaciones atmosféricas, firmas espectrales y captura de imágenes, entre otros.
+
+![Percepción Remota](images/satelites.jpg){width=70%}
+
+
+Percepción Remota Satelital:
+: Los satélites llevan instrumentos o sensores que miden la radiación electromagnética proveniente del sistema tierra - atmósfera. La intensidad de la radiación reflejada y emitida al espacio es influenciada por las condiciones en la superficie y la atmósfera. 
+
+![Percepción Remota Satelital](images/pr_satelital.png){width=70%}
+
+
+Espectro Electromagnético:
+: Es un conjunto de frecuencias o longitudes de onda en los que se organiza la radiación electromagnética. Abarca las radiaciones entre los rayos gamma y las ondas de radio.
+
+
+![Espectro Electromagnético](images/espectro.png)
+
+![Espectro Electromagnético Satelital](images/espectro_sat.png){width=80%}
+
+
+Características de Satélites y Sensores:
+: La energía emitida o reflejada por la superficie terrestre es un fenómeno continuo en 4 cuatro dimensiones: espacio, tiempo, longitud de onda y radiancia.
+
+![Satélites y Sensores](images/Sentinel-2Poster.jpg){width=60%}
+
+**Resolución espacial**: Tamaño del pixel o celda del raster que contiene a la banda espectral (Landsat: 30 m x 30 m) 
+
+![Resolución espacial](images/resoluciones.png)
+
+**Resolución temporal**: Tiempo entre imágenes sucesivas (Landsat 16 días)
+
+![Resolución temporal](images/r_temporal.png){width=50%}
+
+**Resolución espectral**: Número y rango de las regiones del espectro electromagnético para los que capta información el sensor .
+
+![Resolución espectral](images/r_espectral.png){width=80%}
+
+- **Resolución radiométrica**: Indica el número de intervalos de intensidad que puede captar el sensor (escala de grises) (Landsat 5 y 7: 256) 
+
+![Resolución radiométrica](images/r_radiometrica.png)
+
+
+### Aplicaciones de Percepción Remota
+
+![](images/aplicaciones_pr.png)
+
+**Aplicaciones Generales: Ambientales**
+
+- *Bosque Nativo*: Superficie anual, Vigor vegetacional y superficie incendiada 
+- *Glaciares*: Superficie de cuerpos glaciares 
+- *Ambiente urbano*: Superficie anual cubierta con vegetación por manzana urbana 
+- *Ambiente marino costero*: Calidad anual del agua superficial del mar 
+- *Humedales Alto Andino*: Superficie anual vegetada e inundada en el humedal 
+
+![Aplicaciones Ambientales; temperatura superficial de glaciar ](images/aplicaciones_amb.png){width=70%}
+
+**Aplicaciones Generales: Antrópicas**
+
+- *Mancha Urbana*: Crecimiento evolutivo
+- *Contaminación de Recursos Naturales*: Borde Costero, red hídrica, cuerpos de agua, suelos, aire.
+- *Deforestación*: Actividad de industria a Forestal
+- *Monitoreo de Edificaciones*: Construcción de Industrias, asentamientos, cualquier edificación de grandes dimensiones 
+
+![Aplicaciones Antrópicas; deforestación](images/deforestacion.png){width=70%}
+
+### Imágenes disponibles
+
+Existe una gran cantidad de imágenes disponibles, a continuación se presenta una tabla con información sobre los satélites Landsat y Sentinel (Copernicus), junto con sus fechas de disponibilidad:
+
+| Satélite            | Programa     | Fecha de Lanzamiento | Disponibilidad de Datos       | Tipo de Imágenes                    | Acceso                                                                 |
+|---------------------|--------------|----------------------|-------------------------------|--------------------------------------|------------------------------------------------------------------------|
+| **Landsat 1**        | Landsat      | 23 de julio de 1972   | 1972 - 1978                   | Multiespectral                      | [Earth Explorer](https://earthexplorer.usgs.gov)                        |
+| **Landsat 8**        | Landsat      | 11 de febrero de 2013 | Desde 2013 - Presente         | Multiespectral y térmica             | [Earth Explorer](https://earthexplorer.usgs.gov)                        |
+| **Landsat 9**        | Landsat      | 27 de septiembre 2021 | Desde 2021 - Presente         | Multiespectral y térmica             | [Earth Explorer](https://earthexplorer.usgs.gov)                        |
+| **Sentinel-1**       | Copernicus   | 3 de abril de 2014    | Desde 2014 - Presente         | Radar (SAR)                         | [Copernicus Data Space](https://dataspace.copernicus.eu)               |
+| **Sentinel-2**       | Copernicus   | 23 de junio de 2015   | Desde 2015 - Presente         | Multiespectral (óptico)              | [Copernicus Data Space](https://dataspace.copernicus.eu)               |
+| **Sentinel-3**       | Copernicus   | 16 de febrero de 2016 | Desde 2016 - Presente         | Óptico, térmico y altimetría         | [Copernicus Data Space](https://dataspace.copernicus.eu)               |
+| **Sentinel-5P**      | Copernicus   | 13 de octubre de 2017 | Desde 2017 - Presente         | Monitorización atmosférica (óptico) | [Copernicus Data Space](https://dataspace.copernicus.eu)               |
+
+Los satélites Landsat son administrados por NASA y USGS, proporcionando datos desde 1972, mientras que Sentinel, parte del programa Copernicus, administrado por la ESA, comenzó a operar en 2014. Ambos programas ofrecen acceso gratuito a los datos, permitiendo su uso en estudios de medio ambiente, cambio climático y monitoreo de la Tierra.
+
+Existe una plataforma de acceso y procesamiento de información satelital cloud llamada Google Earth Engine, que disponibiliza casi todos los productos satelitales de libre acceso en un solo lugar denominado [Earth Engine Data Catalog](https://developers.google.com/earth-engine/datasets). 
+
+![Ejemplos de recursos Satelitales de Google Earth Engine](images/recursos_rgee.jpg)
+
+Se puede accesar y preocesar directamente en los servidores de google mediante el lenguaje de programación Javascript y Python, y desde R de forma indirecta mediante la librería [rgee](https://github.com/r-spatial/rgee).
+
+![Librería [rgee](https://github.com/r-spatial/rgee)](images/logo_rgee.png){fig-align="center" width="150"}
+
+
+## Manipulación de datos Raster de imágenes satelitales.
+
+* Leer Archivos Raster (Imagen Satelital)
+* Visualización Raster
+* Reproyectar imagen tipo Raster (Sistema de Referencia de Coords.)
+* Cortar Imagen Raster desde archivo Shapefile
+* Combinacionaciones de Bandas Satelitales
+
+
+### Leer Archivos Raster (Imagen Satelital)
+
+```{r echo=FALSE}
+suppressMessages(library(raster))
+OLI <- brick("data/raster/corte_rm_m.tif")
+names(OLI) <- c("aerosol", "blue", "green", "red", "nir",
+                "swir1", "swir2", "thermal")
+# OLI
+```
+
+![Un raster que proviene de un insumo satelital normalmente tiene más de una banda o también llamada layer](images/bands.jpg){width=70%}
+
+```{r eval=FALSE}
+library(raster)
+OLI <- brick("data/raster/corte_rm_m.tif")
+names(OLI) <- c("aerosol", "blue", "green", "red", "nir", "swir1", "swir2", "thermal")
+OLI
+```
+
+```{r echo=FALSE}
+OLI
+```
+
+Los nombres de las bandas satelitales tienen que confirmarse con la información satelital, para el caso de Landsat 8 corresponden a la siguiente denominación:
+
+![Nombres de Bandas del Satélite Landsat 8](images/bandas_landsat8.png){width=70%}
+
+
+### Visualización Raster
+
+```{r}
+plotRGB(OLI, r = 4, g = 3, b = 2, stretch = "lin")
+# viewRGB(OLI, r = 4, g = 3, b = 2)
+```
+
+
+### Cortar Imagen Raster desde archivo Shapefile {#sec-cortaraster}
+
+
+Leer archivo vectorialde la Región Metropolitana
+
+
+```{r}
+library(sf)
+
+# Leer geometrías Nacional y filtrar RM
+region_met <- st_read("data/shape/Comunas_Chile.shp") %>% 
+  filter(REGION == "13")
+
+# selección de Comuna
+mi_comuna <-  "LAS CONDES"
+comuna <- region_met %>% filter(NOM_COMUNA == mi_comuna)
+```
+
+
+```{r}
+ggplot() +
+  geom_sf(data = comuna, fill = NA, color ="orange", 
+          alpha=0.8,  size= 1)+
+  ggtitle(paste0("COMUNA DE ", mi_comuna) ) +
+  theme_bw() +
+  theme(panel.grid.major = element_line(colour = "gray80"), 
+        panel.grid.minor = element_line(colour = "gray80"))
+```
+
+
+Realizar el corte de la comuna que seleccione
+
+```{r}
+comuna_img <- mask(crop(OLI, extent(comuna), snap="out"), comuna)
+comuna_img
+
+plotRGB(comuna_img, r = 4, g = 3, b = 2, stretch = "lin")
+```
+
+
+
+```{r}
+comuna_img_df <- as.data.frame(comuna_img[[-8]])
+suppressMessages(library(tidyr))
+#Transformar una base con dos columnas 
+base <- gather(na.omit(comuna_img_df), key = "Banda", value = "Valor")
+
+suppressMessages(library(ggplot2))
+hist_bandas <- ggplot(base, aes(Valor, fill = Banda)) +
+  geom_histogram(bins = 60) + facet_wrap( ~ Banda) + 
+  theme(plot.subtitle = element_text(size = 10, hjust = 0.5),
+        axis.ticks = element_line(colour = "gray10"),
+        plot.title = element_text(size = 14, hjust = 0.5,
+        face = "bold", colour = "gray30"), 
+        panel.background = element_rect(fill = "gray98")) +
+  labs(title = "Histograma de las Bandas Espectrales Landsat 8", 
+       subtitle = mi_comuna)
+
+
+
+hist_bandas
+```
+
+
+### Reproyectar imagen tipo Raster (Sistema de Referencia de Coords.)
+
+
+```{r echo=TRUE}
+crs_latlon <- "+proj=longlat +datum=WGS84 +no_defs"# geográficas o elipsoidales
+crs_utm <- "+proj=utm +zone=19 +south +datum=WGS84 +units=m +no_defs" # UTM o cartográficas
+
+# utm a latlon
+comuna_img <- projectRaster(comuna_img, crs = crs_latlon)
+
+# latlon a utm
+comuna_img <- projectRaster(comuna_img, crs = crs_utm)
+```
+
+
+
+###  Combinacionaciones de Bandas Satelitales
+
+
+![Visualización de Bandas](images/l8-band-combinations.png)
+Referencias: [https://mappinggis.com/2019/05/combinaciones-de-bandas-en-imagenes-de-satelite-landsat-y-sentinel/](https://mappinggis.com/2019/05/combinaciones-de-bandas-en-imagenes-de-satelite-landsat-y-sentinel/)
+
+
+
+
+```{r fig.align="center"}
+# Falso Color (7,6,4)
+plotRGB(comuna_img, r = 7, g = 6, b = 4, stretch = "lin")
+```
+
+
+```{r fig.align="center"}
+# Infrarojo (5,4,3)
+plotRGB(comuna_img, r = 5, g = 4, b = 3, stretch = "lin")
+```
+
+
+```{r fig.align="center"}
+# Agricultura (6,5,2)
+plotRGB(comuna_img, r = 6, g = 5, b = 2, stretch = "lin")
+```
+
+
+```{r fig.align="center"}
+# Penetración de la Radiación en la Atmósfera (7,6,5)
+plotRGB(comuna_img, r = 7, g = 6, b = 5, stretch = "lin")
+```
+
+
+```{r fig.align="center"}
+# Uso del Suelo / Masas de Agua (5,6,4)
+plotRGB(comuna_img, r = 5, g = 6, b = 4, stretch = "lin")
+```
+
+
+```{r fig.align="center"}
+# Infrarojo de Onda Corta (7,5,4)
+plotRGB(comuna_img, r = 7, g = 5, b = 4, stretch = "lin")
+```
+
+
+```{r fig.align="center"}
+# Análisis de Vegetación (6,5,4)
+plotRGB(comuna_img, r = 6, g = 5, b = 4, stretch = "lin")
+```
+
+
+```{r fig.align="center"}
+# Análisis de Vegetación Sana (5,6,2)
+plotRGB(comuna_img, r = 5, g = 6, b = 2, stretch = "lin")
+```
+
+
+
+
+## Construcción de Indicadores ambientales
+
+* Calcular NDVI
+* Calcular Indicador Cobertura Vegetacional
+
+
+### Calcular NDVI {#sec-calcndvi}
+
+![Fórmula para el cáculo de NDVI](images/NDVI_f.png)
+
+**Creación de la función de NDVI**
+
+```{r eval = TRUE}
+#NDVI(img, red, NIR)
+NDVI <- function(img, i, k) {
+   bi <- img[[i]]
+   bk <- img[[k]]
+   vi <- (bk - bi) / (bk + bi)
+   return(vi)
+}
+
+```
+
+```{r}
+NDVI_com <- NDVI(comuna_img, 4, 5)
+```
+
+
+Visualización de NDVI en ggplot2
+
+```{r}
+
+# rastero to df (na omit)
+NDVI_com_df <- raster::as.data.frame(NDVI_com, xy = TRUE) %>% na.omit()
+
+#paleta
+pal_ndvi<- colorRampPalette(c("gray20", "yellow", "green","springgreen4"))( 200 )
+
+ggplot() +
+  geom_raster(data = NDVI_com_df , 
+             aes(x = x, y = y, 
+                  fill = layer)) + 
+  scale_fill_gradientn(name = "NDVI", colors = pal_ndvi)+
+  coord_fixed()+
+  ggtitle(paste0("NDVI DE ", mi_comuna) ) +
+  theme_bw() +
+  theme(panel.grid.major = element_line(colour = "gray80"), 
+        panel.grid.minor = element_line(colour = "gray80"))
+```
+
+### Definición de Umbral {#sec-umbralicv}
+
+
+Se ha estudiado que el umbral de valores de NDVI superiores a 0.4 se entienede como vegetación y sana
+
+```{r fig.align="center"}
+#| label: fig-ndvi-com
+#| fig-cap: Histograma de valores de NDVI
+
+hist(NDVI_com, col="springgreen4", main="Histograma NDVI",
+  ylab="Número de Pixeles", xlab="valor NDVI")
+```
+
+
+
+Considerando el gráfico anterior se deberá crear una función para definir umbral y eliminar (transformar NA) los valores de pixeles que esten bajo ese umbral.
+
+
+```{r}
+#función para definir umbral
+corte_eq_may <- function(value) {
+  function(x) {
+    ifelse(x >= value, 1, NA)
+  }
+}
+```
+
+
+```{r eval=TRUE}
+library(mapview)
+
+mapview(NDVI_com, na.color = "transparent")
+```
+
+
+
+Aplicación de la función para definir umbral utilizando `calc()`:
+
+```{r echo=TRUE, eval=TRUE}
+vegetacion <- calc(NDVI_com, fun = corte_eq_may(value = 0.30))
+```
+
+
+```{r warning=F}
+
+vegetacion_df <- raster::as.data.frame(vegetacion, xy = TRUE) %>% na.omit()
+ggplot() +
+  geom_sf(data = comuna, fill = NA, color ="orange", 
+          alpha=0.8,  size= 0.5)+
+  geom_raster(data = vegetacion_df , 
+             aes(x = x, y = y, 
+                  fill = layer)) + 
+  scale_fill_gradientn(name = "Veg", colors = "springgreen4")+
+  ggtitle(paste0("VEGETACIÓN DE ", mi_comuna) ) +
+  theme_bw() +
+  theme(panel.grid.major = element_line(colour = "gray80"), 
+        panel.grid.minor = element_line(colour = "gray80"))
+
+
+```
+
+
+Visualización Dinámica
+
+```{r eval=TRUE}
+
+
+mview <- mapview(vegetacion, na.color = "transparent", 
+                 col.regions = "springgreen4", legend =FALSE)+
+  mapview(comuna, color = "magenta", alpha.region =0, size = 2,
+          legend =FALSE)
+mview
+```
+
+
+<br>
+
+## Construcción del Indicador de Cobertura Vegetacional {#sec-calcicv}
+
+
+Crear Indicador por manzana:
+: Para esto se debe contar los pixeles que existe por manzana calcular su superficie sabiendo la resolución espacila (30x30) y dividirla por el toral de superficie de la manzana, afin de obtener un porcentaje de cobertura vegetal por manzana.
+
+
+Leer manzanas del Censo
+
+```{r}
+mz_comuna <- readRDS("data/censo/manzanas.rds") %>% 
+  filter(NOM_COM == mi_comuna) %>% 
+  st_transform(32719)
+```
+
+
+Calcular el área por cada polígono
+
+```{r}
+mz_comuna <-  mz_comuna %>% 
+  mutate(AREA = as.numeric(st_area(.))) #mts2
+```
+
+
+Contar los piexeles por manzana y multiplicar por área que representan estos pixeles. Para contar la cantidad de pixeles por manzana usaremos la función [`exacextract()`](https://isciences.gitlab.io/exactextractr/) 
+
+
+```{r}
+library(exactextractr)
+
+mz_comuna  <- mz_comuna %>% 
+  mutate(pix_veg = exact_extract(vegetacion,y = ., 'sum', progress = FALSE)) %>% 
+  mutate(area_veg = pix_veg * 30 * 30) %>% # resolución espacial landsat (30*30)
+  mutate(ICV = round((area_veg /AREA)*100, 1))  
+  
+```
+
+
+
+Visualización del Indicador
+
+
+```{r}
+ggplot() +
+  geom_sf(data = mz_comuna, aes(fill = ICV), color ="gray70", 
+          alpha=0.8,  size= 0.1)+
+  scale_fill_distiller(palette= "Greens", direction = 1)+
+  ggtitle("Indicador de Cobertura Vegetal (ICV) - Urbano") +
+  theme_bw() +
+  theme(panel.grid.major = element_line(colour = "gray80"), 
+        panel.grid.minor = element_line(colour = "gray80"))
+```
+
+
+
+
+
+<!-- ## Procesar Imágenes satelitales con GEE -->

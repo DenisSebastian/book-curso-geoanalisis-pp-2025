@@ -1,0 +1,106 @@
+---
+title: "Análisis Espacial"
+subtitle: "Introducción y fundamentos"
+---
+
+![](images/S2.png){fig-align="center"}
+
+
+
+## Relaciones Espaciales
+
+![](images/w_spatial.png){fig-align="center"}
+
+### Orígenes del Análisis Espacial  {.unnumbered}
+
+
+Estadística deriva del italiano statista (hombre de Estado) y se desarrolla desde la antigüedad para facilitar la gestión tributaria y estimar la capacidad bélica de un reino. Ej: censos egipcios desde el 3050 a.C.
+
+Durante la expansión de los imperios coloniales (siglos XVI - XIX) se desarrolla la estadística en estrecha relación con la cartografía, principalmente para la administración y dominio de territorios.
+
+![Origen de la Estadística](images/mapa_africa.png){fig-align="center" width="400"}
+
+
+La estadística es una herramienta fundamental en la ciencia de datos que nos permite comprender y analizar datos para obtener información significativa. En términos simples, es como un lenguaje que utilizamos para describir, resumir y tomar decisiones basadas en la información que los datos nos proporcionan. Al aplicar métodos estadísticos, podemos identificar patrones, tendencias y relaciones en los datos, lo que es esencial tanto para la investigación académica como para la toma de decisiones en el mundo real.
+
+### Estadística vs Estadística Espacial
+
+La estadística en general es una disciplina amplia que se aplica a diversos tipos de datos y problemas, utilizando métodos estadísticos convencionales. La estadística espacial, por otro lado, se enfoca en datos con ubicaciones geográficas explícitas y se especializa en el análisis de la dependencia espacial y la modelización de patrones espaciales.
+
+
+**Estadística:**
+
+* Análisis de la estructura de datos representativos de una población (en áreas arbitrarias)
+* Se basa en matemáticas relativamente complejas
+
+![Distribución normal en estadística](images/gauss_graph.png){fig-align="center" width="400"}
+
+
+**Geoestadística**
+
+* Análisis de relaciones de dependencia espacial entre datos georreferenciados y modelamiento de datos espacilizados.
+* Complejidad de cálculo que hacía inviable su uso masivo 
+
+![Dependencia espacial en geoestadística](images/dep_espacial.png){fig-align="center" width="400"}
+
+### Condideraciones generales
+
+La inferencia estadística convencional se basa en dos supuestos fundamentales
+
+* Los valores de una variable se distribuyen de forma aleatoria
+
+* Los valores de una variable son independientes unos de otros
+
+Pero ninguno de estos dos supuestos se cumple al utilizar datos espaciales, ya que:
+
+* Los fenómenos más próximos en el espacio están más estrechamente relacionados entre sí. Ley de @Tobler_1970
+
+* La historia, el espacio y la sociedad se co-producen, por lo que el espacio tiene un rol activo en la reproducción y acumulación de fenómenos sociales. @Lefebvre_1974
+
+Para resolver esta limitación existen dos enfoques principales
+
+* La econometría espacial, que trata el efecto espacial como un error y lo elimina para generar estimaciones sin sesgo
+* La geoestadística, que identifica y cuantifica el efecto que el espacio genera en la estructura de la información
+
+
+## Ejemplos de Correlación Espacial
+
+### Autoproducción: Tráfico de Drogas
+
+![Autoproducción Espacial en tráfico de Drogas](images/drogas_autoproducion.png)
+
+
+### Co-producción: Mercado inmobiliario local
+
+![Co-producción Espacial en Mercado inmobiliario local](images/mercado_inmob.png)
+
+### Segregación y delincuencia
+
+::: {layout-ncol=3}
+
+![](images/lc_vulnerabilidad.png)
+
+![](images/lc_delitos_dom.png)
+
+![](images/LC_delitos_drogas.png)
+
+:::
+
+![Segregación y delincuencia](images/segregacion_del.png){width=70%}
+
+### Valores de Vivienda
+
+
+
+![Valores de Vivienda](images/val_vivienda.png)
+
+## Inconsistencia estadística de datos espaciales agregados: MAUP
+
+**Modifiable Areal Unit Problem**: inconsistencia de indicadores estadísticos al modificar los perímetros de agregación (Gehlke & Biehl 1934, Openshaw & Taylor 1979)
+
+
+![ Modifiable Areal Unit Problem](images/maup.png)
+
+En general, es recomendable trabajar con datos a la menor escala posible, o agregarlos en zonas homogéneas
+
+

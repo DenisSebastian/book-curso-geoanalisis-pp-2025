@@ -1,0 +1,102 @@
+---
+subtitle: "Encunciado y Criterios de evaluación"
+---
+
+# Proyecto Final
+
+
+## Enunciado
+
+En este proyecto final, su grupo se pondrá en el rol de investigadores territoriales encargados de diseñar y construir un indicador territorial que aborde un problema específico dentro de un área geográfica delimitada. 
+
+A lo largo del proyecto, deberán pasar por todas las etapas del proceso de construcción de indicadores territoriales: desde la presentación del problema y la definición del marco teórico, hasta la recolección de datos, cálculo del indicador, representación espacial y análisis de resultados. Se espera que su grupo identifique una problemática territorial relevante y desarrolle un indicador que permita evaluar y diagnosticar esta situación con base en evidencia.
+
+![](images/pasos.png){fig-align="center"}
+
+
+
+
+## Presentación
+
+El día 23-08-2024 cada grupo de 4 participantes máximo, tendrá un tiempo máximo de **15 minutos** para presentar y **5 minutos** para responder preguntas. 
+
+
+
+
+**Contenidos a evaluar**
+
+  
+::: {.callout-note icon=false collapse="true"}
+## 1. Presentación del Problema (0.5 pts.)
+
+En esta etapa se debe explicar claramente el problema específico relacionado con el territorio que se quiere analizar. Es importante explicar explicar porque el problema es significativo para la comunidad y cómo los indicadores territoriales pueden ayudar a entenderlo y eventualmente a resolverlo.
+  
+En esta etapa se necesita tener definir el problema pero también el **área de estudio**, puede ser una comuna o toda una región.
+:::
+
+
+::: {.callout-note icon=false collapse="true"}
+## 2. Marco de Referencia (0.5 pts.)
+
+Establecer las teorías, **conceptos** y estudios previos que guiarán el análisis y la construcción de indicadores. 
+
+Es recomendable definir _keywords_ para facilitar la búsqueda de librerías en páginas como [google scholar](https://scholar.google.com/). Se debe dejar constancia de la referencia bibliográfica, citar la fuente.
+:::
+
+
+::: {.callout-note icon=false collapse="true"}
+## 3. Definición de Objetivos (0.5 pts.)
+
+Se debe entregar una definición clara de lo que se espera lograr con el proyecto y la construcción de indicadores territoriales. 
+
+
+:::
+
+::: {.callout-note icon=false collapse="true"}
+## 4. Recolección de Datos (0.5 pts.)
+
+Señalar fuente utilizadapara calcular los indicadores territoriales. Describiendo sus características y elementos relevantes para el cálculo e intepretación de resultados.
+
+Ejemplo: 
+
+**Censo de Población y Vivienda **: El Censo de Población y Vivienda se realiza cada diez años y ofrece un conteo exhaustivo de la población y sus características demográficas, económicas y de vivienda. Es una fuente crítica de datos para la planificación y desarrollo de políticas a nivel nacional y local. [Link Censo](http://www.censo2017.cl/).
+
+![](images/censo_2017.png){fig-align="center" width="100"}
+:::
+
+
+::: {.callout-note icon=false collapse="true"}
+## 5. Cálculo de Indicador (1 pts.)
+
+Explicar la metodología de cálculo, la ecuación y una interpretación de los valores bajos y altos. 
+
+
+:::
+
+::: {.callout-note icon=false collapse="true"}
+
+## 6. Representación Espacial (1 pts.)
+
+Presentar un mapa de la comuna seleccionada, dar un un contexto para interpretar los valores y los colores. Señalar las zonas donde existen concentraciones o patrones espaciales de niveles altos y bajos.
+
+Tip: Asuma que el público no conoce el área de estudio por lo tanto aproveche de dar un contexto sociodemográfico o económico.
+
+:::
+
+
+::: {.callout-note icon=false collapse="true"}
+## 7. Análisis de Resultados (1 pts.)
+
+En estapa presente sus conclusiones generales destacando sus impresiones o hallazgos importantes que le entregó el indicador territorial. Puede proponer medidas, programas o proyectos focalizados que atiendan una necesidad social.
+
+
+
+:::
+
+## Entregable
+
+Se subirá la presentación en formato PDF en un buzón de webcursos el mismo día de la presentación (23-08-2024). Si se requiere complementar contenidos con otros documentos esta permitido.
+
+
+
+

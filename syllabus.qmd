@@ -1,0 +1,126 @@
+---
+editor: 
+  markdown: 
+    wrap: 72
+---
+
+# Syllabus {.unnumbered}
+
+## Resumen
+
+Este curso está diseñado para proporcionar a los estudiantes una sólida
+base teórica y competencias técnicas para realizar análisis espacial de
+variables territoriales en múltiples áreas de aplicación. Se destaca el
+uso del lenguaje de programación R para implementar metodologías
+analíticas y automatizadas, con un enfoque en resolver desafíos
+complejos en políticas públicas, facilitando la toma de decisiones
+informadas por evidencia territorial.
+
+## OBjetivos
+
+### Objetivo General
+
+El objetivo general es proporcionar a los estudiantes los fundamentos,
+técnicas y aspectos básicos para analizar, modelar y representar
+información espacial, para apoyar la toma de decisiones con evidencia
+territorial robusta.
+
+### Objetivos específicos
+
+-   Conocer los conceptos básicos del geoanálisis.
+-   Manipular datos espaciales en R.
+-   Aplicar las técnicas a problemas de interés público.
+
+## Metodología
+
+Las clases se dividirán en partes teóricas y prácticas. La primera de
+ellas se pretende entregar un marco conceptual metodológico y teórico
+del geoanálisis y sus aplicaciones en las políticas públicas, que será
+la base para afrontar la segunda parte del módulo, que se basará en
+ejercicios aplicados utilizando lenguaje de programación R Project,
+dirigido a internalizar los conceptos teóricos, además de generar
+productos de análisis espacial útiles para gestión eventual de políticas
+públicas. Requerimiento tener instalado R Project y Rstudio en su
+computador personal.
+
+## Normas de Buen funcionamiento
+
+**Presencia Activa**: Este curso, por su metodología experiencial,
+requiere de una participación activa de los participantes. Es importante
+descubrir las fuentes de distracción y evitarlas. Las más usuales son
+lectura o escritura de e-mails, navegar por internet o utilizar redes
+sociales. Esto distrae a quien lo hace y restringe al resto del curso de
+su participación activa.
+
+**Puntualidad y Asistencia**: Será necesario ingresar a clases en forma
+puntual y permanecer en la misma sin salir, a menos que haya una
+urgencia. Se requerirá como mínimo un 75% de asistencia). Es importante
+que quien tuviera problemas para estar a tiempo o para asistir, se ponga
+en contacto lo antes posible con la coordinadora del curso. Los alumnos
+que lleguen más de 15 minutos tarde serán considerados ausentes de ese
+segmento de la sesión. Grabación de la clase: La clase se graba como
+respaldo en caso haya fallas de internet, y se disponibiliza en la
+plataforma virtual del curso sin posibilidad de descarga. Está
+disponible únicamente por 60 días en el servidor de Zoom y posterior a
+esa fecha se elimina. La visualización posterior de la clase no se
+considera como asistencia.
+
+## Contenidos
+
+Los contenidos de cada clase se detallan a continuación:
+
+Número de Clase Contenidos 1 Introducción a R 2 Manipulación de datos 3
+Visualización con R 4 Manipulación de datos espaciales 5 Geocoding 6
+Inferencia Espacial: Interpolación y mapas de calor 7 Construcción de
+indicadores territoriales 8 Reporte y Proyecto
+
+## Evaluación
+
+Las evaluaciones consisten en 2 tareas de programación, la primera
+individual y la segunda grupal. A continuación se detallan las
+evaluaciones:
+
+Tipo(s) de evaluación Tareas Forma de entrega En documento escrito (PDF
+o HTML) y código en R Cálculo de la nota final Tarea 1: 40%. - Tarea 2:
+60% Fecha Evaluación 1 22-AGO-2025 Fecha Evaluación 2 16-SEP-2025
+
+## Docentes
+
+### Profesor: Denis Berroeta (<denis.berroeta@uai.cl>)
+
+Master y PhD (cursando) in Data Scicence, Magister en Inteligencia
+Artificial, Universidad Adolfo Ibáñez. Coordinador de Investigación
+Centro Inteligencia Territorial, UAI. Tiene experiencia en
+modelamiento y análisis de datos espaciales, trabajando en diferentes
+proyectos de investigación públicos y privados en el Centro de
+Inteligencia Territorial de la Universidad Adolfo Ibáñez, diseñando y
+gestionando la implementación de metodologías de análisis de datos
+territoriales. Posee experiencia como profesor en Geoestadísticas;
+Análisis Criminal, Análisis de imágenes satelitales para el monitoreo
+ambiental y gestión de desastres naturales; y Data Science.
+
+### Ayudante: Jorge Aravena (<jorge.aravena@edu.uai.cl>)
+
+Analista Espacial en el Centro de Inteligencia Territorial de la
+Universidad Adolfo Ibáñez. Geógrafo de la Universidad Austral de Chile,
+con diplomado en Planificación y Gestión Urbana Integrada de la
+Pontificia Universidad Católica de Chile. Su enfoque abarca la geografía
+urbana crítica y los sistemas de información geográfica.
+
+## Bibliografía
+
+Opcional:
+
+-   Lovelace, R., Nowosad, J., & Muenchow, J. (2019). Welcome \|
+    Geocomputation with R. [https://geocompr.robinlovelace.net/](https://geocompr.robinlovelace.net/).
+
+-   Paez, A. (s. f.). An Introduction to Spatial Data Analysis and Statistics: A Course
+    in R. [https://paezha.github.io/spatial-analysis-r/](https://paezha.github.io/spatial-analysis-r/) 
+
+-   Mas, J.-F.(2018). Análisis espacial con R. 151.
+    [http://eujournal.org/files/journals/1/books/JeanFrancoisMas.pdf](http://eujournal.org/files/journals/1/books/JeanFrancoisMas.pdf)
+
+-   Garreton, M., Basauri, A., & Valenzuela, L. (2020). Exploring the correlation between city size and residential segregation: Comparing Chilean cities with spatially unbiased
+    indexes. Environment and Urbanization, 1-20.[https://doi.org/10.1177/0956247820918983](https://doi.org/10.1177/0956247820918983) 
+
+-   R para la Ciencia de Datos, [https://es.r4ds.hadley.nz/](https://es.r4ds.hadley.nz/)

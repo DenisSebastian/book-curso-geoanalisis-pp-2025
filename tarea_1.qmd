@@ -1,0 +1,45 @@
+---
+subtitle: "Datos Vectoriales y Raster"
+editor_options: 
+  chunk_output_type: console
+---
+
+# Tarea 1 {.unnumbered}
+
+## Antecedentes
+
+-   Fecha de entrega: **08 de Noviembre 2024**
+-   Formato: Informe (pdf o html) + Código
+-   Integrantes: 1 o 2 Integrates
+-   Ponderación de tarea sobre Nota Final: 40%
+
+## Instrucciones
+
+
+### Parte 1: Indicadores Ambientales
+
+1.  *(1pt)* Selecciona una comuna de la Región Metropolitana (excepto Las Condes) (@sec-cortaraster) y calcular NDVI usando la función vista en clases (@sec-calcndvi). 
+
+2.  *(1pt)*  Calcula la cantidad de vegetación en la comuna seleccionada, filtrando los píxeles por un umbral que tú determines (@sec-umbralicv)
+
+3. *(1 pt)* Calcula el indicador de cobertura vegetal para las manzanas urbanas de la comuna seleccionada (@sec-calcicv). **Describa los resultados**.
+
+
+
+### Parte 2: Indicadores Socioeconómicos
+
+    
+1.  *(1pt)* Calcula seis indicadores socioeconómicos en una región de tu área de estudio (@sec-indsoc). 
+
+2.  *(1 pt)* Selecciona una provincia y elige un indicador socioeconómico que consideres que evidencia una necesidad prioritaria en esa provincia. **Define y justifique** un umbral crítico para el indicador seleccionado (por ejemplo: menor a 0.25) y genera una tabla resumen usando la función `group_by()` (@sec-groupby). En la tabla, debes mostrar:
+
+* La cantidad de personas que están por debajo del umbral crítico.
+* El promedio del indicador por comuna dentro de la provincia seleccionada. 
+
+3. *(1 pt)* De la tabla anterior, elige una comuna basada en uno de estos criterios (justifica tu elección):
+
+* Mayor cantidad de personas por debajo del umbral crítico.
+* Valor promedio más bajo del indicador.
+* Realiza una representación cartográfica del valor del indicador a nivel de manzana censal. **Identifica y describe** si existen concentraciones de valores altos o bajos del indicador y describe la situación del sector basándote en tu conocimiento, experiencia o los valores de los indicadores. 
+
+![](images/Tarea_1.1.png)

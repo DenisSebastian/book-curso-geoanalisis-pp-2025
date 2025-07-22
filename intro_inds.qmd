@@ -1,0 +1,122 @@
+---
+title: "Introducción a Indicadores Territoriales"
+subtitle: "Conceptos fundamentales"
+---
+
+![](images/S1.png){fig-align="center"}
+
+## Introducción
+
+Los indicadores territoriales son herramientas esenciales en el análisis espacial y la planificación territorial, proporcionando una representación cuantitativa de diversas dimensiones del desarrollo en un área geográfica específica. Estos indicadores son fundamentales para entender y evaluar el estado actual y las tendencias de los territorios en aspectos económicos, sociales, ambientales y de bienestar. Al ofrecer una visión integral y detallada del territorio, los indicadores territoriales permiten a los tomadores de decisiones, planificadores urbanos y académicos identificar fortalezas, debilidades, oportunidades y amenazas en sus respectivas áreas de interés.
+
+En esta primera sesión del curso, exploraremos los conceptos básicos y la importancia de los indicadores territoriales, así como introduciremos algunas de las principales herramientas y recursos disponibles para el análisis de estos indicadores. La sesión también incluirá una revisión de aplicaciones prácticas de indicadores territoriales a través de estudios de caso, destacando cómo se han utilizado en proyectos reales para evaluar políticas públicas y proyectos de desarrollo.
+
+## Definición y Conceptos Básicos
+
+### Indicadores
+
+Un indicador es un instrumento que proporciona información sobre una condición, situación, actividad o resultado específico. Este instrumento permite definir un punto de comparación para establecer diferencias entre individuos o respecto a sí mismo en diferentes momentos en el tiempo. Los indicadores se construyen mediante análisis y operaciones técnicas que entregan una medida cuantitativa (valor) o una descripción cualitativa (caracterización) de la magnitud o criterio que se pretende medir u observar.
+
+### Indicadores territoriales.
+
+![](images/ind_ter.png){fig-align="center" width="400"}
+
+Un indicador territorial es un instrumento que proporciona información específica sobre una condición, situación, actividad o resultado en un **área geográfica delimitada**. A diferencia de un indicador general, un indicador territorial integra la dimensión espacial en su análisis, permitiendo evaluar y comparar aspectos económicos, sociales, ambientales y de bienestar dentro de un territorio particular.
+
+## Tipos de Indicadores Territoriales
+
+![](images/ind_matriz.png){fig-align="center"}
+
+-   Indicadores Accesibilidad
+-   Indicadores sociodemográficos
+-   Indicadores seguridad
+-   Indicadores ambientales
+
+
+
+## Pasos para la Construcción de Indicadores T.
+![](images/pasos.png){fig-align="center"}
+
+1.  Presentación del Problema: Introducción al contexto y naturaleza del problema que se desea abordar con los indicadores territoriales.
+2.  Definir un Marco Teórico o de Referencia: Establecer las teorías, conceptos y estudios previos que guiarán el análisis y la construcción de indicadores.
+3.  Definición de Objetivos: Clarificación de lo que se espera lograr con el estudio y la construcción de indicadores territoriales.
+4.  Recolección de datos: Identificación y recopilación de los datos necesarios para calcular los indicadores territoriales.
+5.  Cálculo de Indicador Territorial: Proceso de cálculo del indicador territorial a partir de los datos recolectados.
+6.  Representación Espacial: Visualización de los indicadores territoriales mediante cartografía.
+7.  Análisis de Resultados: Interpretación y evaluación de los resultados obtenidos a partir de los indicadores territoriales.
+
+## Aplicaciones de Indicadores Territoriales
+
+![](images/aplicacion_ind.png){fig-align="center"}
+
+-   Diagnóstico Territorial
+-   Evolución Territorial
+-   Evaluación de Escenarios
+-   Evaluación de Proyectos (impacto a largo plazo)
+
+## Herramientas y Recursos para el Análisis de Indicadores T.
+
+
+Este conjunto de herramientas proporciona una base robusta para llevar a cabo análisis espaciales complejos, cada una con sus propias ventajas y aplicaciones específicas.
+
+### Plataformas de Análisis Espacial {.unnumbered}
+
+
+#### QGIS {.unnumbered}
+- **Descripción**: QGIS (Quantum GIS) es un Sistema de Información Geográfica (SIG) de código abierto que permite visualizar, editar y analizar datos espaciales. Es ampliamente utilizado por su capacidad de integrar diversos formatos de datos y su flexibilidad a través de complementos.
+- **Características**:
+  - Soporte para múltiples formatos de datos vectoriales y raster.
+  - Amplia gama de herramientas de análisis espacial.
+  - Comunidad activa y numerosos complementos disponibles.
+  - Interfaz personalizable y amigable.
+- **Enlace**: [QGIS](https://qgis.org)
+
+#### ArcGIS {.unnumbered}
+- **Descripción**: ArcGIS es una plataforma integral de SIG desarrollada por Esri. Es conocida por sus potentes herramientas de análisis, cartografía y gestión de datos espaciales, siendo una de las más utilizadas en entornos profesionales.
+- **Características**:
+  - Herramientas avanzadas de análisis espacial y geoprocesamiento.
+  - Amplia biblioteca de datos y modelos preconfigurados.
+  - Soporte para aplicaciones móviles y web.
+  - Capacidades robustas de visualización y creación de mapas.
+- **Enlace**: [ArcGIS](https://www.esri.com/en-us/arcgis/about-arcgis/overview)
+
+### Lenguajes de Programaciónm  Análisis Espacial {.unnumbered}
+
+
+
+
+#### R {.unnumbered}
+- **Descripción**: R es un entorno y lenguaje de programación especializado en estadísticas y análisis de datos. A través de paquetes específicos, se utiliza ampliamente para análisis espacial y creación de mapas.
+- **Características**:
+  - Paquetes como `sf`, `sp`, `rgdal` para análisis espacial.
+  - `ggplot2` para visualización de datos y mapas.
+  - `raster` y `terra` para manipulación de datos raster.
+  - Integración con otros lenguajes y herramientas de análisis.
+- **Enlace**: [R](https://www.r-project.org)
+
+#### Python {.unnumbered}
+- **Descripción**: Python es un lenguaje de programación versátil que, a través de diversas bibliotecas, se ha convertido en una herramienta poderosa para el análisis espacial y el manejo de datos geoespaciales.
+- **Características**:
+  - Bibliotecas como `geopandas`, `shapely`, `fiona` para manipulación de datos espaciales.
+  - `matplotlib` y `seaborn` para visualización de datos.
+  - `scikit-learn` y `tensorflow` para integración de aprendizaje automático.
+  - Comunidad extensa y abundante documentación.
+- **Enlace**: [Python](https://www.python.org)
+
+![[Source: Carto - What is Spatial Data Science?](https://carto.com/what-is-spatial-data-science)](images/spatial-analysis-languages.png){fig-align="center" width="400"}
+
+
+
+
+
+## Discusión
+
+¿Existen consideraciones **éticas** en procesode construción de Indicadores que pudiera inducir a sesgos?
+
+## Estudios de caso
+
+![](images/casos.png){fig-align="center"}
+
+## Lecturas y Recursos Adicionales
+
+- [Plataforma de MBHT](https://plataformabht.subdere.gov.cl/)

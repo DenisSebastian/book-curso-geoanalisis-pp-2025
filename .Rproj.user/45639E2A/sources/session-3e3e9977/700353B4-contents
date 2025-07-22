@@ -1,0 +1,70 @@
+project:
+  type: book
+  output-dir: docs
+
+
+book:
+  title: "Child Oportunity Index Chile"
+  subtitle: "Observatorio de Factores de Riesgo y Protección"
+  author:
+    - name: Denis Berroeta González
+      url: https://cit.uai.cl/denis-berroeta/
+      affiliation: Centro de Inteligencia Territorial
+      affiliation-url: https://cit.uai.cl
+      email: denis.berroeta@uai.cl
+  date: "2025-05-23"
+  page-footer:
+    left: "Copyright 2025, Denis Berroeta"
+  chapters:
+    - index.qmd
+    - antecedentes.qmd
+    - diseno.qmd
+    - avances.qmd
+    - part: educacion.qmd
+      chapters:
+        - pub_prekinder.qmd
+        - priv_prekinder.qmd
+        - puntajes_lym.qmd
+        - crecimiento_lym.qmd
+    - part: s_y_ma.qmd
+      chapters:
+        - microparticulas.qmd
+        - ozono.qmd
+        - industriales.qmd
+        - residuos.qmd
+        - ee_calor.qmd
+    - part: social_y_eco.qmd
+      chapters:
+        - escolaridad.qmd
+        - jh_primaria.qmd
+        - jh_secundaria.qmd
+        - jh_superior.qmd
+        - empleo.qmd
+        - hacina.qmd
+        - monopar.qmd
+    # - template_ind.qmd
+    - reuniones.qmd
+    - recursos.qmd
+    - references.qmd
+
+bibliography: references.bib
+
+
+format:
+  html:
+    theme: cosmo
+    html-math-method: katex
+    css: style.css
+    toc: true
+    toc-expand: 1
+    toc-title: "Contenidos"
+    fig-cap-location: "margin"
+    tab-cap-location: "bottom"
+    fig-align: "center"
+    mailto: "denis.berroeta@uai.cl"
+    crossref:
+      fig-prefix: Figura   # (default is "Figure")
+      tbl-prefix: Tabla # (default is "Table")
+      eq-prefix: Ecuación 
+
+

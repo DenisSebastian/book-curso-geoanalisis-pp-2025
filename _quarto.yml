@@ -1,0 +1,63 @@
+project:
+  type: book
+
+book:
+  title: "Curso de Geoanálisis"
+  subtitle: "Para la mejora en la implementación de Políticas Públicas"
+  author:
+    - name: Denis Berroeta González
+      url: https://cit.uai.cl/denis-berroeta/
+      affiliation: Centro de Inteligencia Territorial
+      affiliation-url: https://cit.uai.cl
+      email: denis.berroeta@uai.cl
+  date: "2025-7-22"
+  #number-sections: 3
+  page-footer: 
+    left: "Copyright 2025, Denis Berroeta" 
+  chapters:
+    - index.qmd
+    - geoanalisis.qmd
+    - intro_r.qmd
+    - variables.qmd
+    - funciones.qmd
+    - control_r.qmd
+    # - dataframes.qmd
+    # - tidyverse.qmd
+    # - datos_espaciales.qmd
+    # - espacial_r.qmd
+    # - analisis_esp.qmd
+    # - inferencia.qmd
+    # - intro_inds.qmd
+    # - construccion_inds.qmd
+    # - indicadores.qmd
+    # - proyecto.qmd
+    # - part: "R Project"
+    #   chapters:
+    #     - datos_espaciales.qmd
+    #     # - dataframes.qmd
+    - references.qmd
+  appendices:
+    - recursos.qmd
+    # - john_snow.qmd
+
+bibliography: references.bib
+
+format:
+  html:
+    theme: cosmo
+    html-math-method: katex
+    css: styles/style.css
+    fig-align: "center"
+    fig-cap-location: "margin"
+    tab-cap-location: "left"
+    mailto: "denis.berroeta@uai.cl"
+    toc-title: "Contenidos"
+  
+execute:
+  warning: false
+  
+editor: source
+always_allow_html: true
+
+
+
