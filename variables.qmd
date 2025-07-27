@@ -157,24 +157,7 @@ vec + vec2
 ```
 
 
-### Listas
 
-Son estructuras eficientes y flexibles, que permiten combinar distintas clases de elementos : 
-```{r }
-lista <-  list(1, 2, 3, "cosa", x, y)
-lista
-str(lista)
-```
-
-
-```{r }
-#Tambien se puede seleccionar parte de una lista, usando el doble corchete:
-lista[[3]]
-
-```
-
-Como inspeccionar una lista con Rstudio
-<center>![](images/rstudio_environment_list.gif){width=90%}</center>
 
 ### Matrices
 
@@ -243,3 +226,22 @@ También podemos realizar operaciones entre vectores del dataframe:
 df$promedio_final <-  0.3*df$control_1 + 0.3*df$control_2 + 0.4*df$examen
 df
 ```
+
+### Listas
+
+Son estructuras eficientes y flexibles, que permiten combinar distintas clases de elementos : 
+```{r }
+lista <-  list(1, 2, 3, "cosa", x, y)
+lista
+str(lista)
+```
+
+
+```{r }
+#Tambien se puede seleccionar parte de una lista, usando el doble corchete:
+lista[[3]]
+
+```
+
+Como inspeccionar una lista con Rstudio
+<center>![](images/rstudio_environment_list.gif){width=90%}</center>
