@@ -20,9 +20,8 @@ book:
     - intro_r.qmd
     - variables.qmd
     - funciones.qmd
-    - control_r.qmd
     - tidyverse.qmd
-    - dataframes.qmd
+    # - dataframes.qmd
     # - datos_espaciales.qmd
     # - espacial_r.qmd
     # - analisis_esp.qmd
@@ -38,6 +37,7 @@ book:
     - references.qmd
   appendices:
     - recursos.qmd
+    - control_r.qmd
     # - john_snow.qmd
 
 bibliography: references.bib

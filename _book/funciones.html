@@ -65,7 +65,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./control_r.html" rel="next">
+<link href="./tidyverse.html" rel="next">
 <link href="./variables.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
@@ -104,8 +104,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     "search-label": "Search"
   }
 }</script>
-<script src="site_libs/kePrint-0.0.1/kePrint.js"></script>
-<link href="site_libs/lightable-0.0.1/lightable.css" rel="stylesheet">
 
   <script>window.backupDefine = window.define; window.define = undefined;</script><script src="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.js"></script>
   <script>document.addEventListener("DOMContentLoaded", function () {
@@ -220,20 +218,8 @@ window.Quarto = {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./control_r.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Estructuras en R</span></span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
   <a href="./tidyverse.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Tidyverse en R</span></span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./dataframes.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Dataframes y Delitos en R</span></span></a>
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Tidyverse en R</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -257,6 +243,12 @@ window.Quarto = {
  <span class="menu-text"><span class="chapter-number">A</span>&nbsp; <span class="chapter-title">Instalación de Recursos</span></span></a>
   </div>
 </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./control_r.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">B</span>&nbsp; <span class="chapter-title">Estructuras en R</span></span></a>
+  </div>
+</li>
       </ul>
   </li>
     </ul>
@@ -272,21 +264,19 @@ window.Quarto = {
   <li><a href="#operaciones-básicas-en-r" id="toc-operaciones-básicas-en-r" class="nav-link active" data-scroll-target="#operaciones-básicas-en-r"><span class="header-section-number">3.1</span> Operaciones Básicas en R</a>
   <ul class="collapse">
   <li><a href="#operaciones-matemáticas" id="toc-operaciones-matemáticas" class="nav-link" data-scroll-target="#operaciones-matemáticas"><span class="header-section-number">3.1.1</span> Operaciones Matemáticas</a></li>
-  <li><a href="#funciones-útiles-de-propósito-general" id="toc-funciones-útiles-de-propósito-general" class="nav-link" data-scroll-target="#funciones-útiles-de-propósito-general"><span class="header-section-number">3.1.2</span> Funciones Útiles de propósito general</a></li>
   </ul></li>
-  <li><a href="#operaciones-lógicas" id="toc-operaciones-lógicas" class="nav-link" data-scroll-target="#operaciones-lógicas"><span class="header-section-number">3.2</span> Operaciones Lógicas</a>
+  <li><a href="#funciones-estadísticas-básicas" id="toc-funciones-estadísticas-básicas" class="nav-link" data-scroll-target="#funciones-estadísticas-básicas"><span class="header-section-number">3.2</span> Funciones estadísticas básicas</a></li>
+  <li><a href="#funciones-de-propósito-general" id="toc-funciones-de-propósito-general" class="nav-link" data-scroll-target="#funciones-de-propósito-general"><span class="header-section-number">3.3</span> Funciones de propósito general</a>
   <ul class="collapse">
-  <li><a href="#operador-de-igualdad" id="toc-operador-de-igualdad" class="nav-link" data-scroll-target="#operador-de-igualdad"><span class="header-section-number">3.2.1</span> Operador de igualdad: (==)</a></li>
-  <li><a href="#operador-de-desigualdad" id="toc-operador-de-desigualdad" class="nav-link" data-scroll-target="#operador-de-desigualdad"><span class="header-section-number">3.2.2</span> Operador de desigualdad: (!=)</a></li>
-  <li><a href="#operador-de-mayor-que" id="toc-operador-de-mayor-que" class="nav-link" data-scroll-target="#operador-de-mayor-que"><span class="header-section-number">3.2.3</span> Operador de mayor que: (&gt;)</a></li>
-  <li><a href="#operador-de-menor-que" id="toc-operador-de-menor-que" class="nav-link" data-scroll-target="#operador-de-menor-que"><span class="header-section-number">3.2.4</span> Operador de menor que: (&lt;)</a></li>
-  <li><a href="#operador-de-mayor-o-igual-que" id="toc-operador-de-mayor-o-igual-que" class="nav-link" data-scroll-target="#operador-de-mayor-o-igual-que"><span class="header-section-number">3.2.5</span> Operador de mayor o igual que: (&gt;=)</a></li>
-  <li><a href="#operador-de-menor-o-igual-que" id="toc-operador-de-menor-o-igual-que" class="nav-link" data-scroll-target="#operador-de-menor-o-igual-que"><span class="header-section-number">3.2.6</span> Operador de menor o igual que: (&lt;=)</a></li>
-  <li><a href="#operador-lógico-and" id="toc-operador-lógico-and" class="nav-link" data-scroll-target="#operador-lógico-and"><span class="header-section-number">3.2.7</span> Operador lógico AND: (&amp;)</a></li>
-  <li><a href="#operador-lógico-or" id="toc-operador-lógico-or" class="nav-link" data-scroll-target="#operador-lógico-or"><span class="header-section-number">3.2.8</span> Operador lógico OR: (|)</a></li>
+  <li><a href="#funciones-de-repetición-y-secuencia" id="toc-funciones-de-repetición-y-secuencia" class="nav-link" data-scroll-target="#funciones-de-repetición-y-secuencia"><span class="header-section-number">3.3.1</span> Funciones de Repetición y Secuencia</a></li>
+  <li><a href="#funciones-sobre-texto" id="toc-funciones-sobre-texto" class="nav-link" data-scroll-target="#funciones-sobre-texto"><span class="header-section-number">3.3.2</span> Funciones sobre texto</a></li>
+  <li><a href="#funciones-de-condiconales" id="toc-funciones-de-condiconales" class="nav-link" data-scroll-target="#funciones-de-condiconales"><span class="header-section-number">3.3.3</span> Funciones de Condiconales</a></li>
   </ul></li>
-  <li><a href="#crear-funciones-propias" id="toc-crear-funciones-propias" class="nav-link" data-scroll-target="#crear-funciones-propias"><span class="header-section-number">3.3</span> Crear Funciones Propias</a></li>
-  <li><a href="#referencias" id="toc-referencias" class="nav-link" data-scroll-target="#referencias"><span class="header-section-number">3.4</span> Referencias:</a></li>
+  <li><a href="#crear-funciones-propias" id="toc-crear-funciones-propias" class="nav-link" data-scroll-target="#crear-funciones-propias"><span class="header-section-number">3.4</span> Crear Funciones Propias</a>
+  <ul class="collapse">
+  <li><a href="#ejercicios-con-funciones" id="toc-ejercicios-con-funciones" class="nav-link" data-scroll-target="#ejercicios-con-funciones"><span class="header-section-number">3.4.1</span> Ejercicios con Funciones</a></li>
+  </ul></li>
+  <li><a href="#referencias" id="toc-referencias" class="nav-link" data-scroll-target="#referencias"><span class="header-section-number">3.5</span> Referencias:</a></li>
   </ul>
 </nav>
     </div>
@@ -313,6 +303,24 @@ window.Quarto = {
 
 
 <!-- ![](images/S3.png){fig-align="center"} -->
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Objetivos
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ul>
+<li>Usar operadores aritméticos y lógicos en R.</li>
+<li>Aplicar funciones estadísticas simples sobre vectores.</li>
+<li>Manipular texto y repetir secuencias con funciones incorporadas.</li>
+<li>Crear funciones propias.</li>
+</ul>
+</div>
+</div>
 <section id="operaciones-básicas-en-r" class="level2" data-number="3.1">
 <h2 data-number="3.1" class="anchored" data-anchor-id="operaciones-básicas-en-r"><span class="header-section-number">3.1</span> Operaciones Básicas en R</h2>
 <section id="operaciones-matemáticas" class="level3" data-number="3.1.1">
@@ -366,337 +374,398 @@ window.Quarto = {
 </div>
 </div>
 <p>Es importante tener en cuenta que R sigue las reglas de precedencia de las operaciones matemáticas. Esto significa que las operaciones dentro de los paréntesis se evalúan primero, seguidas de la exponenciación, la multiplicación y la división, y finalmente la suma y la resta. Si se requiere un orden específico de operaciones, se deben utilizar paréntesis para indicarlo.</p>
-<p>Además, R también cuenta con una variedad de funciones matemáticas incorporadas, como “sin”, “cos”, “tan”, “log”, “exp”, entre otras, que se pueden utilizar para realizar operaciones más complejas.</p>
-<p>También se pueden aplica a un elemento a al objeto espacial completo</p>
+</section>
+</section>
+<section id="funciones-estadísticas-básicas" class="level2" data-number="3.2">
+<h2 data-number="3.2" class="anchored" data-anchor-id="funciones-estadísticas-básicas"><span class="header-section-number">3.2</span> Funciones estadísticas básicas</h2>
+<p>Estas funciones permiten resumir información numérica. Se aplican a vectores, columnas o listas de valores. Ejemplo</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a>a <span class="ot">&lt;-</span> <span class="dv">13</span></span>
-<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a>b <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">20</span>,<span class="dv">30</span>,<span class="dv">22</span>,<span class="dv">2</span>,<span class="dv">1</span>)</span>
-<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb15-4"><a href="#cb15-4" aria-hidden="true" tabindex="-1"></a><span class="fu">sum</span>(b) <span class="co"># suma</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] 75</code></pre>
+<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a>b <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">20</span>,<span class="dv">30</span>,<span class="dv">22</span>,<span class="dv">2</span>,<span class="dv">1</span>) <span class="co"># Vector númerico</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sqrt</span>(b) <span class="co"># find the square root of x</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] 4.472136 5.477226 4.690416 1.414214 1.000000</code></pre>
-</div>
-</div>
+<p>Promedio:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="fu">mean</span>(b)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="fu">mean</span>(b)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 15</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb21"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a><span class="fu">min</span>(b)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Mínimo o Máximo</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="fu">min</span>(b)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 1</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb23"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a><span class="fu">max</span>(b)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb20"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a>(b)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] 30</code></pre>
+<pre><code>[1] 20 30 22  2  1</code></pre>
 </div>
 </div>
-</section>
-<section id="funciones-útiles-de-propósito-general" class="level3" data-number="3.1.2">
-<h3 data-number="3.1.2" class="anchored" data-anchor-id="funciones-útiles-de-propósito-general"><span class="header-section-number">3.1.2</span> Funciones Útiles de propósito general</h3>
+<p>Desviación Estándar</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb25"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a><span class="fu">rep</span>(<span class="dv">1</span>, <span class="dv">10</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb22"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sd</span>(b)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code> [1] 1 1 1 1 1 1 1 1 1 1</code></pre>
-</div>
-<div class="sourceCode cell-code" id="cb27"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a><span class="fu">rep</span>(<span class="st">"HAHA"</span>, <span class="dv">10</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code> [1] "HAHA" "HAHA" "HAHA" "HAHA" "HAHA" "HAHA" "HAHA" "HAHA" "HAHA" "HAHA"</code></pre>
-</div>
-<div class="sourceCode cell-code" id="cb29"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true" tabindex="-1"></a><span class="fu">seq</span>(<span class="dv">1</span>, <span class="dv">10</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code> [1]  1  2  3  4  5  6  7  8  9 10</code></pre>
-</div>
-<div class="sourceCode cell-code" id="cb31"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb31-1"><a href="#cb31-1" aria-hidden="true" tabindex="-1"></a><span class="fu">seq</span>(<span class="dv">1</span>, <span class="dv">10</span>, <span class="at">by =</span> <span class="dv">2</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] 1 3 5 7 9</code></pre>
-</div>
-<div class="sourceCode cell-code" id="cb33"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb33-1"><a href="#cb33-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ifelse</span>(<span class="dv">3</span> <span class="sc">&gt;</span> <span class="dv">5</span>, <span class="dv">1</span>, <span class="st">"this is false"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] "this is false"</code></pre>
+<pre><code>[1] 12.8841</code></pre>
 </div>
 </div>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb35"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb35-1"><a href="#cb35-1" aria-hidden="true" tabindex="-1"></a><span class="fu">paste</span>(<span class="st">"Hola"</span>, <span class="st">"amigo"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] "Hola amigo"</code></pre>
-</div>
-<div class="sourceCode cell-code" id="cb37"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb37-1"><a href="#cb37-1" aria-hidden="true" tabindex="-1"></a><span class="fu">paste</span>(<span class="st">"Hello"</span>, <span class="st">"amigo"</span>, <span class="at">sep =</span> <span class="st">"--"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] "Hello--amigo"</code></pre>
-</div>
-<div class="sourceCode cell-code" id="cb39"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb39-1"><a href="#cb39-1" aria-hidden="true" tabindex="-1"></a><span class="fu">paste0</span>(<span class="st">"Hello"</span>, <span class="st">"amigo"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] "Helloamigo"</code></pre>
-</div>
-<div class="sourceCode cell-code" id="cb41"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb41-1"><a href="#cb41-1" aria-hidden="true" tabindex="-1"></a><span class="fu">tolower</span>(<span class="st">"HAHAHAHAH"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] "hahahahah"</code></pre>
-</div>
-<div class="sourceCode cell-code" id="cb43"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb43-1"><a href="#cb43-1" aria-hidden="true" tabindex="-1"></a><span class="fu">toupper</span>(<span class="st">"hueuehuehuheuhe"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] "HUEUEHUEHUHEUHE"</code></pre>
-</div>
-</div>
-</section>
-</section>
-<section id="operaciones-lógicas" class="level2" data-number="3.2">
-<h2 data-number="3.2" class="anchored" data-anchor-id="operaciones-lógicas"><span class="header-section-number">3.2</span> Operaciones Lógicas</h2>
-<p>En R, los operadores lógicos se utilizan para realizar comparaciones lógicas entre valores o expresiones. Estos operadores devuelven valores booleanos (TRUE o FALSE) según se cumpla o no la condición.</p>
-<p>A continuación se presentan los operadores lógicos en R:</p>
-<div class="cell">
-<div class="cell-output-display">
-<table class="table table-striped table-hover table-condensed caption-top table-sm small" data-quarto-postprocess="true">
-<thead>
-<tr class="header">
-<th style="text-align: left;" data-quarto-table-cell-role="th">Operador</th>
-<th style="text-align: left;" data-quarto-table-cell-role="th">Significado</th>
-<th style="text-align: left;" data-quarto-table-cell-role="th">Ejemplo</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: left;">==</td>
-<td style="text-align: left;">Igual a</td>
-<td style="text-align: left;">2 == 2 (TRUE)</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">!=</td>
-<td style="text-align: left;">Diferente a</td>
-<td style="text-align: left;">2 != 3 (TRUE)</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">&gt;</td>
-<td style="text-align: left;">Mayor que</td>
-<td style="text-align: left;">3 &gt; 2 (TRUE)</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">&lt;</td>
-<td style="text-align: left;">Menor que</td>
-<td style="text-align: left;">2 &lt; 3 (TRUE)</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">&gt;=</td>
-<td style="text-align: left;">Mayor o igual que</td>
-<td style="text-align: left;">3 &gt;= 2 (TRUE)</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">&lt;=</td>
-<td style="text-align: left;">Menor o igual que</td>
-<td style="text-align: left;">2 &lt;= 3 (TRUE)</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">&amp;</td>
-<td style="text-align: left;">Operador lógico AND</td>
-<td style="text-align: left;">2 &lt; 3 &amp; 3 &gt; 1 (TRUE)</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">|</td>
-<td style="text-align: left;">Operador lógico OR</td>
-<td style="text-align: left;">2 &lt; 3 | 3 &lt; 1 (TRUE)</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">!</td>
-<td style="text-align: left;">Operador lógico NOT</td>
-<td style="text-align: left;">!(2 == 3) (TRUE)</td>
-</tr>
-</tbody>
-</table>
-</div>
-</div>
-<section id="operador-de-igualdad" class="level3" data-number="3.2.1">
-<h3 data-number="3.2.1" class="anchored" data-anchor-id="operador-de-igualdad"><span class="header-section-number">3.2.1</span> Operador de igualdad: (==)</h3>
-<p>Este operador se utiliza para comparar si dos valores son iguales. Retorna TRUE si la condición se cumple y FALSE en caso contrario.</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb45"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb45-1"><a href="#cb45-1" aria-hidden="true" tabindex="-1"></a>a <span class="ot">&lt;-</span> <span class="dv">2</span></span>
-<span id="cb45-2"><a href="#cb45-2" aria-hidden="true" tabindex="-1"></a>b <span class="ot">&lt;-</span> <span class="dv">3</span></span>
-<span id="cb45-3"><a href="#cb45-3" aria-hidden="true" tabindex="-1"></a>a <span class="sc">==</span> b <span class="co"># FALSE</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] FALSE</code></pre>
-</div>
-</div>
-</section>
-<section id="operador-de-desigualdad" class="level3" data-number="3.2.2">
-<h3 data-number="3.2.2" class="anchored" data-anchor-id="operador-de-desigualdad"><span class="header-section-number">3.2.2</span> Operador de desigualdad: (!=)</h3>
-<p>Este operador se utiliza para comparar si dos valores son diferentes. Retorna TRUE si la condición se cumple y FALSE en caso contrario.</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb47"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb47-1"><a href="#cb47-1" aria-hidden="true" tabindex="-1"></a>a <span class="ot">&lt;-</span> <span class="dv">2</span></span>
-<span id="cb47-2"><a href="#cb47-2" aria-hidden="true" tabindex="-1"></a>b <span class="ot">&lt;-</span> <span class="dv">3</span></span>
-<span id="cb47-3"><a href="#cb47-3" aria-hidden="true" tabindex="-1"></a>a <span class="sc">!=</span> b <span class="co"># TRUE</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] TRUE</code></pre>
-</div>
-</div>
-</section>
-<section id="operador-de-mayor-que" class="level3" data-number="3.2.3">
-<h3 data-number="3.2.3" class="anchored" data-anchor-id="operador-de-mayor-que"><span class="header-section-number">3.2.3</span> Operador de mayor que: (&gt;)</h3>
-<p>Este operador se utiliza para comparar si un valor es mayor que otro. Retorna TRUE si la condición se cumple y FALSE en caso contrario.</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb49"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb49-1"><a href="#cb49-1" aria-hidden="true" tabindex="-1"></a>a <span class="ot">&lt;-</span> <span class="dv">2</span></span>
-<span id="cb49-2"><a href="#cb49-2" aria-hidden="true" tabindex="-1"></a>b <span class="ot">&lt;-</span> <span class="dv">3</span></span>
-<span id="cb49-3"><a href="#cb49-3" aria-hidden="true" tabindex="-1"></a>b <span class="sc">&gt;</span> a <span class="co"># TRUE</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] TRUE</code></pre>
-</div>
-</div>
-</section>
-<section id="operador-de-menor-que" class="level3" data-number="3.2.4">
-<h3 data-number="3.2.4" class="anchored" data-anchor-id="operador-de-menor-que"><span class="header-section-number">3.2.4</span> Operador de menor que: (&lt;)</h3>
-<p>Este operador se utiliza para comparar si un valor es menor que otro. Retorna TRUE si la condición se cumple y FALSE en caso contrario.</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb51"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb51-1"><a href="#cb51-1" aria-hidden="true" tabindex="-1"></a>a <span class="ot">&lt;-</span> <span class="dv">2</span></span>
-<span id="cb51-2"><a href="#cb51-2" aria-hidden="true" tabindex="-1"></a>b <span class="ot">&lt;-</span> <span class="dv">3</span></span>
-<span id="cb51-3"><a href="#cb51-3" aria-hidden="true" tabindex="-1"></a>a <span class="sc">&lt;</span> b <span class="co"># TRUE</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] TRUE</code></pre>
-</div>
-</div>
-</section>
-<section id="operador-de-mayor-o-igual-que" class="level3" data-number="3.2.5">
-<h3 data-number="3.2.5" class="anchored" data-anchor-id="operador-de-mayor-o-igual-que"><span class="header-section-number">3.2.5</span> Operador de mayor o igual que: (&gt;=)</h3>
-<p>Este operador se utiliza para comparar si un valor es mayor o igual que otro. Retorna TRUE si la condición se cumple y FALSE en caso contrario.</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb53"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb53-1"><a href="#cb53-1" aria-hidden="true" tabindex="-1"></a>a <span class="ot">&lt;-</span> <span class="dv">2</span></span>
-<span id="cb53-2"><a href="#cb53-2" aria-hidden="true" tabindex="-1"></a>b <span class="ot">&lt;-</span> <span class="dv">3</span></span>
-<span id="cb53-3"><a href="#cb53-3" aria-hidden="true" tabindex="-1"></a>b <span class="sc">&gt;=</span> a <span class="co"># TRUE</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] TRUE</code></pre>
-</div>
-</div>
-</section>
-<section id="operador-de-menor-o-igual-que" class="level3" data-number="3.2.6">
-<h3 data-number="3.2.6" class="anchored" data-anchor-id="operador-de-menor-o-igual-que"><span class="header-section-number">3.2.6</span> Operador de menor o igual que: (&lt;=)</h3>
-<p>Este operador se utiliza para comparar si un valor es menor o igual que otro. Retorna TRUE si la condición se cumple y FALSE en caso contrario.</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb55"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb55-1"><a href="#cb55-1" aria-hidden="true" tabindex="-1"></a>a <span class="ot">&lt;-</span> <span class="dv">2</span></span>
-<span id="cb55-2"><a href="#cb55-2" aria-hidden="true" tabindex="-1"></a>b <span class="ot">&lt;-</span> <span class="dv">3</span></span>
-<span id="cb55-3"><a href="#cb55-3" aria-hidden="true" tabindex="-1"></a>a <span class="sc">&lt;=</span> b <span class="co"># TRUE</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] TRUE</code></pre>
-</div>
-</div>
-</section>
-<section id="operador-lógico-and" class="level3" data-number="3.2.7">
-<h3 data-number="3.2.7" class="anchored" data-anchor-id="operador-lógico-and"><span class="header-section-number">3.2.7</span> Operador lógico AND: (&amp;)</h3>
-<p>Este operador se utiliza para evaluar dos o más condiciones y retornar TRUE si todas se cumplen, de lo contrario retorna FALSE.</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb57"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb57-1"><a href="#cb57-1" aria-hidden="true" tabindex="-1"></a>a <span class="ot">&lt;-</span> <span class="dv">2</span></span>
-<span id="cb57-2"><a href="#cb57-2" aria-hidden="true" tabindex="-1"></a>b <span class="ot">&lt;-</span> <span class="dv">3</span></span>
-<span id="cb57-3"><a href="#cb57-3" aria-hidden="true" tabindex="-1"></a>c <span class="ot">&lt;-</span> <span class="dv">4</span></span>
-<span id="cb57-4"><a href="#cb57-4" aria-hidden="true" tabindex="-1"></a>a <span class="sc">&lt;</span> b <span class="sc">&amp;</span> b <span class="sc">&lt;</span> c <span class="co"># TRUE</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] TRUE</code></pre>
-</div>
-</div>
-</section>
-<section id="operador-lógico-or" class="level3" data-number="3.2.8">
-<h3 data-number="3.2.8" class="anchored" data-anchor-id="operador-lógico-or"><span class="header-section-number">3.2.8</span> Operador lógico OR: (|)</h3>
-<p>Este operador se utiliza para evaluar dos o más condiciones y retornar TRUE si al menos una se cumple, de lo contrario retorna FALSE.</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb59"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb59-1"><a href="#cb59-1" aria-hidden="true" tabindex="-1"></a>a <span class="ot">&lt;-</span> <span class="dv">2</span></span>
-<span id="cb59-2"><a href="#cb59-2" aria-hidden="true" tabindex="-1"></a>b <span class="ot">&lt;-</span> <span class="dv">3</span></span>
-<span id="cb59-3"><a href="#cb59-3" aria-hidden="true" tabindex="-1"></a>c <span class="ot">&lt;-</span> <span class="dv">4</span></span>
-<span id="cb59-4"><a href="#cb59-4" aria-hidden="true" tabindex="-1"></a>a <span class="sc">&gt;</span> b <span class="sc">|</span> b <span class="sc">&lt;</span> c <span class="co"># TRUE</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] TRUE</code></pre>
-</div>
-</div>
-<p>Operador lógico NOT: (!) Este operador se utiliza para negar una condición. Si la condición es TRUE, retorna FALSE, y si la condición es FALSE, retorna TRUE.</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb61"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb61-1"><a href="#cb61-1" aria-hidden="true" tabindex="-1"></a>a <span class="ot">&lt;-</span> <span class="dv">2</span></span>
-<span id="cb61-2"><a href="#cb61-2" aria-hidden="true" tabindex="-1"></a>b <span class="ot">&lt;-</span> <span class="dv">3</span></span>
-<span id="cb61-3"><a href="#cb61-3" aria-hidden="true" tabindex="-1"></a><span class="sc">!</span>(a <span class="sc">==</span> b) <span class="co"># TRUE</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] TRUE</code></pre>
-</div>
-</div>
-<p>Es importante tener en cuenta que los operadores lógicos se pueden utilizar en combinación para crear expresiones lógicas más complejas. Además, los operadores lógicos también se pueden utilizar en las estructuras de control condicionales, como if/else y switch, para tomar decisiones basadas en condiciones lógicas.</p>
-</section>
-</section>
-<section id="crear-funciones-propias" class="level2" data-number="3.3">
-<h2 data-number="3.3" class="anchored" data-anchor-id="crear-funciones-propias"><span class="header-section-number">3.3</span> Crear Funciones Propias</h2>
-<p>En R, es posible crear funciones propias para realizar tareas específicas y reutilizarlas en diferentes partes de un programa. Para crear una función en R, se utiliza la siguiente estructura:</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb63"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb63-1"><a href="#cb63-1" aria-hidden="true" tabindex="-1"></a>nombre_de_la_funcion <span class="ot">&lt;-</span> <span class="cf">function</span>(argumentos) {</span>
-<span id="cb63-2"><a href="#cb63-2" aria-hidden="true" tabindex="-1"></a>  cuerpo_de_la_funcion</span>
-<span id="cb63-3"><a href="#cb63-3" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<p>Por ejemplo, se puede crear una función que calcule la suma de dos números:</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb64"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb64-1"><a href="#cb64-1" aria-hidden="true" tabindex="-1"></a>suma <span class="ot">&lt;-</span> <span class="cf">function</span>(a, b) {</span>
-<span id="cb64-2"><a href="#cb64-2" aria-hidden="true" tabindex="-1"></a>  resultado <span class="ot">&lt;-</span> a <span class="sc">+</span> b</span>
-<span id="cb64-3"><a href="#cb64-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">return</span>(resultado)</span>
-<span id="cb64-4"><a href="#cb64-4" aria-hidden="true" tabindex="-1"></a>}</span>
-<span id="cb64-5"><a href="#cb64-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb64-6"><a href="#cb64-6" aria-hidden="true" tabindex="-1"></a>resultado_suma <span class="ot">&lt;-</span> <span class="fu">suma</span>(<span class="dv">2</span>, <span class="dv">3</span>)</span>
-<span id="cb64-7"><a href="#cb64-7" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(resultado_suma) <span class="co"># 5</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] 5</code></pre>
-</div>
-</div>
-<p>Por ejemplo, se puede crear una función que eleve al cuadrado:</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb66"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb66-1"><a href="#cb66-1" aria-hidden="true" tabindex="-1"></a>cuadrado <span class="ot">&lt;-</span> <span class="cf">function</span>(x) { <span class="co"># x = parámetro</span></span>
-<span id="cb66-2"><a href="#cb66-2" aria-hidden="true" tabindex="-1"></a>    y <span class="ot">=</span> x <span class="sc">^</span> <span class="dv">2</span> <span class="co"># asiganción de variables solo dentro de la función</span></span>
-<span id="cb66-3"><a href="#cb66-3" aria-hidden="true" tabindex="-1"></a>    <span class="fu">return</span>(y) <span class="co"># especificar valor retornado (no necesario completamente)</span></span>
-<span id="cb66-4"><a href="#cb66-4" aria-hidden="true" tabindex="-1"></a>}</span>
-<span id="cb66-5"><a href="#cb66-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb66-6"><a href="#cb66-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb66-7"><a href="#cb66-7" aria-hidden="true" tabindex="-1"></a>a <span class="ot">&lt;-</span> <span class="dv">13</span></span>
-<span id="cb66-8"><a href="#cb66-8" aria-hidden="true" tabindex="-1"></a>b <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">20</span>,<span class="dv">30</span>,<span class="dv">22</span>,<span class="dv">2</span>,<span class="dv">1</span>)</span>
-<span id="cb66-9"><a href="#cb66-9" aria-hidden="true" tabindex="-1"></a><span class="fu">cuadrado</span>(a)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] 169</code></pre>
-</div>
-<div class="sourceCode cell-code" id="cb68"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb68-1"><a href="#cb68-1" aria-hidden="true" tabindex="-1"></a><span class="fu">cuadrado</span>(b)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] 400 900 484   4   1</code></pre>
-</div>
-</div>
-<p>Es importante tener en cuenta que los nombres de las funciones en R deben cumplir las mismas reglas que los nombres de las variables. Además, es recomendable incluir comentarios explicativos dentro del cuerpo de la función para facilitar su comprensión y uso posterior.</p>
-<p><strong>Actividad:</strong></p>
-<p>Actividad: Crear una función que calcule la hipotenusa de un triángulo rectángulo (Teorema de Pitágoras):</p>
-<center>
-<img src="images/hipotenusa.png" class="img-fluid" style="width:40.0%">
-</center>
-<p>Establece que el cuadrado de la longitud de la hipotenusa es igual a la suma de los cuadrados de las longitudes de los catetos.</p>
-<p><span class="math display">c^2 = {a^2}+{b^2}</span></p>
-<p>Por lo cual:</p>
-<p><span class="math display">c = \sqrt{{a^2}+{b^2}}</span></p>
-<div class="callout callout-style-simple callout-tip callout-titled">
+<p>Además, R también cuenta con una variedad de funciones matemáticas incorporadas, como “sin”, “cos”, “tan”, “log”, “exp”, entre otras, que se pueden utilizar para realizar operaciones más complejas.</p>
+<div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Ayuda
+Actividad: Explorando un vector
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<div class="cell">
-<div class="sourceCode cell-code" id="cb70"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb70-1"><a href="#cb70-1" aria-hidden="true" tabindex="-1"></a>hipotenusa <span class="ot">&lt;-</span> <span class="cf">function</span>(a, b){</span>
-<span id="cb70-2"><a href="#cb70-2" aria-hidden="true" tabindex="-1"></a>  <span class="co">#h &lt;-     # En esta parte escribir la función</span></span>
-<span id="cb70-3"><a href="#cb70-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">return</span>(h)</span>
-<span id="cb70-4"><a href="#cb70-4" aria-hidden="true" tabindex="-1"></a>}</span>
-<span id="cb70-5"><a href="#cb70-5" aria-hidden="true" tabindex="-1"></a>r1 <span class="ot">&lt;-</span>  <span class="fu">hipotenusa</span>(<span class="at">a =</span> <span class="dv">5</span>,  <span class="at">b =</span> <span class="dv">5</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<ol type="1">
+<li>Crea un vector con las edades de 5 personas.</li>
+<li>Calcula el promedio, la edad mínima y máxima.</li>
+<li>¿Qué resultado da <code>edad %% 2</code>? ¿Qué representa?</li>
+</ol>
+<p>Pista: usa <code>c()</code> para crear el vector y <code>mean()</code>, <code>min()</code>, <code>max()</code> para calcular.</p>
 </div>
 </div>
-</div>
-<p>Encontrar la Hipotenusa de:<br>
-h=<em>?</em>, a = 10, b = 6<br>
-h=<em>?</em>, a = 5, b = 4<br>
-h=<em>?</em>, a = 3, b = 4</p>
 </section>
-<section id="referencias" class="level2" data-number="3.4">
-<h2 data-number="3.4" class="anchored" data-anchor-id="referencias"><span class="header-section-number">3.4</span> Referencias:</h2>
+<section id="funciones-de-propósito-general" class="level2" data-number="3.3">
+<h2 data-number="3.3" class="anchored" data-anchor-id="funciones-de-propósito-general"><span class="header-section-number">3.3</span> Funciones de propósito general</h2>
+<section id="funciones-de-repetición-y-secuencia" class="level3" data-number="3.3.1">
+<h3 data-number="3.3.1" class="anchored" data-anchor-id="funciones-de-repetición-y-secuencia"><span class="header-section-number">3.3.1</span> Funciones de Repetición y Secuencia</h3>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb24"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a><span class="fu">rep</span>(<span class="dv">1</span>, <span class="dv">10</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code> [1] 1 1 1 1 1 1 1 1 1 1</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb26"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a><span class="fu">rep</span>(<span class="st">"HAHA"</span>, <span class="dv">10</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code> [1] "HAHA" "HAHA" "HAHA" "HAHA" "HAHA" "HAHA" "HAHA" "HAHA" "HAHA" "HAHA"</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb28"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true" tabindex="-1"></a><span class="fu">seq</span>(<span class="dv">1</span>, <span class="dv">10</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code> [1]  1  2  3  4  5  6  7  8  9 10</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb30"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb30-1"><a href="#cb30-1" aria-hidden="true" tabindex="-1"></a><span class="fu">seq</span>(<span class="dv">1</span>, <span class="dv">10</span>, <span class="at">by =</span> <span class="dv">2</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 1 3 5 7 9</code></pre>
+</div>
+</div>
+</section>
+<section id="funciones-sobre-texto" class="level3" data-number="3.3.2">
+<h3 data-number="3.3.2" class="anchored" data-anchor-id="funciones-sobre-texto"><span class="header-section-number">3.3.2</span> Funciones sobre texto</h3>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb32"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb32-1"><a href="#cb32-1" aria-hidden="true" tabindex="-1"></a><span class="fu">paste</span>(<span class="st">"Hola"</span>, <span class="st">"amigo"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] "Hola amigo"</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb34"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb34-1"><a href="#cb34-1" aria-hidden="true" tabindex="-1"></a><span class="fu">paste</span>(<span class="st">"Hello"</span>, <span class="st">"amigo"</span>, <span class="at">sep =</span> <span class="st">"--"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] "Hello--amigo"</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb36"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb36-1"><a href="#cb36-1" aria-hidden="true" tabindex="-1"></a><span class="fu">paste0</span>(<span class="st">"Hello"</span>, <span class="st">"amigo"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] "Helloamigo"</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb38"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb38-1"><a href="#cb38-1" aria-hidden="true" tabindex="-1"></a><span class="fu">tolower</span>(<span class="st">"HAHAHAHAH"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] "hahahahah"</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb40"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb40-1"><a href="#cb40-1" aria-hidden="true" tabindex="-1"></a><span class="fu">toupper</span>(<span class="st">"hueuehuehuheuhe"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] "HUEUEHUEHUHEUHE"</code></pre>
+</div>
+</div>
+</section>
+<section id="funciones-de-condiconales" class="level3" data-number="3.3.3">
+<h3 data-number="3.3.3" class="anchored" data-anchor-id="funciones-de-condiconales"><span class="header-section-number">3.3.3</span> Funciones de Condiconales</h3>
+<p>La función <code>ifelse()</code> permite <strong>evaluar una condición lógica y devolver un resultado distinto según se cumpla o no</strong>. Es una herramienta muy útil para tomar decisiones dentro de un vector.</p>
+<p>Su estructura general es:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb42"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb42-1"><a href="#cb42-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ifelse</span>(condición, valor_si_verdadero, valor_si_falso)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<ul>
+<li>La condición se evalúa para cada elemento del vector.</li>
+<li>Si se cumple (TRUE), devuelve el segundo argumento.</li>
+<li>Si no se cumple (FALSE), devuelve el tercero.</li>
+</ul>
+<p>Por ejemplo:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb43"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb43-1"><a href="#cb43-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Notas de un alumno</span></span>
+<span id="cb43-2"><a href="#cb43-2" aria-hidden="true" tabindex="-1"></a>notas <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="fl">6.5</span>, <span class="fl">3.5</span>, <span class="fl">5.0</span>, <span class="fl">2.0</span>, <span class="fl">7.0</span>)</span>
+<span id="cb43-3"><a href="#cb43-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb43-4"><a href="#cb43-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Evaluar Condición y categorizar</span></span>
+<span id="cb43-5"><a href="#cb43-5" aria-hidden="true" tabindex="-1"></a><span class="fu">ifelse</span>(notas <span class="sc">&gt;=</span> <span class="fl">4.0</span>, <span class="st">"Aprobado"</span>, <span class="st">"Reprobado"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] "Aprobado"  "Reprobado" "Aprobado"  "Reprobado" "Aprobado" </code></pre>
+</div>
+</div>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Actividad: Clasificación con ifelse()
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ul>
+<li>Crea un vector con temperaturas en grados Celsius.</li>
+<li>Usa ifelse() para indicar si hace frío (&lt; 15°C) o calor (≥ 15°C).</li>
+<li>¿Qué ocurre si agregas un valor NA al vector? ¿Cómo lo manejarías?</li>
+</ul>
+</div>
+</div>
+</section>
+</section>
+<section id="crear-funciones-propias" class="level2" data-number="3.4">
+<h2 data-number="3.4" class="anchored" data-anchor-id="crear-funciones-propias"><span class="header-section-number">3.4</span> Crear Funciones Propias</h2>
+<p>En R, es posible crear funciones propias para realizar tareas específicas y reutilizarlas en diferentes partes de un programa.</p>
+<p><strong>¿Por qué crear funciones?</strong></p>
+<p>Crear funciones propias te permite automatizar tareas, evitar repetir código y estructurar tu análisis de manera más clara y reutilizable.</p>
+<p>Para crear una función en R, se utiliza la siguiente estructura:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb45"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb45-1"><a href="#cb45-1" aria-hidden="true" tabindex="-1"></a>nombre_de_la_funcion <span class="ot">&lt;-</span> <span class="cf">function</span>(argumentos) {</span>
+<span id="cb45-2"><a href="#cb45-2" aria-hidden="true" tabindex="-1"></a>  cuerpo_de_la_funcion</span>
+<span id="cb45-3"><a href="#cb45-3" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Por ejemplo, se puede crear una función que calcule la suma de dos números:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb46"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb46-1"><a href="#cb46-1" aria-hidden="true" tabindex="-1"></a>suma <span class="ot">&lt;-</span> <span class="cf">function</span>(a, b) {</span>
+<span id="cb46-2"><a href="#cb46-2" aria-hidden="true" tabindex="-1"></a>  resultado <span class="ot">&lt;-</span> a <span class="sc">+</span> b</span>
+<span id="cb46-3"><a href="#cb46-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">return</span>(resultado)</span>
+<span id="cb46-4"><a href="#cb46-4" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb46-5"><a href="#cb46-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb46-6"><a href="#cb46-6" aria-hidden="true" tabindex="-1"></a>resultado_suma <span class="ot">&lt;-</span> <span class="fu">suma</span>(<span class="dv">2</span>, <span class="dv">3</span>)</span>
+<span id="cb46-7"><a href="#cb46-7" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(resultado_suma) <span class="co"># 5</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 5</code></pre>
+</div>
+</div>
+<ul>
+<li>En R, la última línea de una función se retorna automáticamente, pero usar <code>return()</code> hace explícito qué quieres devolver, lo cual mejora la legibilidad.</li>
+</ul>
+<p>Por ejemplo, se puede crear una función que eleve al cuadrado un número dado:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb48"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb48-1"><a href="#cb48-1" aria-hidden="true" tabindex="-1"></a>cuadrado <span class="ot">&lt;-</span> <span class="cf">function</span>(x) { <span class="co"># x = parámetro</span></span>
+<span id="cb48-2"><a href="#cb48-2" aria-hidden="true" tabindex="-1"></a>    y <span class="ot">=</span> x <span class="sc">^</span> <span class="dv">2</span> <span class="co"># asiganción de variables solo dentro de la función</span></span>
+<span id="cb48-3"><a href="#cb48-3" aria-hidden="true" tabindex="-1"></a>    <span class="fu">return</span>(y) <span class="co"># especificar valor retornado (no necesario completamente)</span></span>
+<span id="cb48-4"><a href="#cb48-4" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb49"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb49-1"><a href="#cb49-1" aria-hidden="true" tabindex="-1"></a>a <span class="ot">&lt;-</span> <span class="dv">13</span></span>
+<span id="cb49-2"><a href="#cb49-2" aria-hidden="true" tabindex="-1"></a><span class="fu">cuadrado</span>(a)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 169</code></pre>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb51"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb51-1"><a href="#cb51-1" aria-hidden="true" tabindex="-1"></a>b <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">20</span>,<span class="dv">30</span>,<span class="dv">22</span>,<span class="dv">2</span>,<span class="dv">1</span>)</span>
+<span id="cb51-2"><a href="#cb51-2" aria-hidden="true" tabindex="-1"></a><span class="fu">cuadrado</span>(b)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 400 900 484   4   1</code></pre>
+</div>
+</div>
+<p><strong>Funciones con Parámetros por defecto</strong></p>
+<p>Es posible usar funciones con valores por defecto en sus argumentos</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb53"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb53-1"><a href="#cb53-1" aria-hidden="true" tabindex="-1"></a>cuadrado <span class="ot">&lt;-</span> <span class="cf">function</span>(<span class="at">x =</span> <span class="dv">2</span>) { <span class="co"># x = parámetro con valor por defecto</span></span>
+<span id="cb53-2"><a href="#cb53-2" aria-hidden="true" tabindex="-1"></a>    y <span class="ot">=</span> x <span class="sc">^</span> <span class="dv">2</span> <span class="co"># asiganción de variables solo dentro de la función</span></span>
+<span id="cb53-3"><a href="#cb53-3" aria-hidden="true" tabindex="-1"></a>    <span class="fu">return</span>(y) <span class="co"># especificar valor retornado (no necesario completamente)</span></span>
+<span id="cb53-4"><a href="#cb53-4" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb54"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb54-1"><a href="#cb54-1" aria-hidden="true" tabindex="-1"></a><span class="fu">cuadrado</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 4</code></pre>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb56"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb56-1"><a href="#cb56-1" aria-hidden="true" tabindex="-1"></a><span class="fu">cuadrado</span>(<span class="at">x =</span> <span class="dv">3</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 9</code></pre>
+</div>
+</div>
+<p><strong>Anidar Funciones</strong></p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb58"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb58-1"><a href="#cb58-1" aria-hidden="true" tabindex="-1"></a>doble_cuadrado <span class="ot">&lt;-</span> <span class="cf">function</span>(x) {</span>
+<span id="cb58-2"><a href="#cb58-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">cuadrado</span>(x <span class="sc">*</span> <span class="dv">2</span>)</span>
+<span id="cb58-3"><a href="#cb58-3" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb59"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb59-1"><a href="#cb59-1" aria-hidden="true" tabindex="-1"></a><span class="fu">doble_cuadrado</span>(<span class="dv">3</span>)  <span class="co"># (3*2)^2 = 36</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 36</code></pre>
+</div>
+</div>
+<p>Es importante tener en cuenta que los nombres de las funciones en R deben cumplir las mismas reglas que los nombres de las variables. Además, es <em>recomendable</em> incluir comentarios explicativos dentro del cuerpo de la función para facilitar su comprensión y uso posterior.</p>
+<section id="ejercicios-con-funciones" class="level3" data-number="3.4.1">
+<h3 data-number="3.4.1" class="anchored" data-anchor-id="ejercicios-con-funciones"><span class="header-section-number">3.4.1</span> Ejercicios con Funciones</h3>
+<div class="callout callout-style-simple callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Actividad 1: Clasificador de notas
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Crea una función llamada <code>clasificar_nota()</code> que reciba una nota y devuelva:</p>
+<ul>
+<li><code>"Excelente"</code> si es mayor o igual a 6,</li>
+<li><code>"Aprobado"</code> si está entre 4 y 5.9,</li>
+<li><code>"Reprobado"</code> si es menor a 4.</li>
+</ul>
+<p>Prueba la función con los siguientes valores: <code>3.5</code>, <code>4.8</code>, <code>6.2</code>, <code>5.5</code></p>
+<p>Pista: puedes usar <code>ifelse()</code> o <code>case_when()</code> si ya fue presentado.</p>
+</div>
+</div>
+<div class="callout callout-style-simple callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Actividad: Crear tu función de Hipotenusa
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ul>
+<li>Crear una función que calcule la hipotenusa de un triángulo rectángulo (Teorema de Pitágoras):</li>
+</ul>
+<center>
+<img src="images/hipotenusa.png" class="img-fluid" style="width:40.0%">
+</center>
+<blockquote class="blockquote">
+<p>Establece que el cuadrado de la longitud de la hipotenusa es igual a la suma de los cuadrados de las longitudes de los catetos.</p>
+</blockquote>
+<p><span class="math display">c^2 = {a^2}+{b^2}</span></p>
+<blockquote class="blockquote">
+<p>Por lo cual:</p>
+</blockquote>
+<p><span class="math display">c = \sqrt{{a^2}+{b^2}}</span> Encontrar la Hipotenusa de:</p>
+<ul>
+<li>h=<em>?</em>, a = 10, b = 6<br>
+</li>
+<li>h=<em>?</em>, a = 5, b = 4<br>
+</li>
+<li>h=<em>?</em>, a = 3, b = 4<br>
+</li>
+</ul>
+</div>
+</div>
+<div class="callout callout-style-simple callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-6-contents" aria-controls="callout-6" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Ayuda: Estructura de la función
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-6" class="callout-6-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb61"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb61-1"><a href="#cb61-1" aria-hidden="true" tabindex="-1"></a>hipotenusa <span class="ot">&lt;-</span> <span class="cf">function</span>(a, b){</span>
+<span id="cb61-2"><a href="#cb61-2" aria-hidden="true" tabindex="-1"></a>  <span class="co">#h &lt;-     # En esta parte escribir la función</span></span>
+<span id="cb61-3"><a href="#cb61-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">return</span>(h)</span>
+<span id="cb61-4"><a href="#cb61-4" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb61-5"><a href="#cb61-5" aria-hidden="true" tabindex="-1"></a>r1 <span class="ot">&lt;-</span>  <span class="fu">hipotenusa</span>(<span class="at">a =</span> <span class="dv">5</span>,  <span class="at">b =</span> <span class="dv">5</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="referencias" class="level2" data-number="3.5">
+<h2 data-number="3.5" class="anchored" data-anchor-id="referencias"><span class="header-section-number">3.5</span> Referencias:</h2>
 <ul>
 <li><p><a href="https://bookdown.org/jboscomendoza/r-principiantes4/estructuras-de-control.html">https://bookdown.org/jboscomendoza/r-principiantes4/estructuras-de-control.html</a></p></li>
 <li><p><a href="https://rstudio-pubs-static.s3.amazonaws.com/623888_497a5388a98545c48e9b5b6bec4056f6.html">Loops y funciones en R</a></p></li>
 </ul>
+<!-- Legacy -->
+<!-- ## Operaciones Lógicas -->
+<!-- En R, los operadores lógicos se utilizan para realizar comparaciones lógicas entre valores o expresiones. Estos operadores devuelven valores booleanos (TRUE o FALSE) según se cumpla o no la condición. -->
+<!-- A continuación se presentan los operadores lógicos en R: -->
+<!-- ::: {.callout-tip} -->
+<!-- ## Operadores Lógicos -->
+<!-- | Operador | Significado        | Ejemplo       | Resultado     | -->
+<!-- |----------|--------------------|---------------|---------------| -->
+<!-- | `==`     | Igual a            | `2 == 2`      | `TRUE`        | -->
+<!-- | `!=`     | Distinto de        | `3 != 2`      | `TRUE`        | -->
+<!-- | `>`      | Mayor que          | `5 > 2`       | `TRUE`        | -->
+<!-- | `<`      | Menor que          | `2 < 1`       | `FALSE`       | -->
+<!-- | `&`      | Y lógico           | `TRUE & FALSE`| `FALSE`       | -->
+<!-- | `|`      | O lógico           | `TRUE | FALSE`| `TRUE`        | -->
+<!-- | `!`      | Negación           | `!TRUE`       | `FALSE`       | -->
+<!-- ::: -->
+<!-- ### Operador de igualdad: (==) -->
+<!-- Este operador se utiliza para comparar si dos valores son iguales. Retorna TRUE si la condición se cumple y FALSE en caso contrario. -->
+<!-- ```{r} -->
+<!-- a <- 2 -->
+<!-- b <- 3 -->
+<!-- a == b # FALSE -->
+<!-- ``` -->
+<!-- ### Operador de desigualdad: (!=) -->
+<!-- Este operador se utiliza para comparar si dos valores son diferentes. Retorna TRUE si la condición se cumple y FALSE en caso contrario. -->
+<!-- ```{r} -->
+<!-- a <- 2 -->
+<!-- b <- 3 -->
+<!-- a != b # TRUE -->
+<!-- ``` -->
+<!-- ### Operador de mayor que: (>) -->
+<!-- Este operador se utiliza para comparar si un valor es mayor que otro. Retorna TRUE si la condición se cumple y FALSE en caso contrario. -->
+<!-- ```{r} -->
+<!-- a <- 2 -->
+<!-- b <- 3 -->
+<!-- b > a # TRUE -->
+<!-- ``` -->
+<!-- ### Operador de menor que: (<) -->
+<!-- Este operador se utiliza para comparar si un valor es menor que otro. Retorna TRUE si la condición se cumple y FALSE en caso contrario. -->
+<!-- ```{r} -->
+<!-- a <- 2 -->
+<!-- b <- 3 -->
+<!-- a < b # TRUE -->
+<!-- ``` -->
+<!-- ### Operador de mayor o igual que: (>=) -->
+<!-- Este operador se utiliza para comparar si un valor es mayor o igual que otro. Retorna TRUE si la condición se cumple y FALSE en caso contrario. -->
+<!-- ```{r} -->
+<!-- a <- 2 -->
+<!-- b <- 3 -->
+<!-- b >= a # TRUE -->
+<!-- ``` -->
+<!-- ### Operador de menor o igual que: (<=) -->
+<!-- Este operador se utiliza para comparar si un valor es menor o igual que otro. Retorna TRUE si la condición se cumple y FALSE en caso contrario. -->
+<!-- ```{r} -->
+<!-- a <- 2 -->
+<!-- b <- 3 -->
+<!-- a <= b # TRUE -->
+<!-- ``` -->
+<!-- ### Operador lógico AND: (&) -->
+<!-- Este operador se utiliza para evaluar dos o más condiciones y retornar TRUE si todas se cumplen, de lo contrario retorna FALSE. -->
+<!-- ```{r} -->
+<!-- a <- 2 -->
+<!-- b <- 3 -->
+<!-- c <- 4 -->
+<!-- a < b & b < c # TRUE -->
+<!-- ``` -->
+<!-- ### Operador lógico OR: (|) -->
+<!-- Este operador se utiliza para evaluar dos o más condiciones y retornar TRUE si al menos una se cumple, de lo contrario retorna FALSE. -->
+<!-- ```{r} -->
+<!-- a <- 2 -->
+<!-- b <- 3 -->
+<!-- c <- 4 -->
+<!-- a > b | b < c # TRUE -->
+<!-- ``` -->
+<!-- Operador lógico NOT: (!) -->
+<!-- Este operador se utiliza para negar una condición. Si la condición es TRUE, retorna FALSE, y si la condición es FALSE, retorna TRUE. -->
+<!-- ```{r} -->
+<!-- a <- 2 -->
+<!-- b <- 3 -->
+<!-- !(a == b) # TRUE -->
+<!-- ``` -->
+<!-- Es importante tener en cuenta que los operadores lógicos se pueden utilizar en combinación para crear expresiones lógicas más complejas. Además, los operadores lógicos también se pueden utilizar en las estructuras de control condicionales, como if/else y switch, para tomar decisiones basadas en condiciones lógicas. -->
 
 
 </section>
@@ -1108,8 +1177,8 @@ h=<em>?</em>, a = 3, b = 4</p>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./control_r.html" class="pagination-link" aria-label="Estructuras en R">
-        <span class="nav-page-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Estructuras en R</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./tidyverse.html" class="pagination-link" aria-label="Tidyverse en R">
+        <span class="nav-page-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Tidyverse en R</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

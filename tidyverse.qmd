@@ -162,6 +162,7 @@ Objetivo: Usar funciones auxiliares de selección para explorar columnas.
 La función `filter()` permite seleccionar filas de un dataframe que cumplen con una o más condiciones lógicas. Es muy útil para quedarte solo con los registros relevantes según un criterio territorial, como una comuna específica, superficies mayores a cierto umbral, o zonas de uso mixto.
 
 1. Filtrar los registros de la comuna de "LAS CONDES"
+
 ```{r}
 mi_comuna <- "LAS CONDES" 
 
@@ -184,21 +185,17 @@ filter(oficinas > 0 & comercio > 0)
 ::: {.callout-note}
 ## Operadores Lógicos
 
-```{r echo = FALSE}
-op_logicos <- tibble::tribble(
-    ~Operador,                   ~Comparación,       ~Ejemplo, ~Resultado,
-      "x | y",           "x Ó y es verdadero", "TRUE | FALSE",     "TRUE",
-      "x & y",         "x Y y son verdaderos", "TRUE & FALSE",    "FALSE",
-         "!x", "x no es verdadero (negación)",        "!TRUE",    "FALSE",
-  "isTRUE(x)",  "x es verdadero (afirmación)", "isTRUE(TRUE)",     "TRUE"
-  )
-
-require(knitr)
-kable(op_logicos, digits = 3, row.names = FALSE, align = "c",
-              caption = NULL)
-
-```
+| Operador | Significado        | Ejemplo       | Resultado     |
+|----------|--------------------|---------------|---------------|
+| `==`     | Igual a            | `2 == 2`      | `TRUE`        |
+| `!=`     | Distinto de        | `3 != 2`      | `TRUE`        |
+| `>`      | Mayor que          | `5 > 2`       | `TRUE`        |
+| `<`      | Menor que          | `2 < 1`       | `FALSE`       |
+| `&`      | Y lógico           | `TRUE & FALSE`| `FALSE`       |
+| `|`      | O lógico           | `TRUE | FALSE`| `TRUE`        |
+| `!`      | Negación           | `!TRUE`       | `FALSE`       |
 :::
+
 
 Filtrar las manzanas que tengan valores de oficina y comercio mayores a 0
 
