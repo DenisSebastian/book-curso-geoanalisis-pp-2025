@@ -204,6 +204,18 @@ Guardar el gráfico de barras como imagen
 ggsave(plot = g_barra, filename = "images/del_violentos_R09.png", width = 8, height = 7)
 ```
 
+## Visualización dinámica
+
+Generar gráfico dinámico con `plotly`
+
+```{r}
+# Lectura de la Librería
+library(plotly)
+
+# Convertir un gráfico estático en dinámico
+ggplotly(g_barra)
+
+```
 
 
 
@@ -229,17 +241,6 @@ ggsave(plot = g_barra, filename = "images/del_violentos_R09.png", width = 8, hei
 - [x] Crear gráficos (básicos)
 
 
-<!-- <!-- Generar gráfico dinámico --> 
-<!-- ```{r eval=FALSE} -->
-<!-- # library(plotly) -->
-<!-- ``` -->
-
-<!-- ```{r} -->
-<!-- ggplotly(g_barra) -->
-
-<!-- ``` -->
-
-<!-- {{< include _datos_espaciales.qmd >}} -->
 
 
 <!-- ## Visualización Espacial -->

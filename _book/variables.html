@@ -181,6 +181,18 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
+  <a href="./visualizaciones.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Visualizaciones en R</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./dataframes.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Dataframes y Delitos en R</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
   <a href="./references.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">References</span></a>
   </div>
@@ -311,19 +323,19 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>ru <span class="ot">&lt;-</span> <span class="fu">runif</span>(<span class="at">n =</span> <span class="dv">100</span>, <span class="at">min =</span> <span class="dv">1</span>, <span class="at">max =</span> <span class="dv">10</span>)</span>
 <span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>ru</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>  [1] 5.142467 9.141129 1.279986 1.357534 5.162518 8.251749 4.401968 3.226222
-  [9] 4.367764 6.688681 4.731875 4.886907 6.327477 2.816733 3.972928 8.741147
- [17] 4.565147 9.049093 1.482516 8.218331 8.281538 3.513745 5.112603 5.865376
- [25] 3.311681 8.518266 1.205417 1.436557 4.368438 2.683126 6.111809 3.010408
- [33] 3.344962 3.101417 1.838047 3.775873 4.036696 5.786708 7.921759 6.694628
- [41] 7.726016 3.477299 4.597741 1.859784 3.679658 3.946010 1.446428 7.675085
- [49] 3.217612 7.938540 4.574520 9.226206 6.857524 3.471946 6.076209 2.793073
- [57] 8.049494 1.431717 2.987013 8.598030 1.563127 1.524589 1.272031 8.643530
- [65] 3.688795 6.157972 8.033119 2.218321 4.819350 6.140996 5.204896 7.152499
- [73] 8.854960 5.090508 2.158800 5.265620 3.404407 4.344599 7.072773 5.375081
- [81] 7.149382 1.709561 7.904493 1.882739 4.724358 6.809488 9.377330 5.694696
- [89] 4.953878 5.976991 3.990799 1.589621 9.554906 3.752821 4.118252 4.055289
- [97] 8.142795 1.048288 8.216872 9.870143</code></pre>
+<pre><code>  [1] 2.523049 8.692869 9.671548 4.257750 7.449668 9.918830 4.583761 4.590940
+  [9] 2.410072 5.680468 9.536012 6.713457 5.239146 9.365225 6.496335 7.954895
+ [17] 5.957648 6.857622 4.179342 9.863012 6.765316 7.714702 1.369055 2.398023
+ [25] 4.573774 5.283672 4.011244 6.330754 3.459641 8.803479 9.882949 3.011602
+ [33] 2.712185 1.807517 4.315975 6.567834 9.330566 8.948212 1.185157 8.213397
+ [41] 8.885199 5.485976 3.388021 5.388047 9.759514 6.751163 7.869044 1.461768
+ [49] 7.164773 6.696698 8.199803 9.530356 8.412582 3.857634 9.308249 8.097278
+ [57] 7.111846 2.997248 3.362031 2.338440 9.699882 9.167114 4.976132 6.761648
+ [65] 9.538575 9.190699 9.487575 2.314168 1.440231 1.919741 7.508500 3.448506
+ [73] 4.238494 6.464050 3.076901 8.479141 3.488197 7.337369 5.639595 1.314699
+ [81] 1.477907 8.408859 9.040783 1.384800 6.176383 3.591688 3.942840 7.781023
+ [89] 3.320869 4.484051 5.366704 5.673775 7.226916 5.293410 4.177385 8.120396
+ [97] 3.684467 8.808986 1.821063 3.646250</code></pre>
 </div>
 </div>
 <div class="cell" data-layout-align="center">
@@ -342,7 +354,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="cell">
 <div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sample.int</span>(<span class="at">n =</span> <span class="dv">6</span>, <span class="at">size =</span> <span class="dv">10</span>, <span class="at">replace =</span> T)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code> [1] 3 1 1 4 3 3 6 3 5 1</code></pre>
+<pre><code> [1] 6 5 4 5 3 2 1 6 4 1</code></pre>
 </div>
 </div>
 </section>

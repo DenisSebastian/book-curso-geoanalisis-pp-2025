@@ -1,0 +1,463 @@
+---
+title: "Visualizaciones en R"
+subtitle: "Introducción a la generación de Gráficos en R"
+---
+
+## 1. Introducción
+
+La visualización es clave en el análisis espacial porque permite identificar patrones, anomalías y tendencias de manera intuitiva. En este módulo aprenderás a transformar datos tabulares en gráficos que comuniquen información relevante, usando ejemplos reales del catastro de edificaciones (tabla `tbl_sii`).
+
+
+
+## Visualización básica de tablas
+
+### Explorando la tabla de datos
+
+
+Cargar las librerias:
+
+```{r}
+library(dplyr)
+library(sf)
+```
+
+Leemos los datos y mostramos su estructura:
+
+```{r}
+# Leer insumos del SII y descartar geometría
+tbl_sii <- readRDS("data/sii/mz_constru_SII.rds") %>% 
+  st_drop_geometry() # Solo la tabla
+
+# Estructura general
+glimpse(tbl_sii)
+
+```
+
+¿Qué información contiene la tabla?
+
+* Nombre de la comuna (`n_com`)
+* Código y número de manzana, región y comuna
+* Cantidad de oficinas, comercio, viviendas por manzana
+* Área de cada manzana (m²)
+
+
+### Tablas de frecuencia y resumen
+
+_¿Qué comunas tienen más manzanas registradas?_
+
+
+Frecuencia de manzanas por comuna con la función `count`. Posteriormente se ordenarán los resultados con la función `arrange` y con la función `desc` está ordenación será de mayor a menor.
+
+```{r}
+tbl_sii %>% 
+  count(n_com, name = "n_manzanas") %>% 
+  arrange(desc(n_manzanas)) %>% 
+  head(10)
+```
+\
+Interpretación: Identificar concentración urbana o cobertura de datos.
+
+**Resumen estadístico básico de variables cuantitativas**
+
+```{r}
+tbl_sii %>% 
+  summarise(
+    min_area = min(AREA, na.rm = TRUE),
+    max_area = max(AREA, na.rm = TRUE),
+    media_area = mean(AREA, na.rm = TRUE),
+    mediana_area = median(AREA, na.rm = TRUE)
+  )
+```
+
+
+## Visualización gráfica
+
+###  Diagramas de barras (frecuencia de manzanas por comuna)
+
+En este punto que generaremos algunos gráficos que visualicen la cantidad de manzanas que existen por comuna.
+
+```{r}
+# 1. Preparar los datos
+cant_com = 5
+
+top_mz <- tbl_sii %>%
+  count(n_com) %>%
+  top_n(cant_com, n) %>%
+  arrange(n)  # Opcional: para graficar en orden ascendente
+```
+**Gráfico base de R**
+
+```{r}
+# 2. Crear el gráfico base R
+plot_baseR <- plot(
+  top_mz$n ~ reorder(top_mz$n_com, top_mz$n), #Nombres de comunas ordenados por cantidad
+  type = "h",
+  main = paste0("Top ", cant_com, " comunas por número de manzanas"),
+  ylab = "Manzanas",
+  xlab = "Comuna"
+)
+
+```
+
+
+**Gráfico de barras con barplot base de R^^
+
+```{r}
+# Nombres de comunas ordenados por cantidad
+names_com <- reorder(top_mz$n_com, top_mz$n)
+
+# Crear gráfico de barras
+barplot_baseR <- barplot(
+  height = top_mz$n,
+  names.arg = names_com,
+  las = 2, # Gira las etiquetas
+  main = paste0("Top ", cant_com, " comunas por número de manzanas"),
+  ylab = "Manzanas",
+  xlab = "Comuna"
+)
+
+```
+
+### Histograma base en R
+
+Se realizará un histograma con área viviendas construídas de las manzanas del SII.
+
+
+```{r}
+options(scipen = 999) # descartar la notación científica
+hist_baseR <- hist(tbl_sii$vivienda, breaks = 100, 
+     main = "Distribución del área de las manzanas", 
+     xlab = "Área (m²)", ylab = "Frecuencia",
+     col = "orange", border = "orange")
+
+
+```
+
+
+
+### Boxplot
+
+Haremos un ejemplo de comparación de las distribuciones cantidad metros cuadrados de vivienda entre dos comunas del norte de Chile
+
+```{r}
+com_norte <- tbl_sii %>% 
+  filter(n_com %in% c("IQUIQUE", "ALTO HOSPICIO")) 
+
+boxplot_baseR <- boxplot(
+  vivienda ~ n_com, 
+  data = com_norte,
+  main = "Distribución del área de manzanas por comuna",
+  xlab = "Comuna",
+  ylab = "Área de manzana (m²)",
+  col = c("lightblue", "orange")
+)
+
+
+```
+
+::: {.callout-note collapse="true"}
+## valores outlier (atípicos)\
+
+
+**¿Cómo identificar los valores outlier (atípicos) que aparecen en el boxplot?**
+
+1. ¿Cómo los marca el boxplot?
+	*	Los círculos que ves sobre las cajas son outliers según el criterio de Tukey:
+Valores mayores que el tercer cuartil + 1.5 x rango intercuartil (IQR), o menores que el primer cuartil - 1.5 x IQR.
+
+2. ¿Cómo extraer esos valores en R?
+
+Supamos que queremos identificar los outliers de cada comuna:
+
+```{r}
+com_norte_sin_outliers <- com_norte %>%
+ group_by(n_com) %>%
+  mutate(
+    Q1 = quantile(vivienda, 0.25, na.rm = TRUE),
+    Q3 = quantile(vivienda, 0.75, na.rm = TRUE),
+    IQR = Q3 - Q1,
+    outlier = vivienda < (Q1 - 1.5 * IQR) | vivienda > (Q3 + 1.5 * IQR)) %>% 
+  filter(!outlier)
+
+# Eliminar filas donde outlier es TRUE
+boxplot(
+  vivienda ~ n_com, 
+  data = com_norte_sin_outliers,
+  main = "Distribución del área de manzanas por comuna",
+  xlab = "Comuna",
+  ylab = "Área de manzana (m²)",
+  col = c("lightblue", "orange")
+)
+
+
+```
+:::
+
+
+## Visualización avanzada con `ggplot2`
+
+La librería [ggplot2](https://ggplot2.tidyverse.org/articles/ggplot2.html) es uno de los sistemas más potentes y versátiles para la visualización de datos en R. Basado en la “gramática de los gráficos”, permite construir visualizaciones complejas y altamente personalizables de manera estructurada y reproducible.
+
+Con ggplot2 puedes crear desde gráficos básicos como barras, histogramas y dispersión, hasta visualizaciones avanzadas, mapas y gráficos interactivos. La sintaxis está orientada a la composición modular: cada capa del gráfico (datos, geometría, escalas, temas, etiquetas) se define y ajusta de forma clara y coherente.
+
+
+
+### Gráficos de Barra con  `ggplot2`
+
+**Versión Básica**
+
+```{r}
+library(ggplot2)
+
+# 1. Preparar los datos
+cant_com = 10
+
+top_mz <- tbl_sii %>%
+  count(n_com) %>%
+  top_n(cant_com, n) %>%
+  arrange(n)  # Opcional: para graficar en orden ascendente
+  
+bar_basico <- ggplot(data =top_mz, aes(x = reorder(n_com, n), y = n)) +
+  geom_bar(stat = "identity", fill = "steelblue") +
+  labs(title = paste0("Top ", cant_com, " comunas por número de manzanas"), x = "Comuna", y = "N° Manzanas") 
+
+bar_basico
+```
+
+**Versión Mejorada**
+
+Mejoras o cambios que se pueden hacer con los gráficos
+
+```{r}
+
+library(scales)    # Para etiquetas bonitas
+library(ggtext)    # Opcional: etiquetas enriquecidas (si lo tienes instalado)
+
+bar_avanzado <- ggplot(data = top_mz, aes(x = reorder(n_com, n), y = n)) +
+  # Barra principal con color personalizado y borde
+  geom_bar(stat = "identity", fill = "#2B8CBE", 
+           width = 0.6, color = "gray60", alpha = 0.8) +
+  
+  # Línea horizontal cada 1.000 manzanas
+  geom_hline(yintercept = seq(0, max(top_mz$n, na.rm=TRUE), by = 1000), 
+             linetype = "dotted", color = "gray80", linewidth = 0.4) +
+  
+  # Etiquetas con el valor encima de cada barra
+  geom_text(aes(label = n), 
+            hjust = 1.1, size = 4, fontface = "bold", color = "white") +
+  
+  # Cambiar la orientación
+  coord_flip() +
+  
+  # Etiquetas y títulos enriquecidos
+  labs(
+    title = "Top 10 comunas por <span style='color:#2B8CBE'>número de manzanas</span>",
+    subtitle = "Fuente: Servicio de Impuestos Internos",
+    x = "", 
+    y = "N° Manzanas"
+  ) +
+  
+  # Tema elegante, fuentes y tamaños
+  theme_bw(base_size = 13) +
+  theme(
+    plot.title = element_markdown(face = "bold", size = 15),
+    plot.subtitle = element_text(face = "italic", size = 12, margin = margin(b = 10)),
+    axis.text.x = element_text(angle = 0, hjust = 0.5, vjust = 1, color = "gray30"),
+    axis.text.y = element_text(face = "bold", color = "#2B8CBE"),
+    panel.grid.major.y = element_blank(),  # Sin grid horizontal
+    panel.grid.minor = element_blank(),
+    plot.margin = margin(10, 15, 10, 15)
+  ) 
+
+bar_avanzado
+```
+
+### Histograma  `ggplot2`
+
+```{r}
+hist_basico <- ggplot(tbl_sii, aes(x = vivienda)) +
+  geom_histogram(bins = 50, fill = "darkgreen", color = "white") +
+  labs(title = "Distribución del área de manzanas", x = "Área (m²)", y = "Frecuencia")
+
+hist_basico
+
+```
+
+
+### Boxplot  `ggplot2`
+
+```{r}
+com_norte <- tbl_sii %>% 
+  filter(n_com %in% c("IQUIQUE", "ALTO HOSPICIO")) %>% 
+  filter(vivienda > 0)
+
+boxplot_basico <- ggplot(data = com_norte, aes(x = n_com, y = vivienda)) +
+  geom_boxplot() +
+  labs(title = "Distribución del área de manzanas por comuna")
+
+boxplot_basico
+
+```
+
+
+
+### Facet por comunas con  `ggplot2`
+
+
+```{r}
+
+
+facet_basico <- ggplot(com_norte, aes(x = vivienda)) +
+  geom_histogram(bins = 30, fill = "skyblue") +
+  facet_wrap(~ n_com) +
+  labs(title = "Distribución de Viviendas en manzanas por comuna", x = "Área (m²)")
+facet_basico
+
+```
+
+
+::: {.callout-note collapse="false"}
+## Actividad: Mejorar el estilo del gráficos
+
+Tomar los gráficos anteriores (`hist_basico, boxplot_basico, facet_basico`), agregar y modificar las siguientes elementos:
+
+**Agregar:**
+
+  - Subtítulo
+  - agregar `theme`a su gusto (bw, minimal, gray, light, dark, etc.)
+  
+**Modficar**
+
+  - Color de `fill` a su gusto en formato hex
+  - La cantidad de `bins`
+  - El nombre del eje y
+
+:::
+
+
+## Interactividad con `Plotly`
+
+
+`Plotly` es una librería que permite convertir tus gráficos en R en visualizaciones interactivas, facilitando la exploración y el análisis visual de los datos. Plotly es especialmente útil para presentar resultados a audiencias no técnicas, ya que habilita funciones como zoom, hover (ver valores al pasar el mouse), selección dinámica y exportación directa.
+
+Puedes crear gráficos desde cero con la función `plot_ly()` o transformar gráficos estáticos de `ggplot2` en interactivos usando `ggplotly()`.
+
+La [documentación oficial de Plotly](https://plotly.com/r/) para R ofrece numerosos ejemplos, tutoriales y guías para sacar el máximo provecho de sus capacidades interactivas en tus proyectos de análisis de datos.
+
+A continuación mostraremos un ejemplo simple como transformar un gráfico estático generado con `ggplot` en un gráfico dinámico tipo `plotly` utilizando la función `ggplotly()`
+
+```{r}
+library(plotly)
+bar_interactivo <- ggplotly(bar_avanzado)
+
+bar_interactivo
+```
+
+
+::: {.callout-note collapse="false"}
+## Actividad: Transformar los gráficos estáticos a dinámicos
+
+Utilizando la función `ggplotly()` convierta todo los gráficos -que en la actividad anterior se debía mejorar- en gráficos dinámicos.
+
+:::
+
+
+## Guardar los Gráficos
+
+A continuación estaremos las diferentes opciones para guardar los gráficos generados en esa sección, utilizando la librería base, ggplot2 y plotly. Para esto previamente generaremos una carpeta que llamaremos `plots` en la cual guardaremos todas las imágenes generadas.
+
+### Guardar en plot base
+
+```{r eval = FALSE}
+# Guardar gráfico como imagen PNG
+png("plots/mi_grafico_base.png", width = 800, height = 600, res = 120)
+# Nombres de comunas ordenados por cantidad
+names_com <- reorder(top_mz$n_com, top_mz$n)
+
+# Crear gráfico de barras
+barplot_baseR <- barplot(
+  height = top_mz$n,
+  names.arg = names_com,
+  las = 2, # Gira las etiquetas
+  main = paste0("Top ", cant_com, " comunas por número de manzanas"),
+  ylab = "Manzanas",
+  xlab = "Comuna"
+)
+dev.off()
+
+# Guardar como PDF (ideal para calidad vectorial)
+pdf("plots/mi_grafico_base.pdf", width = 7, height = 5)
+# Nombres de comunas ordenados por cantidad
+names_com <- reorder(top_mz$n_com, top_mz$n)
+
+# Crear gráfico de barras
+barplot_baseR <- barplot(
+  height = top_mz$n,
+  names.arg = names_com,
+  las = 2, # Gira las etiquetas
+  main = paste0("Top ", cant_com, " comunas por número de manzanas"),
+  ylab = "Manzanas",
+  xlab = "Comuna"
+)
+dev.off()
+```
+
+
+### Guardar Gráficos con `ggplot2`
+
+Con ggplot2 lo más práctico es usar la función ggsave(), que detecta el último gráfico generado por ggplot o puedes especificar el objeto del gráfico.
+
+```{r eval=FALSE}
+bar_avanzado
+# Guardar como PNG (por defecto 300 dpi, ideal para publicaciones)
+ggsave(filename = "plots/grafico_ggplot2.png", 
+       plot = bar_avanzado, 
+       width = 8, height = 6, dpi = 300)
+
+# Guardar como PDF (calidad vectorial)
+ggsave(filename = "plots/grafico_ggplot2.pdf", 
+       plot = bar_avanzado, 
+       width = 7, height = 5)
+
+# Otros formatos disponibles: jpg, svg, tiff, eps
+```
+
+- Puedes definir el tamaño en width y height (pulgadas por defecto, puedes usar units = "cm").
+- Puedes guardar directamente el último gráfico generado si no usas el argumento plot =.
+
+
+### Guardar Gráficos con `plotly`
+
+Para guardar gráficos interactivos de plotly, utiliza `htmlwidgets::saveWidget()` para exportar como archivo HTML autónomo (ideal para compartir interactividad completa).
+
+```{r eval=FALSE}
+library(htmlwidgets)
+
+# Guardar como HTML (abrible en cualquier navegador)
+saveWidget(widget = bar_interactivo, file = "plots/grafico_interactivo_plotly.html", 
+           selfcontained = TRUE)
+
+```
+
+Exportar a imagen estática (png, jpg, svg) desde el gráfico dinámico se puede hacer usando la función `webshot::webshot()` en combinación con `htmlwidgets`.
+
+```{r eval=FALSE}
+# Instalar webshot si no lo tienes
+# install.packages("webshot")
+# webshot::install_phantomjs()
+
+# Exportar a PNG usando webshot
+library(webshot)
+webshot(url = "plots/grafico_interactivo_plotly.html", 
+        file = "plots/grafico_interactivo_plotly.png", 
+        vwidth = 900, vheight = 700)
+```
+
+
+
+## Referencias:
+
+- Histogramas: <https://bookdown.org/jboscomendoza/r-principiantes4/histogramas.html>
+- Boxplot: <https://bookdown.org/jboscomendoza/r-principiantes4/diagramas-de-caja.html>
+- ggplt2: ggplot2: Elegant Graphics for Data Analysis <https://ggplot2-book.org/>
+- Paletas de Colores <https://colorbrewer2.org/#type=sequential&scheme=BuGn&n=3>

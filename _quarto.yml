@@ -21,7 +21,8 @@ book:
     - variables.qmd
     - funciones.qmd
     - tidyverse.qmd
-    # - dataframes.qmd
+    - visualizaciones.qmd
+    - dataframes.qmd
     # - datos_espaciales.qmd
     # - espacial_r.qmd
     # - analisis_esp.qmd
