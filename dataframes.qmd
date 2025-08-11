@@ -191,7 +191,7 @@ g_barra <- ggplot(tabla_resumen, aes(x = NOM_COMUNA, y = del_10000_hab)) +
   coord_flip()+
   theme_bw()+
   labs(title="Delitos Violentos en la Región de la Araucanía", 
-       y ="Delitos Violentos / 10000 hebitantes", x = "Nombre de Comuna")+
+       y ="Delitos Violentos / 10000 habitantes", x = "Nombre de Comuna")+
   theme(plot.title = element_text(face = "bold",colour= "gray20", size=12)) 
   
 g_barra
@@ -243,81 +243,81 @@ ggplotly(g_barra)
 
 
 
-<!-- ## Visualización Espacial -->
+## Visualización Espacial
 
-<!-- Primero se debe unir la tabla resumen delitos con Shapefile de comunas del INE. -->
+Primero se debe unir la tabla resumen delitos con Shapefile de comunas del INE.
 
-<!-- **Leer Shapefile de comunas** -->
-
-
-<!-- ```{r} -->
-<!-- comunas_r09 <- st_read("data/shape/Comunas_Chile.shp") %>%  -->
-<!--   filter(NOM_REGION == "REGIÓN DE LA ARAUCANÍA") -->
-
-<!-- head(comunas_r09) -->
-<!-- ``` -->
-
-<!-- **Unir shafile con tabla resumen** -->
-
-<!-- Se utilizará la función `left_join` -->
-
-<!-- ```{r} -->
-
-<!-- comunas_r09 <- comunas_r09 %>%  -->
-<!--   left_join(tabla_resumen, by = "NOM_COMUNA") -->
-
-<!-- head(comunas_r09) -->
-<!-- ``` -->
+**Leer Shapefile de comunas**
 
 
+```{r}
+comunas_r09 <- st_read("data/shape/Comunas_Chile.shp") %>%
+  filter(NOM_REGION == "REGIÓN DE LA ARAUCANÍA")
 
+head(comunas_r09)
+```
 
-<!-- ### Generar Mapa -->
+**Unir shafile con tabla resumen**
 
+Se utilizará la función `left_join`
 
-<!-- ```{r} -->
-<!-- library(viridis) -->
-<!-- del_r09_m <- ggplot() + -->
-<!--   geom_sf(data = comunas_r09, aes(fill = del_10000_hab), alpha=0.8,  size= 0.5)+ -->
-<!--   scale_fill_viridis_c()+ -->
-<!--   ggtitle("Delitos Violentos en la Región de la Araucanía" ) + -->
-<!--   theme_bw() + -->
-<!--   # theme(legend.position="none")+ -->
-<!--   theme(panel.grid.major = element_line(colour = "gray80"),  -->
-<!--         panel.grid.minor = element_line(colour = "gray80")) -->
+```{r}
 
-<!-- del_r09_m -->
-<!-- ``` -->
+comunas_r09 <- comunas_r09 %>%
+  left_join(tabla_resumen, by = "NOM_COMUNA")
 
-<!-- Guardar el Mapa como imagen -->
-<!-- ```{r eval=FALSE} -->
-<!-- ggsave(plot = del_r09_m, filename = "images/map_del_violentos_R09.png", width = 8, height = 7) -->
-<!-- ``` -->
+head(comunas_r09)
+```
 
 
 
-<!-- **Mapa Dinámico** -->
+
+### Generar Mapa
 
 
-<!-- ```{r} -->
-<!-- library(mapview) -->
+```{r}
+library(viridis)
+del_r09_m <- ggplot() +
+  geom_sf(data = comunas_r09, aes(fill = del_10000_hab), alpha=0.8,  size= 0.5)+
+  scale_fill_viridis_c()+
+  ggtitle("Delitos Violentos en la Región de la Araucanía" ) +
+  theme_bw() +
+  # theme(legend.position="none")+
+  theme(panel.grid.major = element_line(colour = "gray80"),
+        panel.grid.minor = element_line(colour = "gray80"))
 
-<!-- mapview(comunas_r09, zcol = "del_10000_hab", alpha.regions = 0.9) -->
-<!-- ``` -->
+del_r09_m
+```
 
-<!-- ## Guardar Resultados -->
+Guardar el Mapa como imagen
+```{r eval=FALSE}
+ggsave(plot = del_r09_m, filename = "images/map_del_violentos_R09.png", width = 8, height = 7)
+```
 
-<!-- ```{r eval=FALSE} -->
 
-<!-- # Excel -->
-<!-- write.xlsx(tabla_resumen, file = "data/excel/R09_del_violentos.xlsx") -->
 
-<!-- # Shapefile  -->
-<!-- st_write(comunas_r09, "data/shape/R09_del_violentos.shp", delete_dsn = T) -->
+**Mapa Dinámico**
 
-<!-- # rds -->
-<!-- saveRDS(object = comunas_r09,file = "data/rds/R09_del_violentos.rds") -->
 
-<!-- ``` -->
+```{r}
+library(mapview)
+
+mapview(comunas_r09, zcol = "del_10000_hab", alpha.regions = 0.9)
+```
+
+## Guardar Resultados
+
+```{r eval=FALSE}
+
+# Excel
+write.xlsx(tabla_resumen, file = "data/excel/R09_del_violentos.xlsx")
+
+# Shapefile
+st_write(comunas_r09, "data/shape/R09_del_violentos.shp", delete_dsn = T)
+
+# rds
+saveRDS(object = comunas_r09,file = "data/rds/R09_del_violentos.rds")
+
+```
 
 

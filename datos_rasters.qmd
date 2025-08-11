@@ -1,0 +1,73 @@
+---
+title: "datos_raster"
+---
+
+
+
+
+## Datos Raster
+
+Raster
+: Representación del espacio mediante una matriz de celdas organizada  en filas y columnas, donde cada celda tiene un valor que representa información. 
+
+
+![Representación Raster](images/raster_concept.png){width=60%}
+
+![Resolución Raster](images/raster_resolucion.gif)
+
+
+Para ejemplificar el uso y ver características de Raster vamos a utilizar una imágenes satelital del [Satelite Landsat 8](https://eos.com/es/find-satellite/landsat-8/).
+
+
+
+![Imágenes Satelitales](images/Sentinel-2Poster.jpg)
+
+Este tipos de imágenes satelitales generalmente contiene una series de de bandas que corresponden a capas de información tipos raster conformando una especie de brick de raster.
+
+![Configuración de Bandas](images/3D-array.jpg)
+
+
+
+
+Para este ejemplo de visualización necesitamos conocer las bandas satelitales que componen nuestra imagen satelital.
+
+
+
+![Bandas de Landsat 8](images/bandas_landsat8.png)
+
+
+
+### lectura de imagen Raster.
+
+```{r}
+library(raster)
+las_condes_raster <- brick("data/raster/OLI_LC.tif")
+names(las_condes_raster) <- c("aerosol", "blue", "green", "red" , "nir", "swir1", "swir2", "tirs1")
+las_condes_raster
+
+```
+
+### Visualización Raster
+```{r}
+# Visualización de imagen recortada de Las Condes en Color Natural
+plotRGB(las_condes_raster, r = 4, g = 3, b = 2, stretch = "lin")
+# viewRGB(las_condes_raster, r = 4, g = 3, b = 2)
+```
+
+
+
+
+
+:::{.callout-tip}
+
+## Actividades 
+![Visualización de Bandas](images/l8-band-combinations.png)
+Referencias: [https://mappinggis.com/2019/05/combinaciones-de-bandas-en-imagenes-de-satelite-landsat-y-sentinel/](https://mappinggis.com/2019/05/combinaciones-de-bandas-en-imagenes-de-satelite-landsat-y-sentinel/)
+
+
+```{r eval=FALSE}
+plotRGB(las_condes_raster, r = 7, g = 6, b = 4, stretch = "lin")
+```
+
+:::
+

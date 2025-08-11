@@ -11,7 +11,6 @@ book:
       affiliation-url: https://cit.uai.cl
       email: denis.berroeta@uai.cl
   date: "2025-7-22"
-  #number-sections: 3
   page-footer: 
     left: "Copyright 2025, Denis Berroeta" 
   chapters:
@@ -22,8 +21,9 @@ book:
     - funciones.qmd
     - tidyverse.qmd
     - visualizaciones.qmd
+    - datos_vectores.qmd
     - dataframes.qmd
-    # - datos_espaciales.qmd
+    # - datos_vectoriales.qmd
     # - espacial_r.qmd
     # - analisis_esp.qmd
     # - inferencia.qmd
@@ -39,6 +39,7 @@ book:
   appendices:
     - recursos.qmd
     - control_r.qmd
+    - crs.qmd
     # - john_snow.qmd
 
 bibliography: references.bib
@@ -53,6 +54,7 @@ format:
     tab-cap-location: "left"
     mailto: "denis.berroeta@uai.cl"
     toc-title: "Contenidos"
+    toc-depth: 3
   
 execute:
   warning: false

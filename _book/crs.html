@@ -6,10 +6,8 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="Denis Berroeta González">
-<meta name="dcterms.date" content="2025-07-22">
 
-<title>Curso de Geoanálisis</title>
+<title>Appendix C — CRS en R – Curso de Geoanálisis</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -22,6 +20,41 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
@@ -32,7 +65,7 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./geoanalisis.html" rel="next">
+<link href="./control_r.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
@@ -75,7 +108,7 @@ ul.task-list li input[type="checkbox"] {
 <link rel="stylesheet" href="styles/style.css">
 </head>
 
-<body class="nav-sidebar floating quarto-light">
+<body class="nav-sidebar floating slimcontent quarto-light">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -84,7 +117,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./index.html">Syllabus</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./recursos.html">Appendices</a></li><li class="breadcrumb-item"><a href="./crs.html"><span class="chapter-number">C</span>&nbsp; <span class="chapter-title">CRS en R</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -111,7 +144,7 @@ ul.task-list li input[type="checkbox"] {
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./index.html" class="sidebar-item-text sidebar-link active">
+  <a href="./index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Syllabus</span></a>
   </div>
 </li>
@@ -153,20 +186,14 @@ ul.task-list li input[type="checkbox"] {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./dataframes.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Dataframes y Delitos en R</span></span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
   <a href="./datos_vectores.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Datos Espaciales: Vectores</span></span></a>
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Datos Espaciales: Vectores</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./datos_vectoriales.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Datos Vectoriales</span></span></a>
+  <a href="./dataframes.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Dataframes y Delitos en R</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -198,8 +225,8 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./crs.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">C</span>&nbsp; <span class="chapter-title">Sistema de Referencias de Coordenadas</span></span></a>
+  <a href="./crs.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">C</span>&nbsp; <span class="chapter-title">CRS en R</span></span></a>
   </div>
 </li>
       </ul>
@@ -214,64 +241,28 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">Contenidos</h2>
    
   <ul>
-  <li><a href="#syllabus" id="toc-syllabus" class="nav-link active" data-scroll-target="#syllabus">Syllabus</a>
+  <li><a href="#sistema-de-referencias-de-coordenadas" id="toc-sistema-de-referencias-de-coordenadas" class="nav-link active" data-scroll-target="#sistema-de-referencias-de-coordenadas"><span class="header-section-number">C.1</span> Sistema de Referencias de Coordenadas</a>
   <ul class="collapse">
-  <li><a href="#resumen" id="toc-resumen" class="nav-link" data-scroll-target="#resumen">Resumen</a></li>
-  <li><a href="#objetivos" id="toc-objetivos" class="nav-link" data-scroll-target="#objetivos">Objetivos</a>
-  <ul class="collapse">
-  <li><a href="#objetivo-general" id="toc-objetivo-general" class="nav-link" data-scroll-target="#objetivo-general">Objetivo General</a></li>
-  <li><a href="#objetivos-específicos" id="toc-objetivos-específicos" class="nav-link" data-scroll-target="#objetivos-específicos">Objetivos específicos</a></li>
-  </ul></li>
-  <li><a href="#metodología" id="toc-metodología" class="nav-link" data-scroll-target="#metodología">Metodología</a></li>
-  <li><a href="#normas-en-clases" id="toc-normas-en-clases" class="nav-link" data-scroll-target="#normas-en-clases">Normas en clases</a></li>
-  <li><a href="#contenidos" id="toc-contenidos" class="nav-link" data-scroll-target="#contenidos">Contenidos</a></li>
-  <li><a href="#evaluación" id="toc-evaluación" class="nav-link" data-scroll-target="#evaluación">Evaluación</a></li>
-  <li><a href="#docentes" id="toc-docentes" class="nav-link" data-scroll-target="#docentes">Docentes</a>
-  <ul class="collapse">
-  <li><a href="#profesor-denis-berroeta-denis.berroetauai.cl" id="toc-profesor-denis-berroeta-denis.berroetauai.cl" class="nav-link" data-scroll-target="#profesor-denis-berroeta-denis.berroetauai.cl">Profesor: Denis Berroeta (denis.berroeta@uai.cl)</a></li>
-  <li><a href="#ayudante-docente-jorge-aravena-jorge.aravenaedu.uai.cl" id="toc-ayudante-docente-jorge-aravena-jorge.aravenaedu.uai.cl" class="nav-link" data-scroll-target="#ayudante-docente-jorge-aravena-jorge.aravenaedu.uai.cl">Ayudante Docente: Jorge Aravena (jorge.aravena@edu.uai.cl)</a></li>
-  </ul></li>
-  <li><a href="#contactos" id="toc-contactos" class="nav-link" data-scroll-target="#contactos">Contactos</a></li>
-  <li><a href="#bibliografía" id="toc-bibliografía" class="nav-link" data-scroll-target="#bibliografía">Bibliografía</a></li>
+  <li><a href="#reproyectar-vectores" id="toc-reproyectar-vectores" class="nav-link" data-scroll-target="#reproyectar-vectores"><span class="header-section-number">C.1.1</span> Reproyectar Vectores</a></li>
+  <li><a href="#reproyectar-raster" id="toc-reproyectar-raster" class="nav-link" data-scroll-target="#reproyectar-raster"><span class="header-section-number">C.1.2</span> Reproyectar Raster</a></li>
   </ul></li>
   </ul>
 </nav>
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content">
+<main class="content page-columns page-full" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default">
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./recursos.html">Appendices</a></li><li class="breadcrumb-item"><a href="./crs.html"><span class="chapter-number">C</span>&nbsp; <span class="chapter-title">CRS en R</span></a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">Curso de Geoanálisis</h1>
-<p class="subtitle lead">Para la mejora en la implementación de Políticas Públicas</p>
+<h1 class="title"><span id="sec-crs" class="quarto-section-identifier">Appendix C — CRS en R</span></h1>
+<p class="subtitle lead">Sistema de Referencias de Coordenadas</p>
 </div>
 
 
-<div class="quarto-title-meta-author">
-  <div class="quarto-title-meta-heading">Author</div>
-  <div class="quarto-title-meta-heading">Affiliation</div>
-  
-    <div class="quarto-title-meta-contents">
-    <p class="author"><a href="https://cit.uai.cl/denis-berroeta/">Denis Berroeta González</a> <a href="mailto:denis.berroeta@uai.cl" class="quarto-title-author-email"><i class="bi bi-envelope"></i></a> </p>
-  </div>
-  <div class="quarto-title-meta-contents">
-        <p class="affiliation">
-            <a href="https://cit.uai.cl">
-            Centro de Inteligencia Territorial
-            </a>
-          </p>
-      </div>
-  </div>
 
 <div class="quarto-title-meta">
 
-      
-    <div>
-    <div class="quarto-title-meta-heading">Published</div>
-    <div class="quarto-title-meta-contents">
-      <p class="date">July 22, 2025</p>
-    </div>
-  </div>
+    
   
     
   </div>
@@ -281,226 +272,158 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="syllabus" class="level1 unnumbered">
-<h1 class="unnumbered">Syllabus</h1>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="images/logo-CIT-GOBLAB.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="350"></p>
+<section id="sistema-de-referencias-de-coordenadas" class="level2 page-columns page-full" data-number="C.1">
+<h2 data-number="C.1" class="anchored" data-anchor-id="sistema-de-referencias-de-coordenadas"><span class="header-section-number">C.1</span> Sistema de Referencias de Coordenadas</h2>
+<div class="quarto-figure quarto-figure-center page-columns page-full">
+<figure class="figure page-columns page-full">
+<p><img src="images/crs.png" class="img-fluid figure-img"></p>
+<figcaption class="margin-caption">Sistema de Referencias de Coordenadas</figcaption>
 </figure>
 </div>
-<section id="resumen" class="level2">
-<h2 class="anchored" data-anchor-id="resumen">Resumen</h2>
-<p>Este curso está diseñado para proporcionar a los estudiantes una sólida base teórica y competencias técnicas para realizar análisis espacial de variables territoriales en múltiples áreas de aplicación. Se destaca el uso del lenguaje de programación R para implementar metodologías analíticas y automatizadas, con un enfoque en resolver desafíos complejos en políticas públicas, facilitando la toma de decisiones informadas por evidencia territorial.</p>
+<p>Los sistemas de coordenadas forman la base de cálculo para describir la posición de un punto a partir de mediciones geodésicas: distancias, proporciones de distancias (sin escala) y ángulos. Las coordenadas nunca pueden medirse, solamente se calculan con referencia un sistema de coordenadas bien definido. Los tipos de sistemas de coordenadas principales que existen son:</p>
+<dl>
+<dt>Coordenadas elipsoidales</dt>
+<dd>
+son la representación de las coordenadas sobre la superficie de un elipsoide determinado, se representan por [φ, λ, h] siendo respectivamente, la latitud, longitud y altura elipsoidal.
+</dd>
+</dl>
+<div class="quarto-figure quarto-figure-center page-columns page-full">
+<figure class="figure page-columns page-full">
+<p><img src="images/geodesicas.png" class="img-fluid figure-img" style="width:60.0%"></p>
+<figcaption class="margin-caption">Coordenadas Geodésicas. Fuente: (Drewes &amp; Sánchez, 2011)</figcaption>
+</figure>
+</div>
+<dl>
+<dt>Coordenadas proyectadas o cartográficas</dt>
+<dd>
+Según la proyección empleada las coordenadas elipsoidales pueden representarse en un plano, en el caso de Chile continental, se emplea la proyección Universal Transversal de Mercator (UTM), huso 19 y huso 18.
+</dd>
+</dl>
+<div class="quarto-figure quarto-figure-center page-columns page-full">
+<figure class="figure page-columns page-full">
+<p><img src="images/utm.png" class="img-fluid figure-img" style="width:60.0%"></p>
+<figcaption class="margin-caption">proyección Universal Transversal Mercator (UTM) Fuente: (Drewes &amp; Sánchez, 2011)</figcaption>
+</figure>
+</div>
+<p>Para hacer reproyecciones en R, se le tiene que asignar el Sistema de Referencia de Coordenadas de dos formas, uno como cadena de texto (<code>"+proj=longlat +datum=WGS84 +no_defs"</code>) o como número que corresponde a EPSG (<a href="https://mappinggis.com/2016/04/los-codigos-epsg-srid-vinculacion-postgis/">EPSG es el acrónimo de European Petroleum Survey Group</a>) que representan sistema de referencia de coordenadas también.</p>
+<p>Para el caso de Chile usamos dos sistemas de referencias de coordenadas:</p>
+<dl>
+<dt>Coordenadas elipsoidales (geodésicas):</dt>
+<dd>
+4326 o <code>"+proj=longlat +datum=WGS84 +no_defs"</code>
+</dd>
+<dt>Coordenadas proyectadas (métricas):</dt>
+<dd>
+32719 o <code>"+proj=utm +zone=19 +south +datum=WGS84 +units=m +no_defs"</code>
+</dd>
+</dl>
+<section id="reproyectar-vectores" class="level3" data-number="C.1.1">
+<h3 data-number="C.1.1" class="anchored" data-anchor-id="reproyectar-vectores"><span class="header-section-number">C.1.1</span> Reproyectar Vectores</h3>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(sf) <span class="co"># manipulación de datos vectoriales</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(mapview) <span class="co"># visualización de mapas dinámicos</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2) <span class="co"># gráficos</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(RColorBrewer) <span class="co">#paleta de colores</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Lectura de Vectores</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>las_condes_mz <span class="ot">&lt;-</span> <span class="fu">st_read</span>(<span class="st">"data/shape/icv_las_condes.shp"</span>, <span class="at">quiet=</span>T) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>LC_mz_32719 <span class="ot">&lt;-</span> las_condes_mz <span class="sc">%&gt;%</span> <span class="fu">st_transform</span>(<span class="dv">32719</span>)</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="fu">st_crs</span>(LC_mz_32719)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Coordinate Reference System:
+  User input: EPSG:32719 
+  wkt:
+PROJCRS["WGS 84 / UTM zone 19S",
+    BASEGEOGCRS["WGS 84",
+        ENSEMBLE["World Geodetic System 1984 ensemble",
+            MEMBER["World Geodetic System 1984 (Transit)"],
+            MEMBER["World Geodetic System 1984 (G730)"],
+            MEMBER["World Geodetic System 1984 (G873)"],
+            MEMBER["World Geodetic System 1984 (G1150)"],
+            MEMBER["World Geodetic System 1984 (G1674)"],
+            MEMBER["World Geodetic System 1984 (G1762)"],
+            MEMBER["World Geodetic System 1984 (G2139)"],
+            MEMBER["World Geodetic System 1984 (G2296)"],
+            ELLIPSOID["WGS 84",6378137,298.257223563,
+                LENGTHUNIT["metre",1]],
+            ENSEMBLEACCURACY[2.0]],
+        PRIMEM["Greenwich",0,
+            ANGLEUNIT["degree",0.0174532925199433]],
+        ID["EPSG",4326]],
+    CONVERSION["UTM zone 19S",
+        METHOD["Transverse Mercator",
+            ID["EPSG",9807]],
+        PARAMETER["Latitude of natural origin",0,
+            ANGLEUNIT["degree",0.0174532925199433],
+            ID["EPSG",8801]],
+        PARAMETER["Longitude of natural origin",-69,
+            ANGLEUNIT["degree",0.0174532925199433],
+            ID["EPSG",8802]],
+        PARAMETER["Scale factor at natural origin",0.9996,
+            SCALEUNIT["unity",1],
+            ID["EPSG",8805]],
+        PARAMETER["False easting",500000,
+            LENGTHUNIT["metre",1],
+            ID["EPSG",8806]],
+        PARAMETER["False northing",10000000,
+            LENGTHUNIT["metre",1],
+            ID["EPSG",8807]]],
+    CS[Cartesian,2],
+        AXIS["(E)",east,
+            ORDER[1],
+            LENGTHUNIT["metre",1]],
+        AXIS["(N)",north,
+            ORDER[2],
+            LENGTHUNIT["metre",1]],
+    USAGE[
+        SCOPE["Navigation and medium accuracy spatial referencing."],
+        AREA["Between 72°W and 66°W, southern hemisphere between 80°S and equator, onshore and offshore. Argentina. Bolivia. Brazil. Chile. Colombia. Peru."],
+        BBOX[-80,-72,0,-66]],
+    ID["EPSG",32719]]</code></pre>
+</div>
+</div>
 </section>
-<section id="objetivos" class="level2">
-<h2 class="anchored" data-anchor-id="objetivos">Objetivos</h2>
-<section id="objetivo-general" class="level3">
-<h3 class="anchored" data-anchor-id="objetivo-general">Objetivo General</h3>
-<p>El objetivo general es proporcionar a los estudiantes los fundamentos, técnicas y aspectos básicos para analizar, modelar y representar información espacial, para apoyar la toma de decisiones con evidencia territorial robusta.</p>
-</section>
-<section id="objetivos-específicos" class="level3">
-<h3 class="anchored" data-anchor-id="objetivos-específicos">Objetivos específicos</h3>
-<ul>
-<li>Conocer los conceptos básicos del geoanálisis.</li>
-<li>Manipular datos espaciales en R.</li>
-<li>Aplicar las técnicas a problemas de interés público.</li>
-</ul>
-</section>
-</section>
-<section id="metodología" class="level2">
-<h2 class="anchored" data-anchor-id="metodología">Metodología</h2>
-<p>Las clases se dividirán en partes teóricas y prácticas. La primera de ellas se pretende entregar un marco conceptual metodológico y teórico del geoanálisis y sus aplicaciones en las políticas públicas, que será la base para afrontar la segunda parte del módulo, que se basará en ejercicios aplicados utilizando lenguaje de programación R Project, dirigido a internalizar los conceptos teóricos, además de generar productos de análisis espacial útiles para gestión eventual de políticas públicas. Requerimiento tener instalado R Project y Rstudio en su computador personal.</p>
-</section>
-<section id="normas-en-clases" class="level2">
-<h2 class="anchored" data-anchor-id="normas-en-clases">Normas en clases</h2>
-<p><strong>Presencia Activa</strong>: Este curso, por su metodología experiencial, requiere de una participación activa de los participantes. Es importante descubrir las fuentes de distracción y evitarlas. Las más usuales son lectura o escritura de e-mails, navegar por internet o utilizar redes sociales. Esto distrae a quien lo hace y restringe al resto del curso de su participación activa.</p>
-<p><strong>Puntualidad y Asistencia</strong>: Será necesario ingresar a clases en forma puntual y permanecer en la misma sin salir, a menos que haya una urgencia. Se requerirá como mínimo un 75% de asistencia). Es importante que quien tuviera problemas para estar a tiempo o para asistir, se ponga en contacto lo antes posible con la coordinadora del curso. Los alumnos que lleguen más de 15 minutos tarde serán considerados ausentes de ese segmento de la sesión. Grabación de la clase: La clase se graba como respaldo en caso haya fallas de internet, y se disponibiliza en la plataforma virtual del curso sin posibilidad de descarga. Está disponible únicamente por 60 días en el servidor de Zoom y posterior a esa fecha se elimina. La visualización posterior de la clase no se considera como asistencia.</p>
-<p><strong>Reunión Zoom recurrente</strong>: <a href="https://uai-cl.zoom.us/j/98936792371?jst=1" class="uri">https://uai-cl.zoom.us/j/98936792371?jst=1</a></p>
-<p><strong>Carpeta de Respaldo de Contenidos</strong>: <a href="https://alumnosuaicl-my.sharepoint.com/:f:/g/personal/denis_berroeta_uai_cl/Eujwj4nL7oFPvZ2zm5W5LKEBbH2sC-Zojs7f7paCLNk3Sg?e=rQJkQq">Curso-Geoanálisis-2025</a></p>
-</section>
-<section id="contenidos" class="level2">
-<h2 class="anchored" data-anchor-id="contenidos">Contenidos</h2>
-<p>Los contenidos de cada clase se detallan a continuación:</p>
-<table class="caption-top table">
-<colgroup>
-<col style="width: 14%">
-<col style="width: 14%">
-<col style="width: 14%">
-<col style="width: 14%">
-<col style="width: 26%">
-<col style="width: 14%">
-</colgroup>
-<thead>
-<tr class="header">
-<th>Sesión</th>
-<th>Fecha</th>
-<th>Inicio</th>
-<th>Término</th>
-<th>Sesiones</th>
-<th>Horas</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>S1</td>
-<td>martes, 22 de julio de 2025</td>
-<td>17:30</td>
-<td>20:50</td>
-<td>Introducción a R</td>
-<td>3</td>
-</tr>
-<tr class="even">
-<td>S2</td>
-<td>martes, 29 de julio de 2025</td>
-<td>17:30</td>
-<td>20:50</td>
-<td>Manipulación de datos</td>
-<td>3</td>
-</tr>
-<tr class="odd">
-<td>S3</td>
-<td>martes, 5 de agosto de 2025</td>
-<td>17:30</td>
-<td>20:50</td>
-<td>Visualización con R</td>
-<td>3</td>
-</tr>
-<tr class="even">
-<td>S4</td>
-<td>martes, 12 de agosto de 2025</td>
-<td>17:30</td>
-<td>20:50</td>
-<td>Manipulación de datos espaciales</td>
-<td>3</td>
-</tr>
-<tr class="odd">
-<td>S5</td>
-<td>martes, 19 de agosto de 2025</td>
-<td>17:30</td>
-<td>20:50</td>
-<td>Geocoding</td>
-<td>3</td>
-</tr>
-<tr class="even">
-<td>S6</td>
-<td>martes, 26 de agosto de 2025</td>
-<td>17:30</td>
-<td>20:50</td>
-<td>Inferencia Espacial: Interpolación y mapas de calor</td>
-<td>3</td>
-</tr>
-<tr class="odd">
-<td>S7</td>
-<td>martes, 2 de septiembre de 2025</td>
-<td>17:30</td>
-<td>20:50</td>
-<td>Construcción de indicadores territoriales</td>
-<td>3</td>
-</tr>
-<tr class="even">
-<td>S8</td>
-<td>martes, 9 de septiembre de 2025</td>
-<td>17:30</td>
-<td>20:50</td>
-<td>Reporte y Proyecto</td>
-<td>3</td>
-</tr>
-</tbody>
-</table>
-</section>
-<section id="evaluación" class="level2">
-<h2 class="anchored" data-anchor-id="evaluación">Evaluación</h2>
-<p>Las evaluaciones consisten en 2 tareas de programación, la primera individual y la segunda grupal. A continuación se detallan las evaluaciones:</p>
-<table class="caption-top table">
-<colgroup>
-<col style="width: 37%">
-<col style="width: 62%">
-</colgroup>
-<thead>
-<tr class="header">
-<th>Concepto</th>
-<th>Detalle</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Tipo(s) de evaluación</td>
-<td>Tareas</td>
-</tr>
-<tr class="even">
-<td>Forma de entrega</td>
-<td>En documento escrito (PDF o HTML) y código en R</td>
-</tr>
-<tr class="odd">
-<td>Cálculo de la nota final</td>
-<td>Tarea 1: 40% - Tarea 2: 60%</td>
-</tr>
-<tr class="even">
-<td>Fecha Evaluación 1</td>
-<td>22-AGO-2025</td>
-</tr>
-<tr class="odd">
-<td>Fecha Evaluación 2</td>
-<td>16-SEP-2025</td>
-</tr>
-</tbody>
-</table>
-</section>
-<section id="docentes" class="level2">
-<h2 class="anchored" data-anchor-id="docentes">Docentes</h2>
-<section id="profesor-denis-berroeta-denis.berroetauai.cl" class="level3">
-<h3 class="anchored" data-anchor-id="profesor-denis-berroeta-denis.berroetauai.cl">Profesor: Denis Berroeta (<a href="mailto:denis.berroeta@uai.cl" class="email">denis.berroeta@uai.cl</a>)</h3>
-<p>Master y PhD (cursando) in Data Scicence, Magister en Inteligencia Artificial, Universidad Adolfo Ibáñez. Coordinador de Investigación Centro Inteligencia Territorial, UAI. Tiene experiencia en modelamiento y análisis de datos espaciales, trabajando en diferentes proyectos de investigación públicos y privados en el Centro de Inteligencia Territorial de la Universidad Adolfo Ibáñez, diseñando y gestionando la implementación de metodologías de análisis de datos territoriales. Posee experiencia como profesor en Geoestadísticas; Análisis Criminal, Análisis de imágenes satelitales para el monitoreo ambiental y gestión de desastres naturales; y Data Science.</p>
-</section>
-<section id="ayudante-docente-jorge-aravena-jorge.aravenaedu.uai.cl" class="level3">
-<h3 class="anchored" data-anchor-id="ayudante-docente-jorge-aravena-jorge.aravenaedu.uai.cl">Ayudante Docente: Jorge Aravena (<a href="mailto:jorge.aravena@edu.uai.cl" class="email">jorge.aravena@edu.uai.cl</a>)</h3>
-<p>Analista Espacial en el Centro de Inteligencia Territorial de la Universidad Adolfo Ibáñez. Geógrafo de la Universidad Austral de Chile, con diplomado en Planificación y Gestión Urbana Integrada de la Pontificia Universidad Católica de Chile. Su enfoque abarca la geografía urbana crítica y los sistemas de información geográfica.</p>
-</section>
-</section>
-<section id="contactos" class="level2">
-<h2 class="anchored" data-anchor-id="contactos">Contactos</h2>
-<table class="caption-top table">
-<thead>
-<tr class="header">
-<th>Cargo</th>
-<th>Nombre</th>
-<th>Correo</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Director de Programa</td>
-<td>Claudio Aracena</td>
-<td><a href="mailto:claudio.aracena.c@edu.uai.cl" class="email">claudio.aracena.c@edu.uai.cl</a></td>
-</tr>
-<tr class="even">
-<td>Coordinadora Académica</td>
-<td>Gabriela Nuñez</td>
-<td><a href="mailto:gabriela.nunez.s@uai.cl" class="email">gabriela.nunez.s@uai.cl</a></td>
-</tr>
-<tr class="odd">
-<td>Docente</td>
-<td>Denis Berroeta</td>
-<td><a href="mailto:denisberroeta@uai.cl" class="email">denisberroeta@uai.cl</a></td>
-</tr>
-<tr class="even">
-<td>Ayudante</td>
-<td>Jorge Aravena</td>
-<td><a href="mailto:jorge.aravena@edu.uai.cl" class="email">jorge.aravena@edu.uai.cl</a></td>
-</tr>
-</tbody>
-</table>
-</section>
-<section id="bibliografía" class="level2">
-<h2 class="anchored" data-anchor-id="bibliografía">Bibliografía</h2>
-<p>Opcional:</p>
-<ul>
-<li><p>Lovelace, R., Nowosad, J., &amp; Muenchow, J. (2019). Welcome | Geocomputation with R. <a href="https://geocompr.robinlovelace.net/" class="uri">https://geocompr.robinlovelace.net/</a>.</p></li>
-<li><p>Paez, A. (s. f.). An Introduction to Spatial Data Analysis and Statistics: A Course in R. <a href="https://paezha.github.io/spatial-analysis-r/" class="uri">https://paezha.github.io/spatial-analysis-r/</a></p></li>
-<li><p>Mas, J.-F.(2018). Análisis espacial con R. 151. <a href="http://eujournal.org/files/journals/1/books/JeanFrancoisMas.pdf" class="uri">http://eujournal.org/files/journals/1/books/JeanFrancoisMas.pdf</a></p></li>
-<li><p>Garreton, M., Basauri, A., &amp; Valenzuela, L. (2020). Exploring the correlation between city size and residential segregation: Comparing Chilean cities with spatially unbiased indexes. Environment and Urbanization, 1-20.<a href="https://doi.org/10.1177/0956247820918983" class="uri">https://doi.org/10.1177/0956247820918983</a></p></li>
-<li><p>R para la Ciencia de Datos, <a href="https://es.r4ds.hadley.nz/" class="uri">https://es.r4ds.hadley.nz/</a></p></li>
-</ul>
+<section id="reproyectar-raster" class="level3" data-number="C.1.2">
+<h3 data-number="C.1.2" class="anchored" data-anchor-id="reproyectar-raster"><span class="header-section-number">C.1.2</span> Reproyectar Raster</h3>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(raster)</span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>las_condes_raster <span class="ot">&lt;-</span> <span class="fu">brick</span>(<span class="st">"data/raster/OLI_LC.tif"</span>)</span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a><span class="fu">names</span>(las_condes_raster) <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"aerosol"</span>, <span class="st">"blue"</span>, <span class="st">"green"</span>, <span class="st">"red"</span> , <span class="st">"nir"</span>, <span class="st">"swir1"</span>, <span class="st">"swir2"</span>, <span class="st">"tirs1"</span>)</span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>las_condes_raster</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>class      : RasterBrick 
+dimensions : 449, 562, 252338, 8  (nrow, ncol, ncell, nlayers)
+resolution : 30, 30  (x, y)
+extent     : 350505, 367365, 6293905, 6307375  (xmin, xmax, ymin, ymax)
+crs        : +proj=utm +zone=19 +south +datum=WGS84 +units=m +no_defs 
+source     : OLI_LC.tif 
+names      : aerosol,  blue, green,   red,   nir, swir1, swir2, tirs1 
+min values :    8465,  7604,  6500,  5924,  5520,  5191,  5197,  5002 
+max values :   19119, 20517, 21248, 23237, 29344, 30012, 31166,  5512 </code></pre>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>crs_latlon <span class="ot">&lt;-</span> <span class="st">"+proj=longlat +datum=WGS84 +no_defs"</span><span class="co"># geográficas o elipsoidales</span></span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>crs_utm <span class="ot">&lt;-</span> <span class="st">"+proj=utm +zone=19 +south +datum=WGS84 +units=m +no_defs"</span> <span class="co"># UTM o cartográficas</span></span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>las_condes_raster2 <span class="ot">&lt;-</span> <span class="fu">projectRaster</span>(<span class="at">from=</span> las_condes_raster,                                             <span class="at">crs =</span> crs_latlon)</span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>las_condes_raster2</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>class      : RasterBrick 
+dimensions : 470, 578, 271660, 8  (nrow, ncol, ncell, nlayers)
+resolution : 0.000323, 0.00027  (x, y)
+extent     : -70.61069, -70.424, -33.48775, -33.36085  (xmin, xmax, ymin, ymax)
+crs        : +proj=longlat +datum=WGS84 +no_defs 
+source     : memory
+names      :  aerosol,     blue,    green,      red,      nir,    swir1,    swir2,    tirs1 
+min values : 8592.067, 7778.388, 6806.291, 6280.802, 5729.628, 5316.893, 5303.627, 5005.409 
+max values : 18590.84, 19485.05, 20596.61, 22406.07, 28732.09, 26707.17, 26787.15,  5495.00 </code></pre>
+</div>
+</div>
 
 
 </section>
@@ -908,11 +831,11 @@ ul.task-list li input[type="checkbox"] {
   </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
+      <a href="./control_r.html" class="pagination-link" aria-label="Estructuras en R">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">B</span>&nbsp; <span class="chapter-title">Estructuras en R</span></span>
+      </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./geoanalisis.html" class="pagination-link" aria-label="Introducción al Geoanálisis">
-        <span class="nav-page-text">Introducción al Geoanálisis</span> <i class="bi bi-arrow-right-short"></i>
-      </a>
   </div>
 </nav>
 </div> <!-- /content -->
