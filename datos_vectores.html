@@ -1,0 +1,2032 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.7.31">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>6&nbsp; Datos Espaciales: Vectores – Curso de Geoanálisis</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<link href="./dataframes.html" rel="next">
+<link href="./visualizaciones.html" rel="prev">
+<script src="site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-e1a5c8363afafaef2c763b6775fbf3ca.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap-485d01fc63b59abcd3ee1bf1e8e2748d.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+<script src="site_libs/kePrint-0.0.1/kePrint.js"></script>
+<link href="site_libs/lightable-0.0.1/lightable.css" rel="stylesheet">
+
+
+<link rel="stylesheet" href="styles/style.css">
+</head>
+
+<body class="nav-sidebar floating slimcontent quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./datos_vectores.html"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Datos Espaciales: Vectores</span></a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="./">Curso de Geoanálisis</a> 
+    </div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Syllabus</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./geoanalisis.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Introducción al Geoanálisis</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./intro_r.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Introducción a R Project</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./variables.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Variables en R</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./funciones.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Funciones en R</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./tidyverse.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Tidyverse en R</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./visualizaciones.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Visualizaciones en R</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./datos_vectores.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Datos Espaciales: Vectores</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./dataframes.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Dataframes y Delitos en R</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./references.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">References</span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
+ <span class="menu-text">Appendices</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./recursos.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">A</span>&nbsp; <span class="chapter-title">Instalación de Recursos</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./control_r.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">B</span>&nbsp; <span class="chapter-title">Estructuras en R</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./crs.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">C</span>&nbsp; <span class="chapter-title">CRS en R</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Contenidos</h2>
+   
+  <ul>
+  <li><a href="#objetivos-del-módulo" id="toc-objetivos-del-módulo" class="nav-link active" data-scroll-target="#objetivos-del-módulo"><span class="header-section-number">6.1</span> Objetivos del Módulo</a></li>
+  <li><a href="#definición-general-de-datos-espaciales" id="toc-definición-general-de-datos-espaciales" class="nav-link" data-scroll-target="#definición-general-de-datos-espaciales"><span class="header-section-number">6.2</span> Definición General de Datos Espaciales</a></li>
+  <li><a href="#datos-vectoriales" id="toc-datos-vectoriales" class="nav-link" data-scroll-target="#datos-vectoriales"><span class="header-section-number">6.3</span> Datos Vectoriales</a>
+  <ul class="collapse">
+  <li><a href="#puntos" id="toc-puntos" class="nav-link" data-scroll-target="#puntos"><span class="header-section-number">6.3.1</span> Puntos</a></li>
+  </ul></li>
+  <li><a href="#líneas" id="toc-líneas" class="nav-link" data-scroll-target="#líneas"><span class="header-section-number">6.4</span> Líneas</a></li>
+  <li><a href="#polígonos" id="toc-polígonos" class="nav-link" data-scroll-target="#polígonos"><span class="header-section-number">6.5</span> Polígonos</a></li>
+  <li><a href="#actividades-prácticas" id="toc-actividades-prácticas" class="nav-link" data-scroll-target="#actividades-prácticas"><span class="header-section-number">6.6</span> Actividades Prácticas</a></li>
+  <li><a href="#manipulación-de-datos-vectoriales" id="toc-manipulación-de-datos-vectoriales" class="nav-link" data-scroll-target="#manipulación-de-datos-vectoriales"><span class="header-section-number">6.7</span> Manipulación de Datos Vectoriales</a>
+  <ul class="collapse">
+  <li><a href="#filtros-y-selección-de-columnas" id="toc-filtros-y-selección-de-columnas" class="nav-link" data-scroll-target="#filtros-y-selección-de-columnas"><span class="header-section-number">6.7.1</span> Filtros y selección de columnas</a></li>
+  <li><a href="#sec-groupby" id="toc-sec-groupby" class="nav-link" data-scroll-target="#sec-groupby"><span class="header-section-number">6.7.2</span> Resumen Estadísticos</a></li>
+  <li><a href="#joining" id="toc-joining" class="nav-link" data-scroll-target="#joining"><span class="header-section-number">6.7.3</span> Joining</a></li>
+  </ul></li>
+  <li><a href="#operaciones-espaciales-con-sf" id="toc-operaciones-espaciales-con-sf" class="nav-link" data-scroll-target="#operaciones-espaciales-con-sf"><span class="header-section-number">6.8</span> Operaciones Espaciales con sf</a>
+  <ul class="collapse">
+  <li><a href="#operaciones-en-la-misma-geometría" id="toc-operaciones-en-la-misma-geometría" class="nav-link" data-scroll-target="#operaciones-en-la-misma-geometría"><span class="header-section-number">6.8.1</span> Operaciones en la misma geometría</a></li>
+  <li><a href="#operaciones-entre-multiples-geometrías" id="toc-operaciones-entre-multiples-geometrías" class="nav-link" data-scroll-target="#operaciones-entre-multiples-geometrías"><span class="header-section-number">6.8.2</span> Operaciones entre multiples geometrías</a></li>
+  </ul></li>
+  <li><a href="#referencias" id="toc-referencias" class="nav-link" data-scroll-target="#referencias"><span class="header-section-number">6.9</span> Referencias</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content page-columns page-full" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Datos Espaciales: Vectores</span></h1>
+<p class="subtitle lead">Manipulación de Vectores Espaciales</p>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="objetivos-del-módulo" class="level2" data-number="6.1">
+<h2 data-number="6.1" class="anchored" data-anchor-id="objetivos-del-módulo"><span class="header-section-number">6.1</span> Objetivos del Módulo</h2>
+<p>La presente Sesión tiene como objetivo principal introducir conceptos generales y manipulación básica de datos de tipo vectorial (punto, lineas, polígonos).</p>
+</section>
+<section id="definición-general-de-datos-espaciales" class="level2 page-columns page-full" data-number="6.2">
+<h2 data-number="6.2" class="anchored" data-anchor-id="definición-general-de-datos-espaciales"><span class="header-section-number">6.2</span> Definición General de Datos Espaciales</h2>
+<p>La representación de un territorio requiere datos geográficos compuestos por información espacial (geometrías asociadas a una ubicación real en el mundo) e información de atributos (características y variables asociadas a estas geometrías).</p>
+<div class="quarto-figure quarto-figure-center page-columns page-full">
+<figure class="figure page-columns page-full">
+<p><img src="images/capas_general.png" class="img-fluid figure-img" style="width:50.0%"></p>
+<figcaption class="margin-caption">Capas de datos espaciales</figcaption>
+</figure>
+</div>
+</section>
+<section id="datos-vectoriales" class="level2 page-columns page-full" data-number="6.3">
+<h2 data-number="6.3" class="anchored" data-anchor-id="datos-vectoriales"><span class="header-section-number">6.3</span> Datos Vectoriales</h2>
+<p>Los datos vectoriales son uno de los tipos fundamentales en los que se representa la información espacial. Este formato se caracteriza por describir los elementos del espacio a través de puntos, líneas y polígonos. Cada uno de estos objetos puede tener atributos asociados que describen características adicionales como el uso del suelo, la densidad poblacional, o cualquier otra variable relevante para el análisis.</p>
+<p>En políticas públicas, los datos vectoriales juegan un rol clave en la toma de decisiones, ya que permiten analizar la distribución espacial de fenómenos, desde la localización de infraestructuras hasta la incidencia de eventos sociales y delictivos. A través de las herramientas de análisis vectorial, es posible identificar patrones, relaciones espaciales y tomar decisiones fundamentadas sobre la planificación y gestión del territorio.</p>
+<p>En este capítulo, utilizaremos la librería <a href="https://r-spatial.github.io/sf/index.html">sf</a> para la lectura y manipulación de datos vectoriales en R. Esta librería es ampliamente utilizada en la comunidad de análisis espacial debido a su eficiencia y su integración con otras herramientas como dplyr para el manejo de tablas de atributos.</p>
+<p><strong>Tipos de Datos Vectoriales espaciales básicos</strong></p>
+<p>Representación mediante coordenadas que se pueden unir espacialmente o no. Corresponde a 3 tipos de geometrías: puntos, líneas y polígonos.</p>
+<p><img src="images/tipos_vect.png" class="img-fluid"></p>
+<p>Fuente: <a href="https://r-spatial.github.io/sf/articles/sf1.html">https://r-spatial.github.io/sf/articles/sf1.html</a></p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Tipo</th>
+<th>Descripción</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>POINT</td>
+<td>Geometría de dimensión cero que contiene un único punto</td>
+</tr>
+<tr class="even">
+<td>LINESTRING</td>
+<td>Secuencia de puntos conectados por segmentos rectos, no auto-intersecantes; geometría unidimensional</td>
+</tr>
+<tr class="odd">
+<td>POLYGON</td>
+<td>Geometría con área positiva (bidimensional); la secuencia de puntos forma un anillo cerrado y no auto-intersecante; el primer anillo denota el anillo exterior, cero o más anillos posteriores representan huecos en este anillo exterior</td>
+</tr>
+<tr class="even">
+<td>MULTIPOINT</td>
+<td>Conjunto de puntos; un MULTIPOINT es simple si no hay dos puntos iguales dentro del conjunto</td>
+</tr>
+<tr class="odd">
+<td>MULTILINESTRING</td>
+<td>Conjunto de líneas (linestrings)</td>
+</tr>
+<tr class="even">
+<td>MULTIPOLYGON</td>
+<td>Conjunto de polígonos</td>
+</tr>
+<tr class="odd">
+<td>GEOMETRYCOLLECTION</td>
+<td>Conjunto de geometrías de cualquier tipo, excepto GEOMETRYCOLLECTION</td>
+</tr>
+</tbody>
+</table>
+<p>### Lectura de Insumos</p>
+<p>El paquete <a href="https://r-spatial.github.io/sf/index.html">sf</a> facilita la importación de estos datos, que suelen estar en formatos como shapefile (.shp) o GeoJSON (.geojson), etc. la función nativa para esto es <code>st_read()</code>. Para los efectos prácticos de esta etapa se utilizará la base de datos del censo a nivel zonal a nivel nacional que en este caso esta almacenado bajo la estrucura <code>rds</code> nativa de R, pero manteniendo todos los atributos y geometrías espaciales.</p>
+<section id="puntos" class="level3 page-columns page-full" data-number="6.3.1">
+<h3 data-number="6.3.1" class="anchored" data-anchor-id="puntos"><span class="header-section-number">6.3.1</span> Puntos</h3>
+<p>Tiene un par de coordenadas “x” e “y”. Es utilizado para información de tipo puntual, como por ejemplo equipamiento urbano, postes, árboles, entre otros.</p>
+<div class="quarto-figure quarto-figure-center page-columns page-full">
+<figure class="figure page-columns page-full">
+<p><img src="images/punto.png" class="img-fluid figure-img"></p>
+<figcaption class="margin-caption">Objeto vectorial tipo punto</figcaption>
+</figure>
+</div>
+<p>Cargar librerías</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># install.packages("sf") </span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(sf) <span class="co"># manipulación de datos vectoriales</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(mapview) <span class="co"># visualización de mapas dinámicos</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2) <span class="co"># gráficos</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(RColorBrewer) <span class="co">#paleta de colores</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<section id="lectura-de-archivos-tipo-puntos" class="level4">
+<h4 class="anchored" data-anchor-id="lectura-de-archivos-tipo-puntos">Lectura de archivos tipo puntos</h4>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>sii_LC <span class="ot">&lt;-</span> <span class="fu">st_read</span>(<span class="st">"data/sii/sii_urbe_LC.shp"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Reading layer `sii_urbe_LC' from data source 
+  `/Users/denisberroeta/Documents/Docencia/geoanalisis/cgeoa-book/data/sii/sii_urbe_LC.shp' 
+  using driver `ESRI Shapefile'
+Simple feature collection with 2310 features and 11 fields
+Geometry type: POINT
+Dimension:     XY
+Bounding box:  xmin: -70.60645 ymin: -33.44471 xmax: -70.47083 ymax: -33.36548
+Geodetic CRS:  +proj=longlat +datum=WGS84 +no_defs</code></pre>
+</div>
+</div>
+</section>
+<section id="visualización-de-los-puntos" class="level4">
+<h4 class="anchored" data-anchor-id="visualización-de-los-puntos">Visualización de los puntos</h4>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Visualización ggplot y sf</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>() <span class="sc">+</span></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_sf</span>(<span class="at">data =</span> sii_LC, <span class="at">col =</span> <span class="st">"orange"</span>, <span class="at">alpha=</span><span class="fl">0.8</span>,  <span class="at">size=</span> <span class="fl">0.5</span>)<span class="sc">+</span></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggtitle</span>(<span class="st">"Datos del SII en Las Condes"</span> ) <span class="sc">+</span></span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_bw</span>() <span class="sc">+</span></span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">legend.position=</span><span class="st">"none"</span>)<span class="sc">+</span></span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">panel.grid.major =</span> <span class="fu">element_line</span>(<span class="at">colour =</span> <span class="st">"gray80"</span>), </span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a>        <span class="at">panel.grid.minor =</span> <span class="fu">element_line</span>(<span class="at">colour =</span> <span class="st">"gray80"</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="datos_vectores_files/figure-html/unnamed-chunk-3-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co"># mapview(sii_LC, zcol = "atractor", cex =2)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+</section>
+</section>
+<section id="líneas" class="level2 page-columns page-full" data-number="6.4">
+<h2 data-number="6.4" class="anchored" data-anchor-id="líneas"><span class="header-section-number">6.4</span> Líneas</h2>
+<p>Tiene tantas coordenadas como vértices. La información que representa es de tipo lineal, como por ejemplo calles, ríos, redes energéticas, entre otros. Existen las líneas cerradas, las cuales se pueden entender como el perímetro de una superficie (sin relleno).</p>
+<div class="quarto-figure quarto-figure-center page-columns page-full">
+<figure class="figure page-columns page-full">
+<p><img src="images/linea.png" class="img-fluid figure-img"></p>
+<figcaption class="margin-caption">Objeto vectorial tipo Línea</figcaption>
+</figure>
+</div>
+<section id="lectura-de-líneas" class="level4">
+<h4 class="anchored" data-anchor-id="lectura-de-líneas">Lectura de líneas</h4>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>las_condes_red <span class="ot">&lt;-</span> <span class="fu">readRDS</span>(<span class="st">"data/redes/RED_LAS_CONDES.rds"</span>) </span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="co"># las_condes_red</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="visualización-líneas" class="level4">
+<h4 class="anchored" data-anchor-id="visualización-líneas">visualización Líneas</h4>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>() <span class="sc">+</span></span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_sf</span>(<span class="at">data =</span> las_condes_red, <span class="at">col =</span> <span class="st">"gray70"</span>, <span class="at">alpha=</span><span class="fl">0.8</span>,  <span class="at">size=</span> <span class="fl">0.5</span>)<span class="sc">+</span></span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggtitle</span>(<span class="st">"Red víal de la comuna Las Condes"</span> ) <span class="sc">+</span></span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_bw</span>() <span class="sc">+</span></span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">legend.position=</span><span class="st">"none"</span>)<span class="sc">+</span></span>
+<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">panel.grid.major =</span> <span class="fu">element_line</span>(<span class="at">colour =</span> <span class="st">"gray80"</span>), </span>
+<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a>        <span class="at">panel.grid.minor =</span> <span class="fu">element_line</span>(<span class="at">colour =</span> <span class="st">"gray80"</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="datos_vectores_files/figure-html/unnamed-chunk-5-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="co"># mapview(las_condes_red)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+</section>
+<section id="polígonos" class="level2 page-columns page-full" data-number="6.5">
+<h2 data-number="6.5" class="anchored" data-anchor-id="polígonos"><span class="header-section-number">6.5</span> Polígonos</h2>
+<p>Tiene tantas coordenadas como vértices. La información que representa es de tipo área, como por ejemplo división política administrativa, manzanas, construcciones, entre otras.</p>
+<div class="quarto-figure quarto-figure-center page-columns page-full">
+<figure class="figure page-columns page-full">
+<p><img src="images/poligono.png" class="img-fluid figure-img"></p>
+<figcaption class="margin-caption">Objeto vectorial tipo polígono</figcaption>
+</figure>
+</div>
+<section id="lectura-de-polígonos" class="level4">
+<h4 class="anchored" data-anchor-id="lectura-de-polígonos">Lectura de polígonos</h4>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>las_condes_mz <span class="ot">&lt;-</span> <span class="fu">st_read</span>(<span class="st">"data/shape/icv_las_condes.shp"</span>, <span class="at">quiet=</span>T) </span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a><span class="co"># las_condes_ptos</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="visualización-polígonos" class="level4">
+<h4 class="anchored" data-anchor-id="visualización-polígonos">Visualización polígonos</h4>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>() <span class="sc">+</span></span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_sf</span>(<span class="at">data =</span> las_condes_mz, <span class="fu">aes</span>(<span class="at">fill =</span> veg_cob), <span class="at">color =</span><span class="st">"gray80"</span>, </span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a>          <span class="at">alpha=</span><span class="fl">0.8</span>,  <span class="at">size=</span> <span class="fl">0.1</span>)<span class="sc">+</span></span>
+<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_fill_distiller</span>(<span class="at">palette=</span><span class="st">"Greens"</span>, <span class="at">direction =</span> <span class="dv">1</span>)<span class="sc">+</span></span>
+<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggtitle</span>(<span class="st">"Cobertura Vegetal de la comuna Las Condes"</span> ) <span class="sc">+</span></span>
+<span id="cb10-6"><a href="#cb10-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_bw</span>() <span class="sc">+</span></span>
+<span id="cb10-7"><a href="#cb10-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">panel.grid.major =</span> <span class="fu">element_line</span>(<span class="at">colour =</span> <span class="st">"gray80"</span>), </span>
+<span id="cb10-8"><a href="#cb10-8" aria-hidden="true" tabindex="-1"></a>        <span class="at">panel.grid.minor =</span> <span class="fu">element_line</span>(<span class="at">colour =</span> <span class="st">"gray80"</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="datos_vectores_files/figure-html/unnamed-chunk-7-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="co"># mapview(las_condes_mz, zcol = "veg_cob")</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+</section>
+<section id="actividades-prácticas" class="level2" data-number="6.6">
+<h2 data-number="6.6" class="anchored" data-anchor-id="actividades-prácticas"><span class="header-section-number">6.6</span> Actividades Prácticas</h2>
+<p>Seleccione una comuna de las manzanas del INE, visualiza con ggplot. Además genere una tabla resumen de suma de personas, hombres, mujeres viviendas por Zona Censal.</p>
+<div class="callout callout-style-simple callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Tips
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-1" class="callout-1-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>Leer Archivo:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>mz_ine <span class="ot">&lt;-</span> <span class="fu">readRDS</span>(<span class="st">"../data/censo/manz_INE_2017_sf.rds"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Seleccionar Comuna con <code>dplyr::filter()</code></p>
+<p>Eliminar geometrías <code>sf::st_drop_geometry()</code> ya que no es necesaria para realizar tabla resumen.</p>
+</div>
+</div>
+</div>
+</section>
+<section id="manipulación-de-datos-vectoriales" class="level2 page-columns page-full" data-number="6.7">
+<h2 data-number="6.7" class="anchored" data-anchor-id="manipulación-de-datos-vectoriales"><span class="header-section-number">6.7</span> Manipulación de Datos Vectoriales</h2>
+<p>Además de las geometrías espaciales, los datos vectoriales incluyen una tabla de atributos que contiene información adicional sobre cada objeto espacial. Esta tabla de atributos es esencial para realizar análisis más profundos, ya que nos permite filtrar, seleccionar, crear columnas nuevas y resumir los datos según diferentes criterios.</p>
+<div class="quarto-figure quarto-figure-center page-columns page-full">
+<figure class="figure page-columns page-full">
+<p><img src="images/feature_at_glance.png" class="img-fluid figure-img"></p>
+<figcaption class="margin-caption">Al leer un archivo vectorial, obtenemos un objeto sf que combina tanto la geometría como la tabla de atributos.</figcaption>
+</figure>
+</div>
+<p>Para la manipulación de datos vectoriales se usará la sección de atributos que la estructura sf permite para lo cual utilizaremos la librería <code>dplyr</code> cómo si fuera un dataframe.</p>
+<p>Cargar librerías</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="co"># install.packages("sf") </span></span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(sf) <span class="co"># manipulación de datos vectoriales</span></span>
+<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dplyr) <span class="co"># manipulación de tablas de atributos</span></span>
+<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(mapview) <span class="co"># visualización de mapas dinámicos</span></span>
+<span id="cb13-5"><a href="#cb13-5" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2) <span class="co"># gráficos</span></span>
+<span id="cb13-6"><a href="#cb13-6" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(RColorBrewer) <span class="co">#paleta de colores</span></span>
+<span id="cb13-7"><a href="#cb13-7" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(viridis) <span class="co">#paleta de colores</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="co"># sii_LC &lt;- st_read("data/sii/sii_urbe_LC.shp")</span></span>
+<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a>zonas_censales <span class="ot">&lt;-</span>  <span class="fu">readRDS</span>(<span class="st">"data/censo/zonas_urb_consolidadas.rds"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell">
+<div id="tbl-censo-zonas" class="cell quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-censo-zonas-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;6.1: Registros de Zonas Censales del Censo 2017
+</figcaption>
+<div aria-describedby="tbl-censo-zonas-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div class="cell-output-display">
+<table class="table table-striped table-hover table-condensed do-not-create-environment cell caption-top table-sm small" data-quarto-postprocess="true">
+<thead>
+<tr class="header">
+<th style="text-align: left;" data-quarto-table-cell-role="th">REGION</th>
+<th style="text-align: left;" data-quarto-table-cell-role="th">NOM_REGION</th>
+<th style="text-align: left;" data-quarto-table-cell-role="th">PROVINCIA</th>
+<th style="text-align: left;" data-quarto-table-cell-role="th">NOM_PROVIN</th>
+<th style="text-align: left;" data-quarto-table-cell-role="th">COMUNA</th>
+<th style="text-align: left;" data-quarto-table-cell-role="th">NOM_COMUNA</th>
+<th style="text-align: left;" data-quarto-table-cell-role="th">URBANO</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">DISTRITO</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">LOC_ZON</th>
+<th style="text-align: left;" data-quarto-table-cell-role="th">GEOCODIGO</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">AREA</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">COD_INE_15</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">COD_INE_16</th>
+<th style="text-align: left;" data-quarto-table-cell-role="th">VALIDO</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">KM2</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">ESC_JH</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">PERS</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">M2_O</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">M2_C</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">DENS_HAB</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">DENS_OF</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">DENS_COM</th>
+<th style="text-align: left;" data-quarto-table-cell-role="th">geometry</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">1</td>
+<td style="text-align: left;">REGIÓN DE TARAPACÁ</td>
+<td style="text-align: left;">14</td>
+<td style="text-align: left;">TAMARUGAL</td>
+<td style="text-align: left;">1405</td>
+<td style="text-align: left;">PICA</td>
+<td style="text-align: left;">PICA</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: left;">1405011001</td>
+<td style="text-align: right;">9336400.3</td>
+<td style="text-align: right;">1405011001</td>
+<td style="text-align: right;">1405011001</td>
+<td style="text-align: left;">TRUE</td>
+<td style="text-align: right;">9.3364003</td>
+<td style="text-align: right;">10.817377</td>
+<td style="text-align: right;">3876</td>
+<td style="text-align: right;">0.0000</td>
+<td style="text-align: right;">0.0000</td>
+<td style="text-align: right;">415.1493</td>
+<td style="text-align: right;">0.0000</td>
+<td style="text-align: right;">0.00000</td>
+<td style="text-align: left;">MULTIPOLYGON (((-69.31192 -...</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">1</td>
+<td style="text-align: left;">REGIÓN DE TARAPACÁ</td>
+<td style="text-align: left;">14</td>
+<td style="text-align: left;">TAMARUGAL</td>
+<td style="text-align: left;">1401</td>
+<td style="text-align: left;">POZO ALMONTE</td>
+<td style="text-align: left;">POZO ALMONTE</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: left;">1401011001</td>
+<td style="text-align: right;">1941994.2</td>
+<td style="text-align: right;">1401011001</td>
+<td style="text-align: right;">1401011001</td>
+<td style="text-align: left;">TRUE</td>
+<td style="text-align: right;">1.9419942</td>
+<td style="text-align: right;">10.224880</td>
+<td style="text-align: right;">2771</td>
+<td style="text-align: right;">1476.0000</td>
+<td style="text-align: right;">4093.0000</td>
+<td style="text-align: right;">1426.8838</td>
+<td style="text-align: right;">760.0435</td>
+<td style="text-align: right;">2107.62731</td>
+<td style="text-align: left;">MULTIPOLYGON (((-69.78591 -...</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">1</td>
+<td style="text-align: left;">REGIÓN DE TARAPACÁ</td>
+<td style="text-align: left;">14</td>
+<td style="text-align: left;">TAMARUGAL</td>
+<td style="text-align: left;">1401</td>
+<td style="text-align: left;">POZO ALMONTE</td>
+<td style="text-align: left;">POZO ALMONTE</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: left;">1401011002</td>
+<td style="text-align: right;">3572254.9</td>
+<td style="text-align: right;">1401011002</td>
+<td style="text-align: right;">1401011002</td>
+<td style="text-align: left;">TRUE</td>
+<td style="text-align: right;">3.5722549</td>
+<td style="text-align: right;">10.253158</td>
+<td style="text-align: right;">6506</td>
+<td style="text-align: right;">1905.0000</td>
+<td style="text-align: right;">9696.0000</td>
+<td style="text-align: right;">1821.2586</td>
+<td style="text-align: right;">533.2766</td>
+<td style="text-align: right;">2714.25201</td>
+<td style="text-align: left;">MULTIPOLYGON (((-69.76215 -...</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">1</td>
+<td style="text-align: left;">REGIÓN DE TARAPACÁ</td>
+<td style="text-align: left;">14</td>
+<td style="text-align: left;">TAMARUGAL</td>
+<td style="text-align: left;">1404</td>
+<td style="text-align: left;">HUARA</td>
+<td style="text-align: left;">HUARA</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: left;">1404011001</td>
+<td style="text-align: right;">603314.2</td>
+<td style="text-align: right;">1404011001</td>
+<td style="text-align: right;">1404011001</td>
+<td style="text-align: left;">TRUE</td>
+<td style="text-align: right;">0.6033142</td>
+<td style="text-align: right;">9.523220</td>
+<td style="text-align: right;">1082</td>
+<td style="text-align: right;">0.0000</td>
+<td style="text-align: right;">0.0000</td>
+<td style="text-align: right;">1793.4270</td>
+<td style="text-align: right;">0.0000</td>
+<td style="text-align: right;">0.00000</td>
+<td style="text-align: left;">MULTIPOLYGON (((-69.7696 -1...</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">1</td>
+<td style="text-align: left;">REGIÓN DE TARAPACÁ</td>
+<td style="text-align: left;">11</td>
+<td style="text-align: left;">IQUIQUE</td>
+<td style="text-align: left;">1107</td>
+<td style="text-align: left;">ALTO HOSPICIO</td>
+<td style="text-align: left;">ALTO HOSPICIO</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: left;">1107011002</td>
+<td style="text-align: right;">2272129.2</td>
+<td style="text-align: right;">1107011002</td>
+<td style="text-align: right;">1107011002</td>
+<td style="text-align: left;">TRUE</td>
+<td style="text-align: right;">2.2721292</td>
+<td style="text-align: right;">9.747321</td>
+<td style="text-align: right;">4360</td>
+<td style="text-align: right;">475.0686</td>
+<td style="text-align: right;">180.6789</td>
+<td style="text-align: right;">1918.9050</td>
+<td style="text-align: right;">209.0852</td>
+<td style="text-align: right;">79.51965</td>
+<td style="text-align: left;">MULTIPOLYGON (((-70.09246 -...</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">1</td>
+<td style="text-align: left;">REGIÓN DE TARAPACÁ</td>
+<td style="text-align: left;">11</td>
+<td style="text-align: left;">IQUIQUE</td>
+<td style="text-align: left;">1107</td>
+<td style="text-align: left;">ALTO HOSPICIO</td>
+<td style="text-align: left;">ALTO HOSPICIO</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: left;">1107031002</td>
+<td style="text-align: right;">5820325.8</td>
+<td style="text-align: right;">1107031002</td>
+<td style="text-align: right;">1107031002</td>
+<td style="text-align: left;">TRUE</td>
+<td style="text-align: right;">5.8203258</td>
+<td style="text-align: right;">9.397516</td>
+<td style="text-align: right;">7099</td>
+<td style="text-align: right;">4003.6214</td>
+<td style="text-align: right;">1008.7833</td>
+<td style="text-align: right;">1219.6912</td>
+<td style="text-align: right;">687.8690</td>
+<td style="text-align: right;">173.32076</td>
+<td style="text-align: left;">MULTIPOLYGON (((-70.05305 -...</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</figure>
+</div>
+</div>
+<section id="filtros-y-selección-de-columnas" class="level3 page-columns page-full" data-number="6.7.1">
+<h3 data-number="6.7.1" class="anchored" data-anchor-id="filtros-y-selección-de-columnas"><span class="header-section-number">6.7.1</span> Filtros y selección de columnas</h3>
+<p>Uno de los pasos más comunes en la manipulación de datos vectoriales es filtrar y seleccionar filas o columnas de la tabla de atributos, lo que permite centrarse en elementos específicos para análisis más detallados. Para efectos de practicar la manipulación de datos espaciales se creará un subset de la base de zonas censales de alguna provincia de Chile y se realizarán cálculos sencillos de densidad.</p>
+<p><strong>Filtrar</strong></p>
+<div class="cell">
+<div class="cell-output-display">
+<table class="caption-top table table-sm table-striped small">
+<colgroup>
+<col style="width: 16%">
+<col style="width: 41%">
+<col style="width: 26%">
+<col style="width: 15%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: center;">Operador</th>
+<th style="text-align: center;">Comparación</th>
+<th style="text-align: center;">Ejemplo</th>
+<th style="text-align: center;">Resultado</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">x | y</td>
+<td style="text-align: center;">x Ó y es verdadero</td>
+<td style="text-align: center;">TRUE | FALSE</td>
+<td style="text-align: center;">TRUE</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">x &amp; y</td>
+<td style="text-align: center;">x Y y son verdaderos</td>
+<td style="text-align: center;">TRUE &amp; FALSE</td>
+<td style="text-align: center;">FALSE</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">!x</td>
+<td style="text-align: center;">x no es verdadero (negación)</td>
+<td style="text-align: center;">!TRUE</td>
+<td style="text-align: center;">FALSE</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">isTRUE(x)</td>
+<td style="text-align: center;">x es verdadero (afirmación)</td>
+<td style="text-align: center;">isTRUE(TRUE)</td>
+<td style="text-align: center;">TRUE</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="co"># zonas_censales$NOM_PROVIN %&gt;% unique() %&gt;% sort()</span></span>
+<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a>zonas <span class="ot">&lt;-</span>  zonas_censales <span class="sc">%&gt;%</span> </span>
+<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(NOM_PROVIN <span class="sc">==</span> <span class="st">"VALPARAÍSO"</span>) <span class="sc">%&gt;%</span> </span>
+<span id="cb15-4"><a href="#cb15-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(URBANO <span class="sc">%in%</span> <span class="fu">c</span>(<span class="st">"VIÑA DEL MAR"</span>, <span class="st">"VALPARAÍSO"</span>) )</span>
+<span id="cb15-5"><a href="#cb15-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-6"><a href="#cb15-6" aria-hidden="true" tabindex="-1"></a><span class="co"># mapview::mapview(zonas, zcol = "PERS")</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell page-columns page-full">
+<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>() <span class="sc">+</span></span>
+<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_sf</span>(<span class="at">data =</span> zonas, <span class="fu">aes</span>(<span class="at">fill =</span> PERS), <span class="at">color =</span><span class="cn">NA</span>, </span>
+<span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a>          <span class="at">alpha=</span><span class="fl">0.8</span>,  <span class="at">size=</span> <span class="fl">0.1</span>)<span class="sc">+</span></span>
+<span id="cb16-4"><a href="#cb16-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_fill_distiller</span>(<span class="at">palette=</span> <span class="st">"YlGnBu"</span>, <span class="at">direction =</span> <span class="dv">1</span>)<span class="sc">+</span></span>
+<span id="cb16-5"><a href="#cb16-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggtitle</span>(<span class="st">"Población Zonas Censales - Urbano"</span> ) <span class="sc">+</span></span>
+<span id="cb16-6"><a href="#cb16-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_bw</span>() <span class="sc">+</span></span>
+<span id="cb16-7"><a href="#cb16-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">panel.grid.major =</span> <span class="fu">element_line</span>(<span class="at">colour =</span> <span class="st">"gray80"</span>), </span>
+<span id="cb16-8"><a href="#cb16-8" aria-hidden="true" tabindex="-1"></a>        <span class="at">panel.grid.minor =</span> <span class="fu">element_line</span>(<span class="at">colour =</span> <span class="st">"gray80"</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display page-columns page-full">
+<div id="fig-zonas-censales" class="quarto-float quarto-figure quarto-figure-center anchored page-columns page-full">
+<figure class="quarto-float quarto-float-fig figure page-columns page-full">
+<div aria-describedby="fig-zonas-censales-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="datos_vectores_files/figure-html/fig-zonas-censales-1.png" class="img-fluid figure-img" width="672">
+</div>
+<figcaption class="quarto-float-caption-margin quarto-float-caption quarto-float-fig margin-caption" id="fig-zonas-censales-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;6.1: Zonas Censales de comunas de Valparaíso y Viña del Mar - Urbano
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<p><strong>Selección de columnas</strong></p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a>zonas <span class="ot">&lt;-</span>  zonas <span class="sc">%&gt;%</span> </span>
+<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">select</span>(GEOCODIGO,NOM_REGION, NOM_PROVIN, </span>
+<span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a>                NOM_COMUNA, PERS, URBANO, ESC_JH)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p><strong>Mutate</strong></p>
+<p>Cálculo de superficie por polígono</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a>zonas <span class="ot">&lt;-</span> zonas <span class="sc">%&gt;%</span> </span>
+<span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">AREA =</span> <span class="fu">as.numeric</span>(<span class="fu">st_area</span>(.))) <span class="sc">%&gt;%</span> <span class="co"># en metros cuadrados</span></span>
+<span id="cb18-3"><a href="#cb18-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">AREA =</span> AREA<span class="sc">/</span><span class="dv">10000</span>) <span class="sc">%&gt;%</span> <span class="co"># en hectárea cuadrada</span></span>
+<span id="cb18-4"><a href="#cb18-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">DENS_PERS=</span> <span class="fu">round</span>(PERS<span class="sc">/</span>AREA, <span class="dv">1</span>))</span>
+<span id="cb18-5"><a href="#cb18-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-6"><a href="#cb18-6" aria-hidden="true" tabindex="-1"></a><span class="co"># zonas</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>() <span class="sc">+</span></span>
+<span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_sf</span>(<span class="at">data =</span> zonas, <span class="fu">aes</span>(<span class="at">fill =</span> PERS), <span class="at">color =</span><span class="cn">NA</span>, </span>
+<span id="cb19-3"><a href="#cb19-3" aria-hidden="true" tabindex="-1"></a>          <span class="at">alpha=</span><span class="fl">0.8</span>,  <span class="at">size=</span> <span class="fl">0.1</span>)<span class="sc">+</span></span>
+<span id="cb19-4"><a href="#cb19-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_fill_distiller</span>(<span class="at">palette=</span> <span class="st">"YlGnBu"</span>, <span class="at">direction =</span> <span class="dv">1</span>)<span class="sc">+</span></span>
+<span id="cb19-5"><a href="#cb19-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggtitle</span>(<span class="st">"Población Zonas Censales - Urbano"</span> ) <span class="sc">+</span></span>
+<span id="cb19-6"><a href="#cb19-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_bw</span>() <span class="sc">+</span></span>
+<span id="cb19-7"><a href="#cb19-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">panel.grid.major =</span> <span class="fu">element_line</span>(<span class="at">colour =</span> <span class="st">"gray80"</span>), </span>
+<span id="cb19-8"><a href="#cb19-8" aria-hidden="true" tabindex="-1"></a>        <span class="at">panel.grid.minor =</span> <span class="fu">element_line</span>(<span class="at">colour =</span> <span class="st">"gray80"</span>))</span>
+<span id="cb19-9"><a href="#cb19-9" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>() <span class="sc">+</span></span>
+<span id="cb19-10"><a href="#cb19-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_sf</span>(<span class="at">data =</span> zonas, <span class="fu">aes</span>(<span class="at">fill =</span> DENS_PERS), <span class="at">color =</span><span class="cn">NA</span>, </span>
+<span id="cb19-11"><a href="#cb19-11" aria-hidden="true" tabindex="-1"></a>          <span class="at">alpha=</span><span class="fl">0.8</span>,  <span class="at">size=</span> <span class="fl">0.1</span>)<span class="sc">+</span></span>
+<span id="cb19-12"><a href="#cb19-12" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_fill_distiller</span>(<span class="at">palette=</span> <span class="st">"YlGnBu"</span>, <span class="at">direction =</span> <span class="dv">1</span>)<span class="sc">+</span></span>
+<span id="cb19-13"><a href="#cb19-13" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggtitle</span>(<span class="st">"Densidad de Población Zonas Censales - Urbano"</span> ) <span class="sc">+</span></span>
+<span id="cb19-14"><a href="#cb19-14" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_bw</span>() <span class="sc">+</span></span>
+<span id="cb19-15"><a href="#cb19-15" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">panel.grid.major =</span> <span class="fu">element_line</span>(<span class="at">colour =</span> <span class="st">"gray80"</span>), </span>
+<span id="cb19-16"><a href="#cb19-16" aria-hidden="true" tabindex="-1"></a>        <span class="at">panel.grid.minor =</span> <span class="fu">element_line</span>(<span class="at">colour =</span> <span class="st">"gray80"</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell quarto-layout-panel" data-layout-ncol="2">
+<div class="quarto-layout-row">
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<p><img src="datos_vectores_files/figure-html/unnamed-chunk-15-1.png" class="img-fluid" width="672"></p>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<p><img src="datos_vectores_files/figure-html/unnamed-chunk-15-2.png" class="img-fluid" width="672"></p>
+</div>
+</div>
+</div>
+</section>
+<section id="sec-groupby" class="level3" data-number="6.7.2">
+<h3 data-number="6.7.2" class="anchored" data-anchor-id="sec-groupby"><span class="header-section-number">6.7.2</span> Resumen Estadísticos</h3>
+<p>El objetivo de este punto es que con bases de datos espaciales también se pueden hacer resúmenes estadísticos, como se hacen normalmente con bases de datos. Ahora, se creará tabla con las poblaciones y promedio de años de estudio del Jefe de Hogar en todas las comunas de Chile.</p>
+<p>Un punto importante para generar esta tabla es eficiente eliminar la geometría para los cálculos ya que la salida será una tabla.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb20"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a>tab_com <span class="ot">&lt;-</span> zonas_censales <span class="sc">%&gt;%</span> </span>
+<span id="cb20-2"><a href="#cb20-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">st_drop_geometry</span>() <span class="sc">%&gt;%</span> <span class="co"># eliminar geometría.</span></span>
+<span id="cb20-3"><a href="#cb20-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(NOM_COMUNA) <span class="sc">%&gt;%</span> </span>
+<span id="cb20-4"><a href="#cb20-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarise</span>(<span class="at">POB_COM =</span> <span class="fu">sum</span>(PERS, <span class="at">na.rm =</span> T),</span>
+<span id="cb20-5"><a href="#cb20-5" aria-hidden="true" tabindex="-1"></a>            <span class="at">ESC_JH_COM =</span> <span class="fu">round</span>(<span class="fu">mean</span>(ESC_JH, <span class="at">na.rm=</span> T), <span class="dv">1</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell">
+<div id="tbl-censo-comunas" class="cell quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-censo-comunas-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;6.2: Registros de Población y Escolaridad por Comuna
+</figcaption>
+<div aria-describedby="tbl-censo-comunas-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div class="cell-output-display">
+<table class="table table-striped table-hover table-condensed do-not-create-environment cell caption-top table-sm small" data-quarto-postprocess="true">
+<thead>
+<tr class="header">
+<th style="text-align: left;" data-quarto-table-cell-role="th">NOM_COMUNA</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">POB_COM</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">ESC_JH_COM</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">ALGARROBO</td>
+<td style="text-align: right;">10880</td>
+<td style="text-align: right;">12.1</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">ALHUÉ</td>
+<td style="text-align: right;">2706</td>
+<td style="text-align: right;">9.6</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">ALTO HOSPICIO</td>
+<td style="text-align: right;">105065</td>
+<td style="text-align: right;">10.4</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">ANCUD</td>
+<td style="text-align: right;">28162</td>
+<td style="text-align: right;">10.0</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">ANDACOLLO</td>
+<td style="text-align: right;">9989</td>
+<td style="text-align: right;">8.8</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">ANGOL</td>
+<td style="text-align: right;">48608</td>
+<td style="text-align: right;">10.1</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">ANTOFAGASTA</td>
+<td style="text-align: right;">349983</td>
+<td style="text-align: right;">12.2</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">ANTUCO</td>
+<td style="text-align: right;">2038</td>
+<td style="text-align: right;">9.2</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">ARAUCO</td>
+<td style="text-align: right;">27274</td>
+<td style="text-align: right;">9.8</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">ARICA</td>
+<td style="text-align: right;">203132</td>
+<td style="text-align: right;">11.5</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</figure>
+</div>
+</div>
+</section>
+<section id="joining" class="level3 page-columns page-full" data-number="6.7.3">
+<h3 data-number="6.7.3" class="anchored" data-anchor-id="joining"><span class="header-section-number">6.7.3</span> Joining</h3>
+<p>En este caso agregaremos a la tabla de resultados comunales antes creada, a la base de la comuna de Viña del Mar y Valparaíso, utilizaremos la función <code>left_join</code>.</p>
+<div class="quarto-figure quarto-figure-center page-columns page-full">
+<figure class="figure page-columns page-full">
+<p><img src="images/lef_join.png" class="img-fluid figure-img" style="width:50.0%"></p>
+<figcaption class="margin-caption">Unir tablas mediante <code>left_join</code>. Ejemplos en <a href="https://es.r4ds.hadley.nz/13-relational-data.html#entendiendo-las-uniones">R para Ciencia de Datos.</a></figcaption>
+</figure>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb21"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a>zonas <span class="ot">&lt;-</span>  zonas <span class="sc">%&gt;%</span></span>
+<span id="cb21-2"><a href="#cb21-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">left_join</span>(tab_com, <span class="at">by =</span> <span class="st">"NOM_COMUNA"</span>) <span class="sc">%&gt;%</span> <span class="co"># Ojo con las veces que se hace esta operación</span></span>
+<span id="cb21-3"><a href="#cb21-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">DIF_EJH_COM =</span> <span class="fu">round</span>(( ESC_JH<span class="sc">-</span>ESC_JH_COM), <span class="dv">2</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell page-columns page-full">
+<div class="sourceCode cell-code" id="cb22"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>() <span class="sc">+</span></span>
+<span id="cb22-2"><a href="#cb22-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_sf</span>(<span class="at">data =</span> zonas, <span class="fu">aes</span>(<span class="at">fill =</span> DIF_EJH_COM), <span class="at">color =</span><span class="cn">NA</span>, </span>
+<span id="cb22-3"><a href="#cb22-3" aria-hidden="true" tabindex="-1"></a>          <span class="at">alpha=</span><span class="fl">0.8</span>,  <span class="at">size=</span> <span class="fl">0.1</span>)<span class="sc">+</span></span>
+<span id="cb22-4"><a href="#cb22-4" aria-hidden="true" tabindex="-1"></a>          <span class="fu">scale_fill_distiller</span>(<span class="at">palette=</span> <span class="st">"PRGn"</span>, <span class="at">direction =</span> <span class="dv">1</span>)<span class="sc">+</span> </span>
+<span id="cb22-5"><a href="#cb22-5" aria-hidden="true" tabindex="-1"></a>          <span class="fu">ggtitle</span>(<span class="st">"Diferencias Esc. Jefe Hogar Zona/Comuna - Urbano"</span> ) <span class="sc">+</span></span>
+<span id="cb22-6"><a href="#cb22-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_bw</span>() <span class="sc">+</span></span>
+<span id="cb22-7"><a href="#cb22-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">panel.grid.major =</span> <span class="fu">element_line</span>(<span class="at">colour =</span> <span class="st">"gray80"</span>), </span>
+<span id="cb22-8"><a href="#cb22-8" aria-hidden="true" tabindex="-1"></a>        <span class="at">panel.grid.minor =</span> <span class="fu">element_line</span>(<span class="at">colour =</span> <span class="st">"gray80"</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display page-columns page-full">
+<div id="fig-zonas-dif-ejh" class="quarto-float quarto-figure quarto-figure-center anchored page-columns page-full" width="672">
+<figure class="quarto-float quarto-float-fig figure page-columns page-full">
+<div aria-describedby="fig-zonas-dif-ejh-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="datos_vectores_files/figure-html/fig-zonas-dif-ejh-1.png" id="fig-zonas-dif-ejh" class="img-fluid figure-img" width="672">
+</div>
+<figcaption class="quarto-float-caption-margin quarto-float-caption quarto-float-fig quarto-uncaptioned margin-caption" id="fig-zonas-dif-ejh-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;6.2
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb23"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>() <span class="sc">+</span></span>
+<span id="cb23-2"><a href="#cb23-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_sf</span>(<span class="at">data =</span> zonas, <span class="fu">aes</span>(<span class="at">fill =</span> DIF_EJH_COM), <span class="at">color =</span><span class="cn">NA</span>, </span>
+<span id="cb23-3"><a href="#cb23-3" aria-hidden="true" tabindex="-1"></a>          <span class="at">alpha=</span><span class="fl">0.8</span>,  <span class="at">size=</span> <span class="fl">0.1</span>)<span class="sc">+</span></span>
+<span id="cb23-4"><a href="#cb23-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_fill_distiller</span>(<span class="at">palette=</span> <span class="st">"PRGn"</span>, <span class="at">direction =</span> <span class="dv">1</span>)<span class="sc">+</span></span>
+<span id="cb23-5"><a href="#cb23-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggtitle</span>(<span class="st">"Diferencias Esc. Jefe Hogar Zona/Comuna - Urbano"</span> ) <span class="sc">+</span></span>
+<span id="cb23-6"><a href="#cb23-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_bw</span>() <span class="sc">+</span></span>
+<span id="cb23-7"><a href="#cb23-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">panel.grid.major =</span> <span class="fu">element_line</span>(<span class="at">colour =</span> <span class="st">"gray80"</span>), </span>
+<span id="cb23-8"><a href="#cb23-8" aria-hidden="true" tabindex="-1"></a>        <span class="at">panel.grid.minor =</span> <span class="fu">element_line</span>(<span class="at">colour =</span> <span class="st">"gray80"</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="datos_vectores_files/figure-html/unnamed-chunk-18-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="operaciones-espaciales-con-sf" class="level2 page-columns page-full" data-number="6.8">
+<h2 data-number="6.8" class="anchored" data-anchor-id="operaciones-espaciales-con-sf"><span class="header-section-number">6.8</span> Operaciones Espaciales con sf</h2>
+<p>Las operaciones espaciales son el conjunto de herramientas que permiten realizar cálculos y transformaciones sobre los datos espaciales vectoriales. Estas operaciones son fundamentales para análisis de proximidad, intersección, disolución de fronteras y creación de buffers, entre otras.</p>
+<p>Podemos clasificar las operaciones sobre geometrías en función de lo que toman como entrada y lo que devuelven como salida. En cuanto a la salida tenemos operaciones que devuelven:</p>
+<ul>
+<li><strong>predicates</strong>: una lógica que afirma una determinada propiedad es <code>TRUE</code></li>
+<li><strong>measures</strong>: una cantidad (un valor numérico, posiblemente con unidad de medida)</li>
+<li><strong>transformations</strong>: nuevas geometrías generadas en cuanto a lo que operan, distinguimos las operaciones que son:
+<ul>
+<li><strong>unary</strong> cuando trabajan en una única geometría</li>
+<li><strong>binary</strong> cuando trabajan con pares de geometrías</li>
+<li><strong>n-ary</strong> cuando trabajan con conjuntos de geometrías</li>
+</ul></li>
+</ul>
+<section id="operaciones-en-la-misma-geometría" class="level3 page-columns page-full" data-number="6.8.1">
+<h3 data-number="6.8.1" class="anchored" data-anchor-id="operaciones-en-la-misma-geometría"><span class="header-section-number">6.8.1</span> Operaciones en la misma geometría</h3>
+<section id="unary-predicates" class="level4">
+<h4 class="anchored" data-anchor-id="unary-predicates">Unary predicates</h4>
+<p>Los predicados unitarios describen una determinada propiedad de una geometría. Los predicados <code>is_simple</code>, <code>is_valid</code>, y <code>is_empty</code> devolver respectivamente si una geometría es simple, válida o vacía. Dado un sistema de referencia de coordenadas, <code>is_longlat</code> devuelve si las coordenadas son geográficas o proyectadas. es(geometría, clase)` comprueba si una geometría pertenece a una clase determinada.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb24"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a><span class="fu">st_is_valid</span>(zonas) <span class="sc">%&gt;%</span> <span class="fu">head</span>(<span class="dv">10</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code> [1] TRUE TRUE TRUE TRUE TRUE TRUE TRUE TRUE TRUE TRUE</code></pre>
+</div>
+</div>
+</section>
+<section id="unary-measures" class="level4">
+<h4 class="anchored" data-anchor-id="unary-measures">Unary measures</h4>
+<p>Las medidas unarias devuelven una medida o cantidad que describe una propiedad de la geometría:</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 20%">
+<col style="width: 79%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>medida</th>
+<th>devuelve</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>dimension</code></td>
+<td>0 para puntos, 1 para líneas, 2 para polígonos, posiblemente <code>NA</code> para geometrías vacías</td>
+</tr>
+<tr class="even">
+<td><code>area</code></td>
+<td>el área de una geometría</td>
+</tr>
+<tr class="odd">
+<td><code>length</code></td>
+<td>la longitud de una geometría lineal</td>
+</tr>
+</tbody>
+</table>
+<p>Ejemplo cuando calculamos el área de cada polígono de zona censal.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb26"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a><span class="co"># st_area(zonas)</span></span>
+<span id="cb26-2"><a href="#cb26-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb26-3"><a href="#cb26-3" aria-hidden="true" tabindex="-1"></a>zonas_area <span class="ot">&lt;-</span> zonas <span class="sc">%&gt;%</span> </span>
+<span id="cb26-4"><a href="#cb26-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">AREA =</span> <span class="fu">as.numeric</span>(<span class="fu">st_area</span>(.))) <span class="co"># área en metros cuadrados</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="unary-transformers" class="level4 page-columns page-full">
+<h4 class="anchored" data-anchor-id="unary-transformers">Unary transformers</h4>
+<p>Las transformaciones unarias funcionan por geometría y devuelven para cada geometría una nueva geometría.</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 23%">
+<col style="width: 52%">
+<col style="width: 23%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>transformador</th>
+<th>devuelve una geometría …</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>centroid</code></td>
+<td>de tipo <code>POINT</code> con el centroide de la geometría</td>
+<td></td>
+</tr>
+<tr class="even">
+<td><code>buffer</code></td>
+<td>que es más grande (o más pequeña) que la geometría de entrada, dependiendo del tamaño del buffer</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td><code>jitter</code></td>
+<td>que ha sido movida en el espacio una cierta cantidad, usando una distribución uniforme bivariada</td>
+<td></td>
+</tr>
+<tr class="even">
+<td><code>wrap_dateline</code></td>
+<td>cortada en piezas que ya no cruzan ni cubren la línea de cambio de fecha</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td><code>boundary</code></td>
+<td>con el límite de la geometría de entrada</td>
+<td></td>
+</tr>
+<tr class="even">
+<td><code>convex_hull</code></td>
+<td>que forma el envolvente convexo de la geometría de entrada</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td><code>line_merge</code></td>
+<td>después de unir elementos <code>LINESTRING</code> conectados de un <code>MULTILINESTRING</code> en <code>LINESTRING</code>s más largos</td>
+<td></td>
+</tr>
+<tr class="even">
+<td><code>make_valid</code></td>
+<td>que es válida</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td><code>node</code></td>
+<td>con nodos añadidos a geometrías lineales en las intersecciones sin nodo; solo funciona en geometrías lineales individuales</td>
+<td></td>
+</tr>
+<tr class="even">
+<td><code>point_on_surface</code></td>
+<td>con un (arbitrario) punto en una superficie</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td><code>polygonize</code></td>
+<td>de tipo polígono, creada a partir de líneas que forman un anillo cerrado</td>
+<td></td>
+</tr>
+<tr class="even">
+<td><code>segmentize</code></td>
+<td>una geometría (lineal) con nodos a una densidad o distancia mínima dada</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td><code>simplify</code></td>
+<td>simplificada mediante la eliminación de vértices/nodos (líneas o polígonos)</td>
+<td></td>
+</tr>
+<tr class="even">
+<td><code>split</code></td>
+<td>que ha sido dividida con una línea divisoria</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td><code>transform</code></td>
+<td>transformada o convertida a un nuevo sistema de referencia de coordenadas</td>
+<td></td>
+</tr>
+<tr class="even">
+<td><code>triangulate</code></td>
+<td>con polígonos triangulados de Delaunay</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td><code>voronoi</code></td>
+<td>con la teselación de Voronoi de una geometría de entrada</td>
+<td></td>
+</tr>
+<tr class="even">
+<td><code>zm</code></td>
+<td>con coordenadas <code>Z</code> y/o <code>M</code> eliminadas o añadidas</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td><code>collection_extract</code></td>
+<td>con sub-geometrías de un <code>GEOMETRYCOLLECTION</code> de un tipo particular</td>
+<td></td>
+</tr>
+<tr class="even">
+<td><code>cast</code></td>
+<td>que se convierte a otro tipo</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td><code>+</code></td>
+<td>que se desplaza sobre un vector dado</td>
+<td></td>
+</tr>
+<tr class="even">
+<td><code>*</code></td>
+<td>que se multiplica por un escalar o matriz</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb27"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a><span class="co"># st_area(zonas)</span></span>
+<span id="cb27-2"><a href="#cb27-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-3"><a href="#cb27-3" aria-hidden="true" tabindex="-1"></a>zonas_points <span class="ot">&lt;-</span> zonas <span class="sc">%&gt;%</span> </span>
+<span id="cb27-4"><a href="#cb27-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">sample_n</span>(<span class="dv">10</span>) <span class="sc">%&gt;%</span> </span>
+<span id="cb27-5"><a href="#cb27-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">st_centroid</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Otros Ejemplos de operaciones sobre una geometría tipo puntos</p>
+<div class="cell page-columns page-full">
+<div class="cell-output-display page-columns page-full">
+<div id="fig-vor" class="quarto-float quarto-figure quarto-figure-center anchored page-columns page-full">
+<figure class="quarto-float quarto-float-fig figure page-columns page-full">
+<div aria-describedby="fig-vor-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="datos_vectores_files/figure-html/fig-vor-1.png" class="img-fluid figure-img" style="width:60.0%">
+</div>
+<figcaption class="quarto-float-caption-margin quarto-float-caption quarto-float-fig margin-caption" id="fig-vor-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;6.3: Para un conjunto de puntos, izquierda: Convex Hull (rojo); centro: Polígonos de Voronoi; derecha: triangulación de Delauney
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="unión-de-polígonos" class="level4 page-columns page-full">
+<h4 class="anchored" data-anchor-id="unión-de-polígonos">Unión de Polígonos</h4>
+<p>Primeramente se creará una geometría comunal basándose en las zonas censales utilizando la función <code>st_union()</code></p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb28"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true" tabindex="-1"></a>valpo_com <span class="ot">&lt;-</span>  zonas <span class="sc">%&gt;%</span> <span class="fu">filter</span>(NOM_COMUNA <span class="sc">==</span> <span class="st">"VALPARAÍSO"</span>) <span class="sc">%&gt;%</span> </span>
+<span id="cb28-2"><a href="#cb28-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">st_union</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell page-columns page-full">
+<div class="sourceCode cell-code" id="cb29"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>() <span class="sc">+</span></span>
+<span id="cb29-2"><a href="#cb29-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_sf</span>(<span class="at">data =</span> zonas, <span class="fu">aes</span>(<span class="at">fill =</span> DIF_EJH_COM), <span class="at">color =</span><span class="cn">NA</span>, </span>
+<span id="cb29-3"><a href="#cb29-3" aria-hidden="true" tabindex="-1"></a>          <span class="at">alpha=</span><span class="fl">0.3</span>,  <span class="at">size=</span> <span class="fl">0.1</span>)<span class="sc">+</span></span>
+<span id="cb29-4"><a href="#cb29-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_fill_distiller</span>(<span class="at">palette=</span> <span class="st">"PRGn"</span>, <span class="at">direction =</span> <span class="dv">1</span>)<span class="sc">+</span></span>
+<span id="cb29-5"><a href="#cb29-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_sf</span>(<span class="at">data =</span> valpo_com,  <span class="at">color =</span><span class="st">"magenta"</span>, <span class="at">alpha=</span><span class="dv">1</span>,  <span class="at">size=</span> <span class="dv">1</span>, <span class="at">fill =</span> <span class="cn">NA</span>)<span class="sc">+</span></span>
+<span id="cb29-6"><a href="#cb29-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggtitle</span>(<span class="st">"Resaltar la comuna de Valparaíso"</span> ) <span class="sc">+</span></span>
+<span id="cb29-7"><a href="#cb29-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_bw</span>() <span class="sc">+</span></span>
+<span id="cb29-8"><a href="#cb29-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">panel.grid.major =</span> <span class="fu">element_line</span>(<span class="at">colour =</span> <span class="st">"gray80"</span>), </span>
+<span id="cb29-9"><a href="#cb29-9" aria-hidden="true" tabindex="-1"></a>        <span class="at">panel.grid.minor =</span> <span class="fu">element_line</span>(<span class="at">colour =</span> <span class="st">"gray80"</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display page-columns page-full">
+<div id="fig-zonas-comu-vlp" class="quarto-float quarto-figure quarto-figure-center anchored page-columns page-full">
+<figure class="quarto-float quarto-float-fig figure page-columns page-full">
+<div aria-describedby="fig-zonas-comu-vlp-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="datos_vectores_files/figure-html/fig-zonas-comu-vlp-1.png" class="img-fluid figure-img" width="672">
+</div>
+<figcaption class="quarto-float-caption-margin quarto-float-caption quarto-float-fig margin-caption" id="fig-zonas-comu-vlp-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;6.4: Resaltar la comuna de Valparaíso
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="buffer" class="level4 page-columns page-full">
+<h4 class="anchored" data-anchor-id="buffer">Buffer</h4>
+<p>Aplicación de Buffer con la función de <code>st_buffer</code>, que tiene el parámetro <code>dist</code>que dice relación a los metros que se quiere hacer el buffer (también puede ser negativo)</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb30"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb30-1"><a href="#cb30-1" aria-hidden="true" tabindex="-1"></a><span class="co">#buffer exterior cuando el valor  de dist es positivo</span></span>
+<span id="cb30-2"><a href="#cb30-2" aria-hidden="true" tabindex="-1"></a>valpo_com_buffer <span class="ot">&lt;-</span>  valpo_com <span class="sc">%&gt;%</span> </span>
+<span id="cb30-3"><a href="#cb30-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">st_buffer</span>(<span class="at">dist =</span> <span class="dv">1000</span>) <span class="co"># %&gt;% st_simplify(dTolerance = 100) </span></span>
+<span id="cb30-4"><a href="#cb30-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb30-5"><a href="#cb30-5" aria-hidden="true" tabindex="-1"></a><span class="co">#buffer interior cuando el valor de dist es negativo</span></span>
+<span id="cb30-6"><a href="#cb30-6" aria-hidden="true" tabindex="-1"></a>valpo_com_buffer_menos <span class="ot">&lt;-</span>  valpo_com <span class="sc">%&gt;%</span> </span>
+<span id="cb30-7"><a href="#cb30-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">st_buffer</span>(<span class="at">dist =</span> <span class="sc">-</span> <span class="dv">500</span>) <span class="co"># %&gt;% st_simplify(dTolerance = 100) </span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell page-columns page-full">
+<div class="sourceCode cell-code" id="cb31"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb31-1"><a href="#cb31-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>() <span class="sc">+</span></span>
+<span id="cb31-2"><a href="#cb31-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_sf</span>(<span class="at">data =</span> valpo_com,  <span class="at">color =</span><span class="st">"magenta"</span>, <span class="at">alpha=</span><span class="fl">0.3</span>,  <span class="at">size=</span> <span class="dv">1</span>, <span class="at">fill =</span> <span class="st">"magenta"</span>)<span class="sc">+</span></span>
+<span id="cb31-3"><a href="#cb31-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_sf</span>(<span class="at">data =</span> valpo_com_buffer,  <span class="at">color =</span><span class="st">"orange"</span>, <span class="at">alpha=</span><span class="dv">1</span>,  <span class="at">size=</span> <span class="dv">1</span>, <span class="at">fill =</span> <span class="cn">NA</span>)<span class="sc">+</span></span>
+<span id="cb31-4"><a href="#cb31-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_sf</span>(<span class="at">data =</span> valpo_com_buffer_menos,  <span class="at">color =</span><span class="st">"red"</span>, <span class="at">alpha=</span><span class="dv">1</span>,  <span class="at">size=</span> <span class="dv">1</span>, <span class="at">fill =</span> <span class="cn">NA</span>)<span class="sc">+</span></span>
+<span id="cb31-5"><a href="#cb31-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggtitle</span>(<span class="st">"Buffer de la comuna de Valparaíso - 1000 mts."</span> ) <span class="sc">+</span></span>
+<span id="cb31-6"><a href="#cb31-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_bw</span>() <span class="sc">+</span></span>
+<span id="cb31-7"><a href="#cb31-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">panel.grid.major =</span> <span class="fu">element_line</span>(<span class="at">colour =</span> <span class="st">"gray80"</span>), </span>
+<span id="cb31-8"><a href="#cb31-8" aria-hidden="true" tabindex="-1"></a>        <span class="at">panel.grid.minor =</span> <span class="fu">element_line</span>(<span class="at">colour =</span> <span class="st">"gray80"</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display page-columns page-full">
+<div id="fig-buffer-vlp" class="quarto-float quarto-figure quarto-figure-center anchored page-columns page-full">
+<figure class="quarto-float quarto-float-fig figure page-columns page-full">
+<div aria-describedby="fig-buffer-vlp-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="datos_vectores_files/figure-html/fig-buffer-vlp-1.png" class="img-fluid figure-img" width="672">
+</div>
+<figcaption class="quarto-float-caption-margin quarto-float-caption quarto-float-fig margin-caption" id="fig-buffer-vlp-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;6.5: Buffer de la comuna de Valparaíso 1000 y 500 metros.
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="operaciones-entre-multiples-geometrías" class="level3" data-number="6.8.2">
+<h3 data-number="6.8.2" class="anchored" data-anchor-id="operaciones-entre-multiples-geometrías"><span class="header-section-number">6.8.2</span> Operaciones entre multiples geometrías</h3>
+<p>Una consideración importante, cuando se hacen operaciones espaciales entre dos geometrías es importantes que ambas estén bajo el mismo sistema de referencias de coordenadas, por cual empezaremos con esto a continuación.</p>
+<section id="transformación-de-crs" class="level4">
+<h4 class="anchored" data-anchor-id="transformación-de-crs">Transformación de CRS</h4>
+<p>Los sistemas de coordenadas forman la base de cálculo para describir la posición de un punto a partir de mediciones geodésicas: distancias, proporciones de distancias (sin escala) y ángulos. Las coordenadas nunca pueden medirse, solamente se calculan con referencia un sistema de coordenadas bien definido. Mayores detalles ver la sección en apéndices sobre Sistemas de Referencias de Coordenadas (<a href="crs.html" class="quarto-xref"><span>Appendix C</span></a>).</p>
+<p>Para el caso de Chile usamos dos sistemas de referencias de coordenadas:</p>
+<dl>
+<dt>Coordenadas elipsoidales (geodésicas):</dt>
+<dd>
+<p>4326 o <code>"+proj=longlat +datum=WGS84 +no_defs"</code></p>
+</dd>
+<dt>Coordenadas proyectadas (métricas):</dt>
+<dd>
+<p>32719 o <code>"+proj=utm +zone=19 +south +datum=WGS84 +units=m +no_defs"</code></p>
+</dd>
+</dl>
+<p>Las medidas unarias devuelven una medida o cantidad que describe una propiedad de la geometría:</p>
+<p><strong>Reproyectar Vectores</strong></p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb32"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb32-1"><a href="#cb32-1" aria-hidden="true" tabindex="-1"></a>zonas_censales <span class="ot">&lt;-</span>  <span class="fu">readRDS</span>(<span class="st">"data/censo/zonas_urb_consolidadas.rds"</span>)</span>
+<span id="cb32-2"><a href="#cb32-2" aria-hidden="true" tabindex="-1"></a><span class="fu">st_crs</span>(zonas_censales)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Coordinate Reference System:
+  User input: EPSG:4326 
+  wkt:
+GEOGCRS["WGS 84",
+    ENSEMBLE["World Geodetic System 1984 ensemble",
+        MEMBER["World Geodetic System 1984 (Transit)"],
+        MEMBER["World Geodetic System 1984 (G730)"],
+        MEMBER["World Geodetic System 1984 (G873)"],
+        MEMBER["World Geodetic System 1984 (G1150)"],
+        MEMBER["World Geodetic System 1984 (G1674)"],
+        MEMBER["World Geodetic System 1984 (G1762)"],
+        MEMBER["World Geodetic System 1984 (G2139)"],
+        MEMBER["World Geodetic System 1984 (G2296)"],
+        ELLIPSOID["WGS 84",6378137,298.257223563,
+            LENGTHUNIT["metre",1]],
+        ENSEMBLEACCURACY[2.0]],
+    PRIMEM["Greenwich",0,
+        ANGLEUNIT["degree",0.0174532925199433]],
+    CS[ellipsoidal,2],
+        AXIS["geodetic latitude (Lat)",north,
+            ORDER[1],
+            ANGLEUNIT["degree",0.0174532925199433]],
+        AXIS["geodetic longitude (Lon)",east,
+            ORDER[2],
+            ANGLEUNIT["degree",0.0174532925199433]],
+    USAGE[
+        SCOPE["Horizontal component of 3D system."],
+        AREA["World."],
+        BBOX[-90,-180,90,180]],
+    ID["EPSG",4326]]</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb34"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb34-1"><a href="#cb34-1" aria-hidden="true" tabindex="-1"></a>zonas_utm <span class="ot">&lt;-</span> zonas_censales <span class="sc">%&gt;%</span> <span class="fu">st_transform</span>(<span class="dv">32719</span>)</span>
+<span id="cb34-2"><a href="#cb34-2" aria-hidden="true" tabindex="-1"></a><span class="fu">st_crs</span>(zonas_utm)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Coordinate Reference System:
+  User input: EPSG:32719 
+  wkt:
+PROJCRS["WGS 84 / UTM zone 19S",
+    BASEGEOGCRS["WGS 84",
+        ENSEMBLE["World Geodetic System 1984 ensemble",
+            MEMBER["World Geodetic System 1984 (Transit)"],
+            MEMBER["World Geodetic System 1984 (G730)"],
+            MEMBER["World Geodetic System 1984 (G873)"],
+            MEMBER["World Geodetic System 1984 (G1150)"],
+            MEMBER["World Geodetic System 1984 (G1674)"],
+            MEMBER["World Geodetic System 1984 (G1762)"],
+            MEMBER["World Geodetic System 1984 (G2139)"],
+            MEMBER["World Geodetic System 1984 (G2296)"],
+            ELLIPSOID["WGS 84",6378137,298.257223563,
+                LENGTHUNIT["metre",1]],
+            ENSEMBLEACCURACY[2.0]],
+        PRIMEM["Greenwich",0,
+            ANGLEUNIT["degree",0.0174532925199433]],
+        ID["EPSG",4326]],
+    CONVERSION["UTM zone 19S",
+        METHOD["Transverse Mercator",
+            ID["EPSG",9807]],
+        PARAMETER["Latitude of natural origin",0,
+            ANGLEUNIT["degree",0.0174532925199433],
+            ID["EPSG",8801]],
+        PARAMETER["Longitude of natural origin",-69,
+            ANGLEUNIT["degree",0.0174532925199433],
+            ID["EPSG",8802]],
+        PARAMETER["Scale factor at natural origin",0.9996,
+            SCALEUNIT["unity",1],
+            ID["EPSG",8805]],
+        PARAMETER["False easting",500000,
+            LENGTHUNIT["metre",1],
+            ID["EPSG",8806]],
+        PARAMETER["False northing",10000000,
+            LENGTHUNIT["metre",1],
+            ID["EPSG",8807]]],
+    CS[Cartesian,2],
+        AXIS["(E)",east,
+            ORDER[1],
+            LENGTHUNIT["metre",1]],
+        AXIS["(N)",north,
+            ORDER[2],
+            LENGTHUNIT["metre",1]],
+    USAGE[
+        SCOPE["Navigation and medium accuracy spatial referencing."],
+        AREA["Between 72°W and 66°W, southern hemisphere between 80°S and equator, onshore and offshore. Argentina. Bolivia. Brazil. Chile. Colombia. Peru."],
+        BBOX[-80,-72,0,-66]],
+    ID["EPSG",32719]]</code></pre>
+</div>
+</div>
+<p><strong>Reporyección con verificación</strong></p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb36"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb36-1"><a href="#cb36-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Verificamos el CRS y lo igualamos si es necesario</span></span>
+<span id="cb36-2"><a href="#cb36-2" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> (<span class="fu">st_crs</span>(las_condes_mz) <span class="sc">!=</span> <span class="fu">st_crs</span>(sii_LC)) {</span>
+<span id="cb36-3"><a href="#cb36-3" aria-hidden="true" tabindex="-1"></a>  sii_LC <span class="ot">&lt;-</span> <span class="fu">st_transform</span>(sii_LC, <span class="fu">st_crs</span>(las_condes_mz))</span>
+<span id="cb36-4"><a href="#cb36-4" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="binary-predicates" class="level4">
+<h4 class="anchored" data-anchor-id="binary-predicates">Binary Predicates</h4>
+<p>Una lista de predicados binarios es:</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 19%">
+<col style="width: 61%">
+<col style="width: 19%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>predicado</th>
+<th>significado</th>
+<th>inverso de</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>contains</code></td>
+<td>Ninguno de los puntos de A está fuera de B</td>
+<td><code>within</code></td>
+</tr>
+<tr class="even">
+<td><code>contains_properly</code></td>
+<td>A contiene a B y B no tiene puntos en común con el límite de A</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td><code>covers</code></td>
+<td>Ningún punto de B está en el exterior de A</td>
+<td><code>covered_by</code></td>
+</tr>
+<tr class="even">
+<td><code>covered_by</code></td>
+<td>Inverso de <code>covers</code></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td><code>crosses</code></td>
+<td>A y B tienen algunos pero no todos los puntos interiores en común</td>
+<td></td>
+</tr>
+<tr class="even">
+<td><code>disjoint</code></td>
+<td>A y B no tienen puntos en común</td>
+<td><code>intersects</code></td>
+</tr>
+<tr class="odd">
+<td><code>equals</code></td>
+<td>A y B son topológicamente iguales: el orden de los nodos o el número de nodos puede ser diferente; idéntico a A contiene B y A dentro de B</td>
+<td></td>
+</tr>
+<tr class="even">
+<td><code>equals_exact</code></td>
+<td>A y B son geométricamente iguales, y tienen el mismo orden de nodos</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td><code>intersects</code></td>
+<td>A y B no son disjuntos</td>
+<td><code>disjoint</code></td>
+</tr>
+<tr class="even">
+<td><code>is_within_distance</code></td>
+<td>A está más cerca de B que una distancia dada</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td><code>within</code></td>
+<td>Ninguno de los puntos de B está fuera de A</td>
+<td><code>contains</code></td>
+</tr>
+<tr class="even">
+<td><code>touches</code></td>
+<td>A y B tienen al menos un punto en el límite en común, pero ningún punto interior</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td><code>overlaps</code></td>
+<td>A y B tienen algunos puntos en común; la dimensión de estos es idéntica a la de A y B</td>
+<td></td>
+</tr>
+<tr class="even">
+<td><code>relate</code></td>
+<td>Dado un patrón de máscara, devuelve si A y B se adhieren a este patrón</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>La <a href="https://en.wikipedia.org/wiki/DE-9IM">página DE-9IM de Wikipedia</a> proporciona los patrones <code>relate</code> para cada uno de estos verbos. Es importante importante comprobarlos; por ejemplo, <em>covers</em> y <em>contains</em> (y sus (y sus inversos) no suelen ser del todo intuitivos:</p>
+<ul>
+<li>si A <em>contiene</em> B, B no tiene puntos en común con el exterior <em>o frontera</em> de A</li>
+<li>si A <em>cubre</em> B, B no tiene puntos en común con el exterior de A</li>
+</ul>
+</section>
+<section id="ejemplo" class="level4">
+<h4 class="anchored" data-anchor-id="ejemplo">Ejemplo:</h4>
+<p>Supongamos que tenemos una cantidad de puntos del servicio impuesto interno y necesitamos atribuirle la información de la manzana de las Condes y en específico no interesa el id manzana (<code>MANZENT_I</code>) y la cobertura vegetal (<code>veg_cob</code>).</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb37"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb37-1"><a href="#cb37-1" aria-hidden="true" tabindex="-1"></a><span class="co"># 1) Asegurar mismo CRS</span></span>
+<span id="cb37-2"><a href="#cb37-2" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> (<span class="fu">st_crs</span>(las_condes_mz) <span class="sc">!=</span> <span class="fu">st_crs</span>(sii_LC)) {</span>
+<span id="cb37-3"><a href="#cb37-3" aria-hidden="true" tabindex="-1"></a>  sii_LC <span class="ot">&lt;-</span> <span class="fu">st_transform</span>(sii_LC, <span class="fu">st_crs</span>(las_condes_mz))</span>
+<span id="cb37-4"><a href="#cb37-4" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb37-5"><a href="#cb37-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb37-6"><a href="#cb37-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb37-7"><a href="#cb37-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb37-8"><a href="#cb37-8" aria-hidden="true" tabindex="-1"></a><span class="co"># 2) (Opcional) Quedarse solo con columnas de interés del polígono</span></span>
+<span id="cb37-9"><a href="#cb37-9" aria-hidden="true" tabindex="-1"></a>polys <span class="ot">&lt;-</span> las_condes_mz <span class="sc">%&gt;%</span></span>
+<span id="cb37-10"><a href="#cb37-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(MANZENT_I, veg_cob)  </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p><strong>Join estricto (punto dentro del polígono)</strong></p>
+<p>Usa st_within (inverso de contains). No asigna atributos a puntos en el borde.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb38"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb38-1"><a href="#cb38-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Unir atributos del polígono al punto si el punto está DENTRO del polígono</span></span>
+<span id="cb38-2"><a href="#cb38-2" aria-hidden="true" tabindex="-1"></a>sii_join_within <span class="ot">&lt;-</span> <span class="fu">st_join</span>(</span>
+<span id="cb38-3"><a href="#cb38-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">x    =</span> sii_LC, </span>
+<span id="cb38-4"><a href="#cb38-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">y    =</span> polys, </span>
+<span id="cb38-5"><a href="#cb38-5" aria-hidden="true" tabindex="-1"></a>  <span class="at">join =</span> st_within,     <span class="co"># predicado binario</span></span>
+<span id="cb38-6"><a href="#cb38-6" aria-hidden="true" tabindex="-1"></a>  <span class="at">left =</span> <span class="cn">TRUE</span>           <span class="co"># conserva todos los puntos</span></span>
+<span id="cb38-7"><a href="#cb38-7" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb38-8"><a href="#cb38-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb38-9"><a href="#cb38-9" aria-hidden="true" tabindex="-1"></a><span class="co"># Chequeo: ¿cuántos puntos quedaron sin polígono? (NA en id_manz)</span></span>
+<span id="cb38-10"><a href="#cb38-10" aria-hidden="true" tabindex="-1"></a><span class="fu">sum</span>(<span class="fu">is.na</span>(sii_join_within<span class="sc">$</span>id_manz))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 0</code></pre>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb40"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb40-1"><a href="#cb40-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Visualización ggplot y sf</span></span>
+<span id="cb40-2"><a href="#cb40-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(viridis)</span>
+<span id="cb40-3"><a href="#cb40-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
+<span id="cb40-4"><a href="#cb40-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb40-5"><a href="#cb40-5" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>() <span class="sc">+</span></span>
+<span id="cb40-6"><a href="#cb40-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_sf</span>(<span class="at">data =</span> sii_join_within,</span>
+<span id="cb40-7"><a href="#cb40-7" aria-hidden="true" tabindex="-1"></a>          <span class="fu">aes</span>(<span class="at">color =</span> veg_cob),</span>
+<span id="cb40-8"><a href="#cb40-8" aria-hidden="true" tabindex="-1"></a>          <span class="at">alpha =</span> <span class="fl">0.8</span>, <span class="at">size =</span> <span class="fl">0.8</span>) <span class="sc">+</span></span>
+<span id="cb40-9"><a href="#cb40-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_color_viridis_c</span>(<span class="at">na.value =</span> <span class="st">"grey80"</span>) <span class="sc">+</span></span>
+<span id="cb40-10"><a href="#cb40-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggtitle</span>(<span class="st">"Datos del SII en Las Condes — Cobertura de Vegetación"</span>) <span class="sc">+</span></span>
+<span id="cb40-11"><a href="#cb40-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_bw</span>() <span class="sc">+</span></span>
+<span id="cb40-12"><a href="#cb40-12" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(</span>
+<span id="cb40-13"><a href="#cb40-13" aria-hidden="true" tabindex="-1"></a>    <span class="at">legend.position =</span> <span class="st">"right"</span>,</span>
+<span id="cb40-14"><a href="#cb40-14" aria-hidden="true" tabindex="-1"></a>    <span class="at">panel.grid.major =</span> <span class="fu">element_line</span>(<span class="at">colour =</span> <span class="st">"gray80"</span>),</span>
+<span id="cb40-15"><a href="#cb40-15" aria-hidden="true" tabindex="-1"></a>    <span class="at">panel.grid.minor =</span> <span class="fu">element_line</span>(<span class="at">colour =</span> <span class="st">"gray90"</span>)</span>
+<span id="cb40-16"><a href="#cb40-16" aria-hidden="true" tabindex="-1"></a>  )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="datos_vectores_files/figure-html/unnamed-chunk-28-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+<div class="sourceCode cell-code" id="cb41"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb41-1"><a href="#cb41-1" aria-hidden="true" tabindex="-1"></a><span class="co"># mapview(sii_join_within, zcol = "veg_cob", cex =2)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="transformaciones-binarias" class="level4">
+<h4 class="anchored" data-anchor-id="transformaciones-binarias">Transformaciones Binarias</h4>
+<p>Los transformadores binarios son funciones que devuelven una geometría basada en operar sobre un par de geometrías. Incluyen:</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 21%">
+<col style="width: 56%">
+<col style="width: 21%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>función</th>
+<th>devuelve</th>
+<th style="text-align: center;">operador infijo</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>intersection</code></td>
+<td>las geometrías superpuestas para un par de geometrías</td>
+<td style="text-align: center;"><code>&amp;</code></td>
+</tr>
+<tr class="even">
+<td><code>union</code></td>
+<td>la combinación de las geometrías; elimina límites internos y puntos, nodos o segmentos de línea duplicados</td>
+<td style="text-align: center;"><code>|</code></td>
+</tr>
+<tr class="odd">
+<td><code>difference</code></td>
+<td>las geometrías de la primera después de eliminar la superposición con la segunda geometría</td>
+<td style="text-align: center;"><code>/</code></td>
+</tr>
+<tr class="even">
+<td><code>sym_difference</code></td>
+<td>las combinaciones de las geometrías después de eliminar donde se intersectan; la negación (opuesto) de <code>intersection</code></td>
+<td style="text-align: center;"><code>%/%</code></td>
+</tr>
+</tbody>
+</table>
+</section>
+</section>
+</section>
+<section id="referencias" class="level2" data-number="6.9">
+<h2 data-number="6.9" class="anchored" data-anchor-id="referencias"><span class="header-section-number">6.9</span> Referencias</h2>
+<p><a href="https://es.r4ds.hadley.nz/13-relational-data.html#entendiendo-las-uniones">R para Ciencia de Datos.</a></p>
+<p><a href="https://r-spatial.github.io/sf/">Simple Features for R</a></p>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+        const codeEl = trigger.previousElementSibling.cloneNode(true);
+        for (const childEl of codeEl.children) {
+          if (isCodeAnnotation(childEl)) {
+            childEl.remove();
+          }
+        }
+        return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="./visualizaciones.html" class="pagination-link" aria-label="Visualizaciones en R">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Visualizaciones en R</span></span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="./dataframes.html" class="pagination-link" aria-label="Dataframes y Delitos en R">
+        <span class="nav-page-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Dataframes y Delitos en R</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+<p>Copyright 2025, Denis Berroeta</p>
+</div>   
+    <div class="nav-footer-center">
+      &nbsp;
+    </div>
+    <div class="nav-footer-right">
+      &nbsp;
+    </div>
+  </div>
+</footer>
+
+
+
+
+</body></html>
