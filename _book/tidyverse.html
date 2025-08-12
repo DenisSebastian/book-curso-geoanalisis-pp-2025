@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>4&nbsp; Tidyverse en R – Curso de Geoanálisis</title>
+<title>4&nbsp; Manipulación de tablas en r – Curso de Geoanálisis</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -118,7 +118,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./tidyverse.html"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Tidyverse en R</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./tidyverse.html"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Manipulación de tablas en r</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -176,7 +176,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./tidyverse.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Tidyverse en R</span></span></a>
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Manipulación de tablas en r</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -187,10 +187,33 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./dataframes.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Dataframes y Delitos en R</span></span></a>
+  <a href="./datos_vectores.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Datos Espaciales: Vectores</span></span></a>
   </div>
 </li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./dataframes.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Dataframes y Delitos en R</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
+ <span class="menu-text">Tareas</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./tarea_1.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Tarea 1</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./references.html" class="sidebar-item-text sidebar-link">
@@ -199,13 +222,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true">
  <span class="menu-text">Appendices</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./recursos.html" class="sidebar-item-text sidebar-link">
@@ -216,6 +239,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <div class="sidebar-item-container"> 
   <a href="./control_r.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">B</span>&nbsp; <span class="chapter-title">Estructuras en R</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./crs.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">C</span>&nbsp; <span class="chapter-title">CRS en R</span></span></a>
   </div>
 </li>
       </ul>
@@ -230,15 +259,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">Contenidos</h2>
    
   <ul>
-  <li><a href="#introducción-a-tidyverse" id="toc-introducción-a-tidyverse" class="nav-link active" data-scroll-target="#introducción-a-tidyverse"><span class="header-section-number">4.1</span> Introducción a Tidyverse</a></li>
+  <li><a href="#introducción-a-tidyverse" id="toc-introducción-a-tidyverse" class="nav-link active" data-scroll-target="#introducción-a-tidyverse"><span class="header-section-number">4.1</span> introducción a tidyverse</a></li>
   <li><a href="#estructura-de-un-dataframe" id="toc-estructura-de-un-dataframe" class="nav-link" data-scroll-target="#estructura-de-un-dataframe"><span class="header-section-number">4.2</span> Estructura de un dataframe</a></li>
   <li><a href="#funciones-básicas-dplyr" id="toc-funciones-básicas-dplyr" class="nav-link" data-scroll-target="#funciones-básicas-dplyr"><span class="header-section-number">4.3</span> Funciones básicas <code>dplyr</code></a>
   <ul class="collapse">
   <li><a href="#select" id="toc-select" class="nav-link" data-scroll-target="#select"><span class="header-section-number">4.3.1</span> Select</a></li>
   <li><a href="#filter" id="toc-filter" class="nav-link" data-scroll-target="#filter"><span class="header-section-number">4.3.2</span> Filter</a></li>
   </ul></li>
-  <li><a href="#resúmenes-estadísticos-con-dplyr" id="toc-resúmenes-estadísticos-con-dplyr" class="nav-link" data-scroll-target="#resúmenes-estadísticos-con-dplyr"><span class="header-section-number">4.4</span> Resúmenes Estadísticos con <code>dplyr</code></a></li>
-  <li><a href="#mutate" id="toc-mutate" class="nav-link" data-scroll-target="#mutate"><span class="header-section-number">4.5</span> Mutate</a></li>
+  <li><a href="#sec-group_By" id="toc-sec-group_By" class="nav-link" data-scroll-target="#sec-group_By"><span class="header-section-number">4.4</span> Resúmenes Estadísticos</a></li>
+  <li><a href="#sec-mutate" id="toc-sec-mutate" class="nav-link" data-scroll-target="#sec-mutate"><span class="header-section-number">4.5</span> Mutate</a></li>
   <li><a href="#referencias" id="toc-referencias" class="nav-link" data-scroll-target="#referencias"><span class="header-section-number">4.6</span> Referencias:</a></li>
   </ul>
 </nav>
@@ -248,8 +277,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Tidyverse en R</span></h1>
-<p class="subtitle lead">Universo Tidyverse</p>
+<h1 class="title"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Manipulación de tablas en r</span></h1>
+<p class="subtitle lead">Manipulación de Tablas utilizando dplyr</p>
 </div>
 
 
@@ -272,16 +301,16 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Objetivo de esta sección
+objetivo de esta sección
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>Conocer el conjunto de paquetes Tidyverse y su utilidad en la manipulación de tablas de Datos en R.</p>
-<p>“Imagina que estás frente a una base de datos de miles de manzanas con información territorial. ¿Cómo la exploras, limpias y visualizas con claridad? Tidyverse es tu mejor aliado.”</p>
+<p>conocer el conjunto de paquetes tidyverse y su utilidad en la manipulación de tablas de datos en r.</p>
+<p>“imagina que estás frente a una base de datos de miles de manzanas con información territorial. ¿cómo la exploras, limpias y visualizas con claridad? tidyverse es tu mejor aliado.”</p>
 </div>
 </div>
 <section id="introducción-a-tidyverse" class="level2" data-number="4.1">
-<h2 data-number="4.1" class="anchored" data-anchor-id="introducción-a-tidyverse"><span class="header-section-number">4.1</span> Introducción a Tidyverse</h2>
+<h2 data-number="4.1" class="anchored" data-anchor-id="introducción-a-tidyverse"><span class="header-section-number">4.1</span> introducción a tidyverse</h2>
 <p><a href="https://www.tidyverse.org">Tidyverse</a> es una colección de paquetes diseñados para Ciencia de Datos.</p>
 <p><img src="images/tidyverse.png" class="img-fluid" data-fig-aling="center" width="300"></p>
 <div class="cell">
@@ -639,8 +668,8 @@ Actividades con Filter
 </div>
 </section>
 </section>
-<section id="resúmenes-estadísticos-con-dplyr" class="level2" data-number="4.4">
-<h2 data-number="4.4" class="anchored" data-anchor-id="resúmenes-estadísticos-con-dplyr"><span class="header-section-number">4.4</span> Resúmenes Estadísticos con <code>dplyr</code></h2>
+<section id="sec-group_By" class="level2" data-number="4.4">
+<h2 data-number="4.4" class="anchored" data-anchor-id="sec-group_By"><span class="header-section-number">4.4</span> Resúmenes Estadísticos</h2>
 <center>
 <img src="images/dplyr_group_by.png" class="img-fluid" style="width:70.0%">
 </center>
@@ -721,8 +750,8 @@ Actividades con Group_By
 </div>
 </div>
 </section>
-<section id="mutate" class="level2" data-number="4.5">
-<h2 data-number="4.5" class="anchored" data-anchor-id="mutate"><span class="header-section-number">4.5</span> Mutate</h2>
+<section id="sec-mutate" class="level2" data-number="4.5">
+<h2 data-number="4.5" class="anchored" data-anchor-id="sec-mutate"><span class="header-section-number">4.5</span> Mutate</h2>
 <p>La función <code>mutate()</code> de <code>dplyr</code> permite <strong>crear nuevas columnas</strong> o <strong>modificar columnas existentes</strong> dentro de un dataframe, utilizando expresiones que pueden depender de otras variables del mismo dataframe.</p>
 <p>Es una herramienta clave para <strong>transformar datos territoriales</strong>, por ejemplo, al calcular proporciones, densidades o indicadores derivados.</p>
 <div class="callout callout-style-default callout-note callout-titled">

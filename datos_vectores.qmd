@@ -232,7 +232,7 @@ zonas_censales  %>%
                 font_size = 10,full_width = F)
 ```
 
-### Filtros y selección de columnas
+### Filtros y selección de columnas {#sec-filtros_esp}
 
 Uno de los pasos más comunes en la manipulación de datos vectoriales es filtrar y seleccionar filas o columnas de la tabla de atributos, lo que permite centrarse en elementos específicos para análisis más detallados. Para efectos de practicar la manipulación de datos espaciales se creará un subset de la base de zonas censales de alguna provincia de Chile y se realizarán cálculos sencillos de densidad.
 
@@ -287,6 +287,9 @@ zonas <-  zonas %>%
 
 ```
 
+
+### Generación columnas {#sec-mutate_esp}
+
 **Mutate**
   
 Cálculo de superficie por polígono
@@ -322,7 +325,7 @@ ggplot() +
         panel.grid.minor = element_line(colour = "gray80"))
 ```
 
-### Resumen Estadísticos {#sec-groupby}
+### Resumen Estadísticos Espaciales {#sec-groupby_esp}
 
 El objetivo de este punto es que con bases de datos espaciales también se pueden hacer resúmenes estadísticos, como se hacen normalmente con bases de datos. Ahora, se creará tabla con las poblaciones y promedio de años de estudio del Jefe de Hogar en todas las comunas de Chile.
 
@@ -348,12 +351,11 @@ tab_com  %>%
                 font_size = 16,full_width = F)
 ```
 
-### Joining
+### Joining  {#sec-joins}
 
 En este caso agregaremos a la tabla de resultados comunales antes creada, a la base de la comuna de Viña del Mar y Valparaíso, utilizaremos la función `left_join`.
 
 ![Unir tablas mediante `left_join`. Ejemplos en [R para Ciencia de Datos.](https://es.r4ds.hadley.nz/13-relational-data.html#entendiendo-las-uniones)](images/lef_join.png){width=50%}
-
 
 
 
@@ -365,19 +367,10 @@ zonas <-  zonas %>%
 
 
 ```{r}
-#| label: fig-zonas-dif-ejh                                                   #| fig-cap: Diferencias Esc. Jefe Hogar respecto comuna - Urbano
+#| label: fig-zonas-dif-ejh                                                   
+#| fig-cap: Diferencias Esc. Jefe Hogar respecto comuna - Urbano
 
-ggplot() +
-  geom_sf(data = zonas, aes(fill = DIF_EJH_COM), color =NA, 
-          alpha=0.8,  size= 0.1)+
-          scale_fill_distiller(palette= "PRGn", direction = 1)+ 
-          ggtitle("Diferencias Esc. Jefe Hogar Zona/Comuna - Urbano" ) +
-  theme_bw() +
-  theme(panel.grid.major = element_line(colour = "gray80"), 
-        panel.grid.minor = element_line(colour = "gray80"))
-```
 
-```{r}
 ggplot() +
   geom_sf(data = zonas, aes(fill = DIF_EJH_COM), color =NA, 
           alpha=0.8,  size= 0.1)+
@@ -387,6 +380,7 @@ ggplot() +
   theme(panel.grid.major = element_line(colour = "gray80"), 
         panel.grid.minor = element_line(colour = "gray80"))
 ```
+
 
 
 

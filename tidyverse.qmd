@@ -1,19 +1,19 @@
 ---
-subtitle: "Universo Tidyverse"
+subtitle: "Manipulación de Tablas utilizando dplyr"
 ---
 
-# Tidyverse en R
+# Manipulación de tablas en r
 
 ::: {.callout-note}
-## Objetivo de esta sección
-Conocer el conjunto de paquetes Tidyverse y su utilidad en la manipulación de tablas de Datos en R.
+## objetivo de esta sección
+conocer el conjunto de paquetes tidyverse y su utilidad en la manipulación de tablas de datos en r.
 
 
-“Imagina que estás frente a una base de datos de miles de manzanas con información territorial. ¿Cómo la exploras, limpias y visualizas con claridad? Tidyverse es tu mejor aliado.”
+“imagina que estás frente a una base de datos de miles de manzanas con información territorial. ¿cómo la exploras, limpias y visualizas con claridad? tidyverse es tu mejor aliado.”
 :::
 
 
-## Introducción a Tidyverse
+## introducción a tidyverse
 
 [Tidyverse](https://www.tidyverse.org) es una colección de paquetes diseñados para Ciencia de Datos.
 
@@ -217,7 +217,7 @@ Referencias: <https://dplyr.tidyverse.org/reference/filter.html>
 
 
 
-## Resúmenes Estadísticos con `dplyr`
+## Resúmenes Estadísticos {#sec-group_By}
 
 <center>![](images/dplyr_group_by.png){width="70%"}</center>
 
@@ -276,7 +276,7 @@ Hint: Densidad de comercio, se puede entender como la división de la cantidad d
 
 
 
-## Mutate
+## Mutate {#sec-mutate}
 La función `mutate()` de `dplyr` permite **crear nuevas columnas** o **modificar columnas existentes** dentro de un dataframe, utilizando expresiones que pueden depender de otras variables del mismo dataframe.
 
 Es una herramienta clave para **transformar datos territoriales**, por ejemplo, al calcular proporciones, densidades o indicadores derivados.

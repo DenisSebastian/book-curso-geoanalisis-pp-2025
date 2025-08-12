@@ -25,6 +25,7 @@ En esta sesión se realizará un flujo de trabajo de construcción de un indicad
 ## Acceso a Datos de Casos Policiales Sala CEAD
 La base fuen obtenida de la Sala **CEAD** (Centro de Estudios de Análisis del Delito) dependiente del la Subsecretaría de Prevención del Delito. Corresponde a datos a **nivel comunal** que da cuenta de los casos policiales conocidos por las policías para distintos grupos delictuales a partir de las detenciones flagrantes y las denuncias formales realizadas por la ciudadanía en Carabineros de Chile o la Policía de Investigaciones de Chile.
 
+![Filtros realizados en la página de sala CEAD](images/filtros_cead.png)
 Los grupos delictuales propuestos para el análisis incorporan el concepto de daño social y penal el cual busca ponderar los delitos no solo por su frecuencia, sino también, por el impacto y gravedad de sus consecuencias. 
 
 Consideración: A esta base de casos policiales se le agregó información administrativa de cada comuna.

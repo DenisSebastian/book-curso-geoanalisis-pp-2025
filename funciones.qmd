@@ -162,7 +162,7 @@ ifelse(notas >= 4.0, "Aprobado", "Reprobado")
 
 
 
-## Crear Funciones Propias
+## Crear Funciones Propias {#sec-func_propias}
 
 En R, es posible crear funciones propias para realizar tareas específicas y reutilizarlas en diferentes partes de un programa. 
 

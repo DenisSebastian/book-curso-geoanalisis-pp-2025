@@ -31,10 +31,9 @@ book:
     # - construccion_inds.qmd
     # - indicadores.qmd
     # - proyecto.qmd
-    # - part: "R Project"
-    #   chapters:
-    #     - datos_espaciales.qmd
-    #     # - dataframes.qmd
+    # - part: "Tareas"
+      # chapters:
+        # - tarea_1.qmd
     - references.qmd
   appendices:
     - recursos.qmd

@@ -1,5 +1,5 @@
 ---
-subtitle: "Datos Vectoriales y Raster"
+subtitle: "Datos Vectoriales"
 editor_options: 
   chunk_output_type: console
 ---
@@ -8,38 +8,92 @@ editor_options:
 
 ## Antecedentes
 
--   Fecha de entrega: **08 de Noviembre 2024**
--   Formato: Informe (pdf o html) + Código
--   Integrantes: 1 o 2 Integrates
+-   Fecha de entrega: **22 de Agosto 2024**
+-   Formato: Informe (pdf o html) + Código (.R)
+-   Integrantes: 1 o 2 Integrantes
 -   Ponderación de tarea sobre Nota Final: 40%
 
 ## Instrucciones
 
+### Parte 1: Manipulación de Tablas
 
-### Parte 1: Indicadores Ambientales
+En esta primera parte trabajaremos con la base de datos del Servicio de Impuestos Internos (SII) a nivel nacional. El conjunto de datos representa la cantidad de metros cuadrados construidos por manzana en Chile, clasificados por uso (comercio, oficinas, vivienda).
 
-1.  *(1pt)* Selecciona una comuna de la Región Metropolitana (excepto Las Condes) (@sec-cortaraster) y calcular NDVI usando la función vista en clases (@sec-calcndvi). 
+Insumo:
 
-2.  *(1pt)*  Calcula la cantidad de vegetación en la comuna seleccionada, filtrando los píxeles por un umbral que tú determines (@sec-umbralicv)
+```{r}
+# Cargar librerías necesarias
+library(dplyr)    # Manipulación de tablas
+library(sf)       # Manipulación de datos espaciales
+library(ggplot2)  # Gráficos de alto nivel
 
-3. *(1 pt)* Calcula el indicador de cobertura vegetal para las manzanas urbanas de la comuna seleccionada (@sec-calcicv). **Describa los resultados**.
+# Leer datos del SII
+tbl_sii <- readRDS("data/sii/mz_constru_SII.rds") %>% 
+  st_drop_geometry()  # Usaremos solo la tabla, sin geometría
+```
+
+Instrucciones de la tarea:
+
+-   Importante: Sigue los pasos en orden y asegúrate de que tu código sea reproducible. Usa nombres de variables claros.
+
+1.  Función para calcular proporciones (1 punto)
+    -   Crea una función propia en R que reciba como argumentos:
+        -   El valor de una categoría (por ejemplo, m² de comercio).
+        -   El valor total de m² construidos.
+    -   La función debe devolver la proporción (en decimal o porcentaje) de la categoría respecto al total.
+    -   (Referencia: [@sec-func_propias]).
+2.  Aplicación de la función (1 punto)
+    -   Utiliza la función creada en el paso anterior para calcular, para cada manzana, las proporciones de:
+        -   m² de Comercio
+        -   m² de Oficinas
+        -   m² de Vivienda
+    -   Guarda estos nuevos valores como columnas adicionales en `tbl_sii`. (Referencia: [@sec-mutate]).
+3.  Análisis por región (1 punto)
+    -   Selecciona una región de Chile (a tu elección).
+    -   Calcula, para cada comuna de esa región, el promedio de las proporciones de m² de Comercio, Oficinas y Vivienda obtenidas en el paso anterior.
+    -   Presenta los resultados en una tabla resumen.
+    -   Genera un gráfico de barras que compare estos promedios por comuna de una categoría solamente (por ejemplo Oficinas).
+    -   (Referencias: [@sec-group_By], [@sec-gbarras]).
+
+### Parte 2: Manipulación de Vectores Espaciales
+
+En esta segunda parte trabajaremos con los polígonos de zonas censales del INE, que servirán para realizar operaciones espaciales.
+
+Insumo:
+
+```{r}
+# Cargar Librerías
+library(dplyr) # Manipulación de tablas
+library(sf) # Manipulación de datos espaciales
+library(ggplot2) # Generar gráficas de alto nivel
 
 
+# zonas censales INE, seleccionará columnas de interés
+zonas_censales <-  readRDS("data/censo/zonas_urb_consolidadas.rds") %>% 
+  select(REGION, NOM_REGION, COMUNA, NOM_COMUNA, COD_INE_16, ESC_JH, PERS)
+```
 
-### Parte 2: Indicadores Socioeconómicos
+Siga los pasos en orden. Usa nombres de variables claros y agrega comentarios a tu código para explicar cada operación.
 
-    
-1.  *(1pt)* Calcula seis indicadores socioeconómicos en una región de tu área de estudio (@sec-indsoc). 
+1.  Filtrar comunas seleccionadas (1 punto)
 
-2.  *(1 pt)* Selecciona una provincia y elige un indicador socioeconómico que consideres que evidencia una necesidad prioritaria en esa provincia. **Define y justifique** un umbral crítico para el indicador seleccionado (por ejemplo: menor a 0.25) y genera una tabla resumen usando la función `group_by()` (@sec-groupby). En la tabla, debes mostrar:
+    -   Elige dos o más comunas contiguas dentro de una misma región.
+    -   Filtra la base de zonas censales utilizando la columna `NOM_COMUNA` para quedarte únicamente con esas comunas seleccionadas. @sec-filtros_esp
+    -   Guarda el resultado en un nuevo objeto.
 
-* La cantidad de personas que están por debajo del umbral crítico.
-* El promedio del indicador por comuna dentro de la provincia seleccionada. 
+2.  Cálculo de área y densidad de población (1 punto)
 
-3. *(1 pt)* De la tabla anterior, elige una comuna basada en uno de estos criterios (justifica tu elección):
+    -   Calcula una nueva variable `AREA_HA` que represente el área de cada polígono en hectáreas (`st_area(.)` / 10000). Referencias @sec-mutate_esp.
+    -   Calcula la densidad de población (PERS / `AREA_HA`).
+    -   Genera dos mapas con ggplot2:
+        -   Población absoluta (`PERS` por zona censal).
+        -   Densidad de población (personas por hectárea).
+    -   Usa escalas de color adecuadas y leyendas claras para cada mapa.
 
-* Mayor cantidad de personas por debajo del umbral crítico.
-* Valor promedio más bajo del indicador.
-* Realiza una representación cartográfica del valor del indicador a nivel de manzana censal. **Identifica y describe** si existen concentraciones de valores altos o bajos del indicador y describe la situación del sector basándote en tu conocimiento, experiencia o los valores de los indicadores. 
+3.  Promedio comunal de escolaridad y análisis espacial (1 punto)
 
-![](images/Tarea_1.1.png)
+    -   Calcula, a nivel comunal, el promedio de escolaridad del jefe/a de hogar (`ESC_JH`) usando `group_by()` y `summarise()` (Referencia: [@sec-groupby_esp]).
+    -   Une esta tabla resumen a la base espacial filtrada en el punto 1 mediante `left_join()` (Referencia: [@sec-joins]).
+    -   Calcula una nueva variable que represente la diferencia entre:
+        -   La escolaridad de cada zona censal (`ESC_JH`), y El promedio comunal calculado previamente.
+    -   Genera un mapa temático mostrando esta diferencia y analiza si existe algún patrón espacial visible.

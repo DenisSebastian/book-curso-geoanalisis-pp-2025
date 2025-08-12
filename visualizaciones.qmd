@@ -194,7 +194,7 @@ La librería [ggplot2](https://ggplot2.tidyverse.org/articles/ggplot2.html) es u
 
 Con ggplot2 puedes crear desde gráficos básicos como barras, histogramas y dispersión, hasta visualizaciones avanzadas, mapas y gráficos interactivos. La sintaxis está orientada a la composición modular: cada capa del gráfico (datos, geometría, escalas, temas, etiquetas) se define y ajusta de forma clara y coherente.
 
-### Gráficos de Barra con `ggplot2`
+### Gráficos de Barra con `ggplot2` {#sec-gbarras}
 
 **Versión Básica**
 
