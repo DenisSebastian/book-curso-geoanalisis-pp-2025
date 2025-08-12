@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Introducción al Geoanálisis – Curso de Geoanálisis</title>
+<title>Tarea 1 – Curso de Geoanálisis</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,6 +20,41 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
@@ -30,8 +65,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./intro_r.html" rel="next">
-<link href="./index.html" rel="prev">
+<link href="./references.html" rel="next">
+<link href="./dataframes.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
@@ -83,7 +118,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./geoanalisis.html">Introducción al Geoanálisis</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./tarea_1.html">Tareas</a></li><li class="breadcrumb-item"><a href="./tarea_1.html">Tarea 1</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -116,7 +151,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./geoanalisis.html" class="sidebar-item-text sidebar-link active">
+  <a href="./geoanalisis.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Introducción al Geoanálisis</span></a>
   </div>
 </li>
@@ -162,6 +197,23 @@ ul.task-list li input[type="checkbox"] {
  <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Dataframes y Delitos en R</span></span></a>
   </div>
 </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
+ <span class="menu-text">Tareas</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./tarea_1.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">Tarea 1</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./references.html" class="sidebar-item-text sidebar-link">
@@ -170,13 +222,13 @@ ul.task-list li input[type="checkbox"] {
 </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true">
  <span class="menu-text">Appendices</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./recursos.html" class="sidebar-item-text sidebar-link">
@@ -207,21 +259,22 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">Contenidos</h2>
    
   <ul>
-  <li><a href="#breve-historia-del-pensamiento-geográfico-y-estadístico" id="toc-breve-historia-del-pensamiento-geográfico-y-estadístico" class="nav-link active" data-scroll-target="#breve-historia-del-pensamiento-geográfico-y-estadístico">Breve Historia del Pensamiento Geográfico y Estadístico</a></li>
-  <li><a href="#la-primera-ley-de-la-geografía-y-su-relevancia-social" id="toc-la-primera-ley-de-la-geografía-y-su-relevancia-social" class="nav-link" data-scroll-target="#la-primera-ley-de-la-geografía-y-su-relevancia-social">La Primera Ley de la Geografía y su Relevancia Social</a></li>
-  <li><a href="#el-espacio-y-el-tiempo-coproducción-espacio-temporal-del-bienestar" id="toc-el-espacio-y-el-tiempo-coproducción-espacio-temporal-del-bienestar" class="nav-link" data-scroll-target="#el-espacio-y-el-tiempo-coproducción-espacio-temporal-del-bienestar">El Espacio y el Tiempo: Coproducción Espacio-Temporal del Bienestar</a></li>
-  <li><a href="#por-qué-medir-la-importancia-de-las-estadísticas-territoriales" id="toc-por-qué-medir-la-importancia-de-las-estadísticas-territoriales" class="nav-link" data-scroll-target="#por-qué-medir-la-importancia-de-las-estadísticas-territoriales">Por Qué Medir: La Importancia de las Estadísticas Territoriales</a></li>
-  <li><a href="#el-geoanálisis-hoy-herramientas-y-capacidades-para-la-toma-de-decisiones" id="toc-el-geoanálisis-hoy-herramientas-y-capacidades-para-la-toma-de-decisiones" class="nav-link" data-scroll-target="#el-geoanálisis-hoy-herramientas-y-capacidades-para-la-toma-de-decisiones">El Geoanálisis Hoy: Herramientas y Capacidades para la Toma de Decisiones</a></li>
-  <li><a href="#impacto-en-las-políticas-públicas-del-siglo-xxi" id="toc-impacto-en-las-políticas-públicas-del-siglo-xxi" class="nav-link" data-scroll-target="#impacto-en-las-políticas-públicas-del-siglo-xxi">Impacto en las Políticas Públicas del Siglo XXI</a></li>
+  <li><a href="#antecedentes" id="toc-antecedentes" class="nav-link active" data-scroll-target="#antecedentes">Antecedentes</a></li>
+  <li><a href="#instrucciones" id="toc-instrucciones" class="nav-link" data-scroll-target="#instrucciones">Instrucciones</a>
+  <ul class="collapse">
+  <li><a href="#parte-1-manipulación-de-tablas" id="toc-parte-1-manipulación-de-tablas" class="nav-link" data-scroll-target="#parte-1-manipulación-de-tablas">Parte 1: Manipulación de Tablas</a></li>
+  <li><a href="#parte-2-manipulación-de-vectores-espaciales" id="toc-parte-2-manipulación-de-vectores-espaciales" class="nav-link" data-scroll-target="#parte-2-manipulación-de-vectores-espaciales">Parte 2: Manipulación de Vectores Espaciales</a></li>
+  </ul></li>
   </ul>
 </nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default">
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./tarea_1.html">Tareas</a></li><li class="breadcrumb-item"><a href="./tarea_1.html">Tarea 1</a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">Introducción al Geoanálisis</h1>
+<h1 class="title">Tarea 1</h1>
+<p class="subtitle lead">Datos Vectoriales</p>
 </div>
 
 
@@ -238,74 +291,114 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>El espacio no es neutro. Las decisiones que tomamos, como individuos y como sociedades, se distribuyen de manera desigual en el territorio. Las políticas públicas moldean y son moldeadas por esa realidad espacial. Comprender esta interacción entre datos, territorio y decisiones es la esencia del geoanálisis, una disciplina cada vez más relevante en un mundo interconectado.</p>
-<p>Este capítulo ofrece una introducción al geoanálisis desde una perspectiva histórica, conceptual y aplicada, subrayando su valor para diseñar políticas públicas que mejoren la calidad de vida y el bienestar.</p>
-<section id="breve-historia-del-pensamiento-geográfico-y-estadístico" class="level2">
-<h2 class="anchored" data-anchor-id="breve-historia-del-pensamiento-geográfico-y-estadístico">Breve Historia del Pensamiento Geográfico y Estadístico</h2>
-<p>El término estadística deriva del italiano statista (“hombre de Estado”), y desde la antigüedad ha servido para estimar capacidades de un reino y facilitar la gestión tributaria. Por ejemplo, en Egipto ya se realizaban censos hacia el 3050 a.C. Durante la expansión colonial europea (siglos XVI–XIX), la estadística se desarrolló en estrecha relación con la cartografía, como herramienta para administrar y dominar territorios.</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="images/mapa-antiguo.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="450"></p>
-</figure>
-</div>
-<p>En el siglo XX, con la llegada de la estadística espacial y la computación, se superaron las limitaciones del cálculo manual y se hizo posible analizar grandes volúmenes de datos georreferenciados. Hoy, gracias a R, QGIS y otras herramientas abiertas, el análisis espacial es accesible a todos.</p>
-</section>
-<section id="la-primera-ley-de-la-geografía-y-su-relevancia-social" class="level2">
-<h2 class="anchored" data-anchor-id="la-primera-ley-de-la-geografía-y-su-relevancia-social">La Primera Ley de la Geografía y su Relevancia Social</h2>
-<p>Waldo Tobler (1931–2018) formuló en 1970 su célebre Primera Ley de la Geografía:</p>
-<p><img src="images/tobler-frase.png" class="img-fluid quarto-figure quarto-figure-center" width="600"> <!-- > “Todas las cosas están relacionadas entre sí, pero las cosas más próximas en el espacio tienen una relación mayor que las distantes.” --></p>
-<p>Este principio refleja cómo las interacciones humanas y sociales están condicionadas por la proximidad espacial. En política pública esto significa, por ejemplo, que las intervenciones en un barrio tienen efectos directos en los barrios vecinos, y que ignorar la dimensión espacial conduce a políticas sesgadas.</p>
-<p>O como lo resume Cervantes en El Quijote:</p>
-<p><img src="images/cervantes-frase.png" class="img-fluid quarto-figure quarto-figure-center" width="600"> <!-- > “Dime con quién andas y te diré quién eres.” --></p>
-<p>⸻</p>
-</section>
-<section id="el-espacio-y-el-tiempo-coproducción-espacio-temporal-del-bienestar" class="level2">
-<h2 class="anchored" data-anchor-id="el-espacio-y-el-tiempo-coproducción-espacio-temporal-del-bienestar">El Espacio y el Tiempo: Coproducción Espacio-Temporal del Bienestar</h2>
-<p>El bienestar social es resultado de una coproducción espacio-temporal: las políticas, las acciones colectivas y las dinámicas naturales configuran el territorio, que a su vez influye en las oportunidades y limitaciones de sus habitantes.</p>
-<p>Henri Lefebvre (1901–1991) lo expresó así:</p>
-<p><img src="images/lefebvre-frase.png" class="img-fluid quarto-figure quarto-figure-center" width="600"> <!-- > “La historia, el espacio y la sociedad se co-producen, por lo que el espacio tiene un rol activo en la reproducción y acumulación de fenómenos sociales.” --></p>
-<p>El espacio no es simplemente un escenario pasivo, sino un actor en las dinámicas sociales. Por ejemplo, la segregación urbana o la concentración delictual en ciertas áreas no son casualidad, sino resultado de una autoproducción espacial donde factores históricos, económicos y sociales se retroalimentan.</p>
-</section>
-<section id="por-qué-medir-la-importancia-de-las-estadísticas-territoriales" class="level2">
-<h2 class="anchored" data-anchor-id="por-qué-medir-la-importancia-de-las-estadísticas-territoriales">Por Qué Medir: La Importancia de las Estadísticas Territoriales</h2>
-<blockquote class="blockquote">
-<p>Lo que no se mide, no se gestiona.</p>
-</blockquote>
-<p>Las estadísticas territoriales permiten entender y actuar sobre el territorio con evidencia. Sin embargo, presentan desafíos particulares. La inferencia estadística clásica asume independencia entre observaciones y aleatoriedad, pero los datos espaciales violan ambos supuestos:</p>
+<section id="antecedentes" class="level2">
+<h2 class="anchored" data-anchor-id="antecedentes">Antecedentes</h2>
 <ul>
-<li>Las observaciones cercanas tienden a estar correlacionadas (Ley de Tobler).</li>
-<li>El espacio actúa como un soporte material indispensable para las relaciones sociales.</li>
-</ul>
-<p>Además, fenómenos como el MAUP (Modifiable Areal Unit Problem) advierten que los resultados pueden cambiar si modificamos las unidades territoriales de agregación.</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="images/maup_2.png" class="img-fluid quarto-figure quarto-figure-center figure-img"></p>
-</figure>
-</div>
-<p>Por eso, es clave aplicar técnicas robustas que cuantifiquen y corrijan la dependencia espacial en los datos.</p>
-</section>
-<section id="el-geoanálisis-hoy-herramientas-y-capacidades-para-la-toma-de-decisiones" class="level2">
-<h2 class="anchored" data-anchor-id="el-geoanálisis-hoy-herramientas-y-capacidades-para-la-toma-de-decisiones">El Geoanálisis Hoy: Herramientas y Capacidades para la Toma de Decisiones</h2>
-<p>El geoanálisis combina datos, teoría espacial y herramientas computacionales para explicar y predecir fenómenos territoriales. No se trata solo de mapear, sino de interpretar y modelar.</p>
-<p>Las herramientas modernas —como R y sus paquetes especializados— permiten:</p>
-<ul>
-<li>trabajar con datos vectoriales y raster,</li>
-<li>calcular indicadores territoriales,</li>
-<li>inferir patrones espaciales (mapas de calor, interpolaciones),</li>
-<li>detectar autocorrelación y clusters espaciales,</li>
+<li>Fecha de entrega: <strong>22 de Agosto 2024</strong></li>
+<li>Formato: Informe (pdf o html) + Código (.R)</li>
+<li>Integrantes: 1 o 2 Integrantes</li>
+<li>Ponderación de tarea sobre Nota Final: 40%</li>
 </ul>
 </section>
-<section id="impacto-en-las-políticas-públicas-del-siglo-xxi" class="level2">
-<h2 class="anchored" data-anchor-id="impacto-en-las-políticas-públicas-del-siglo-xxi">Impacto en las Políticas Públicas del Siglo XXI</h2>
-<p>Hoy, las políticas públicas más innovadoras incluyen una perspectiva territorial para abordar problemas como el cambio climático, la segregación socioeconómica, la delincuencia o la justicia ambiental.</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="images/lc_vulnerabilidad.png" class="img-fluid quarto-figure quarto-figure-center figure-img"></p>
-</figure>
+<section id="instrucciones" class="level2">
+<h2 class="anchored" data-anchor-id="instrucciones">Instrucciones</h2>
+<section id="parte-1-manipulación-de-tablas" class="level3">
+<h3 class="anchored" data-anchor-id="parte-1-manipulación-de-tablas">Parte 1: Manipulación de Tablas</h3>
+<p>En esta primera parte trabajaremos con la base de datos del Servicio de Impuestos Internos (SII) a nivel nacional. El conjunto de datos representa la cantidad de metros cuadrados construidos por manzana en Chile, clasificados por uso (comercio, oficinas, vivienda).</p>
+<p>Insumo:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Cargar librerías necesarias</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dplyr)    <span class="co"># Manipulación de tablas</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(sf)       <span class="co"># Manipulación de datos espaciales</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)  <span class="co"># Gráficos de alto nivel</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="co"># Leer datos del SII</span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>tbl_sii <span class="ot">&lt;-</span> <span class="fu">readRDS</span>(<span class="st">"data/sii/mz_constru_SII.rds"</span>) <span class="sc">%&gt;%</span> </span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">st_drop_geometry</span>()  <span class="co"># Usaremos solo la tabla, sin geometría</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<p>Los indicadores territoriales son instrumentos esenciales para cuantificar y comparar condiciones, actividades o resultados en diferentes espacios y tiempos. Permiten definir puntos de comparación que guían la toma de decisiones.</p>
+<p>Instrucciones de la tarea:</p>
+<ul>
+<li>Importante: Sigue los pasos en orden y asegúrate de que tu código sea reproducible. Usa nombres de variables claros.</li>
+</ul>
+<ol type="1">
+<li>Función para calcular proporciones (1 punto)
+<ul>
+<li>Crea una función propia en R que reciba como argumentos:
+<ul>
+<li>El valor de una categoría (por ejemplo, m² de comercio).</li>
+<li>El valor total de m² construidos.</li>
+</ul></li>
+<li>La función debe devolver la proporción (en decimal o porcentaje) de la categoría respecto al total.</li>
+<li>(Referencia: <a href="funciones.html#sec-func_propias" class="quarto-xref"><span>Crear Funciones Propias</span></a>).</li>
+</ul></li>
+<li>Aplicación de la función (1 punto)
+<ul>
+<li>Utiliza la función creada en el paso anterior para calcular, para cada manzana, las proporciones de:
+<ul>
+<li>m² de Comercio</li>
+<li>m² de Oficinas</li>
+<li>m² de Vivienda</li>
+</ul></li>
+<li>Guarda estos nuevos valores como columnas adicionales en <code>tbl_sii</code>. (Referencia: <a href="tidyverse.html#sec-mutate" class="quarto-xref"><span>Mutate</span></a>).</li>
+</ul></li>
+<li>Análisis por región (1 punto)
+<ul>
+<li>Selecciona una región de Chile (a tu elección).</li>
+<li>Calcula, para cada comuna de esa región, el promedio de las proporciones de m² de Comercio, Oficinas y Vivienda obtenidas en el paso anterior.</li>
+<li>Presenta los resultados en una tabla resumen.</li>
+<li>Genera un gráfico de barras que compare estos promedios por comuna de una categoría solamente (por ejemplo Oficinas).</li>
+<li>(Referencias: <a href="tidyverse.html#sec-group_By" class="quarto-xref"><span>Resúmenes Estadísticos</span></a>, <a href="visualizaciones.html#sec-gbarras" class="quarto-xref"><span>Gráficos de Barra con ggplot2</span></a>).</li>
+</ul></li>
+</ol>
+</section>
+<section id="parte-2-manipulación-de-vectores-espaciales" class="level3">
+<h3 class="anchored" data-anchor-id="parte-2-manipulación-de-vectores-espaciales">Parte 2: Manipulación de Vectores Espaciales</h3>
+<p>En esta segunda parte trabajaremos con los polígonos de zonas censales del INE, que servirán para realizar operaciones espaciales.</p>
+<p>Insumo:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Cargar Librerías</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dplyr) <span class="co"># Manipulación de tablas</span></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(sf) <span class="co"># Manipulación de datos espaciales</span></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2) <span class="co"># Generar gráficas de alto nivel</span></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a><span class="co"># zonas censales INE, seleccionará columnas de interés</span></span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>zonas_censales <span class="ot">&lt;-</span>  <span class="fu">readRDS</span>(<span class="st">"data/censo/zonas_urb_consolidadas.rds"</span>) <span class="sc">%&gt;%</span> </span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(REGION, NOM_REGION, COMUNA, NOM_COMUNA, COD_INE_16, ESC_JH, PERS)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Siga los pasos en orden. Usa nombres de variables claros y agrega comentarios a tu código para explicar cada operación.</p>
+<ol type="1">
+<li><p>Filtrar comunas seleccionadas (1 punto)</p>
+<ul>
+<li>Elige dos o más comunas contiguas dentro de una misma región.</li>
+<li>Filtra la base de zonas censales utilizando la columna <code>NOM_COMUNA</code> para quedarte únicamente con esas comunas seleccionadas. <a href="datos_vectores.html#sec-filtros_esp" class="quarto-xref"><span>Filtros y selección de columnas</span></a></li>
+<li>Guarda el resultado en un nuevo objeto.</li>
+</ul></li>
+<li><p>Cálculo de área y densidad de población (1 punto)</p>
+<ul>
+<li>Calcula una nueva variable <code>AREA_HA</code> que represente el área de cada polígono en hectáreas (<code>st_area(.)</code> / 10000). Referencias <a href="datos_vectores.html#sec-mutate_esp" class="quarto-xref"><span>Generación columnas</span></a>.</li>
+<li>Calcula la densidad de población (PERS / <code>AREA_HA</code>).</li>
+<li>Genera dos mapas con ggplot2:
+<ul>
+<li>Población absoluta (<code>PERS</code> por zona censal).</li>
+<li>Densidad de población (personas por hectárea).</li>
+</ul></li>
+<li>Usa escalas de color adecuadas y leyendas claras para cada mapa.</li>
+</ul></li>
+<li><p>Promedio comunal de escolaridad y análisis espacial (1 punto)</p>
+<ul>
+<li>Calcula, a nivel comunal, el promedio de escolaridad del jefe/a de hogar (<code>ESC_JH</code>) usando <code>group_by()</code> y <code>summarise()</code> (Referencia: <a href="datos_vectores.html#sec-groupby_esp" class="quarto-xref"><span>Resumen Estadísticos Espaciales</span></a>).</li>
+<li>Une esta tabla resumen a la base espacial filtrada en el punto 1 mediante <code>left_join()</code> (Referencia: <a href="datos_vectores.html#sec-joins" class="quarto-xref"><span>Joining</span></a>).</li>
+<li>Calcula una nueva variable que represente la diferencia entre:
+<ul>
+<li>La escolaridad de cada zona censal (<code>ESC_JH</code>), y El promedio comunal calculado previamente.</li>
+</ul></li>
+<li>Genera un mapa temático mostrando esta diferencia y analiza si existe algún patrón espacial visible.</li>
+</ul></li>
+</ol>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->
@@ -710,13 +803,13 @@ ul.task-list li input[type="checkbox"] {
   </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./index.html" class="pagination-link" aria-label="Syllabus">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Syllabus</span>
+      <a href="./dataframes.html" class="pagination-link" aria-label="Dataframes y Delitos en R">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Dataframes y Delitos en R</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./intro_r.html" class="pagination-link" aria-label="Introducción a R Project">
-        <span class="nav-page-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Introducción a R Project</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./references.html" class="pagination-link" aria-label="References">
+        <span class="nav-page-text">References</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
