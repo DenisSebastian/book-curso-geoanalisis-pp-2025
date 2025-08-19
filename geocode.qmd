@@ -16,7 +16,6 @@ suppressPackageStartupMessages(library(dplyr))
 suppressPackageStartupMessages(library(purrr))
 suppressPackageStartupMessages(library(readr))
 suppressPackageStartupMessages(library(kableExtra))
-suppressPackageStartupMessages(library(mapdeck))
 suppressPackageStartupMessages(require(knitr))
 suppressPackageStartupMessages(library(tidygeocoder))
 suppressPackageStartupMessages(library(tidyr))
@@ -27,7 +26,13 @@ suppressPackageStartupMessages(library(stringdist))
 
 ## Introducción
 
-La geocodificación consiste en traducir descripciones textuales de direcciones a coordenadas geográficas (puntos), lo que permite incorporarlas a un análisis espacial. En contextos hispanos, la amplia variabilidad en los formatos de escritura de direcciones —abreviaciones, uso de diacríticos, numeraciones, referencias a kilómetros o parcelas, y complementos adicionales— exige un pipeline estructurado. Este debe integrar [normalización determinística, diccionarios de abreviaciones y métodos de similitud]{.verde}, antes de consultar motores de geocodificación externos.
+La geocodificación es el proceso de convertir direcciones físicas (por ejemplo, "Presidente Errázuriz 3485, Las Condes") en coordenadas geográficas (latitud y longitud), que se pueden utilizar para posicionar elementos o eventos en el espacio de un mapa o para análisis espaciales. Este proceso es fundamental en diversos proyectos de análisis espacial, ya que permite transformar datos textuales en información espacial. 
+
+
+![](images/geocoding.png){fig-align="center" width="500"}
+
+
+En contextos hispanos, la amplia variabilidad en los formatos de escritura de direcciones —abreviaciones, uso de diacríticos, numeraciones, referencias a kilómetros o parcelas, y complementos adicionales— exige un pipeline estructurado. Este debe integrar [normalización determinística, diccionarios de abreviaciones y métodos de similitud]{.verde}, antes de consultar motores de geocodificación externos.
 
 El proceso de geocodificación debe ser [flexible y adaptable]{.verde} a los diferentes tipos y estructuras de direcciones. Por ello, resulta fundamental contar con un flujo de trabajo que permita transformar las direcciones en etapas sucesivas, mejorando gradualmente la calidad de los resultados. Esta organización facilita la trazabilidad, el control de calidad y la incorporación de ajustes o transformaciones adicionales cuando sea necesario. A continuación, se presenta una visión resumida del pipeline básico que trabajaremos en esta clase.
 
@@ -74,7 +79,21 @@ Estandariza la cadena de entrada (**corrección, normalización, limpieza**), en
 
 ### Geocodificación
 
-Un motor geográfico de geocodificación es el sistema que convierte una dirección normalizada en coordenadas (latitud, longitud) usando una base de datos de referencia (calles, portales, topónimos, límites administrativos). Puede ser abierto (ej. Nominatim, Pelias) o comercial (ej. Google Maps, Here, Mapbox).
+Para realizar el proceso de geocodificación de direcciones es necesario contar con un **motor de geocodificación** que es un servicio o sistema que convierte direcciones físicas en coordenadas geográficas (latitud y longitud), o viceversa, un proceso conocido como “reverse geocoding”. Estos motores son esenciales para analizar datos espaciales cuando la información disponible está en formato de texto (como direcciones postales). 
+
+Los motores de geocodificación utilizan bases de datos geográficas y algoritmos de correspondencia para ubicar puntos específicos en un mapa a partir de descripciones textuales. Dependiendo del motor, pueden ofrecer características adicionales, como filtrado por región, cálculos de rutas, o integración con sistemas de tráfico en tiempo real. La siguiente tabla compara varios motores de geocodificación en cuanto a características, cobertura, precisión y si son gratuitos o de pago.
+
+| Motor | Tipo | Cobertura | Precisión | Límite Gratuito | Características Adicionales |
+|------------|------------|------------|------------|------------|------------|
+| Google Geocoding API | De pago | Mundial | Alta | 40,000 diarias | Geocodificación y "reverse geocoding", alta calidad. |
+| OpenStreetMap Nominatim | Gratuito | Mundial | Buena | Límite bajo | Basado en OpenStreetMap, infraestructura propia recomendada. |
+| HERE Geocoder API | De pago | Mundial | Alta | 250,000 mensuales | Filtrado avanzado, datos de tráfico en tiempo real. |
+| Mapbox Geocoding API | De pago | Mundial | Alta | 100,000 mensuales | Integración con Mapbox, geocodificación en tiempo real. |
+| Bing Maps Geocoding API | De pago | Mundial | Alta | 125,000 mensuales | Información adicional sobre tipo de localización. |
+| Geocode.xyz | Gratuito | Mundial | Moderada | 1,000 diarias | Servicio gratuito con opciones de pago. |
+| TomTom Geocoding API | De pago | Mundial | Alta | 2,500 diarias | Uso en navegación y tráfico en tiempo real. |
+
+Un motor geográfico de geocodificación es el sistema que convierte una dirección normalizada en coordenadas (latitud, longitud) usando una base de datos de referencia (calles, portales, topónimos, límites administrativos). 
 
 **Variables clave al momento de geocodificar**
 
@@ -87,7 +106,7 @@ Un motor geográfico de geocodificación es el sistema que convierte una direcci
 - User-Agent / Email: requerido en OSM para trazabilidad.
 - Rate limiting: número máximo de consultas permitido.
 
-En la práctica se utilizarán motores libres basados en OpenStreetMap (OSM), principalmente Nominatim, respetando sus términos de uso y buenas prácticas.
+En la práctica se utilizarán motores libres basados en OpenStreetMap (OSM), principalmente [Nominatim](https://nominatim.openstreetmap.org/ui/search.html), respetando sus términos de uso y buenas prácticas.
 
 
 
@@ -119,7 +138,7 @@ Mide el desempeño: **match rate**, porcentaje de acierto, cobertura por comuna,
 
 ### Etapa 2. Transformación Avanzada: Tablas de abreviaciones {.unnumbered}
 
-- Aplicar **diccionarios** muchos→uno (AV/AVDA/AVENIDA → AVENIDA; PJE/PSJE → PASAJE; O'HIGGINS ↔ OHIGGINS).
+- Aplicar [diccionarios]{.verde} muchos→uno (AV/AVDA/AVENIDA → AVENIDA; PJE/PSJE → PASAJE; O'HIGGINS ↔ OHIGGINS).
 - Reintentar geocodificación con dirección estandarizada.
 
 ### Etapa 3. Transformación por Similitud {.unnumbered}
@@ -157,7 +176,7 @@ flowchart TB
   classDef backlog fill:#FFF1F2,stroke:#FB7185,stroke-width:1px,color:#7f1d1d;
 
   %% ====== Entrada ======
-  IN["Dirección cruda"]:::input
+  IN["Base con Direcciones Raw"]:::input
 
   %% ====== [0] Preparación ======
   subgraph S0 ["[0] Preparación"]
@@ -287,7 +306,7 @@ flowchart TB
   classDef backlog fill:#FFF1F2,stroke:#FB7185,stroke-width:1px,color:#7f1d1d;
 
   %% ====== Entrada ======
-  IN["Dirección cruda"]:::input
+  IN["Base con Direcciones Raw"]:::input
 
   %% ====== [0] Preparación ======
   subgraph S0 ["[0] Preparación"]
@@ -431,7 +450,7 @@ write.xlsx(est_salud, "bases/original/original_id.xlsx")
 
 #### Selección de Columnas
 
-Selecciona la columna esenciales para el proceso de Geocodificón, además aprovecha para corregir los nombres de columnas mediante la función `clean_names()`.
+Selecciona la columna esenciales para el proceso de Geocodificón, además aprovecha para corregir los nombres de columnas mediante la función `clean_names()` de la librería [janitor](https://cran.r-project.org/web/packages/janitor/vignettes/janitor.html).
 
 ```{r eval=FALSE}
   # Selección de Columnas ---------------------------------------------------
@@ -563,18 +582,20 @@ base <- readRDS(paste0("geocoding/etapa_", etapa_anterior, "/",
 #### E1: Funciones de Limpieza Básica
 
 
-Para el proceso de limpieza inicial, se puede escribir cualquier función que se considere adecuada según la naturaleza de las direcciones, teniendo siempre en cuenta el **motor de geocodificación** que se utilizará. Estos motores son sensibles al formato del texto, por lo que es crucial que las direcciones estén bien formateadas para mejorar la precisión del proceso de geocodificación. A continuación, presentamos un ejemplo de función. La función limpieza() es útil cuando necesitamos estandarizar cadenas de texto eliminando tildes, convirtiendo todo a mayúsculas y limpiando ciertos caracteres no deseados. Su funcionamiento es el siguiente:
+Para el proceso de limpieza inicial, se puede escribir cualquier función que se considere adecuada según la naturaleza de las direcciones, teniendo siempre en cuenta el **motor de geocodificación** que se utilizará. Estos motores son sensibles al formato del texto, por lo que es crucial que las direcciones estén bien formateadas para mejorar la precisión del proceso de geocodificación. A continuación, presentamos un ejemplo de función. 
 
-1.  Conversión a mayúsculas: Utiliza la función stringr::str_to_upper para convertir todas las letras en mayúsculas.
-2.  Eliminación de tildes: Mediante chartr, las vocales con tilde (ÁÉÍÓÚ) son reemplazadas por sus equivalentes sin tilde (AEIOU), normalizando las vocales.
+La función `limpieza()` es útil cuando necesitamos estandarizar cadenas de texto eliminando tildes, convirtiendo todo a mayúsculas y limpiando ciertos caracteres no deseados. Su funcionamiento es el siguiente:
+
+1.  Conversión a mayúsculas: Utiliza la función `stringr::str_to_upper` para convertir todas las letras en mayúsculas.
+2.  Eliminación de tildes: Mediante `chartr`, las vocales con tilde (ÁÉÍÓÚ) son reemplazadas por sus equivalentes sin tilde (AEIOU), normalizando las vocales.
 3.  Eliminación de puntuación: Se eliminan todos los signos de puntuación excepto el apóstrofe (esto es útil para nombres como “O’Higgins”).
 4.  Limpieza de caracteres no deseados: Elimina símbolos específicos, como el carácter º.
-5.  Espacios: Usa str_squish para eliminar espacios innecesarios, como los que se encuentran al inicio o los que están repetidos entre palabras.
+5.  Espacios: Usa `str_squish` para eliminar espacios innecesarios, como los que se encuentran al inicio o los que están repetidos entre palabras.
 
 Esta función es muy útil para preparar texto en análisis de datos o cuando queremos asegurarnos de que las entradas de texto sean uniformes y fáciles de comparar.
 
 
-Complementariamente, separar_num_letra() evita que “123A” sea interpretado como una sola palabra, y eliminar_sn() previene confusión en direcciones “S/N”. Estas funciones incrementan la tasa de coincidencia en motores OSM.
+Complementariamente, `separar_num_letra()` evita que “123A” sea interpretado como una sola palabra, y `eliminar_sn()``` previene confusión en direcciones “S/N”. Estas funciones incrementan la tasa de coincidencia en motores OSM.
 
 
 ```{r}
@@ -606,7 +627,7 @@ eliminar_sn <- function(texto) {
 
 #### E1: Aplicar Limpieza Básica
 
-Con las funciones listas, se aplican a los campos de la dirección (CALLE, NUM, COMUNA, REGION). Luego se crea una columna CONSULTA, que concatena todo en un formato estándar. Esto es esencial porque motores como Nominatim requieren una cadena única, ordenada y jerárquica (número + calle + comuna + región + país).
+Con las funciones listas, se aplican a los campos de la dirección (`CALLE`, `NUM`, `COMUNA`, `REGION`). Luego se crea una columna `CONSULTA`, que concatena todo en un formato estándar. Esto es esencial porque motores como Nominatim requieren una cadena única, ordenada y jerárquica (número + calle + comuna + región + país).
 
 ```{r}
 
@@ -652,7 +673,7 @@ head(base_e1, 3) %>%
 
 Se utilizará una librería llamada [tidygeocoder](https://jessecambon.github.io/tidygeocoder/) que da acceso a los servicios de geocodificación en este caso Nominatim online. El procedimiento que se realizó en el proyecto difiere ya que se utilizó el motor de geocodificación local que ofrece mayor performance.
 
-La función `geocode()` transforma la columna CONSULTA en coordenadas (latitude, longitude). Este paso es el primero en que podemos medir cobertura real: cuántas direcciones logran ser interpretadas directamente sin reglas adicionales.
+La función `geocode()` transforma la columna `CONSULTA` en coordenadas (latitude, longitude). Este paso es el primero en que podemos medir cobertura real: cuántas direcciones logran ser interpretadas directamente sin reglas adicionales.
 
 ```{r eval =FALSE}
 
@@ -822,25 +843,25 @@ flowchart TB
   OUT["Dirección geocodificada"]:::finish
 
   %% ====== Flujo ======
-  S1 --> S2
+  E1 --> S2
   s2a --> s2b --> s2c
   s2c -- "✔ válido" --> OUT
-  s2c -- "✖ → [3]" --> s2d --> S3
+  s2c -- "✖ → [3]" --> s2d --> E3
 
 
 
 
   %% ====== Estilos de subgrupos ======
-  style S1 stroke:#3B82F6,stroke-width:2px,fill:#F8FBFF
+  style E1 stroke:#3B82F6,stroke-width:2px,fill:#F8FBFF
   style S2 stroke:#10B981,stroke-width:2px,fill:#F6FFFB
-  style S3 stroke:#A3BE00,stroke-width:2px,fill:#F9FFE6
+  style E3 stroke:#A3BE00,stroke-width:2px,fill:#F9FFE6
 
 ```
 
 
 #### E2: Lectura de Etapa Anterior
 
-En esta etapa retomamos únicamente los registros rezagados que no lograron validarse en E1. Esto asegura eficiencia en el pipeline (evitamos reprocesar direcciones correctas) y permite llevar un histórico de avance. Se añade la columna ETAPA=2 para documentar el progreso.
+En esta etapa retomamos únicamente los registros rezagados que no lograron validarse en E1. Esto asegura eficiencia en el pipeline (evitamos reprocesar direcciones correctas) y permite llevar un histórico de avance. Se añade la columna `ETAPA` = 2 para documentar el progreso.
 
 ```{r}
 etapa_actual = 2
@@ -906,7 +927,7 @@ base_e2_replaced <- base_e2 %>%
 
 #### E2: Buscar y Reemplazar forma masiva
 
-Con `find_replace_table()` aplicamos todas las reglas de la tabla de abreviaciones a la columna CALLE. Esta aproximación sistemática garantiza uniformidad en la estandarización y evita depender de reemplazos aislados.
+Con `find_replace_table()` aplicamos todas las reglas de la tabla de abreviaciones a la columna `CALLE.` Esta aproximación sistemática garantiza uniformidad en la estandarización y evita depender de reemplazos aislados.
 
 ```{r}
 find_replace_table <- function(data, col, ref_table) {
@@ -935,7 +956,7 @@ base_e2_mod_ab <- find_replace_table(data = base_e2_replaced,
 
 #### E2: Geocodificación
 
-Una vez corregidas las direcciones, volvemos a formar la cadena CONSULTA y ejecutamos la geocodificación. La expectativa es que, gracias a las abreviaciones normalizadas, el motor OSM (Nominatim) reconozca más casos que en la etapa anterior.
+Una vez corregidas las direcciones, volvemos a formar la cadena `CONSULTA` y ejecutamos la geocodificación. La expectativa es que, gracias a las abreviaciones normalizadas, el motor OSM (Nominatim) reconozca más casos que en la etapa anterior.
 
 ```{r}
 
@@ -1077,6 +1098,7 @@ flowchart TB
   REZ["Rezagados"]:::backlog
 
   %% ====== Flujo ======
+  E2 --> S3
   s3c -- "✔ válido" --> OUT
   s3c -- "✖ inválido" --> s3d --> REZ
   s3a --> s3t
@@ -1145,7 +1167,7 @@ Mediante esta técnica, las direcciones incorrectas o mal escritas pueden ser aj
 Referencias de algoritmos de distancias de textos ([link](https://search.r-project.org/CRAN/refmans/stringdist/html/stringdist-metrics.html))
 
 
-Usamos el algoritmo Jaro-Winkler, que devuelve una medida de similitud entre 0 y 1. Este algoritmo da mayor peso a coincidencias en los primeros caracteres, lo que es especialmente útil en nombres de calles. Para nuestro caso realizaremos una función que busque candidatos en la misma comuna para acelerar el proceso, y para analizar la proximidad entre la calle original y candidato utilizaremos la función `stringdist` con el método = "jw", donde la métrica que devueve está entre 0 y 1, donde 0 es la coincidencia máxima significa sin diferencias.
+Usamos el algoritmo Jaro-Winkler, que devuelve una medida de similitud entre 0 y 1. Este algoritmo da mayor peso a coincidencias en los primeros caracteres, lo que es especialmente útil en nombres de calles. Para nuestro caso realizaremos una función que busque candidatos en la misma comuna para acelerar el proceso, y para analizar la proximidad entre la calle original y candidato utilizaremos la función `stringdist` con el método = "jw", donde la métrica que devuelve está entre 0 y 1, donde 0 es la coincidencia máxima significa sin diferencias. Referencias de la librería [stringdist](https://github.com/markvanderloo/stringdist)
 
 
 ```{r}
@@ -1186,8 +1208,8 @@ match_calle_jw <- function(data, maestro, col_calle = "CALLE",
 
 
 
-*	Si la distancia es menor o igual al umbral (p. ej. 0.15), consideramos que la calle fue corregida con éxito.
-*	Si no, se conserva el valor original para auditoría.
+*	Si la distancia es menor o igual al umbral (p. ej. `0.15`), consideramos que la calle fue corregida con éxito.
+*	Si no, se conserva el valor original para auditoría o trazabilidad general.
 El objetivo es maximizar la recuperación de casos válidos sin introducir errores sistemáticos.
 
 
@@ -1200,7 +1222,7 @@ base_e3_mod_jw %>% select(CALLE, JW:CALLE_MATCH)
 
 
 #### E3: Geocodificación
-Con la nueva columna `CALLE_MATCH`, que contiene la calle corregida por similitud, se construye la cadena `CONSULTA``` y se reintenta la geocodificación. De esta forma, cada dirección usa su mejor versión posible antes de considerarse “no geocodificable”.
+Con la nueva columna `CALLE_MATCH`, que contiene la calle corregida por similitud, se construye la cadena `CONSULTA` y se reintenta la geocodificación. De esta forma, cada dirección usa su mejor versión posible antes de considerarse “no geocodificable”.
 
 ```{r}
 base_e3_mod_jw <-  base_e3_mod_jw %>% 
