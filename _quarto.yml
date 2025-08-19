@@ -23,7 +23,8 @@ book:
     - visualizaciones.qmd
     - datos_vectores.qmd
     - dataframes.qmd
-    # - datos_vectoriales.qmd
+    - geocoding.qmd
+    - geocode.qmd
     # - espacial_r.qmd
     # - analisis_esp.qmd
     # - inferencia.qmd
@@ -54,6 +55,8 @@ format:
     mailto: "denis.berroeta@uai.cl"
     toc-title: "Contenidos"
     toc-depth: 3
+    number-sections: true 
+    number-depth: 3 
   
 execute:
   warning: false

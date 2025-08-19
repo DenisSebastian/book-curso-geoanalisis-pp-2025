@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>1&nbsp; Introducción a R Project – Curso de Geoanálisis</title>
+<title>8&nbsp; Geocoding – Curso de Geoanálisis</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -65,8 +65,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./variables.html" rel="next">
-<link href="./geoanalisis.html" rel="prev">
+<link href="./tarea_1.html" rel="next">
+<link href="./geocoding.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
@@ -104,6 +104,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     "search-label": "Search"
   }
 }</script>
+<script src="site_libs/quarto-diagram/mermaid.min.js"></script>
+<script src="site_libs/quarto-diagram/mermaid-init.js"></script>
+<link href="site_libs/quarto-diagram/mermaid.css" rel="stylesheet">
 
 
 <link rel="stylesheet" href="styles/style.css">
@@ -118,7 +121,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./intro_r.html"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Introducción a R Project</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./geocode.html"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Geocoding</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -157,7 +160,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./intro_r.html" class="sidebar-item-text sidebar-link active">
+  <a href="./intro_r.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Introducción a R Project</span></span></a>
   </div>
 </li>
@@ -205,7 +208,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./geocode.html" class="sidebar-item-text sidebar-link">
+  <a href="./geocode.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Geocoding</span></span></a>
   </div>
 </li>
@@ -271,22 +274,27 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">Contenidos</h2>
    
   <ul>
-  <li><a href="#motivación" id="toc-motivación" class="nav-link active" data-scroll-target="#motivación"><span class="header-section-number">1.1</span> Motivación</a></li>
-  <li><a href="#r-project" id="toc-r-project" class="nav-link" data-scroll-target="#r-project"><span class="header-section-number">1.2</span> R Project</a>
+  <li><a href="#introducción" id="toc-introducción" class="nav-link active" data-scroll-target="#introducción"><span class="header-section-number">8.1</span> Introducción</a></li>
+  <li><a href="#pasos" id="toc-pasos" class="nav-link" data-scroll-target="#pasos"><span class="header-section-number">8.2</span> Pasos</a>
   <ul class="collapse">
-  <li><a href="#ventajas-de-utilizar-r-project" id="toc-ventajas-de-utilizar-r-project" class="nav-link" data-scroll-target="#ventajas-de-utilizar-r-project"><span class="header-section-number">1.2.1</span> Ventajas de Utilizar R Project</a></li>
+  <li><a href="#transformación-varía-según-etapa" id="toc-transformación-varía-según-etapa" class="nav-link" data-scroll-target="#transformación-varía-según-etapa"><span class="header-section-number">8.2.1</span> Transformación (varía según etapa)</a></li>
+  <li><a href="#geocodificación" id="toc-geocodificación" class="nav-link" data-scroll-target="#geocodificación"><span class="header-section-number">8.2.2</span> Geocodificación</a></li>
+  <li><a href="#validación" id="toc-validación" class="nav-link" data-scroll-target="#validación"><span class="header-section-number">8.2.3</span> Validación</a></li>
+  <li><a href="#calidad-evaluación-de-métricas" id="toc-calidad-evaluación-de-métricas" class="nav-link" data-scroll-target="#calidad-evaluación-de-métricas"><span class="header-section-number">8.2.4</span> Calidad (evaluación de métricas)</a></li>
   </ul></li>
-  <li><a href="#rstudio" id="toc-rstudio" class="nav-link" data-scroll-target="#rstudio"><span class="header-section-number">1.3</span> Rstudio</a></li>
-  <li><a href="#librerías-en-r" id="toc-librerías-en-r" class="nav-link" data-scroll-target="#librerías-en-r"><span class="header-section-number">1.4</span> Librerías en R</a>
+  <li><a href="#etapas" id="toc-etapas" class="nav-link" data-scroll-target="#etapas"><span class="header-section-number">8.3</span> Etapas</a>
   <ul class="collapse">
-  <li><a href="#ejemplo-de-instalación-de-librerías-desde-r" id="toc-ejemplo-de-instalación-de-librerías-desde-r" class="nav-link" data-scroll-target="#ejemplo-de-instalación-de-librerías-desde-r"><span class="header-section-number">1.4.1</span> Ejemplo de Instalación de Librerías desde R</a></li>
-  <li><a href="#ejemplo-de-instalación-de-librerías-desde-rstudio" id="toc-ejemplo-de-instalación-de-librerías-desde-rstudio" class="nav-link" data-scroll-target="#ejemplo-de-instalación-de-librerías-desde-rstudio"><span class="header-section-number">1.4.2</span> Ejemplo de Instalación de Librerías desde Rstudio</a></li>
+  <li><a href="#transformación-inicial-preparación-de-datos" id="toc-transformación-inicial-preparación-de-datos" class="nav-link" data-scroll-target="#transformación-inicial-preparación-de-datos"><span class="header-section-number">8.3.1</span> 0. Transformación Inicial: Preparación de Datos</a></li>
+  <li><a href="#transformación-básica-regex-y-funciones" id="toc-transformación-básica-regex-y-funciones" class="nav-link" data-scroll-target="#transformación-básica-regex-y-funciones"><span class="header-section-number">8.3.2</span> 1. Transformación Básica: Regex y funciones</a></li>
+  <li><a href="#transformación-avanzada-tablas-de-abreviaciones" id="toc-transformación-avanzada-tablas-de-abreviaciones" class="nav-link" data-scroll-target="#transformación-avanzada-tablas-de-abreviaciones"><span class="header-section-number">8.3.3</span> 2. Transformación Avanzada: Tablas de abreviaciones</a></li>
+  <li><a href="#transformación-por-similitud-algoritmos-p.-ej.-jarowinkler" id="toc-transformación-por-similitud-algoritmos-p.-ej.-jarowinkler" class="nav-link" data-scroll-target="#transformación-por-similitud-algoritmos-p.-ej.-jarowinkler"><span class="header-section-number">8.3.4</span> 3. Transformación por Similitud: Algoritmos (p.&nbsp;ej., Jaro–Winkler)</a></li>
   </ul></li>
-  <li><a href="#directorios-de-trabajos" id="toc-directorios-de-trabajos" class="nav-link" data-scroll-target="#directorios-de-trabajos"><span class="header-section-number">1.5</span> Directorios de Trabajos</a>
+  <li><a href="#pipeline-completo" id="toc-pipeline-completo" class="nav-link" data-scroll-target="#pipeline-completo"><span class="header-section-number">8.4</span> Pipeline Completo</a></li>
+  <li><a href="#geocodificación-en-r" id="toc-geocodificación-en-r" class="nav-link" data-scroll-target="#geocodificación-en-r"><span class="header-section-number">8.5</span> Geocodificación en R</a>
   <ul class="collapse">
-  <li><a href="#directorios-de-trabajo-en-rstudio" id="toc-directorios-de-trabajo-en-rstudio" class="nav-link" data-scroll-target="#directorios-de-trabajo-en-rstudio"><span class="header-section-number">1.5.1</span> Directorios de Trabajo en RStudio</a></li>
+  <li><a href="#recursos-previos" id="toc-recursos-previos" class="nav-link" data-scroll-target="#recursos-previos"><span class="header-section-number">8.5.1</span> Recursos Previos</a></li>
+  <li><a href="#etapa-0.-transformación-inicial-preparación-de-datos" id="toc-etapa-0.-transformación-inicial-preparación-de-datos" class="nav-link" data-scroll-target="#etapa-0.-transformación-inicial-preparación-de-datos"><span class="header-section-number">8.5.2</span> Etapa: 0. Transformación Inicial: Preparación de Datos</a></li>
   </ul></li>
-  <li><a href="#referencias" id="toc-referencias" class="nav-link" data-scroll-target="#referencias"><span class="header-section-number">1.6</span> Referencias:</a></li>
   </ul>
 </nav>
     </div>
@@ -295,8 +303,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Introducción a R Project</span></h1>
-<p class="subtitle lead">Introducción al Lenguaje de Programación</p>
+<h1 class="title"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Geocoding</span></h1>
+<p class="subtitle lead">Obtener Coordenadas de Direcciones</p>
 </div>
 
 
@@ -313,203 +321,270 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
-<!-- ![](images/S2.png){fig-align="center"} -->
-<section id="motivación" class="level2" data-number="1.1">
-<h2 data-number="1.1" class="anchored" data-anchor-id="motivación"><span class="header-section-number">1.1</span> Motivación</h2>
-<p>En el mundo del análisis de datos espaciales, R se convierte en tu mejor aliado. Este lenguaje de programación, con su poderosa capacidad de manipulación de datos y una abundancia de paquetes especializados, te abrirá las puertas a muchas posibilidades de análisis. Al aprender R, estarás equipado para explorar, visualizar y modelar datos espaciales de manera efectiva y precisa. El dominio de R te permitirá desbloquear información valiosa a partir de datos geoespaciales, y, además, te proporcionará una ventaja competitiva en un campo en constante crecimiento. El análisis espacial con R te permitirá descubrir patrones, tomar decisiones informadas y hacer contribuciones significativas a tu labor diaria.</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="images/automatizacion-de-reportes-con-r-web.jpeg" class="img-fluid quarto-figure quarto-figure-center figure-img"></p>
-</figure>
-</div>
-<p><strong>¿Por qué usar un lenguaje de programción para análisis espacial?</strong></p>
-<ol type="1">
-<li><dl>
-<dt>Abundancia de paquetes especializados:</dt>
-<dd>
-R cuenta con una amplia gama de paquetes diseñados específicamente para el análisis de datos espaciales, como ‘sf’, ‘raster’ y ‘leaflet’. Esto facilita la implementación de técnicas espaciales sin necesidad de reinventar la rueda.
-</dd>
-</dl></li>
-<li><dl>
-<dt>Visualización avanzada:</dt>
-<dd>
-R ofrece herramientas gráficas de alta calidad para la representación visual de datos espaciales. Paquetes como <code>ggplot2</code>, <code>tmap</code> y <code>leaflet</code> permiten crear mapas y gráficos personalizados con facilidad.
-</dd>
-</dl></li>
-<li><dl>
-<dt>Análisis estadístico y geoespacial integrado:</dt>
-<dd>
-R combina capacidades estadísticas sólidas con análisis espaciales. Puedes realizar análisis espaciales avanzados, como interpolación, análisis de clusters y modelado de datos geoespaciales, todo en un entorno coherente.
-</dd>
-</dl></li>
-<li><dl>
-<dt>Comunidad activa y recursos educativos:</dt>
-<dd>
-La comunidad R es activa y solidaria. Existe una amplia oferta de recursos educativos, foros y tutoriales en línea que te ayudarán a aprender y resolver problemas de análisis espacial en R.
-</dd>
-</dl></li>
-<li><dl>
-<dt>Colaboración interdisciplinaria:</dt>
-<dd>
-A medida que la ciencia de datos espaciales se integra en diversas disciplinas, dominar R te permitirá colaborar con expertos en campos como geografía, ecología, urbanismo y epidemiología, ampliando tus oportunidades de investigación.
-</dd>
-</dl></li>
-<li><dl>
-<dt>Reproducibilidad y documentación:</dt>
-<dd>
-R fomenta la reproducibilidad de tu trabajo. Puedes documentar tus análisis y visualizaciones de manera efectiva, lo que es esencial en proyectos de investigación.
-</dd>
-</dl></li>
-</ol>
-<p>En resumen, aprender R es una inversión valiosa para cualquier profesional que se dedique al análisis de datos espaciales. Te brinda las herramientas necesarias para abordar problemas complejos y contribuir al avance del conocimiento en este campo.</p>
-<p><strong>Todos los indicadores en el Centro de Inteligencia Territorial UAI se construyeron utilizando herramientas de programación.</strong></p>
+<section id="introducción" class="level2" data-number="8.1">
+<h2 data-number="8.1" class="anchored" data-anchor-id="introducción"><span class="header-section-number">8.1</span> Introducción</h2>
+<p>La geocodificación consiste en traducir descripciones textuales de direcciones a coordenadas geográficas (puntos), lo que permite incorporarlas a un análisis espacial. En contextos hispanos, la amplia variabilidad en los formatos de escritura de direcciones —abreviaciones, uso de diacríticos, numeraciones, referencias a kilómetros o parcelas, y complementos adicionales— exige un pipeline estructurado. Este debe integrar <span class="verde">normalización determinística, diccionarios de abreviaciones y métodos de similitud</span>, antes de consultar motores de geocodificación externos.</p>
+<p>El proceso de geocodificación debe ser <span class="verde">flexible y adaptable</span> a los diferentes tipos y estructuras de direcciones. Por ello, resulta fundamental contar con un flujo de trabajo que permita transformar las direcciones en etapas sucesivas, mejorando gradualmente la calidad de los resultados. Esta organización facilita la trazabilidad, el control de calidad y la incorporación de ajustes o transformaciones adicionales cuando sea necesario. A continuación, se presenta una visión resumida del pipeline básico que trabajaremos en esta clase.</p>
+<p><strong>Visión del Pipeline Básico</strong></p>
+<pre><code>Dirección cruda
+  │
+  ├─▶ [0] Preparación
+  │
+  ├─▶ [1] Básica 
+  │      ├─▶ Transformación por Regex Funciones
+  │      ├─▶ Geocodificación 
+  │      ├─▶ Validación Espacial → ✔️ fin | ✖️ pasa a [2]
+  │      └─▶ Calidad de Etapa
+  │
+  ├─▶ [2] Avanzada
+  │      ├─▶ Transformación por Tablas de Abreviaturas
+  │      ├─▶ Geocodificación #2
+  │      ├─▶ Validación Espacial → ✔️ fin | ✖️ pasa a [3]
+  │      └─▶ Calidad de Etapa
+  │
+  └─▶ [3] Similitud
+         ├─▶ Transformación por Similitud de Palabras
+         ├─▶ Geocodificación #3 (si score&lt;τ, usar motor alterno o Rezagados)
+         ├─▶ Validación Espacial → ✔️ fin | ✖️ Rezagados
+         └─▶ Calidad de Etapa y Final</code></pre>
+<hr>
 </section>
-<section id="r-project" class="level2 page-columns page-full" data-number="1.2">
-<h2 data-number="1.2" class="anchored" data-anchor-id="r-project"><span class="header-section-number">1.2</span> R Project</h2>
-<div class="quarto-figure quarto-figure-left">
-<figure class="figure">
-<p><img src="images/R_logo.png" class="img-fluid quarto-figure quarto-figure-left figure-img" width="100"></p>
-</figure>
-</div>
-<p><a href="https://www.r-project.org">R Project</a> es un lenguaje programación multiparadigma (procedural, imperativo, orientado a objetos y funcional enfocado a aplicaciones estadísticas. Por estadísticas se debe entender también los campos de estudio que se basan o las utilizan como economía, finanzas, ciencia de datos, machine learning, etc.</p>
-<p>Para la instalación de seguir las instrucción indicadas en <a href="recursos.html#sec-installR" class="quarto-xref"><span>Section A.1</span></a>.</p>
-<section id="ventajas-de-utilizar-r-project" class="level3 page-columns page-full" data-number="1.2.1">
-<h3 data-number="1.2.1" class="anchored" data-anchor-id="ventajas-de-utilizar-r-project"><span class="header-section-number">1.2.1</span> Ventajas de Utilizar R Project</h3>
-<p><strong>1. R es un software libre</strong></p>
-<ul>
-<li>La libertad de ejecutar el programa como desee y con cualquier propósito</li>
-<li>Estudiar el funcionamiento del programa y adaptarlo a sus necesidades.</li>
-<li>Rescribir copias para ayudar a los demás.</li>
-<li>Manejar el programa y publicar las mejorar, de manera que toda comunidad se beneficie.</li>
-</ul>
-<p><strong>2. R es multiplataforma</strong></p>
-<ul>
-<li>R funciona en Mac, Windows y en numerosos sistemas UNIX. Esto significa que cualquier persona puede trabajar con tus datos, figuras, análisis y más importante aún usar tus instrucciones (también conocido como scripts o código) para generar las figuras y el análisis. Así que cualquier persona, y en cualquier lugar del mundo, con acceso a cualquier Sistema Operativo puede usar <a href="https://www.r-project.org">R Project</a> sin ninguna licencia.</li>
-</ul>
-<p><strong>3. R es de código abierto</strong></p>
-<ul>
-<li>Existe una gran comunidad de voluntarios trabajando para mejorarlo, lo cual permite ser moldeado y dirigido a cuestiones específicas. Creando así programas y paquetes que funcionen en el entorno R. Programas tales como <a href="https://posit.co/products/open-source/rstudio/">RStudio</a>, Java GUI for R, R-commander, RKWard, entre otros, y con más de 19.000 paquetes indexados en <a href="https://cran.r-project.org/">CRAN (Comprehensive R Archive Network)</a>, <a href="https://www.bioconductor.org/">Bioconductor</a>, <a href="https://github.com/">Github</a> y <a href="https://r-forge.r-project.org/">R-Forge</a>.</li>
-</ul>
-<p><strong>4. Todo dentro de un mismo entorno</strong></p>
-<ul>
-<li>R remplaza la combinación de varios programas para el proceso de análisis de datos, por ejemplo Excel, ArcGis, QGis, SigmaPlot, entre otros. Esto no solo resulta en el alto costo de las licencias de múltiples programas, si no también, en la gran cantidad de archivos con diferentes formatos que no podrían leer otros programas. En cambio con solo utilizar R, puedes realizar todo el análisis de datos e inclusive leer archivos de diferentes formatos.</li>
-</ul>
+<section id="pasos" class="level2 page-columns page-full" data-number="8.2">
+<h2 data-number="8.2" class="anchored" data-anchor-id="pasos"><span class="header-section-number">8.2</span> Pasos</h2>
+<p>Cada etapa del pipeline sigue la misma secuencia de pasos: <span class="verde">transformación de la dirección, geocodificación, validación espacial</span> de los resultados y, finalmente, <span class="verde">evaluación de calidad</span>. A continuación, se describen en detalle estos pasos comunes a todas las etapas.</p>
 <div class="quarto-figure quarto-figure-center page-columns page-full">
 <figure class="figure page-columns page-full">
-<p><img src="images/r_project.png" class="img-fluid figure-img" width="800"></p>
-<figcaption class="margin-caption">Rstudio Ejecutándose</figcaption>
+<p><img src="images/geocod-pasos.png" class="img-fluid figure-img"></p>
+<figcaption class="margin-caption">Pasos de que deben tener cada etapa de geocodificación (excepción etapa 0).</figcaption>
 </figure>
 </div>
+<section id="transformación-varía-según-etapa" class="level3" data-number="8.2.1">
+<h3 data-number="8.2.1" class="anchored" data-anchor-id="transformación-varía-según-etapa"><span class="header-section-number">8.2.1</span> Transformación (varía según etapa)</h3>
+<p>Estandariza la cadena de entrada (<strong>corrección, normalización, limpieza</strong>), enriqueciendo con reglas y diccionarios según la etapa.</p>
 </section>
-</section>
-<section id="rstudio" class="level2" data-number="1.3">
-<h2 data-number="1.3" class="anchored" data-anchor-id="rstudio"><span class="header-section-number">1.3</span> Rstudio</h2>
-<div class="quarto-figure quarto-figure-left">
-<figure class="figure">
-<p><img src="images/Logo-RStudio.png" class="img-fluid quarto-figure quarto-figure-left figure-img" width="100"></p>
-</figure>
-</div>
-<p><a href="https://posit.co/products/open-source/rstudio/">RStudio</a> es un entorno de desarrollo integrado (IDE) para <a href="https://www.r-project.org">R Project</a> y <a href="https://docs.python.org/es/3/tutorial/">Python</a>. Incluye una consola, un editor que resalta la sintaxis y admite la ejecución directa del código, y herramientas para graficar, el historial, la depuración y la gestión del espacio de trabajo. RStudio está disponible en ediciones comerciales y de código abierto y se ejecuta en el escritorio (Windows, Mac y Linux).</p>
-<p>Para instalar <a href="https://posit.co/products/open-source/rstudio/">RStudio</a> se debe seguir las instrucciones señaladas en el apéndice <a href="recursos.html#sec-installRStudio" class="quarto-xref"><span>Section A.2</span></a></p>
-<center>
-<img src="images/rstudio-editor.svg" class="img-fluid" style="width:90.0%">
-</center>
-</section>
-<section id="librerías-en-r" class="level2" data-number="1.4">
-<h2 data-number="1.4" class="anchored" data-anchor-id="librerías-en-r"><span class="header-section-number">1.4</span> Librerías en R</h2>
-<p>En R, una librería es un conjunto de funciones, datos y recursos adicionales que se agrupan para facilitar tareas específicas de programación, análisis de datos o visualización. Estas librerías son paquetes de software que amplían las funcionalidades básicas de R y permiten a los usuarios realizar tareas más avanzadas de manera eficiente.</p>
-<p>Existen una gran variedad de librerías disponibles en R, cada una diseñada para abordar un campo o área de aplicación particular. A continuación, mencionaré algunos de los campos más comunes en los que se utilizan las librerías de R:</p>
-<dl>
-<dt>Análisis de datos:</dt>
-<dd>
-R es ampliamente utilizado en el análisis de datos y estadísticas. Librerías como “dplyr”, “tidyr” y “ggplot2” son muy populares en este campo. Estas librerías proporcionan funciones para el manejo de datos, filtrado, transformación, agregación y visualización.
-</dd>
-<dt>Aprendizaje automático (Machine Learning):</dt>
-<dd>
-R es una opción popular para aplicar algoritmos de aprendizaje automático. Librerías como “caret”, “randomForest” y “glmnet” ofrecen una amplia gama de algoritmos y herramientas para entrenar modelos de machine learning, realizar validación cruzada, seleccionar características y evaluar el rendimiento de los modelos.
-</dd>
-<dt>Procesamiento de texto y lenguaje natural:</dt>
-<dd>
-Para el análisis de texto y procesamiento del lenguaje natural, existen librerías como “tm”, “stringr” y “text2vec”. Estas librerías permiten realizar tareas como tokenización, limpieza de texto, extracción de características y modelado de temas.
-</dd>
-<dt>Visualización de datos:</dt>
-<dd>
-R es conocido por su capacidad para generar gráficos y visualizaciones de datos. Librerías como “ggplot2”, “plotly” y “lattice” ofrecen herramientas para crear gráficos estáticos y dinámicos, mapas, diagramas de dispersión y muchas otras visualizaciones.
-</dd>
-</dl>
-<p>Estos son solo algunos ejemplos de los campos en los que se utilizan las librerías de R. Es importante destacar que la comunidad de R es muy activa y constantemente se desarrollan nuevas librerías para abordar diferentes necesidades en diversos campos de aplicación. El uso de estas librerías no solo ahorra tiempo y esfuerzo, sino que también permite a los programadores y analistas aprovechar las mejores prácticas y métodos establecidos en sus respectivos campos.</p>
-<section id="ejemplo-de-instalación-de-librerías-desde-r" class="level3" data-number="1.4.1">
-<h3 data-number="1.4.1" class="anchored" data-anchor-id="ejemplo-de-instalación-de-librerías-desde-r"><span class="header-section-number">1.4.1</span> Ejemplo de Instalación de Librerías desde R</h3>
-<p>Podemos instalar paquetes usando la función <code>install.packages()</code>, dando como argumento el nombre del paquete que deseamos instalar, entre comillas.</p>
-<p>Para instalar librerías se puede hacer directamente desde la consola de RStudio, por ejemplo:</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">"dplyr"</span>) <span class="co"># Se puede instalar más de una librería a la vez</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-</section>
-<section id="ejemplo-de-instalación-de-librerías-desde-rstudio" class="level3" data-number="1.4.2">
-<h3 data-number="1.4.2" class="anchored" data-anchor-id="ejemplo-de-instalación-de-librerías-desde-rstudio"><span class="header-section-number">1.4.2</span> Ejemplo de Instalación de Librerías desde Rstudio</h3>
-<p>También se pude instalar librerías del Panel “Packages”</p>
-<center>
-<img src="images/install_pack2.png" class="img-fluid" style="width:90.0%">
-</center>
-<p>Y por último se puede instalar desde Pestaña “Tools” -&gt; “Install Packages”:</p>
-<center>
-<img src="images/install_pckages.gif" class="img-fluid" style="width:90.0%">
-</center>
-</section>
-</section>
-<section id="directorios-de-trabajos" class="level2" data-number="1.5">
-<h2 data-number="1.5" class="anchored" data-anchor-id="directorios-de-trabajos"><span class="header-section-number">1.5</span> Directorios de Trabajos</h2>
-<p>Un directorio de trabajo, también conocido como carpeta de trabajo, es una ubicación específica en un sistema de archivos donde se almacenan y organizan los archivos relacionados con un proyecto o una tarea determinada. Estos directorios son esenciales para mantener un entorno de desarrollo ordenado y estructurado. Aquí tienes algunas razones por las que son importantes:</p>
-<dl>
-<dt>Organización:</dt>
-<dd>
-Los directorios de trabajo permiten organizar y clasificar los archivos de un proyecto. Puedes crear subdirectorios para agrupar archivos relacionados, como código fuente, recursos multimedia, documentación, pruebas, entre otros. Esto facilita la búsqueda y el acceso a los archivos necesarios, lo que ahorra tiempo y evita la confusión.
-</dd>
-<dt>Mantenimiento:</dt>
-<dd>
-Al utilizar directorios de trabajo adecuados, es más sencillo realizar tareas de mantenimiento en un proyecto. Puedes realizar actualizaciones, realizar pruebas, corregir errores y agregar nuevas funcionalidades de manera más eficiente. Además, si trabajas en equipo, un directorio de trabajo bien estructurado permite a los miembros del equipo colaborar de manera más fluida y reducir posibles conflictos al fusionar sus cambios.
-</dd>
-<dt>Portabilidad:</dt>
-<dd>
-Los directorios de trabajo facilitan la portabilidad de un proyecto. Si necesitas mover o copiar tu proyecto a otro lugar, simplemente tendrás que llevar el directorio principal y todos los subdirectorios y archivos asociados estarán incluidos. Esto garantiza que no falten archivos esenciales y que el proyecto se pueda ejecutar sin problemas en un nuevo entorno.
-</dd>
-</dl>
-<section id="directorios-de-trabajo-en-rstudio" class="level3" data-number="1.5.1">
-<h3 data-number="1.5.1" class="anchored" data-anchor-id="directorios-de-trabajo-en-rstudio"><span class="header-section-number">1.5.1</span> Directorios de Trabajo en RStudio</h3>
-<p>Definir directorio de Trabajo con RStudio se puede hacer de varias formas:</p>
-<ol type="1">
-<li>Desde Rstudio.</li>
-</ol>
-<pre><code>Session -&gt; Set Working Directory -&gt; Choose Directory
-</code></pre>
-<center>
-<img src="images/wdirectory.png" class="img-fluid" style="width:80.0%">
-</center>
-<center>
-<img src="images/folder_directory.png" class="img-fluid" style="width:60.0%">
-</center>
-<ol start="2" type="1">
-<li>Mediante Códigos.</li>
-</ol>
-<p>Definir Directorio de Trabajo con una función</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">setwd</span>(<span class="st">"/Users/denisberroeta/Library/CloudStorage/OneDrive-UniversidadAdolfoIbanez/CIT/DOCENCIA/DIPLOMADOS/DGET_2023/compartir_DGET"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<p>Consultar Directorio de Trabajo</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">getwd</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-</section>
-</section>
-<section id="referencias" class="level2" data-number="1.6">
-<h2 data-number="1.6" class="anchored" data-anchor-id="referencias"><span class="header-section-number">1.6</span> Referencias:</h2>
+<section id="geocodificación" class="level3" data-number="8.2.2">
+<h3 data-number="8.2.2" class="anchored" data-anchor-id="geocodificación"><span class="header-section-number">8.2.2</span> Geocodificación</h3>
+<p>Un motor geográfico de geocodificación es el sistema que convierte una dirección normalizada en coordenadas (latitud, longitud) usando una base de datos de referencia (calles, portales, topónimos, límites administrativos). Puede ser abierto (ej. Nominatim, Pelias) o comercial (ej. Google Maps, Here, Mapbox).</p>
+<p><strong>Variables clave al momento de geocodificar</strong></p>
 <ul>
-<li><a href="https://es.r4ds.hadley.nz">R para Ciencia de Datos</a></li>
-<li><a href="https://bookdown.org/gboccardo/manual-ED-UCH/">RStudio para Estadística Descriptiva en Ciencias Sociales</a></li>
+<li>Cadena de consulta: dirección completa o tokens estructurados.</li>
+<li>País / región: restringen la búsqueda.</li>
+<li>Bounding box / viewbox: acota la búsqueda espacial.</li>
+<li>Nivel de detalle (addressdetails): define si devuelve calle, comuna, provincia, país.</li>
+<li>Número de resultados (limit): controla cuántas coincidencias se devuelven.</li>
+<li>Formato de salida (format): JSON, XML, etc.</li>
+<li>User-Agent / Email: requerido en OSM para trazabilidad.</li>
+<li>Rate limiting: número máximo de consultas permitido.</li>
 </ul>
+<p>En la práctica se utilizarán motores libres basados en OpenStreetMap (OSM), principalmente Nominatim, respetando sus términos de uso y buenas prácticas.</p>
+</section>
+<section id="validación" class="level3" data-number="8.2.3">
+<h3 data-number="8.2.3" class="anchored" data-anchor-id="validación"><span class="header-section-number">8.2.3</span> Validación</h3>
+<p>Confirma consistencia espacial (<strong>Point-in-Polygon</strong> contra la comuna/municipio esperado) y jerárquica (comuna–provincia–región).</p>
+</section>
+<section id="calidad-evaluación-de-métricas" class="level3" data-number="8.2.4">
+<h3 data-number="8.2.4" class="anchored" data-anchor-id="calidad-evaluación-de-métricas"><span class="header-section-number">8.2.4</span> Calidad (evaluación de métricas)</h3>
+<p>Mide el desempeño: <strong>match rate</strong>, porcentaje de acierto, cobertura por comuna, y contribución de cada etapa.</p>
+</section>
+</section>
+<section id="etapas" class="level2" data-number="8.3">
+<h2 data-number="8.3" class="anchored" data-anchor-id="etapas"><span class="header-section-number">8.3</span> Etapas</h2>
+<p><img src="images/geocod-etapas.png" class="img-fluid"></p>
+<section id="transformación-inicial-preparación-de-datos" class="level3" data-number="8.3.1">
+<h3 data-number="8.3.1" class="anchored" data-anchor-id="transformación-inicial-preparación-de-datos"><span class="header-section-number">8.3.1</span> 0. Transformación Inicial: Preparación de Datos</h3>
+<ul>
+<li>Seleccionar columnas necesarias y nombres estándar (p.&nbsp;ej., <code>id</code>, <code>direccion_raw</code>, <code>comuna</code>/<code>municipio</code>, <code>region</code>, <code>pais</code>).</li>
+<li>Crear <strong>id único</strong> (UUID/Hash) para trazabilidad.</li>
+</ul>
+</section>
+<section id="transformación-básica-regex-y-funciones" class="level3" data-number="8.3.2">
+<h3 data-number="8.3.2" class="anchored" data-anchor-id="transformación-básica-regex-y-funciones"><span class="header-section-number">8.3.2</span> 1. Transformación Básica: Regex y funciones</h3>
+<ul>
+<li>Normalización mínima: mayúsculas, quitar diacríticos, compactar espacios, estandarizar símbolos (<code>#</code>, <code>Nº</code>, <code>NUM</code>).</li>
+<li>Extracción de <strong>tokens</strong>: <code>tipo_via</code>, <code>nombre_via</code>, <code>numero</code>, <code>km</code>, <code>complementos</code>.</li>
+<li>Primer intento de geocodificación con cadena limpia.</li>
+</ul>
+</section>
+<section id="transformación-avanzada-tablas-de-abreviaciones" class="level3" data-number="8.3.3">
+<h3 data-number="8.3.3" class="anchored" data-anchor-id="transformación-avanzada-tablas-de-abreviaciones"><span class="header-section-number">8.3.3</span> 2. Transformación Avanzada: Tablas de abreviaciones</h3>
+<ul>
+<li>Aplicar <strong>diccionarios</strong> muchos→uno (AV/AVDA/AVENIDA → AVENIDA; PJE/PSJE → PASAJE; O’HIGGINS ↔︎ OHIGGINS).</li>
+<li>Reintentar geocodificación con dirección estandarizada.</li>
+</ul>
+</section>
+<section id="transformación-por-similitud-algoritmos-p.-ej.-jarowinkler" class="level3" data-number="8.3.4">
+<h3 data-number="8.3.4" class="anchored" data-anchor-id="transformación-por-similitud-algoritmos-p.-ej.-jarowinkler"><span class="header-section-number">8.3.4</span> 3. Transformación por Similitud: Algoritmos (p.&nbsp;ej., Jaro–Winkler)</h3>
+<ul>
+<li>Generar <strong>candidatos</strong> desde un maestro de calles.</li>
+<li>Puntuar con <span class="verde">Jaro–Winkler</span>, Levenshtein/Damerau, Token Sort/Set, TF–IDF trigramas.</li>
+<li>Reintentar geocodificación con dirección ajustada por similitud.</li>
+</ul>
+</section>
+</section>
+<section id="pipeline-completo" class="level2" data-number="8.4">
+<h2 data-number="8.4" class="anchored" data-anchor-id="pipeline-completo"><span class="header-section-number">8.4</span> Pipeline Completo</h2>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div>
+<p></p><figure class="figure"><p></p>
+<div>
+<pre class="mermaid mermaid-js">%%{init: {
+  "theme": "base",
+  "themeVariables": {
+    "fontFamily": "Inter, Segoe UI, Roboto, sans-serif",
+    "primaryTextColor": "#0f172a",
+    "lineColor": "#94a3b8",
+    "tertiaryColor": "#f8fafc"
+  },
+  "flowchart": { "htmlLabels": false, "curve": "basis" }
+}}%%
+
+flowchart TB
+  %% ====== Definición de estilos ======
+  classDef input fill:#E8F1FF,stroke:#3B82F6,stroke-width:1px,color:#0b3d91;
+  classDef s0 fill:#F8FAFC,stroke:#64748B,stroke-width:1px,color:#0f172a;
+  classDef s1 fill:#FFFFFF,stroke:#3B82F6,stroke-width:1.5px,color:#0f172a;
+  classDef s2 fill:#FFFFFF,stroke:#10B981,stroke-width:1.5px,color:#0f172a;
+  classDef s3 fill:#FFFFFF,stroke:#A3BE00,stroke-width:1.5px,color:#0f172a;
+  classDef decision fill:#FEF3C7,stroke:#F59E0B,stroke-width:1px,color:#713f12;
+  classDef qa fill:#F0F9FF,stroke:#0EA5E9,stroke-width:1px,color:#0c4a6e;
+  classDef finish fill:#ECFDF5,stroke:#16A34A,stroke-width:1.5px,color:#065f46;
+  classDef backlog fill:#FFF1F2,stroke:#FB7185,stroke-width:1px,color:#7f1d1d;
+
+  %% ====== Entrada ======
+  IN["Dirección cruda"]:::input
+
+  %% ====== [0] Preparación ======
+  subgraph S0 ["[0] Preparación"]
+    direction TB
+    s0c["Selección de Columnas necesarias"]:::s0
+    s0b["Generación de ID"]:::s0
+  end
+
+  %% ====== [1] Básica ======
+  subgraph S1 ["[1] Básica"]
+    direction TB
+    s1a["Transformación por Regex / funciones"]:::s1
+    s1b["Geocodificación #1"]:::s1
+    s1c{"Validación Espacial"}:::decision
+    s1d["Calidad de etapa"]:::qa
+  end
+
+  %% ====== [2] Avanzada ======
+  subgraph S2 ["[2] Avanzada"]
+    direction TB
+    s2a["Transformación por tablas de abreviaturas"]:::s2
+    s2b["Geocodificación #2"]:::s2
+    s2c{"Validación Espacial"}:::decision
+    s2d["Calidad de etapa"]:::qa
+  end
+
+  %% ====== [3] Similitud ======
+  subgraph S3 ["[3] Similitud"]
+    direction TB
+    s3a["Transformación por similitud de palabras"]:::s3
+    s3t{"¿score ≥ τ?"}:::decision
+    s3b["Geocodificación #3"]:::s3
+    s3alt["Motor alterno / Rezagados"]:::backlog
+    s3c{"Validación Espacial"}:::decision
+    s3d["Calidad de etapa y FINAL"]:::qa
+  end
+
+  %% ====== Salidas ======
+  OUT["Dirección geocodificada + metadata de calidad"]:::finish
+  REZ["Rezagados"]:::backlog
+
+  %% ====== Flujo ======
+  IN --&gt; S0 --&gt; S1
+  s1a --&gt; s1b --&gt; s1c
+  s1c -- "✔ válido" --&gt; OUT
+  s1c -- "✖ → [2]" --&gt; s1d --&gt; S2
+
+  s2a --&gt; s2b --&gt; s2c
+  s2c -- "✔ válido" --&gt; OUT
+  s2c -- "✖ → [3]" --&gt; s2d --&gt; S3
 
 
+  s3c -- "✔ válido" --&gt; OUT
+  s3c -- "✖ inválido" --&gt; s3d --&gt; REZ
+  s3a --&gt; s3t
+  s3t -- "Sí" --&gt; s3b --&gt; s3c
+  s3t -- "No" --&gt; s3alt
+
+  %% ====== Estilos de subgrupos ======
+  style S0 stroke:#64748B,stroke-width:1.5px,fill:#F8FAFC
+  style S1 stroke:#3B82F6,stroke-width:2px,fill:#F8FBFF
+  style S2 stroke:#10B981,stroke-width:2px,fill:#F6FFFB
+  style S3 stroke:#A3BE00,stroke-width:2px,fill:#F9FFE6
+
+</pre>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
+<hr>
+</section>
+<section id="geocodificación-en-r" class="level2" data-number="8.5">
+<h2 data-number="8.5" class="anchored" data-anchor-id="geocodificación-en-r"><span class="header-section-number">8.5</span> Geocodificación en R</h2>
+<section id="recursos-previos" class="level3" data-number="8.5.1">
+<h3 data-number="8.5.1" class="anchored" data-anchor-id="recursos-previos"><span class="header-section-number">8.5.1</span> Recursos Previos</h3>
+<section id="librerías-que-se-utilizarán" class="level4">
+<h4 class="anchored" data-anchor-id="librerías-que-se-utilizarán">Librerías que se utilizarán</h4>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(sf)</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dplyr)</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidygeocoder)</span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyr)</span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(stringdist)</span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(openxlsx)</span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(janitor)</span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(mapview)</span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(stringr)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="funciones-auxiliares" class="level4">
+<h4 class="anchored" data-anchor-id="funciones-auxiliares">Funciones Auxiliares</h4>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Función Si no existe directorio lo crea</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>make_dir <span class="ot">&lt;-</span> <span class="cf">function</span>(path){</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> (<span class="sc">!</span><span class="fu">dir.exists</span>(path)) <span class="fu">dir.create</span>(path, <span class="at">recursive =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+</section>
+<section id="etapa-0.-transformación-inicial-preparación-de-datos" class="level3" data-number="8.5.2">
+<h3 data-number="8.5.2" class="anchored" data-anchor-id="etapa-0.-transformación-inicial-preparación-de-datos"><span class="header-section-number">8.5.2</span> Etapa: 0. Transformación Inicial: Preparación de Datos</h3>
+<p><strong>Objetivo</strong>: asegurar insumos limpios, trazables y reproducibles.</p>
+<section id="crear-directorios-y-variables" class="level4">
+<h4 class="anchored" data-anchor-id="crear-directorios-y-variables">Crear Directorios y Variables</h4>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co"># crear un vector con rutas</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>path_etapas <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">0</span><span class="sc">:</span><span class="dv">3</span>) <span class="sc">%&gt;%</span> </span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">paste0</span>(<span class="st">"etapa_"</span>, .) <span class="sc">%&gt;%</span> </span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">paste0</span>(<span class="st">"../geocoding/"</span>, .)</span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a><span class="co"># Crear directorio en la tuta correspondiente</span></span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> (etapa <span class="cf">in</span> path_etapas) {</span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">print</span>(<span class="fu">paste0</span>(<span class="st">"Creando carpeta en "</span>, etapa))</span>
+<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">make_dir</span>(etapa)</span>
+<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a>}  </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] "Creando carpeta en ../geocoding/etapa_0"
+[1] "Creando carpeta en ../geocoding/etapa_1"
+[1] "Creando carpeta en ../geocoding/etapa_2"
+[1] "Creando carpeta en ../geocoding/etapa_3"</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="co"># lo mismo anterior (programción funcional)</span></span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="co"># purrr::map(.x = path_etapas, .f = make_dir) </span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu">make_dir</span>(<span class="st">"resultados"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+
+
+</section>
+</section>
 </section>
 
 </main> <!-- /main -->
@@ -914,13 +989,13 @@ Los directorios de trabajo facilitan la portabilidad de un proyecto. Si necesita
   </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./geoanalisis.html" class="pagination-link" aria-label="Introducción al Geoanálisis">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Introducción al Geoanálisis</span>
+      <a href="./geocoding.html" class="pagination-link" aria-label="Geocoding">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Geocoding</span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./variables.html" class="pagination-link" aria-label="Variables en R">
-        <span class="nav-page-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Variables en R</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./tarea_1.html" class="pagination-link" aria-label="Tarea 1">
+        <span class="nav-page-text">Tarea 1</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
