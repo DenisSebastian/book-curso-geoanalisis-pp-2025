@@ -23,7 +23,6 @@ book:
     - visualizaciones.qmd
     - datos_vectores.qmd
     - dataframes.qmd
-    - geocoding.qmd
     - geocode.qmd
     # - espacial_r.qmd
     # - analisis_esp.qmd
