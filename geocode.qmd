@@ -43,26 +43,27 @@ Dirección cruda
   │      ├─▶ Transformación por Regex Funciones
   │      ├─▶ Geocodificación 
   │      ├─▶ Validación Espacial → ✔️ fin | ✖️ pasa a [2]
-  │      └─▶ Calidad de Etapa
+  │      └─▶ Registro de Avance por Etapa
   │
   ├─▶ [2] Avanzada
   │      ├─▶ Transformación por Tablas de Abreviaturas
   │      ├─▶ Geocodificación #2
   │      ├─▶ Validación Espacial → ✔️ fin | ✖️ pasa a [3]
-  │      └─▶ Calidad de Etapa
+  │      └─▶ Registro de Avance por Etapa 
   │
   └─▶ [3] Similitud
          ├─▶ Transformación por Similitud de Palabras
-         ├─▶ Geocodificación #3 (si score<τ, usar motor alterno o Rezagados)
+         ├─▶ Score de Diferencias < τ → ✔️ Geocoding | ✖️ Rezagados
+         ├─▶ Geocodificación #3 
          ├─▶ Validación Espacial → ✔️ fin | ✖️ Rezagados
-         └─▶ Calidad de Etapa y Final
+         └─▶ Registro de Avance por Etapa y Final
 ```
 
 ---
 
 ## Pasos
 
-Cada etapa del pipeline sigue la misma secuencia de pasos: [transformación de la dirección, geocodificación, validación espacial]{.verde} de los resultados y, finalmente, [evaluación de calidad]{.verde}. A continuación, se describen en detalle estos pasos comunes a todas las etapas.
+Cada etapa del pipeline sigue la misma secuencia de pasos: [transformación de la dirección, geocodificación, validación espacial]{.verde} de los resultados y, finalmente, [Registro de Avances]{.verde}. A continuación, se describen en detalle estos pasos comunes a todas las etapas.
 
 
 ![Pasos de que deben tener cada etapa de geocodificación (excepción etapa 0).](images/geocod-pasos)
@@ -95,7 +96,7 @@ En la práctica se utilizarán motores libres basados en OpenStreetMap (OSM), pr
 
 Confirma consistencia espacial (**Point-in-Polygon** contra la comuna/municipio esperado) y jerárquica (comuna–provincia–región).
 
-### Calidad (evaluación de métricas)
+### Registros de Avances
 
 Mide el desempeño: **match rate**, porcentaje de acierto, cobertura por comuna, y contribución de cada etapa.
 
@@ -103,24 +104,25 @@ Mide el desempeño: **match rate**, porcentaje de acierto, cobertura por comuna,
 
 ![](images/geocod-etapas.png)
 
-### 0. Transformación Inicial: Preparación de Datos
+### Etapa 0. Preparación de Datos {.unnumbered}
 
 - Seleccionar columnas necesarias y nombres estándar (p. ej., `id`, `direccion_raw`, `comuna`/`municipio`, `region`, `pais`).
 - Crear **id único** (UUID/Hash) para trazabilidad.
 
 
-### 1. Transformación Básica: Regex y funciones
+### Etapa 1. Transformación Básica: Regex y funciones {.unnumbered}
+
 
 - Normalización mínima: mayúsculas, quitar diacríticos, compactar espacios, estandarizar símbolos (`#`, `Nº`, `NUM`).
 - Extracción de **tokens**: `tipo_via`, `nombre_via`, `numero`, `km`, `complementos`.
 - Primer intento de geocodificación con cadena limpia.
 
-### 2. Transformación Avanzada: Tablas de abreviaciones
+### Etapa 2. Transformación Avanzada: Tablas de abreviaciones {.unnumbered}
 
 - Aplicar **diccionarios** muchos→uno (AV/AVDA/AVENIDA → AVENIDA; PJE/PSJE → PASAJE; O'HIGGINS ↔ OHIGGINS).
 - Reintentar geocodificación con dirección estandarizada.
 
-### 3. Transformación por Similitud: Algoritmos (p. ej., Jaro–Winkler)
+### Etapa 3. Transformación por Similitud {.unnumbered}
 
 - Generar **candidatos** desde un maestro de calles.
 - Puntuar con [Jaro–Winkler]{.verde}, Levenshtein/Damerau, Token Sort/Set, TF–IDF trigramas.
@@ -170,7 +172,7 @@ flowchart TB
     s1a["Transformación por Regex / funciones"]:::s1
     s1b["Geocodificación #1"]:::s1
     s1c{"Validación Espacial"}:::decision
-    s1d["Calidad de etapa"]:::qa
+    s1d["Registro de Avance"]:::qa
   end
 
   %% ====== [2] Avanzada ======
@@ -179,7 +181,7 @@ flowchart TB
     s2a["Transformación por tablas de abreviaturas"]:::s2
     s2b["Geocodificación #2"]:::s2
     s2c{"Validación Espacial"}:::decision
-    s2d["Calidad de etapa"]:::qa
+    s2d["Registro de Avance"]:::qa
   end
 
   %% ====== [3] Similitud ======
@@ -188,9 +190,9 @@ flowchart TB
     s3a["Transformación por similitud de palabras"]:::s3
     s3t{"¿score ≥ τ?"}:::decision
     s3b["Geocodificación #3"]:::s3
-    s3alt["Motor alterno / Rezagados"]:::backlog
+    REZ["Rezagados"]:::backlog
     s3c{"Validación Espacial"}:::decision
-    s3d["Calidad de etapa y FINAL"]:::qa
+    s3d["Registro de Avance"]:::qa
   end
 
   %% ====== Salidas ======
@@ -212,7 +214,7 @@ flowchart TB
   s3c -- "✖ inválido" --> s3d --> REZ
   s3a --> s3t
   s3t -- "Sí" --> s3b --> s3c
-  s3t -- "No" --> s3alt
+  s3t -- "No" --> REZ
 
   %% ====== Estilos de subgrupos ======
   style S0 stroke:#64748B,stroke-width:1.5px,fill:#F8FAFC
@@ -335,7 +337,7 @@ for (etapa in path_etapas) {
 ```
 
 Crear Directorios para resultados finales
-```{r}
+```{r eval=FALSE}
 make_dir("resultados")
 ```
 
@@ -353,7 +355,7 @@ aportes_etapas <- list()
 Polígonos de las Comunas de Chile para la validación espacial
 
 ```{r eval=FALSE}
-comunas_polygonos <- st_read("../data/shape/Comunas_Chile.shp") %>% 
+comunas_polygonos <- st_read("bases/shapes/Comunas_Chile.shp") %>% 
   select(COD_COMUNA_INE = COMUNA, NOM_COMUNA_INE = NOM_COMUNA, 
          COD_REGION_INE = REGION, NOM_REGION_INE = NOM_REGION) %>% 
   st_transform(4326) # transformar a coordenadas geográficas
@@ -362,7 +364,7 @@ comunas_polygonos <- st_read("../data/shape/Comunas_Chile.shp") %>%
 
 
 ```{r echo=FALSE}
-comunas_polygonos <- st_read("data/shape/Comunas_Chile.shp") %>% 
+comunas_polygonos <- st_read("geocoding/bases/shapes/Comunas_Chile.shp") %>% 
   select(COD_COMUNA_INE = COMUNA, NOM_COMUNA_INE = NOM_COMUNA, 
          COD_REGION_INE = REGION, NOM_REGION_INE = NOM_REGION) %>% 
   st_transform(4326) # transformar a coordenadas geográficas
@@ -509,7 +511,7 @@ flowchart TB
     s1a["Transformación por Regex / funciones"]:::s1
     s1b["Geocodificación #1"]:::s1
     s1c{"Validación Espacial"}:::decision
-    s1d["Calidad de etapa"]:::qa
+    s1d["Registro de Avance"]:::qa
   end
 
  
@@ -812,7 +814,7 @@ flowchart TB
     s2a["Transformación por tablas de abreviaturas"]:::s2
     s2b["Geocodificación #2"]:::s2
     s2c{"Validación Espacial"}:::decision
-    s2d["Calidad de etapa"]:::qa
+    s2d["Registro de Avance"]:::qa
   end
 
 
@@ -1065,9 +1067,9 @@ flowchart TB
     s3a["Transformación por similitud de palabras"]:::s3
     s3t{"¿score ≥ τ?"}:::decision
     s3b["Geocodificación #3"]:::s3
-    s3alt["Motor alterno / Rezagados"]:::backlog
+    REZ["Rezagados"]:::backlog
     s3c{"Validación Espacial"}:::decision
-    s3d["Calidad de etapa y FINAL"]:::qa
+    s3d["Registro de Avance y FINAL"]:::qa
   end
 
   %% ====== Salidas ======
@@ -1075,12 +1077,11 @@ flowchart TB
   REZ["Rezagados"]:::backlog
 
   %% ====== Flujo ======
-  E2 --> S3
   s3c -- "✔ válido" --> OUT
   s3c -- "✖ inválido" --> s3d --> REZ
   s3a --> s3t
   s3t -- "Sí" --> s3b --> s3c
-  s3t -- "No" --> s3alt
+  s3t -- "No" --> REZ
 
   %% ====== Estilos de subgrupos ======
   style E2 stroke:#10B981,stroke-width:2px,fill:#F6FFFB
@@ -1144,11 +1145,7 @@ Mediante esta técnica, las direcciones incorrectas o mal escritas pueden ser aj
 Referencias de algoritmos de distancias de textos ([link](https://search.r-project.org/CRAN/refmans/stringdist/html/stringdist-metrics.html))
 
 
-Usamos el algoritmo Jaro-Winkler, que devuelve una medida de similitud entre 0 y 1. Este algoritmo da mayor peso a coincidencias en los primeros caracteres, lo que es especialmente útil en nombres de calles.
-
-*	Si la distancia es menor o igual al umbral (p. ej. 0.15), consideramos que la calle fue corregida con éxito.
-*	Si no, se conserva el valor original para auditoría.
-El objetivo es maximizar la recuperación de casos válidos sin introducir errores sistemáticos.
+Usamos el algoritmo Jaro-Winkler, que devuelve una medida de similitud entre 0 y 1. Este algoritmo da mayor peso a coincidencias en los primeros caracteres, lo que es especialmente útil en nombres de calles. Para nuestro caso realizaremos una función que busque candidatos en la misma comuna para acelerar el proceso, y para analizar la proximidad entre la calle original y candidato utilizaremos la función `stringdist` con el método = "jw", donde la métrica que devueve está entre 0 y 1, donde 0 es la coincidencia máxima significa sin diferencias.
 
 
 ```{r}
@@ -1186,6 +1183,13 @@ match_calle_jw <- function(data, maestro, col_calle = "CALLE",
 }
 
 ```
+
+
+
+*	Si la distancia es menor o igual al umbral (p. ej. 0.15), consideramos que la calle fue corregida con éxito.
+*	Si no, se conserva el valor original para auditoría.
+El objetivo es maximizar la recuperación de casos válidos sin introducir errores sistemáticos.
+
 
 ```{r}
 
