@@ -22,3 +22,9 @@ data
 data/
 data/*
 .Rproj.user
+
+
+
+geocoding
+geocoding/
+geocoding/*
