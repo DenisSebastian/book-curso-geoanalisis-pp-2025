@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>1&nbsp; Introducción a R Project – Curso de Geoanálisis</title>
+<title>9&nbsp; Datos Espaciales: Raster – Curso de Geoanálisis</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -65,8 +65,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./variables.html" rel="next">
-<link href="./geoanalisis.html" rel="prev">
+<link href="./inferencia.html" rel="next">
+<link href="./geocode.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
@@ -118,7 +118,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./intro_r.html"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Introducción a R Project</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./datos_rasters.html"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Datos Espaciales: Raster</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -157,7 +157,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./intro_r.html" class="sidebar-item-text sidebar-link active">
+  <a href="./intro_r.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Introducción a R Project</span></span></a>
   </div>
 </li>
@@ -205,7 +205,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./datos_rasters.html" class="sidebar-item-text sidebar-link">
+  <a href="./datos_rasters.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Datos Espaciales: Raster</span></span></a>
   </div>
 </li>
@@ -235,7 +235,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./references.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">References</span></a>
+ <span class="menu-text">Referencias Bibliográficas</span></a>
   </div>
 </li>
         <li class="sidebar-item sidebar-item-section">
@@ -268,7 +268,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./john_snow.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Mapa de Cólera</span></a>
+ <span class="menu-text"><span class="chapter-number">D</span>&nbsp; <span class="chapter-title">Mapa de Cólera</span></span></a>
   </div>
 </li>
       </ul>
@@ -283,22 +283,22 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">Contenidos</h2>
    
   <ul>
-  <li><a href="#motivación" id="toc-motivación" class="nav-link active" data-scroll-target="#motivación"><span class="header-section-number">1.1</span> Motivación</a></li>
-  <li><a href="#r-project" id="toc-r-project" class="nav-link" data-scroll-target="#r-project"><span class="header-section-number">1.2</span> R Project</a>
+  <li><a href="#objetivos-del-módulo" id="toc-objetivos-del-módulo" class="nav-link active" data-scroll-target="#objetivos-del-módulo"><span class="header-section-number">9.1</span> Objetivos del Módulo</a></li>
+  <li><a href="#definición-de-raster" id="toc-definición-de-raster" class="nav-link" data-scroll-target="#definición-de-raster"><span class="header-section-number">9.2</span> Definición de Raster</a></li>
+  <li><a href="#características-de-un-raster" id="toc-características-de-un-raster" class="nav-link" data-scroll-target="#características-de-un-raster"><span class="header-section-number">9.3</span> Características de un Raster</a></li>
+  <li><a href="#imágenes-satelitales-ejemplo-landsat-8" id="toc-imágenes-satelitales-ejemplo-landsat-8" class="nav-link" data-scroll-target="#imágenes-satelitales-ejemplo-landsat-8"><span class="header-section-number">9.4</span> Imágenes Satelitales (ejemplo: Landsat 8)</a></li>
+  <li><a href="#ejemplo-práctico" id="toc-ejemplo-práctico" class="nav-link" data-scroll-target="#ejemplo-práctico"><span class="header-section-number">9.5</span> Ejemplo Práctico</a>
   <ul class="collapse">
-  <li><a href="#ventajas-de-utilizar-r-project" id="toc-ventajas-de-utilizar-r-project" class="nav-link" data-scroll-target="#ventajas-de-utilizar-r-project"><span class="header-section-number">1.2.1</span> Ventajas de Utilizar R Project</a></li>
+  <li><a href="#librerías" id="toc-librerías" class="nav-link" data-scroll-target="#librerías"><span class="header-section-number">9.5.1</span> Librerías</a></li>
+  <li><a href="#lectura-de-imagen-raster." id="toc-lectura-de-imagen-raster." class="nav-link" data-scroll-target="#lectura-de-imagen-raster."><span class="header-section-number">9.5.2</span> lectura de imagen Raster.</a></li>
+  <li><a href="#visualización-raster" id="toc-visualización-raster" class="nav-link" data-scroll-target="#visualización-raster"><span class="header-section-number">9.5.3</span> Visualización Raster</a></li>
   </ul></li>
-  <li><a href="#rstudio" id="toc-rstudio" class="nav-link" data-scroll-target="#rstudio"><span class="header-section-number">1.3</span> Rstudio</a></li>
-  <li><a href="#librerías-en-r" id="toc-librerías-en-r" class="nav-link" data-scroll-target="#librerías-en-r"><span class="header-section-number">1.4</span> Librerías en R</a>
+  <li><a href="#anexo-compatibilidad-con-librería-raster" id="toc-anexo-compatibilidad-con-librería-raster" class="nav-link" data-scroll-target="#anexo-compatibilidad-con-librería-raster"><span class="header-section-number">9.6</span> Anexo: Compatibilidad con librería <code>raster</code></a>
   <ul class="collapse">
-  <li><a href="#ejemplo-de-instalación-de-librerías-desde-r" id="toc-ejemplo-de-instalación-de-librerías-desde-r" class="nav-link" data-scroll-target="#ejemplo-de-instalación-de-librerías-desde-r"><span class="header-section-number">1.4.1</span> Ejemplo de Instalación de Librerías desde R</a></li>
-  <li><a href="#ejemplo-de-instalación-de-librerías-desde-rstudio" id="toc-ejemplo-de-instalación-de-librerías-desde-rstudio" class="nav-link" data-scroll-target="#ejemplo-de-instalación-de-librerías-desde-rstudio"><span class="header-section-number">1.4.2</span> Ejemplo de Instalación de Librerías desde Rstudio</a></li>
+  <li><a href="#lectura-e-inspección" id="toc-lectura-e-inspección" class="nav-link" data-scroll-target="#lectura-e-inspección"><span class="header-section-number">9.6.1</span> Lectura e inspección</a></li>
+  <li><a href="#visualización-de-rgb" id="toc-visualización-de-rgb" class="nav-link" data-scroll-target="#visualización-de-rgb"><span class="header-section-number">9.6.2</span> Visualización de RGB</a></li>
   </ul></li>
-  <li><a href="#directorios-de-trabajos" id="toc-directorios-de-trabajos" class="nav-link" data-scroll-target="#directorios-de-trabajos"><span class="header-section-number">1.5</span> Directorios de Trabajos</a>
-  <ul class="collapse">
-  <li><a href="#directorios-de-trabajo-en-rstudio" id="toc-directorios-de-trabajo-en-rstudio" class="nav-link" data-scroll-target="#directorios-de-trabajo-en-rstudio"><span class="header-section-number">1.5.1</span> Directorios de Trabajo en RStudio</a></li>
-  </ul></li>
-  <li><a href="#referencias" id="toc-referencias" class="nav-link" data-scroll-target="#referencias"><span class="header-section-number">1.6</span> Referencias:</a></li>
+  <li><a href="#referencias" id="toc-referencias" class="nav-link" data-scroll-target="#referencias"><span class="header-section-number">9.7</span> Referencias:</a></li>
   </ul>
 </nav>
     </div>
@@ -307,8 +307,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Introducción a R Project</span></h1>
-<p class="subtitle lead">Introducción al Lenguaje de Programación</p>
+<h1 class="title"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Datos Espaciales: Raster</span></h1>
+<p class="subtitle lead">Manipulación de Raster</p>
 </div>
 
 
@@ -325,200 +325,272 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
-<!-- ![](images/S2.png){fig-align="center"} -->
-<section id="motivación" class="level2" data-number="1.1">
-<h2 data-number="1.1" class="anchored" data-anchor-id="motivación"><span class="header-section-number">1.1</span> Motivación</h2>
-<p>En el mundo del análisis de datos espaciales, R se convierte en tu mejor aliado. Este lenguaje de programación, con su poderosa capacidad de manipulación de datos y una abundancia de paquetes especializados, te abrirá las puertas a muchas posibilidades de análisis. Al aprender R, estarás equipado para explorar, visualizar y modelar datos espaciales de manera efectiva y precisa. El dominio de R te permitirá desbloquear información valiosa a partir de datos geoespaciales, y, además, te proporcionará una ventaja competitiva en un campo en constante crecimiento. El análisis espacial con R te permitirá descubrir patrones, tomar decisiones informadas y hacer contribuciones significativas a tu labor diaria.</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="images/automatizacion-de-reportes-con-r-web.jpeg" class="img-fluid quarto-figure quarto-figure-center figure-img"></p>
-</figure>
-</div>
-<p><strong>¿Por qué usar un lenguaje de programción para análisis espacial?</strong></p>
-<ol type="1">
-<li><dl>
-<dt>Abundancia de paquetes especializados:</dt>
-<dd>
-R cuenta con una amplia gama de paquetes diseñados específicamente para el análisis de datos espaciales, como ‘sf’, ‘raster’ y ‘leaflet’. Esto facilita la implementación de técnicas espaciales sin necesidad de reinventar la rueda.
-</dd>
-</dl></li>
-<li><dl>
-<dt>Visualización avanzada:</dt>
-<dd>
-R ofrece herramientas gráficas de alta calidad para la representación visual de datos espaciales. Paquetes como <code>ggplot2</code>, <code>tmap</code> y <code>leaflet</code> permiten crear mapas y gráficos personalizados con facilidad.
-</dd>
-</dl></li>
-<li><dl>
-<dt>Análisis estadístico y geoespacial integrado:</dt>
-<dd>
-R combina capacidades estadísticas sólidas con análisis espaciales. Puedes realizar análisis espaciales avanzados, como interpolación, análisis de clusters y modelado de datos geoespaciales, todo en un entorno coherente.
-</dd>
-</dl></li>
-<li><dl>
-<dt>Comunidad activa y recursos educativos:</dt>
-<dd>
-La comunidad R es activa y solidaria. Existe una amplia oferta de recursos educativos, foros y tutoriales en línea que te ayudarán a aprender y resolver problemas de análisis espacial en R.
-</dd>
-</dl></li>
-<li><dl>
-<dt>Colaboración interdisciplinaria:</dt>
-<dd>
-A medida que la ciencia de datos espaciales se integra en diversas disciplinas, dominar R te permitirá colaborar con expertos en campos como geografía, ecología, urbanismo y epidemiología, ampliando tus oportunidades de investigación.
-</dd>
-</dl></li>
-<li><dl>
-<dt>Reproducibilidad y documentación:</dt>
-<dd>
-R fomenta la reproducibilidad de tu trabajo. Puedes documentar tus análisis y visualizaciones de manera efectiva, lo que es esencial en proyectos de investigación.
-</dd>
-</dl></li>
-</ol>
-<p>En resumen, aprender R es una inversión valiosa para cualquier profesional que se dedique al análisis de datos espaciales. Te brinda las herramientas necesarias para abordar problemas complejos y contribuir al avance del conocimiento en este campo.</p>
-<p><strong>Todos los indicadores en el Centro de Inteligencia Territorial UAI se construyeron utilizando herramientas de programación.</strong></p>
+<section id="objetivos-del-módulo" class="level2" data-number="9.1">
+<h2 data-number="9.1" class="anchored" data-anchor-id="objetivos-del-módulo"><span class="header-section-number">9.1</span> Objetivos del Módulo</h2>
+<ul>
+<li>Identificar la estructura, propiedades y metadatos de un Raster (resolución, extensión, sistema de referencia).</li>
+<li>Cargar, visualizar e interpretar bandas satelitales (ej.: Landsat 8) y sus combinaciones color.</li>
+<li>Ejecutar un flujo mínimo en R para leer y visualizar imágenes Raster (color natural y falso color).</li>
+</ul>
 </section>
-<section id="r-project" class="level2 page-columns page-full" data-number="1.2">
-<h2 data-number="1.2" class="anchored" data-anchor-id="r-project"><span class="header-section-number">1.2</span> R Project</h2>
-<div class="quarto-figure quarto-figure-left">
-<figure class="figure">
-<p><img src="images/R_logo.png" class="img-fluid quarto-figure quarto-figure-left figure-img" width="100"></p>
+<section id="definición-de-raster" class="level2 page-columns page-full" data-number="9.2">
+<h2 data-number="9.2" class="anchored" data-anchor-id="definición-de-raster"><span class="header-section-number">9.2</span> Definición de Raster</h2>
+<dl>
+<dt>Raster</dt>
+<dd>
+<p>Representación del espacio mediante una matriz de celdas (filas × columnas). Cada celda almacena un valor que describe el fenómeno (p.&nbsp;ej., reflectancia en una banda espectral). Un conjunto de capas apiladas (bandas) forma un raster multicapas..</p>
+</dd>
+</dl>
+<div class="quarto-figure quarto-figure-center page-columns page-full">
+<figure class="figure page-columns page-full">
+<p><img src="images/raster_concept.png" class="img-fluid figure-img" style="width:60.0%"></p>
+<figcaption class="margin-caption">Representación Raster</figcaption>
 </figure>
 </div>
-<p><a href="https://www.r-project.org">R Project</a> es un lenguaje programación multiparadigma (procedural, imperativo, orientado a objetos y funcional enfocado a aplicaciones estadísticas. Por estadísticas se debe entender también los campos de estudio que se basan o las utilizan como economía, finanzas, ciencia de datos, machine learning, etc.</p>
-<p>Para la instalación de seguir las instrucción indicadas en <a href="recursos.html#sec-installR" class="quarto-xref"><span>Section A.1</span></a>.</p>
-<section id="ventajas-de-utilizar-r-project" class="level3 page-columns page-full" data-number="1.2.1">
-<h3 data-number="1.2.1" class="anchored" data-anchor-id="ventajas-de-utilizar-r-project"><span class="header-section-number">1.2.1</span> Ventajas de Utilizar R Project</h3>
-<p><strong>1. R es un software libre</strong></p>
+</section>
+<section id="características-de-un-raster" class="level2 page-columns page-full" data-number="9.3">
+<h2 data-number="9.3" class="anchored" data-anchor-id="características-de-un-raster"><span class="header-section-number">9.3</span> Características de un Raster</h2>
 <ul>
-<li>La libertad de ejecutar el programa como desee y con cualquier propósito</li>
-<li>Estudiar el funcionamiento del programa y adaptarlo a sus necesidades.</li>
-<li>Rescribir copias para ayudar a los demás.</li>
-<li>Manejar el programa y publicar las mejorar, de manera que toda comunidad se beneficie.</li>
-</ul>
-<p><strong>2. R es multiplataforma</strong></p>
-<ul>
-<li>R funciona en Mac, Windows y en numerosos sistemas UNIX. Esto significa que cualquier persona puede trabajar con tus datos, figuras, análisis y más importante aún usar tus instrucciones (también conocido como scripts o código) para generar las figuras y el análisis. Así que cualquier persona, y en cualquier lugar del mundo, con acceso a cualquier Sistema Operativo puede usar <a href="https://www.r-project.org">R Project</a> sin ninguna licencia.</li>
-</ul>
-<p><strong>3. R es de código abierto</strong></p>
-<ul>
-<li>Existe una gran comunidad de voluntarios trabajando para mejorarlo, lo cual permite ser moldeado y dirigido a cuestiones específicas. Creando así programas y paquetes que funcionen en el entorno R. Programas tales como <a href="https://posit.co/products/open-source/rstudio/">RStudio</a>, Java GUI for R, R-commander, RKWard, entre otros, y con más de 19.000 paquetes indexados en <a href="https://cran.r-project.org/">CRAN (Comprehensive R Archive Network)</a>, <a href="https://www.bioconductor.org/">Bioconductor</a>, <a href="https://github.com/">Github</a> y <a href="https://r-forge.r-project.org/">R-Forge</a>.</li>
-</ul>
-<p><strong>4. Todo dentro de un mismo entorno</strong></p>
-<ul>
-<li>R remplaza la combinación de varios programas para el proceso de análisis de datos, por ejemplo Excel, ArcGis, QGis, SigmaPlot, entre otros. Esto no solo resulta en el alto costo de las licencias de múltiples programas, si no también, en la gran cantidad de archivos con diferentes formatos que no podrían leer otros programas. En cambio con solo utilizar R, puedes realizar todo el análisis de datos e inclusive leer archivos de diferentes formatos.</li>
+<li>Resolución espacial: tamaño de celda en unidades del mapa (p.&nbsp;ej., 30 m).</li>
 </ul>
 <div class="quarto-figure quarto-figure-center page-columns page-full">
 <figure class="figure page-columns page-full">
-<p><img src="images/r_project.png" class="img-fluid figure-img" width="800"></p>
-<figcaption class="margin-caption">Rstudio Ejecutándose</figcaption>
+<p><img src="images/raster_resolucion.gif" class="img-fluid figure-img"></p>
+<figcaption class="margin-caption">Resolución Raster</figcaption>
 </figure>
 </div>
-</section>
-</section>
-<section id="rstudio" class="level2" data-number="1.3">
-<h2 data-number="1.3" class="anchored" data-anchor-id="rstudio"><span class="header-section-number">1.3</span> Rstudio</h2>
-<div class="quarto-figure quarto-figure-left">
-<figure class="figure">
-<p><img src="images/Logo-RStudio.png" class="img-fluid quarto-figure quarto-figure-left figure-img" width="100"></p>
-</figure>
-</div>
-<p><a href="https://posit.co/products/open-source/rstudio/">RStudio</a> es un entorno de desarrollo integrado (IDE) para <a href="https://www.r-project.org">R Project</a> y <a href="https://docs.python.org/es/3/tutorial/">Python</a>. Incluye una consola, un editor que resalta la sintaxis y admite la ejecución directa del código, y herramientas para graficar, el historial, la depuración y la gestión del espacio de trabajo. RStudio está disponible en ediciones comerciales y de código abierto y se ejecuta en el escritorio (Windows, Mac y Linux).</p>
-<p>Para instalar <a href="https://posit.co/products/open-source/rstudio/">RStudio</a> se debe seguir las instrucciones señaladas en el apéndice <a href="recursos.html#sec-installRStudio" class="quarto-xref"><span>Section A.2</span></a></p>
-<center>
-<img src="images/rstudio-editor.svg" class="img-fluid" style="width:90.0%">
-</center>
-</section>
-<section id="librerías-en-r" class="level2" data-number="1.4">
-<h2 data-number="1.4" class="anchored" data-anchor-id="librerías-en-r"><span class="header-section-number">1.4</span> Librerías en R</h2>
-<p>En R, una librería es un conjunto de funciones, datos y recursos adicionales que se agrupan para facilitar tareas específicas de programación, análisis de datos o visualización. Estas librerías son paquetes de software que amplían las funcionalidades básicas de R y permiten a los usuarios realizar tareas más avanzadas de manera eficiente.</p>
-<p>Existen una gran variedad de librerías disponibles en R, cada una diseñada para abordar un campo o área de aplicación particular. A continuación, mencionaré algunos de los campos más comunes en los que se utilizan las librerías de R:</p>
-<dl>
-<dt>Análisis de datos:</dt>
-<dd>
-R es ampliamente utilizado en el análisis de datos y estadísticas. Librerías como “dplyr”, “tidyr” y “ggplot2” son muy populares en este campo. Estas librerías proporcionan funciones para el manejo de datos, filtrado, transformación, agregación y visualización.
-</dd>
-<dt>Aprendizaje automático (Machine Learning):</dt>
-<dd>
-R es una opción popular para aplicar algoritmos de aprendizaje automático. Librerías como “caret”, “randomForest” y “glmnet” ofrecen una amplia gama de algoritmos y herramientas para entrenar modelos de machine learning, realizar validación cruzada, seleccionar características y evaluar el rendimiento de los modelos.
-</dd>
-<dt>Procesamiento de texto y lenguaje natural:</dt>
-<dd>
-Para el análisis de texto y procesamiento del lenguaje natural, existen librerías como “tm”, “stringr” y “text2vec”. Estas librerías permiten realizar tareas como tokenización, limpieza de texto, extracción de características y modelado de temas.
-</dd>
-<dt>Visualización de datos:</dt>
-<dd>
-R es conocido por su capacidad para generar gráficos y visualizaciones de datos. Librerías como “ggplot2”, “plotly” y “lattice” ofrecen herramientas para crear gráficos estáticos y dinámicos, mapas, diagramas de dispersión y muchas otras visualizaciones.
-</dd>
-</dl>
-<p>Estos son solo algunos ejemplos de los campos en los que se utilizan las librerías de R. Es importante destacar que la comunidad de R es muy activa y constantemente se desarrollan nuevas librerías para abordar diferentes necesidades en diversos campos de aplicación. El uso de estas librerías no solo ahorra tiempo y esfuerzo, sino que también permite a los programadores y analistas aprovechar las mejores prácticas y métodos establecidos en sus respectivos campos.</p>
-<section id="ejemplo-de-instalación-de-librerías-desde-r" class="level3" data-number="1.4.1">
-<h3 data-number="1.4.1" class="anchored" data-anchor-id="ejemplo-de-instalación-de-librerías-desde-r"><span class="header-section-number">1.4.1</span> Ejemplo de Instalación de Librerías desde R</h3>
-<p>Podemos instalar paquetes usando la función <code>install.packages()</code>, dando como argumento el nombre del paquete que deseamos instalar, entre comillas.</p>
-<p>Para instalar librerías se puede hacer directamente desde la consola de RStudio, por ejemplo:</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">"dplyr"</span>) <span class="co"># Se puede instalar más de una librería a la vez</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-</section>
-<section id="ejemplo-de-instalación-de-librerías-desde-rstudio" class="level3" data-number="1.4.2">
-<h3 data-number="1.4.2" class="anchored" data-anchor-id="ejemplo-de-instalación-de-librerías-desde-rstudio"><span class="header-section-number">1.4.2</span> Ejemplo de Instalación de Librerías desde Rstudio</h3>
-<p>También se pude instalar librerías del Panel “Packages”</p>
-<center>
-<img src="images/install_pack2.png" class="img-fluid" style="width:90.0%">
-</center>
-<p>Y por último se puede instalar desde Pestaña “Tools” -&gt; “Install Packages”:</p>
-<center>
-<img src="images/install_pckages.gif" class="img-fluid" style="width:90.0%">
-</center>
-</section>
-</section>
-<section id="directorios-de-trabajos" class="level2" data-number="1.5">
-<h2 data-number="1.5" class="anchored" data-anchor-id="directorios-de-trabajos"><span class="header-section-number">1.5</span> Directorios de Trabajos</h2>
-<p>Un directorio de trabajo, también conocido como carpeta de trabajo, es una ubicación específica en un sistema de archivos donde se almacenan y organizan los archivos relacionados con un proyecto o una tarea determinada. Estos directorios son esenciales para mantener un entorno de desarrollo ordenado y estructurado. Aquí tienes algunas razones por las que son importantes:</p>
-<dl>
-<dt>Organización:</dt>
-<dd>
-Los directorios de trabajo permiten organizar y clasificar los archivos de un proyecto. Puedes crear subdirectorios para agrupar archivos relacionados, como código fuente, recursos multimedia, documentación, pruebas, entre otros. Esto facilita la búsqueda y el acceso a los archivos necesarios, lo que ahorra tiempo y evita la confusión.
-</dd>
-<dt>Mantenimiento:</dt>
-<dd>
-Al utilizar directorios de trabajo adecuados, es más sencillo realizar tareas de mantenimiento en un proyecto. Puedes realizar actualizaciones, realizar pruebas, corregir errores y agregar nuevas funcionalidades de manera más eficiente. Además, si trabajas en equipo, un directorio de trabajo bien estructurado permite a los miembros del equipo colaborar de manera más fluida y reducir posibles conflictos al fusionar sus cambios.
-</dd>
-<dt>Portabilidad:</dt>
-<dd>
-Los directorios de trabajo facilitan la portabilidad de un proyecto. Si necesitas mover o copiar tu proyecto a otro lugar, simplemente tendrás que llevar el directorio principal y todos los subdirectorios y archivos asociados estarán incluidos. Esto garantiza que no falten archivos esenciales y que el proyecto se pueda ejecutar sin problemas en un nuevo entorno.
-</dd>
-</dl>
-<section id="directorios-de-trabajo-en-rstudio" class="level3" data-number="1.5.1">
-<h3 data-number="1.5.1" class="anchored" data-anchor-id="directorios-de-trabajo-en-rstudio"><span class="header-section-number">1.5.1</span> Directorios de Trabajo en RStudio</h3>
-<p>Definir directorio de Trabajo con RStudio se puede hacer de varias formas:</p>
-<ol type="1">
-<li>Desde Rstudio.</li>
-</ol>
-<pre><code>Session -&gt; Set Working Directory -&gt; Choose Directory
-</code></pre>
-<center>
-<img src="images/wdirectory.png" class="img-fluid" style="width:80.0%">
-</center>
-<center>
-<img src="images/folder_directory.png" class="img-fluid" style="width:60.0%">
-</center>
-<ol start="2" type="1">
-<li>Mediante Códigos.</li>
-</ol>
-<p>Definir Directorio de Trabajo con una función</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">setwd</span>(<span class="st">"/Users/denisberroeta/Library/CloudStorage/OneDrive-UniversidadAdolfoIbanez/CIT/DOCENCIA/DIPLOMADOS/DGET_2023/compartir_DGET"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<p>Consultar Directorio de Trabajo</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">getwd</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-</section>
-</section>
-<section id="referencias" class="level2" data-number="1.6">
-<h2 data-number="1.6" class="anchored" data-anchor-id="referencias"><span class="header-section-number">1.6</span> Referencias:</h2>
 <ul>
-<li><a href="https://es.r4ds.hadley.nz">R para Ciencia de Datos</a></li>
-<li><a href="https://bookdown.org/gboccardo/manual-ED-UCH/">RStudio para Estadística Descriptiva en Ciencias Sociales</a></li>
+<li><p>Extensión (extent): rectángulo mínimo que cubre el raster (xmin, xmax, ymin, ymax).</p></li>
+<li><p>Sistema de referencia (CRS): define cómo se ubican las celdas en la Tierra (p.&nbsp;ej., WGS84, UTM).</p></li>
+<li><p>Tipo de dato / profundidad de bit: rango y precisión de los valores (entero, flotante).</p></li>
+</ul>
+<div class="quarto-figure quarto-figure-center page-columns page-full">
+<figure class="figure page-columns page-full">
+<p><img src="images/r_radiometrica.png" class="img-fluid figure-img"></p>
+<figcaption class="margin-caption">Resolución Radiométrica para imágenes Satelitales</figcaption>
+</figure>
+</div>
+<ul>
+<li>Valores NoData: celdas sin información válida.</li>
+</ul>
+</section>
+<section id="imágenes-satelitales-ejemplo-landsat-8" class="level2 page-columns page-full" data-number="9.4">
+<h2 data-number="9.4" class="anchored" data-anchor-id="imágenes-satelitales-ejemplo-landsat-8"><span class="header-section-number">9.4</span> Imágenes Satelitales (ejemplo: Landsat 8)</h2>
+<p>Para ejemplificar el uso y ver características de Raster vamos a utilizar una imágenes satelital del <a href="https://eos.com/es/find-satellite/landsat-8/">Satelite Landsat 8</a>.</p>
+<div class="quarto-figure quarto-figure-center page-columns page-full">
+<figure class="figure page-columns page-full">
+<p><img src="images/Sentinel-2Poster.jpg" class="img-fluid figure-img"></p>
+<figcaption class="margin-caption">Imágenes Satelitales</figcaption>
+</figure>
+</div>
+<p>Este tipo de productos suele distribuirse como series de bandas (p.&nbsp;ej., coastal/aerosol, azul, verde, rojo, NIR, SWIR1, SWIR2, térmica), que combinamos para visualización y análisis.</p>
+<div class="quarto-figure quarto-figure-center page-columns page-full">
+<figure class="figure page-columns page-full">
+<p><img src="images/bands.jpg" class="img-fluid figure-img" width="500"></p>
+<figcaption class="margin-caption">Ejemplo de configuración de Bandas satelitales</figcaption>
+</figure>
+</div>
+<p>Para este ejemplo de visualización necesitamos conocer las bandas satelitales que componen nuestra imagen satelital.</p>
+</section>
+<section id="ejemplo-práctico" class="level2 page-columns page-full" data-number="9.5">
+<h2 data-number="9.5" class="anchored" data-anchor-id="ejemplo-práctico"><span class="header-section-number">9.5</span> Ejemplo Práctico</h2>
+<section id="librerías" class="level3" data-number="9.5.1">
+<h3 data-number="9.5.1" class="anchored" data-anchor-id="librerías"><span class="header-section-number">9.5.1</span> Librerías</h3>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(terra)</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(raster)</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(mapview)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="lectura-de-imagen-raster." class="level3 page-columns page-full" data-number="9.5.2">
+<h3 data-number="9.5.2" class="anchored" data-anchor-id="lectura-de-imagen-raster."><span class="header-section-number">9.5.2</span> lectura de imagen Raster.</h3>
+<p>Para el ejemplo, necesitaremos reconocer qué bandas incluye nuestro archivo y cómo nombrarlas para facilitar su uso:</p>
+<blockquote class="blockquote">
+<p>la nomenclatura exacta varía según la fuente de datos y el preprocesamiento. En este módulo usaremos nombres legibles que mapean a Landsat 8 OLI/TIRS: <code>aerosol</code>, <code>blue</code>, <code>green</code>, <code>red</code>, <code>nir</code>, <code>swir1</code>, <code>swir2</code>, <code>tirs1</code>.</p>
+</blockquote>
+<div class="callout callout-style-simple callout-note callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Tabla de Bandas de Imagen satelital Landsat 8
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-1" class="callout-1-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure" aria-labelledby="-caption">
+<p><img src="images/bandas_landsat8.png" class="img-fluid figure-img"></p>
+
+</figure>
+</div>
+</div>
+</div>
+</div>
+<div id="-caption" class="margin-figure-caption column-margin callout-1-contents callout-collapse collapse callout-margin-content callout-margin-content-simple">Bandas de Landsat 8</div><p>Para asegurar compatibilidad con material existente, mostramos primero con <code>raster</code> y, luego, la versión recomendada moderna con <code>terra</code>.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># install.packages("terra") # si no lo tienes</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(terra)</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>las_condes_rst <span class="ot">&lt;-</span> <span class="fu">rast</span>(<span class="st">"data/raster/OLI_LC.tif"</span>)</span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="fu">names</span>(las_condes_rst) <span class="ot">&lt;-</span> <span class="fu">c</span>(</span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>  <span class="st">"aerosol"</span>, <span class="st">"blue"</span>, <span class="st">"green"</span>, <span class="st">"red"</span>, <span class="st">"nir"</span>, <span class="st">"swir1"</span>, <span class="st">"swir2"</span>, <span class="st">"tirs1"</span></span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>las_condes_rst</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>class       : SpatRaster 
+size        : 449, 562, 8  (nrow, ncol, nlyr)
+resolution  : 30, 30  (x, y)
+extent      : 350505, 367365, 6293905, 6307375  (xmin, xmax, ymin, ymax)
+coord. ref. : WGS 84 / UTM zone 19S (EPSG:32719) 
+source      : OLI_LC.tif 
+names       : aerosol,  blue, green,   red,   nir, swir1, ... 
+min values  :    8465,  7604,  6500,  5924,  5520,  5191, ... 
+max values  :   19119, 20517, 21248, 23237, 29344, 30012, ... </code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">crs</span>(las_condes_rst)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] "PROJCRS[\"WGS 84 / UTM zone 19S\",\n    BASEGEOGCRS[\"WGS 84\",\n        DATUM[\"World Geodetic System 1984\",\n            ELLIPSOID[\"WGS 84\",6378137,298.257223563,\n                LENGTHUNIT[\"metre\",1]]],\n        PRIMEM[\"Greenwich\",0,\n            ANGLEUNIT[\"degree\",0.0174532925199433]],\n        ID[\"EPSG\",4326]],\n    CONVERSION[\"UTM zone 19S\",\n        METHOD[\"Transverse Mercator\",\n            ID[\"EPSG\",9807]],\n        PARAMETER[\"Latitude of natural origin\",0,\n            ANGLEUNIT[\"degree\",0.0174532925199433],\n            ID[\"EPSG\",8801]],\n        PARAMETER[\"Longitude of natural origin\",-69,\n            ANGLEUNIT[\"degree\",0.0174532925199433],\n            ID[\"EPSG\",8802]],\n        PARAMETER[\"Scale factor at natural origin\",0.9996,\n            SCALEUNIT[\"unity\",1],\n            ID[\"EPSG\",8805]],\n        PARAMETER[\"False easting\",500000,\n            LENGTHUNIT[\"metre\",1],\n            ID[\"EPSG\",8806]],\n        PARAMETER[\"False northing\",10000000,\n            LENGTHUNIT[\"metre\",1],\n            ID[\"EPSG\",8807]]],\n    CS[Cartesian,2],\n        AXIS[\"(E)\",east,\n            ORDER[1],\n            LENGTHUNIT[\"metre\",1]],\n        AXIS[\"(N)\",north,\n            ORDER[2],\n            LENGTHUNIT[\"metre\",1]],\n    USAGE[\n        SCOPE[\"Navigation and medium accuracy spatial referencing.\"],\n        AREA[\"Between 72°W and 66°W, southern hemisphere between 80°S and equator, onshore and offshore. Argentina. Bolivia. Brazil. Chile. Colombia. Peru.\"],\n        BBOX[-80,-72,0,-66]],\n    ID[\"EPSG\",32719]]"</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu">res</span>(las_condes_rst)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 30 30</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ext</span>(las_condes_rst)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>SpatExtent : 350504.999999999, 367364.999999999, 6293905, 6307375 (xmin, xmax, ymin, ymax)</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="fu">nlyr</span>(las_condes_rst)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 8</code></pre>
+</div>
+</div>
+</section>
+<section id="visualización-raster" class="level3" data-number="9.5.3">
+<h3 data-number="9.5.3" class="anchored" data-anchor-id="visualización-raster"><span class="header-section-number">9.5.3</span> Visualización Raster</h3>
+<p>Color natural (RGB = 4–3–2): rojo, verde y azul aproximan cómo “veríamos” la escena.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="co"># # Visualización de imagen recortada de Las Condes en Color Natural</span></span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a><span class="fu">plotRGB</span>(las_condes_rst, <span class="at">r =</span> <span class="dv">4</span>, <span class="at">g =</span> <span class="dv">3</span>, <span class="at">b =</span> <span class="dv">2</span>, <span class="at">stretch =</span> <span class="st">"lin"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="datos_rasters_files/figure-html/unnamed-chunk-3-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="co"># # mapview::viewRGB(raster::brick(las_condes_rst), r = 4, g = 3, b = 2)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="callout callout-style-simple callout-note callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Actividad 1 — Explora combinaciones de bandas
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-2" class="callout-2-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>Ensaya falso color vegetación (NIR–Red–Green → 5–4–3 en Landsat 8 clásico; aquí nir=5, red=4, green=3):</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plotRGB</span>(las_condes_rst, <span class="at">r =</span> <span class="dv">5</span>, <span class="at">g =</span> <span class="dv">4</span>, <span class="at">b =</span> <span class="dv">3</span>, <span class="at">stretch =</span> <span class="st">"lin"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p><img src="images/l8-band-combinations.png" class="img-fluid" alt="Visualización de Bandas"> Referencias: <a href="https://mappinggis.com/2019/05/combinaciones-de-bandas-en-imagenes-de-satelite-landsat-y-sentinel/" class="uri">https://mappinggis.com/2019/05/combinaciones-de-bandas-en-imagenes-de-satelite-landsat-y-sentinel/</a></p>
+</div>
+</div>
+</div>
+<div class="callout callout-style-simple callout-note callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-3-contents" aria-controls="callout-3" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Actividad 2 — Falso color SWIR (realce de suelos/urbano)
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-3" class="callout-3-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>Prueba una combinación que realce zonas urbanas/sequedad (SWIR2–SWIR1–Red → 7–6–4):</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plotRGB</span>(las_condes_rst, <span class="at">r =</span> <span class="dv">7</span>, <span class="at">g =</span> <span class="dv">6</span>, <span class="at">b =</span> <span class="dv">4</span>, <span class="at">stretch =</span> <span class="st">"lin"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="datos_rasters_files/figure-html/unnamed-chunk-5-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>¿Qué patrones cambian respecto del color natural? Describe brevemente.</p>
+</div>
+</div>
+</div>
+<div class="callout callout-style-simple callout-note callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-4-contents" aria-controls="callout-4" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Actividad 3 — Chequeos rápidos de metadatos
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-4" class="callout-4-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<ul>
+<li>¿Cuál es la resolución de tu raster?</li>
+<li>¿Qué CRS utiliza? ¿Es geográfico (lat/long) o proyectado (p.&nbsp;ej., UTM)?</li>
+<li>¿Hay NoData? ¿Cómo se representan?</li>
+</ul>
+<p>Usa: <code>res(r)</code>, <code>crs(r)</code>, `is.na(values(r))```.</p>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="anexo-compatibilidad-con-librería-raster" class="level2" data-number="9.6">
+<h2 data-number="9.6" class="anchored" data-anchor-id="anexo-compatibilidad-con-librería-raster"><span class="header-section-number">9.6</span> Anexo: Compatibilidad con librería <code>raster</code></h2>
+<p>Para asegurar compatibilidad con material existente, mostramos también con {<code>raster</code>} aunque la librería recomendada para el futuro es {<code>terra</code>}.</p>
+<blockquote class="blockquote">
+<p><em><code>terra</code> replaces the <code>raster</code> package. The interfaces of <code>terra</code> and <code>raster</code> are similar, but <code>terra</code> is simpler, faster and can do more</em>. Fuente: <a href="https://rspatial.github.io/terra/" class="uri">https://rspatial.github.io/terra/</a></p>
+</blockquote>
+<section id="lectura-e-inspección" class="level3" data-number="9.6.1">
+<h3 data-number="9.6.1" class="anchored" data-anchor-id="lectura-e-inspección"><span class="header-section-number">9.6.1</span> Lectura e inspección</h3>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(raster)</span>
+<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a>las_condes_raster <span class="ot">&lt;-</span> <span class="fu">brick</span>(<span class="st">"data/raster/OLI_LC.tif"</span>)</span>
+<span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a><span class="fu">names</span>(las_condes_raster) <span class="ot">&lt;-</span> </span>
+<span id="cb16-4"><a href="#cb16-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">c</span>(<span class="st">"aerosol"</span>, <span class="st">"blue"</span>, <span class="st">"green"</span>, <span class="st">"red"</span> , <span class="st">"nir"</span>, <span class="st">"swir1"</span>, <span class="st">"swir2"</span>, <span class="st">"tirs1"</span>)</span>
+<span id="cb16-5"><a href="#cb16-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-6"><a href="#cb16-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-7"><a href="#cb16-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Inspección básica</span></span>
+<span id="cb16-8"><a href="#cb16-8" aria-hidden="true" tabindex="-1"></a>las_condes_raster</span>
+<span id="cb16-9"><a href="#cb16-9" aria-hidden="true" tabindex="-1"></a><span class="fu">crs</span>(las_condes_raster)<span class="co"># sistema de referencia de coordenadas</span></span>
+<span id="cb16-10"><a href="#cb16-10" aria-hidden="true" tabindex="-1"></a><span class="fu">res</span>(las_condes_raster)   <span class="co"># tamaño de celda</span></span>
+<span id="cb16-11"><a href="#cb16-11" aria-hidden="true" tabindex="-1"></a><span class="fu">extent</span>(las_condes_raster) <span class="co"># extensión de la imagen</span></span>
+<span id="cb16-12"><a href="#cb16-12" aria-hidden="true" tabindex="-1"></a><span class="fu">nlayers</span>(las_condes_raster) <span class="co"># cantidad de capas</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="visualización-de-rgb" class="level3" data-number="9.6.2">
+<h3 data-number="9.6.2" class="anchored" data-anchor-id="visualización-de-rgb"><span class="header-section-number">9.6.2</span> Visualización de RGB</h3>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Visualización de Las Condes en color natural</span></span>
+<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a><span class="fu">plotRGB</span>(las_condes_raster, <span class="at">r =</span> <span class="dv">4</span>, <span class="at">g =</span> <span class="dv">3</span>, <span class="at">b =</span> <span class="dv">2</span>, <span class="at">stretch =</span> <span class="st">"lin"</span>)</span>
+<span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Alternativa interactiva (si la tienes instalada):</span></span>
+<span id="cb17-4"><a href="#cb17-4" aria-hidden="true" tabindex="-1"></a><span class="co"># mapview::viewRGB(las_condes_raster, r = 4, g = 3, b = 2)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+</section>
+<section id="referencias" class="level2" data-number="9.7">
+<h2 data-number="9.7" class="anchored" data-anchor-id="referencias"><span class="header-section-number">9.7</span> Referencias:</h2>
+<ul>
+<li><a href="https://rspatial.org/">Spatial Data Science with R and “terra”</a></li>
 </ul>
 
 
@@ -926,13 +998,13 @@ Los directorios de trabajo facilitan la portabilidad de un proyecto. Si necesita
   </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./geoanalisis.html" class="pagination-link" aria-label="Introducción al Geoanálisis">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Introducción al Geoanálisis</span>
+      <a href="./geocode.html" class="pagination-link" aria-label="Geocoding">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Geocoding</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./variables.html" class="pagination-link" aria-label="Variables en R">
-        <span class="nav-page-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Variables en R</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./inferencia.html" class="pagination-link" aria-label="Inferencia Espacial">
+        <span class="nav-page-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Inferencia Espacial</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

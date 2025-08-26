@@ -385,6 +385,7 @@ La idea es simple:
 
 Así, los valores estimados son un **promedio ponderado por la distancia**.  
 
+Este tipo de interpolación, determina los valores de celda a través de una combinación ponderada linealmente de un conjunto de datos de puntos de muestra. Esto significa que los puntos de muestreo se ponderan de tal manera que la influencia de un punto frente a otro, disminuye con la distancia.
 
 ### Ejemplo intuitivo
 
@@ -447,40 +448,14 @@ Un valor típico es $p = 2$.
 
 
 
-
-## Interpolación Inverso a Distancia Ponderada IDW {#sec-IDW}
-
-
-### Definiciones
-
-Este tipo de interpolación, determina los valores de celda a través de una combinación ponderada linealmente de un conjunto de datos de puntos de muestra. Esto significa que los puntos de muestreo se ponderan de tal manera que la influencia de un punto frente a otro, disminuye con la distancia.
-
-
-Cuanto más cerca está un punto del centro de la celda que se está estimando, más influencia o peso tendrá en el proceso de cálculo del promedio.
-
-
-![Estimación de valores por interpolación de inverso a la distancia](images/values_idw.png)
-
-los puntos rojos tienen valores de elevación conocidos. Los otros puntos serán interpolados. Si desea medir el punto púrpura, puede configurar su interpolación para que tome un número fijo o variable de puntos. En este ejemplo, utiliza un número fijo de 3 puntos de 3 y utiliza los tres puntos más cercanos.
-
-
-![Descripción gráfica de los resultados de interpolación](images/exp_idw.png)
-
-Dado que la IDW es un promedio de distancia ponderada, el promedio no puede ser mayor que la entrada máxima o inferior que la entrada mínima. Por lo tanto, no puede crear crestas o valles si estos extremos aún no se han muestreado (Watson y Philip 1985).
-
-
-
-
-
-
 ### Caso Práctico: Indicador de exposición a PM2.5 con IDW
 
 **Objetivo**. Estimar una superficie continua de PM2.5 a partir de estaciones de monitoreo (IDW) y derivar un indicador por manzana.
 
 **Idea**. En IDW, cada estación pesa según su distancia al punto a estimar: más cerca → más peso. Dos parámetros controlan el resultado:
 	
-	* `p` (potencia): local vs. suave.
-	* `nmax` (vecinos): número máximo de estaciones por celda.
+- `p` (potencia): local vs. suave.
+- `nmax` (vecinos): número máximo de estaciones por celda.
 	
 	
 **Fuente de datos:** Los datos provienen de la red de estaciones de monitoreo de calidad del aire del {{< var sinca.name >}} ({{< var sinca.sigla >}}), dependiente del  {{< var mma.name >}} ( {{< var mma.sigla >}}) de Chile. Se utilizaron promedios anuales de PM2.5 entre 2019 y 2023 para la Región Metropolitana, con énfasis en la provincia de Santiago.

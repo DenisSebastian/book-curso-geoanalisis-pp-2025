@@ -24,8 +24,7 @@ book:
     - datos_vectores.qmd
     - dataframes.qmd
     - geocode.qmd
-    # - espacial_r.qmd
-    # - analisis_esp.qmd
+    - datos_rasters.qmd
     - inferencia.qmd
     # - intro_inds.qmd
     # - construccion_inds.qmd
@@ -39,7 +38,7 @@ book:
     - recursos.qmd
     - control_r.qmd
     - crs.qmd
-    # - john_snow.qmd
+    - john_snow.qmd
 
 bibliography: references.bib
 
