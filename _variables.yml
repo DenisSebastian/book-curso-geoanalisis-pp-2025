@@ -36,3 +36,70 @@ organization:
   github: "[Github](https://github.com/)"
   rforge: "[R-Forge](https://r-forge.r-project.org/)"
   
+# Insituciones ------------------------------------------------------------
+ine:
+  name: "[Instituto Nacional de Estadísticas (INE)](https://www.ine.gob.cl/)"
+  sigla: "[INE](https://www.ine.gob.cl/)"
+  censo_2017: "[Censo de Población y Vivienda 2017](http://resultados.censo2017.cl/)"
+  censo_2017s: "[Censo 2017](http://resultados.censo2017.cl/)"
+  censo_2024: "[Censo de Población y Vivienda 2024](https://censo2024.ine.gob.cl/)"
+
+mbht:
+  name: "[Matriz de Bienstar Humano Territorial](https://matrizbht.cl/)"
+  sigla: "[MBHT](https://matrizbht.cl/)"
+
+cit:
+  name: "[Centro de Inteligencia Territorial](https://cit.uai.cl/)"
+  sigla: "[CIT](https://cit.uai.cl/)"
+  
+uai:
+  name: "[Universidad Adolfo Ibáñez](https://www.uai.cl)"
+  sigla: "[UAI](https://www.uai.cl/)"
+  
+mma:
+  name: "[Ministerio del Medio Ambiente](https://mma.gob.cl/)"
+  sigla: "[MMA](https://mma.gob.cl/)"
+  
+sinca:
+  name: "[Sistema Nacional de Información de Calidad del Aire](https://sinca.mma.gob.cl/)"
+  sigla: "[SINCA](https://sinca.mma.gob.cl/)"
+
+epa:
+  name: "[Environmental Protection Agency (US)](https://www.epa.gov/)"
+  sigla: "[EPA](https://www.epa.gov/)"
+
+faqsd: 
+  name: "[Fused Air Quality Surface Using Downscaling](https://www.epa.gov/hesc/rsig-related-downloadable-data-files)"
+  sigla: "[FAQSD](https://www.epa.gov/hesc/rsig-related-downloadable-data-files)"
+
+sernageomin:
+  name: "[Servicio Nacional de Geología y Minería](https://www.sernageomin.cl/)"
+  sigla: "[SERNAGEOMIN](https://www.sernageomin.cl/)"
+  
+retc:
+  name: "[Registros de Emisiones y Transferencias Contaminantes](https://retc.mma.gob.cl/)"
+  sigla: "[RETC](https://retc.mma.gob.cl/)"
+  
+mineduc:
+  name: "[Ministerio de Ecucación](https://www.mineduc.cl/)"
+  sigla: "[MINEDUC](https://www.mineduc.cl/)"
+  
+cestudios:
+  name: "[Centro de Estudios del Mineduc](https://centroestudios.mineduc.cl/)"
+
+acalidad:
+  name: "[Agencia de Calidad de la Educación](https://www.agenciaeducacion.cl/)"
+
+simce:
+  name: "[Sistema de Medición de la Calidad de la Educación](https://www.agenciaeducacion.cl/simce/)"
+  sigla: "[SIMCE](https://www.agenciaeducacion.cl/simce/)"
+  
+junji:
+  name: "[Junta Nacional de Jardines Infantiles](https://junji.cl/)"
+  sigla: "[JUNJI](https://junji.cl/)"
+  
+integra:
+  name: "[Integra](https://www.integra.cl/nuestros-jardines-infantiles/)"
+  name_m: "[Fundación Integra](https://www.integra.cl/nuestros-jardines-infantiles/)"
+  name_l: "[Fundación Integra: Red de Salas Cuna y Jardines Infantiles](https://www.integra.cl/nuestros-jardines-infantiles/)"
+  

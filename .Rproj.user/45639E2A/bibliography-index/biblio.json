@@ -286,6 +286,121 @@
             "title": "Synthetic difference-in-differences",
             "type": "article-journal",
             "volume": "111"
+        },
+        {
+            "author": [
+                {
+                    "family": "Fix",
+                    "given": "E."
+                },
+                {
+                    "family": "Hodges",
+                    "given": "Jr.",
+                    "suffix": "J. L."
+                }
+            ],
+            "id": "FixHodges1951",
+            "issued": {
+                "date-parts": [
+                    [
+                        1951
+                    ]
+                ]
+            },
+            "number": "Technical Report No. 4, Project No. 21-49-004",
+            "publisher": "USAF School of Aviation Medicine, Randolph Field, Texas",
+            "title": "Discriminatory analysis, nonparametric estimation: Consistency properties",
+            "title-short": "Discriminatory analysis, nonparametric estimation",
+            "type": "report"
+        },
+        {
+            "author": [
+                {
+                    "family": "Rosenblatt",
+                    "given": "M."
+                }
+            ],
+            "container-title": "The Annals of Mathematical Statistics",
+            "id": "Rosenblatt1956",
+            "issued": {
+                "date-parts": [
+                    [
+                        1956
+                    ]
+                ]
+            },
+            "title": "Remarks on some nonparametric estimates of a density function",
+            "type": "article-journal"
+        },
+        {
+            "author": [
+                {
+                    "family": "Silverman",
+                    "given": "B. W."
+                }
+            ],
+            "id": "Silverman1986",
+            "issued": {
+                "date-parts": [
+                    [
+                        1986
+                    ]
+                ]
+            },
+            "publisher": "Chapman & Hall",
+            "title": "Density estimation for statistics and data analysis",
+            "type": "book"
+        },
+        {
+            "author": [
+                {
+                    "family": "Eck",
+                    "given": "Chainey",
+                    "suffix": "J."
+                },
+                {
+                    "family": "Wilson",
+                    "given": "R."
+                }
+            ],
+            "id": "Eck2005",
+            "issued": {
+                "date-parts": [
+                    [
+                        2005
+                    ]
+                ]
+            },
+            "publisher": "National Institute of Justice Report",
+            "title": "Mapping crime: Understanding hot spots",
+            "title-short": "Mapping crime",
+            "type": ""
+        },
+        {
+            "author": [
+                {
+                    "family": "Watson",
+                    "given": "D. F."
+                },
+                {
+                    "family": "Philip",
+                    "given": "G. M."
+                }
+            ],
+            "container-title": "Geoprocessing",
+            "id": "WatsonPhilip1985",
+            "issue": "4",
+            "issued": {
+                "date-parts": [
+                    [
+                        1985
+                    ]
+                ]
+            },
+            "page": "315-327",
+            "title": "A refinement of inverse distance weighted interpolation",
+            "type": "article-journal",
+            "volume": "2"
         }
     ],
     "project_biblios": [

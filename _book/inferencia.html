@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>3&nbsp; Inferencia Espacial – Curso de Geoanálisis</title>
+<title>9&nbsp; Inferencia Espacial – Curso de Geoanálisis</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -55,7 +55,27 @@ div.sourceCode
 @media screen {
 pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
@@ -65,8 +85,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./construccion_inds.html" rel="next">
-<link href="./analisis_esp.html" rel="prev">
+<link href="./tarea_1.html" rel="next">
+<link href="./geocode.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
@@ -161,7 +181,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./inferencia.html"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Inferencia Espacial</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./inferencia.html"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Inferencia Espacial</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -189,49 +209,73 @@ window.Quarto = {
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Antecedentes</span></a>
+ <span class="menu-text">Syllabus</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./intro_inds.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Introducción a Indicadores Territoriales</span></span></a>
+  <a href="./geoanalisis.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Introducción al Geoanálisis</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./analisis_esp.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Análisis Espacial</span></span></a>
+  <a href="./intro_r.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Introducción a R Project</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./variables.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Variables en R</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./funciones.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Funciones en R</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./tidyverse.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Manipulación de tablas en r</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./visualizaciones.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Visualizaciones en R</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./datos_vectores.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Datos Espaciales: Vectores</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./dataframes.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Dataframes y Delitos en R</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./geocode.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Geocoding</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./inferencia.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Inferencia Espacial</span></span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./construccion_inds.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Indicadores Territoriales</span></span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./indicadores.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Inds. Socioeconómicos</span></span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./proyecto.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Proyecto Final</span></span></a>
+ <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Inferencia Espacial</span></span></a>
   </div>
 </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
- <span class="menu-text">R Project</span></a>
+ <span class="menu-text">Tareas</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
@@ -239,32 +283,8 @@ window.Quarto = {
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./intro_r.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Introducción a R Project</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./variables.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Variables en R</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./funciones.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Funciones en R</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./datos_espaciales.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Datos Espaciales</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./dataframes.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Dataframes y Delitos en R</span></span></a>
+  <a href="./tarea_1.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Tarea 1</span></a>
   </div>
 </li>
       </ul>
@@ -298,20 +318,8 @@ window.Quarto = {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./tidyverse.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">C</span>&nbsp; <span class="chapter-title">Tidyverse en R</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./espacial_r.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Objetos Espaciales en R</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./john_snow.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Mapa de Cólera</span></a>
+  <a href="./crs.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">C</span>&nbsp; <span class="chapter-title">CRS en R</span></span></a>
   </div>
 </li>
       </ul>
@@ -326,20 +334,34 @@ window.Quarto = {
     <h2 id="toc-title">Contenidos</h2>
    
   <ul>
-  <li><a href="#objetivos-del-módulo" id="toc-objetivos-del-módulo" class="nav-link active" data-scroll-target="#objetivos-del-módulo"><span class="header-section-number">3.1</span> Objetivos del Módulo</a></li>
-  <li><a href="#kernel-density-estimation" id="toc-kernel-density-estimation" class="nav-link" data-scroll-target="#kernel-density-estimation"><span class="header-section-number">3.2</span> Kernel Density Estimation</a>
+  <li><a href="#objetivos-del-módulo" id="toc-objetivos-del-módulo" class="nav-link active" data-scroll-target="#objetivos-del-módulo"><span class="header-section-number">9.1</span> Objetivos del Módulo</a></li>
+  <li><a href="#kernel-density-estimation-kde" id="toc-kernel-density-estimation-kde" class="nav-link" data-scroll-target="#kernel-density-estimation-kde"><span class="header-section-number">9.2</span> Kernel Density Estimation (KDE)</a>
   <ul class="collapse">
-  <li><a href="#introducción" id="toc-introducción" class="nav-link" data-scroll-target="#introducción"><span class="header-section-number">3.2.1</span> Introducción</a></li>
-  <li><a href="#conceptos-relacionados-kde-en-general" id="toc-conceptos-relacionados-kde-en-general" class="nav-link" data-scroll-target="#conceptos-relacionados-kde-en-general"><span class="header-section-number">3.2.2</span> Conceptos relacionados KDE en general</a></li>
-  <li><a href="#kde-aproximación-espacial" id="toc-kde-aproximación-espacial" class="nav-link" data-scroll-target="#kde-aproximación-espacial"><span class="header-section-number">3.2.3</span> KDE aproximación espacial</a></li>
-  <li><a href="#sec-kdeVio" id="toc-sec-kdeVio" class="nav-link" data-scroll-target="#sec-kdeVio"><span class="header-section-number">3.2.4</span> Kernel Density Estimation en delitos Violentos</a></li>
+  <li><a href="#introducción-simplificada-al-kde" id="toc-introducción-simplificada-al-kde" class="nav-link" data-scroll-target="#introducción-simplificada-al-kde"><span class="header-section-number">9.2.1</span> Introducción simplificada al KDE</a></li>
+  <li><a href="#por-qué-kde" id="toc-por-qué-kde" class="nav-link" data-scroll-target="#por-qué-kde"><span class="header-section-number">9.2.2</span> ¿Por qué KDE?</a></li>
+  <li><a href="#idea-básica" id="toc-idea-básica" class="nav-link" data-scroll-target="#idea-básica"><span class="header-section-number">9.2.3</span> Idea básica</a></li>
+  <li><a href="#parámetro-de-ancho-de-banda-en-kde" id="toc-parámetro-de-ancho-de-banda-en-kde" class="nav-link" data-scroll-target="#parámetro-de-ancho-de-banda-en-kde"><span class="header-section-number">9.2.4</span> Parámetro de Ancho de Banda en KDE</a></li>
+  <li><a href="#fórmula-general" id="toc-fórmula-general" class="nav-link" data-scroll-target="#fórmula-general"><span class="header-section-number">9.2.5</span> Fórmula general</a></li>
+  <li><a href="#aplicación-espacial" id="toc-aplicación-espacial" class="nav-link" data-scroll-target="#aplicación-espacial"><span class="header-section-number">9.2.6</span> Aplicación espacial</a></li>
+  <li><a href="#tipos-de-kernel" id="toc-tipos-de-kernel" class="nav-link" data-scroll-target="#tipos-de-kernel"><span class="header-section-number">9.2.7</span> Tipos de kernel</a></li>
+  <li><a href="#resumen" id="toc-resumen" class="nav-link" data-scroll-target="#resumen"><span class="header-section-number">9.2.8</span> Resumen</a></li>
+  <li><a href="#sec-kdeVio" id="toc-sec-kdeVio" class="nav-link" data-scroll-target="#sec-kdeVio"><span class="header-section-number">9.2.9</span> Caso Práctico: Kernel Density Estimation en delitos Violentos</a></li>
   </ul></li>
-  <li><a href="#sec-IDW" id="toc-sec-IDW" class="nav-link" data-scroll-target="#sec-IDW"><span class="header-section-number">3.3</span> Interpolación Inverso a Distancia Ponderada IDW</a>
+  <li><a href="#sec-IDW" id="toc-sec-IDW" class="nav-link" data-scroll-target="#sec-IDW"><span class="header-section-number">9.3</span> Interpolación Inversa a la Distancia Ponderada (IDW)</a>
   <ul class="collapse">
-  <li><a href="#definiciones" id="toc-definiciones" class="nav-link" data-scroll-target="#definiciones"><span class="header-section-number">3.3.1</span> Definiciones</a></li>
-  <li><a href="#usos-prácticos" id="toc-usos-prácticos" class="nav-link" data-scroll-target="#usos-prácticos"><span class="header-section-number">3.3.2</span> Usos prácticos</a></li>
+  <li><a href="#qué-es-idw" id="toc-qué-es-idw" class="nav-link" data-scroll-target="#qué-es-idw"><span class="header-section-number">9.3.1</span> ¿Qué es IDW?</a></li>
+  <li><a href="#ejemplo-intuitivo" id="toc-ejemplo-intuitivo" class="nav-link" data-scroll-target="#ejemplo-intuitivo"><span class="header-section-number">9.3.2</span> Ejemplo intuitivo</a></li>
+  <li><a href="#características-principales" id="toc-características-principales" class="nav-link" data-scroll-target="#características-principales"><span class="header-section-number">9.3.3</span> Características principales</a></li>
+  <li><a href="#fórmula-general-1" id="toc-fórmula-general-1" class="nav-link" data-scroll-target="#fórmula-general-1"><span class="header-section-number">9.3.4</span> Fórmula general</a></li>
+  <li><a href="#parámetro-de-potencia" id="toc-parámetro-de-potencia" class="nav-link" data-scroll-target="#parámetro-de-potencia"><span class="header-section-number">9.3.5</span> Parámetro de potencia</a></li>
+  <li><a href="#resumen-1" id="toc-resumen-1" class="nav-link" data-scroll-target="#resumen-1"><span class="header-section-number">9.3.6</span> Resumen</a></li>
   </ul></li>
-  <li><a href="#referencias" id="toc-referencias" class="nav-link" data-scroll-target="#referencias"><span class="header-section-number">3.4</span> Referencias</a></li>
+  <li><a href="#sec-IDW" id="toc-sec-IDW" class="nav-link" data-scroll-target="#sec-IDW"><span class="header-section-number">9.4</span> Interpolación Inverso a Distancia Ponderada IDW</a>
+  <ul class="collapse">
+  <li><a href="#definiciones" id="toc-definiciones" class="nav-link" data-scroll-target="#definiciones"><span class="header-section-number">9.4.1</span> Definiciones</a></li>
+  <li><a href="#caso-práctico-indicador-de-exposición-a-pm2.5-con-idw" id="toc-caso-práctico-indicador-de-exposición-a-pm2.5-con-idw" class="nav-link" data-scroll-target="#caso-práctico-indicador-de-exposición-a-pm2.5-con-idw"><span class="header-section-number">9.4.2</span> Caso Práctico: Indicador de exposición a PM2.5 con IDW</a></li>
+  </ul></li>
+  <li><a href="#referencias" id="toc-referencias" class="nav-link" data-scroll-target="#referencias"><span class="header-section-number">9.5</span> Referencias</a></li>
   </ul>
 </nav>
     </div>
@@ -348,7 +370,7 @@ window.Quarto = {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Inferencia Espacial</span></h1>
+<h1 class="title"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Inferencia Espacial</span></h1>
 <p class="subtitle lead">KDE y IDW</p>
 </div>
 
@@ -366,39 +388,50 @@ window.Quarto = {
 </header>
 
 
-<section id="objetivos-del-módulo" class="level2 page-columns page-full" data-number="3.1">
-<h2 data-number="3.1" class="anchored" data-anchor-id="objetivos-del-módulo"><span class="header-section-number">3.1</span> Objetivos del Módulo</h2>
+<section id="objetivos-del-módulo" class="level2" data-number="9.1">
+<h2 data-number="9.1" class="anchored" data-anchor-id="objetivos-del-módulo"><span class="header-section-number">9.1</span> Objetivos del Módulo</h2>
+<ul>
+<li>Conocer los fundamentos teóricos de la inferencia espacial<br>
+</li>
+<li>Aprender a construir indicadores con <strong>Kernel Density Estimation (KDE)</strong> e <strong>Intertpolación de Inverso a la Distancia Ponderada (IDW) </strong></li>
+<li>Explorar su aplicación espacial en delitos y fenómenos territoriales</li>
+</ul>
+<hr>
+</section>
+<section id="kernel-density-estimation-kde" class="level2 page-columns page-full" data-number="9.2">
+<h2 data-number="9.2" class="anchored" data-anchor-id="kernel-density-estimation-kde"><span class="header-section-number">9.2</span> Kernel Density Estimation (KDE)</h2>
+<section id="introducción-simplificada-al-kde" class="level3 page-columns page-full" data-number="9.2.1">
+<h3 data-number="9.2.1" class="anchored" data-anchor-id="introducción-simplificada-al-kde"><span class="header-section-number">9.2.1</span> Introducción simplificada al KDE</h3>
+<p>En este módulo aprenderás a usar la <strong>Estimación de Densidad por Kernel (KDE)</strong>, una herramienta que te permite descubrir cómo se distribuyen tus datos sin necesidad de asumir una forma específica.</p>
+<p>Imagina un <strong>histograma</strong>: divide los datos en barras, pero la forma exacta depende del tamaño de los intervalos. KDE refina esa idea colocando una “curva suave” (kernel) en cada observación y sumándolas para generar una <strong>densidad continua</strong>. Así puedes ver cómo se agrupan los datos sin depender de bin (o “buckets”) discretos.</p>
 <div class="quarto-figure quarto-figure-center page-columns page-full">
 <figure class="figure page-columns page-full">
-<p><img src="images/m5_geoanalisis.png" class="img-fluid figure-img"></p>
-<figcaption class="margin-caption">Objetivos del Módulo</figcaption>
+<p><img src="images/kde_exp.png" class="img-fluid figure-img" style="width:80.0%"></p>
+<figcaption class="margin-caption">Suma de funciones normales de Kernel de 5 Puntos</figcaption>
 </figure>
 </div>
-<ul>
-<li>Conocer los fundamentos teóricos de la inferencia espacial</li>
-<li>Construcción Indicadores en base de Kernel Density Estimation (KDE)</li>
-<li>Construcción Indicadores en base de Interpolación Inverso a la Distancia ponderada (IDW)</li>
-</ul>
+<p>Este enfoque fue adelantado por <span class="citation" data-cites="FixHodges1951">Fix and Hodges (<a href="references.html#ref-FixHodges1951" role="doc-biblioref">1951</a>)</span>, y formalizado por <span class="citation" data-cites="Rosenblatt1956">Rosenblatt (<a href="references.html#ref-Rosenblatt1956" role="doc-biblioref">1956</a>)</span>. Luego, <span class="citation" data-cites="Silverman1986">Silverman (<a href="references.html#ref-Silverman1986" role="doc-biblioref">1986</a>)</span> exploró en detalle cómo elegir el ancho de banda y visualizar estas densidades.</p>
+<p>A medida que avancemos, verás cómo KDE se adapta al espacio geográfico, permitiéndonos identificar zonas con alta concentración de eventos (como delitos). <span class="citation" data-cites="Eck2005">Eck and Wilson (<a href="references.html#ref-Eck2005" role="doc-biblioref">2005</a>)</span> describe cómo, usando KDE, podemos generar mapas de “hotspots” que sirven para orientaciones prácticas en análisis criminal.</p>
 </section>
-<section id="kernel-density-estimation" class="level2 page-columns page-full" data-number="3.2">
-<h2 data-number="3.2" class="anchored" data-anchor-id="kernel-density-estimation"><span class="header-section-number">3.2</span> Kernel Density Estimation</h2>
-<section id="introducción" class="level3" data-number="3.2.1">
-<h3 data-number="3.2.1" class="anchored" data-anchor-id="introducción"><span class="header-section-number">3.2.1</span> Introducción</h3>
-<p>Identificar el tipo de distribución que tiene a una variable es un paso fundamental en prácticamente todos los estudios que implican datos, son muchas las ventajas que tiene disponer de una función que describa aproximadamente los datos. Por ejemplo, se puede calcular la probabilidad (o densidad en el caso de variables aleatorias continuas) de que una observación tome un determinado valor. También es posible simular nuevos. valores.</p>
-<p>En términos generales, ajustar una distribución consiste en <strong>encontrar una función matemática capaz de describir un conjunto de datos</strong>. De entre todas las posibles funciones candidatas, lo interesante es encontrar aquella que, con mayor probabilidad, puede haber generado los datos observados.</p>
-<p>Una de las aproximaciones más prácticas es utilizar como candidatas distribuciones paramétricas, estas son distribuciones conocidas cuyo comportamiento está determinado usando un número finito de parámetros. Por ejemplo, la distribución normal está parametrizada por la media y la desviación típica.</p>
-<p>Cuando ninguna de las distribuciones paramétricas disponibles describe correctamente los datos, es necesario recurrir lo que se conoce como métodos de ajuste no paramétricos, cuyo objetivo es encontrar funciones que describan distribuciones cualesquiera, entendiendo por cualesquiera a que no se limitan a las distribuciones paramétricas conocidas. Uno de los métodos más empleados es kernel density estimation (KDE).</p>
-</section>
-<section id="conceptos-relacionados-kde-en-general" class="level3 page-columns page-full" data-number="3.2.2">
-<h3 data-number="3.2.2" class="anchored" data-anchor-id="conceptos-relacionados-kde-en-general"><span class="header-section-number">3.2.2</span> Conceptos relacionados KDE en general</h3>
-<p>En estadística, kernel density estimation (KDE), es un método no paramétrico que permite estimar la función de densidad de probabilidad de una variable aleatoria a partir de un número finito de observaciones (muestra). Fué propuesto por Fix y Hodges (1951) y Rosenblatt (1956).</p>
-<p>Una forma de entender cómo funciona un kernel density estimation (KDE) es partiendo del histograma. El histograma es una de las formas más utilizadas en estadística para representar la distribución de datos unidimensionales.</p>
+<section id="por-qué-kde" class="level3 page-columns page-full" data-number="9.2.2">
+<h3 data-number="9.2.2" class="anchored" data-anchor-id="por-qué-kde"><span class="header-section-number">9.2.2</span> ¿Por qué KDE?</h3>
+<p>En estadística, es importante saber <strong>cómo se distribuyen los datos</strong>.<br>
+Esto permite:<br>
+- Estimar probabilidades<br>
+- Simular nuevos valores<br>
+- Detectar patrones</p>
+<p>El método más simple es el <strong>histograma</strong>, pero depende del número y tamaño de los intervalos. Cambiarlos puede cambiar la forma de la distribución.</p>
 <div class="quarto-figure quarto-figure-center page-columns page-full">
 <figure class="figure page-columns page-full">
 <p><img src="images/histogram_kde.png" class="img-fluid figure-img"></p>
 <figcaption class="margin-caption">Histograma de una variable aleatoria bimodal</figcaption>
 </figure>
 </div>
+<p>El <strong>KDE</strong> es una mejora: crea una <strong>curva suave y continua</strong> que describe mejor la distribución, sin depender de intervalos fijos.</p>
+<hr>
+</section>
+<section id="idea-básica" class="level3 page-columns page-full" data-number="9.2.3">
+<h3 data-number="9.2.3" class="anchored" data-anchor-id="idea-básica"><span class="header-section-number">9.2.3</span> Idea básica</h3>
 <p>El Kernel density estimation (KDE) expande la idea del histograma, “cada observación aumenta la densidad de probabilidad en la zona donde se encuentra”, pero lo hace de forma que las contribuciones se agrupen creando una curva continua y suave (smooth).</p>
 <div class="quarto-figure quarto-figure-center page-columns page-full">
 <figure class="figure page-columns page-full">
@@ -406,6 +439,7 @@ window.Quarto = {
 <figcaption class="margin-caption">Observaciones y sus posiciones ordenadas</figcaption>
 </figure>
 </div>
+<p>** 1. Cada dato aporta una pequeña “campana” (kernel).**</p>
 <p>A continuación, sobre cada observación se centra una distribución normal, con media igual al valor de la observación y desviación típica de 1 (más adelante se detalla la elección de este valor).</p>
 <div class="quarto-figure quarto-figure-center page-columns page-full">
 <figure class="figure page-columns page-full">
@@ -414,6 +448,7 @@ window.Quarto = {
 </figure>
 </div>
 <p>De esta forma se consigue que cada observación contribuya justo en la posición que ocupa pero también, de forma gradual, en las regiones cercanas.</p>
+<p><strong>2. Todas las campanas se suman para formar una sola curva.</strong></p>
 <p>Por último, si se suman las contribuciones individuales y se dividen por el total de curvas (observaciones), se consigue una curva final que describe la distribución de las observaciones.sy</p>
 <div class="quarto-figure quarto-figure-center page-columns page-full">
 <figure class="figure page-columns page-full">
@@ -421,34 +456,55 @@ window.Quarto = {
 <figcaption class="margin-caption">Suma de las Distribuciones</figcaption>
 </figure>
 </div>
+<p><strong>3. El resultado es una estimación continua y suave de la densidad. </strong></p>
 <p>En esta idea se fundamenta el método kernel density estimation (KDE): aproximar una función de densidad como la suma de funciones (kernel) de cada observación.</p>
-<p><strong>Definición matemática</strong></p>
-<p>Dado un conjunto de datos <span class="math inline">x={x_1,x_2,...,x_n}</span> la función de distribución de densidad <span class="math inline">f(x)</span> puede aproximarse utilizando un kernel density estimation (KDE) tal que:</p>
-<p><span class="math display">
-\hat{f}(x)=\frac{1}{n}\sum_{i = 1}^{n}K_h(x-x_i)= \frac{1}{nh}\sum_{i = 1}^{n}K\left(\frac{x-x_i}{h}\right)
-</span> * <span class="math inline">n</span>: es el número de datos (observaciones). Cada uno de ellos es el centro sobre el que se coloca un kernel.</p>
-<ul>
-<li><p><span class="math inline">h</span>: es el ancho de banda (bandwidth o smoothing parameter). Controla cuánto se expande la influencia de cada observación. Si se emplea como kernel una distribución normal, equivale a la desviación típica. Este es el valor más determinante a la hora de ajustar un KDE, puesto que condiciona el nivel de sobreajuste.</p></li>
-<li><p><span class="math inline">K</span>: es el Kernel, una función que define la forma y la distribución de la influencia (peso) que se asocian a cada observación. En los ejemplos anteriores se ha utilizado como kernel la distribución normal.</p></li>
-</ul>
-<p><strong>Selección de Ancho de Banda</strong></p>
-<p>El ancho de banda es crucial a la hora de estimar una función densidad mediante el método KDE. Si su valor es muy bajo, se genera overfitting y la función resultante estará demasiado influenciada por el “ruido” de los datos. Si su valor es muy elevado, la función resultante no será capaz de aprender la distribución subyacente.</p>
+</section>
+<section id="parámetro-de-ancho-de-banda-en-kde" class="level3 page-columns page-full" data-number="9.2.4">
+<h3 data-number="9.2.4" class="anchored" data-anchor-id="parámetro-de-ancho-de-banda-en-kde"><span class="header-section-number">9.2.4</span> Parámetro de Ancho de Banda en KDE</h3>
+<p>La clave está en el <strong>ancho de banda (h)</strong>:<br>
+- <strong>Pequeño →</strong> curva muy ajustada, posible sobreajuste.<br>
+- <strong>Grande →</strong> curva demasiado plana, posible subajuste.</p>
+<p>Ejemplo visual:</p>
 <div class="quarto-figure quarto-figure-center page-columns page-full">
 <figure class="figure page-columns page-full">
 <p><img src="images/banda_kde.png" class="img-fluid figure-img"></p>
-<figcaption class="margin-caption">Tipos de Distribuciones de acuerdo a valor de ancho de Banda</figcaption>
+<figcaption class="margin-caption">KDE con diferentes anchos de banda</figcaption>
 </figure>
 </div>
-<p><em>Reglas empíricas</em></p>
-<ul>
-<li><p>Scott’s rule: <span class="math inline">h≈1.06 \cdot \hat{\sigma}n^{−1/5}</span></p></li>
-<li><p>Silverman’s rule: <span class="math inline">h=0.9\cdot min(\hat{\sigma},IQR/1.35)n^{−1/5}</span></p></li>
-</ul>
-<p>Si bien estos métodos son muy rápidos, tienen el limitante de funcionar bien solo cuando la función de densidad real es aproximadamente normal.</p>
-<p>También se puede usar validación cruzada que requiere de mayor tiempo de computación pero es útil para cualquier tipo de distribución. Validación cruzada es la opción disponible en Scikit learn, utilizando como métrica de comparación en <em>log-likelihood</em>.</p>
-<p>Es importante destacar que, cuando se dispone de pocos datos, conviene utilizar <em>one leave out crossvalidation</em>.</p>
-<p><strong>Tipos de kernel</strong></p>
-<p>El kernel es la función que determina cómo se distribuye la influencia de cada observación, por lo tanto, puede tener un impacto notable en la estimación de la función de densidad resultante. Aunque en la gran mayoría de casos se emplea un kernel gaussiano (distribución normal), existen otras posibilidades.</p>
+<hr>
+</section>
+<section id="fórmula-general" class="level3" data-number="9.2.5">
+<h3 data-number="9.2.5" class="anchored" data-anchor-id="fórmula-general"><span class="header-section-number">9.2.5</span> Fórmula general</h3>
+<p>Dado un conjunto de datos <span class="math inline">x={x_1,x_2,...,x_n}</span>:</p>
+<p><span class="math display">
+\hat{f}(x)=\frac{1}{nh}\sum_{i=1}^{n}K\left(\frac{x-x_i}{h}\right)
+</span></p>
+<p>Donde: - <span class="math inline">n</span> = número de datos<br>
+- <span class="math inline">h</span> = ancho de banda<br>
+- <span class="math inline">K</span> = tipo de kernel (normal, Epanechnikov, etc.)</p>
+<hr>
+</section>
+<section id="aplicación-espacial" class="level3 page-columns page-full" data-number="9.2.6">
+<h3 data-number="9.2.6" class="anchored" data-anchor-id="aplicación-espacial"><span class="header-section-number">9.2.6</span> Aplicación espacial</h3>
+<p>Para aplicar los KDE a casos espaciales, se tiene que entender que las variables aleatorias antes señaladas, ahora van a corresponder a eventos o condiciones físicas que ocurren en el espacio, por ende bajo un sistema de coordenadas, por lo cual el eje de coordenadas <span class="math inline">x</span> e <span class="math inline">y</span>, entonces los que se pretente estimar una distribución multivariante.</p>
+<div class="quarto-figure quarto-figure-center page-columns page-full">
+<figure class="figure page-columns page-full">
+<p><img src="images/Density- map_point-map.png" class="img-fluid figure-img"></p>
+<figcaption class="margin-caption">De puentos espaciales a Mapa de Densidad.</figcaption>
+</figure>
+</div>
+<p>Se usa, por ejemplo, en <strong>análisis criminal</strong> para identificar zonas con mayor concentración de eventos.</p>
+<div class="quarto-figure quarto-figure-center page-columns page-full">
+<figure class="figure page-columns page-full">
+<p><img src="images/lc_delitos_dom.png" class="img-fluid figure-img" style="width:60.0%"></p>
+<figcaption class="margin-caption">Mapa KDE Delitos</figcaption>
+</figure>
+</div>
+<hr>
+</section>
+<section id="tipos-de-kernel" class="level3 page-columns page-full" data-number="9.2.7">
+<h3 data-number="9.2.7" class="anchored" data-anchor-id="tipos-de-kernel"><span class="header-section-number">9.2.7</span> Tipos de kernel</h3>
+<p>Los más comunes:</p>
 <ul>
 <li><p><strong>Gaussian</strong>: asigna los pesos siguiendo la distribución normal con una desviación estándar equivalente al ancho de banda.</p></li>
 <li><p><strong>Epanechnikov</strong>: las observaciones que están a una distancia entre 0 y h tienen un peso entre <span class="math inline">\frac{3}{4}</span> y 0 con disminución cuadrática. Toda observación fuera de este rango tiene pero 0.</p></li>
@@ -463,69 +519,49 @@ window.Quarto = {
 <figcaption class="margin-caption">Algunos tipos de Kernel más utilizados</figcaption>
 </figure>
 </div>
-<p><em>TO-DO: Agregar formulas de cada Kernel</em></p>
+<p>En la práctica, el kernel elegido influye menos que el ancho de banda.</p>
+<hr>
 </section>
-<section id="kde-aproximación-espacial" class="level3 page-columns page-full" data-number="3.2.3">
-<h3 data-number="3.2.3" class="anchored" data-anchor-id="kde-aproximación-espacial"><span class="header-section-number">3.2.3</span> KDE aproximación espacial</h3>
-<p>Para entender el concepto KDE se presentó anteriormente en su forma básica correspondiente a una distribución univariada, como por ejemplo la distribución (bimodal) siguiente:</p>
-<div class="quarto-figure quarto-figure-center page-columns page-full">
-<figure class="figure page-columns page-full">
-<p><img src="images/d-bimodal-kde.png" class="img-fluid figure-img"></p>
-<figcaption class="margin-caption">Distribución Univariada</figcaption>
-</figure>
-</div>
-<p>Para aplicar los KDE a casos espaciales, se tiene que entender que las variables aleatorias antes señaladas, ahora van a corresponder a eventos o condiciones físicas que ocurren en el espacio, por ende bajo un sistema de coordenadas, por lo cual el eje de coordenadas <span class="math inline">x</span> e <span class="math inline">y</span> que también intervienen como nuevas dimensiones, entonces los que se predente estimar una distribución multivariante.</p>
-<div class="quarto-figure quarto-figure-center page-columns page-full">
-<figure class="figure page-columns page-full">
-<p><img src="images/Density- map_point-map.png" class="img-fluid figure-img"></p>
-<figcaption class="margin-caption">De puentos espaciales a Mapa de Densidad.</figcaption>
-</figure>
-</div>
-<p>Una de las aplicaciones más comunas es de el análisis criminal, ya que los algunas categorías delitos coproducen bajo ciertas condiciones espaciales.</p>
-<div class="quarto-figure quarto-figure-center page-columns page-full">
-<figure class="figure page-columns page-full">
-<p><img src="images/lc_delitos_dom.png" class="img-fluid figure-img" style="width:60.0%"></p>
-<figcaption class="margin-caption">Ejemplo de Kernel Density Estimation de Delitos en Domicilios en la Comuna de Las Condes</figcaption>
-</figure>
-</div>
-<p>Entonces para el caso espacial lo que se prentende identificar patrones de cluster basándose en proximidad espacial</p>
-<p>Los elementos del KDE Univariado tambien están presentes en el caso espacial como por ejemplo en ancho debanda como se observa a continuación.</p>
-<div class="quarto-figure quarto-figure-center page-columns page-full">
-<figure class="figure page-columns page-full">
-<p><img src="images/kde_spatial.png" class="img-fluid figure-img"></p>
-<figcaption class="margin-caption">KDE Espacial con diferentes tipos de Ancho de Banda.</figcaption>
-</figure>
-</div>
+<section id="resumen" class="level3" data-number="9.2.8">
+<h3 data-number="9.2.8" class="anchored" data-anchor-id="resumen"><span class="header-section-number">9.2.8</span> Resumen</h3>
+<ul>
+<li>KDE <strong>suaviza datos</strong> para mostrar su distribución.<br>
+</li>
+<li>El <strong>ancho de banda</strong> define el nivel de suavizado.<br>
+</li>
+<li>En análisis espacial, crea <strong>mapas de densidad</strong> para fenómenos como delitos, incendios o accidentes.</li>
+</ul>
+<hr>
 </section>
-<section id="sec-kdeVio" class="level3 page-columns page-full" data-number="3.2.4">
-<h3 data-number="3.2.4" class="anchored" data-anchor-id="sec-kdeVio"><span class="header-section-number">3.2.4</span> Kernel Density Estimation en delitos Violentos</h3>
-<p>Existe una gama importante de métodos de interpolación como el Kriging, las superficies de tendencia, el inverso de la distancia y los modelos de regresión local, (Anselin, 1992; Clevelend at al.&nbsp;1993, Venables &amp; Ripley, 1997) los cuales requieren en su mayoría que los puntos de muestreo/entrada asuman valores heterogéneos diferentes de cero.</p>
-<p>Considerando que los dato con que se trabajará son eventos delictivos, por ensde no se hace muetreo de la información, el universo está dado por la totalidad de los eventos registrados, adicionalmente cada punto representa un evento particular.</p>
-<p>Como no en toda la superficie de una zona de estudio han sucedido delitos, pero existe una probabilidad de que ocurran, la estimación de densidad de kernel sirve para calcular esa probabilidad (Smith &amp; Bruce 2008, 60-64) de modo que la interpolación produce “superficies de riesgo”.</p>
-<div class="quarto-figure quarto-figure-center page-columns page-full">
-<figure class="figure page-columns page-full">
-<p><img src="images/kde_exp.png" class="img-fluid figure-img" style="width:50.0%"></p>
-<figcaption class="margin-caption">Suma de funciones normales de Kernel de 5 Puntos</figcaption>
-</figure>
-</div>
-<p><em>Fuente: Estimación de densidad de Kernel. Adaptado de Wilson, R. y Eck, J. (2005: 27).</em></p>
+<section id="sec-kdeVio" class="level3" data-number="9.2.9">
+<h3 data-number="9.2.9" class="anchored" data-anchor-id="sec-kdeVio"><span class="header-section-number">9.2.9</span> Caso Práctico: Kernel Density Estimation en delitos Violentos</h3>
+<p><strong>Objetivo</strong>: Construir un mapa de densidad de eventos violentos y derivar un indicador por manzana.</p>
+<p><strong>Idea</strong>: KDE coloca una “campana” en cada punto y las suma. El ancho de banda controla qué tan suave queda el mapa.</p>
+<section id="librerías-necesarias" class="level4">
+<h4 class="anchored" data-anchor-id="librerías-necesarias">Librerías necesarias</h4>
 <p>Cargar Librerías</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># library(rgdal)</span></span>
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Paquetes</span></span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(sf)</span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dplyr)</span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="co"># library(rgeos)</span></span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(raster)</span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(spatstat)</span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(spdep)</span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(mapview)</span>
-<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(viridis)</span>
-<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(viridis)</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(SpatialKDE)   <span class="co"># KDE raster a partir de puntos</span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(exactextractr)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<p>Lectura de casos violencia (Las Condes, anonimizados)</p>
+<p>Otros parámetros</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>violencia_df <span class="ot">&lt;-</span> <span class="fu">readRDS</span>(<span class="at">file =</span> <span class="st">"data/delitos/casos_violencia.rds"</span>)</span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(violencia_df)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">42</span>) <span class="co"># dejaremos una semilla para los números random</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="fu">options</span>(<span class="at">scipen =</span> <span class="dv">999</span>) <span class="co"># evitaremos que R convierta a notación científica</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="insumos" class="level4">
+<h4 class="anchored" data-anchor-id="insumos">Insumos</h4>
+<p>Lectura de casos violencia (Las Condes, anonimizados espacialmente)</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># 1.1 Leer eventos (coordenadas x,y en EPSG:32719 como ejemplo)</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>violencia_df <span class="ot">&lt;-</span> <span class="fu">readRDS</span>(<span class="at">file =</span> <span class="st">"data/delitos/casos_violencia.rds"</span>)</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(violencia_df)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>     id        x       y
 4423  1 351501.2 6301276
@@ -538,214 +574,265 @@ window.Quarto = {
 </div>
 <p>Transformar a Objeto Espacial</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>violencia <span class="ot">&lt;-</span>  <span class="fu">st_as_sf</span>(<span class="at">x =</span> violencia_df, </span>
-<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>                          <span class="at">coords =</span> <span class="fu">c</span>(<span class="st">"x"</span>, <span class="st">"y"</span>), <span class="at">crs =</span> <span class="dv">32719</span>)</span>
-<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>() <span class="sc">+</span></span>
-<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_sf</span>(<span class="at">data =</span> violencia,  <span class="at">color =</span>  <span class="st">"red"</span>, </span>
-<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>          <span class="at">alpha=</span><span class="fl">0.8</span>,  <span class="at">size=</span> <span class="fl">0.1</span>)<span class="sc">+</span></span>
-<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggtitle</span>(<span class="st">"Delitos Violentos en Las Condes"</span>) <span class="sc">+</span></span>
-<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_bw</span>() <span class="sc">+</span></span>
-<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">panel.grid.major =</span> <span class="fu">element_line</span>(<span class="at">colour =</span> <span class="st">"gray80"</span>), </span>
-<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a>        <span class="at">panel.grid.minor =</span> <span class="fu">element_line</span>(<span class="at">colour =</span> <span class="st">"gray80"</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>violencia <span class="ot">&lt;-</span>  <span class="fu">st_as_sf</span>(<span class="at">x =</span> violencia_df, </span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>                          <span class="at">coords =</span> <span class="fu">c</span>(<span class="st">"x"</span>, <span class="st">"y"</span>), <span class="at">crs =</span> <span class="dv">32719</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Visualización de los datos</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Vistazo rápido</span></span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>() <span class="sc">+</span></span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_sf</span>(<span class="at">data =</span> violencia,  <span class="at">color =</span>  <span class="st">"red"</span>, </span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>          <span class="at">alpha=</span><span class="fl">0.8</span>,  <span class="at">size=</span> <span class="fl">0.1</span>)<span class="sc">+</span></span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggtitle</span>(<span class="st">"Puntos de Delitos Violentos en Las Condes"</span>) <span class="sc">+</span></span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_bw</span>() <span class="sc">+</span></span>
+<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">panel.grid.major =</span> <span class="fu">element_line</span>(<span class="at">colour =</span> <span class="st">"gray80"</span>), </span>
+<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a>        <span class="at">panel.grid.minor =</span> <span class="fu">element_line</span>(<span class="at">colour =</span> <span class="st">"gray80"</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="inferencia_files/figure-html/unnamed-chunk-3-1.png" class="img-fluid figure-img" width="672"></p>
+<p><img src="inferencia_files/figure-html/unnamed-chunk-5-1.png" class="img-fluid figure-img" width="672"></p>
 </figure>
 </div>
 </div>
 </div>
-<p><strong>KDE con Raster</strong></p>
-<p>Calcular KDE con Función cuartica o esférica (<code>quartic</code>)</p>
-<p>Supone una distribución relativamente uniforme que al llegar a cierto umbral decae sin suavidad:</p>
-<div class="quarto-figure quarto-figure-center page-columns page-full">
-<figure class="figure page-columns page-full">
-<p><img src="images/func_quartic.png" class="img-fluid figure-img" style="width:70.0%"></p>
-<figcaption class="margin-caption">Kernel cuártica o esférica</figcaption>
-</figure>
-</div>
-<p>Definir Parámetros</p>
+</section>
+<section id="área-de-estudio-y-parámetros-de-kde" class="level4">
+<h4 class="anchored" data-anchor-id="área-de-estudio-y-parámetros-de-kde">Área de estudio y parámetros de KDE</h4>
+<p>Usaremos la contorno de los puntos para generar la grilla. Definimos el tamaño de celda y el ancho de banda.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(SpatialKDE)</span>
-<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="co">#Definirán Parámemetros de Estudio</span></span>
-<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>cell_size <span class="ot">&lt;-</span> <span class="dv">100</span> <span class="co"># Tamaño de Celda</span></span>
-<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>band_width <span class="ot">&lt;-</span> <span class="dv">500</span> <span class="co">#  Parámetro de Suavisado (denominada ventana o h)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(SpatialKDE)</span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a><span class="co">#Definirán Parámemetros de Estudio</span></span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>cell_size <span class="ot">&lt;-</span> <span class="dv">100</span> <span class="co"># Tamaño de Celda</span></span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a>band_width <span class="ot">&lt;-</span> <span class="dv">500</span> <span class="co">#  Parámetro de Suavisado (denominada ventana o h)</span></span>
+<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Grilla base (raster vacío) con un margen = band_width para evitar borde duro</span></span>
+<span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a>raster_base <span class="ot">&lt;-</span> violencia <span class="sc">%&gt;%</span> </span>
+<span id="cb7-9"><a href="#cb7-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">create_raster</span>(<span class="at">cell_size =</span> cell_size, <span class="at">side_offset =</span> band_width)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<p>Crear Raster Vacío</p>
+</section>
+<section id="kde-kernel-cuártico" class="level4">
+<h4 class="anchored" data-anchor-id="kde-kernel-cuártico">KDE (kernel cuártico)</h4>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>raster_violencia <span class="ot">&lt;-</span> violencia <span class="sc">%&gt;%</span> </span>
-<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">create_raster</span>(<span class="at">cell_size =</span> cell_size, <span class="at">side_offset =</span> band_width)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<p>Crear Kernel raster</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>kde_raster <span class="ot">&lt;-</span> violencia <span class="sc">%&gt;%</span> </span>
-<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">kde</span>(<span class="at">band_width =</span> band_width, <span class="at">kernel =</span> <span class="st">"quartic"</span>, <span class="at">grid =</span> raster_violencia)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>
-Done: [--------------------------------------------------------------------] .
-Done: [=========-----------------------------------------------------------] .
-Done: [==========----------------------------------------------------------] .
-Done: [===========---------------------------------------------------------] .
-Done: [============--------------------------------------------------------] .
-Done: [=============-------------------------------------------------------] .
-Done: [==============------------------------------------------------------] .
-Done: [===============-----------------------------------------------------] .
-Done: [================----------------------------------------------------] .
-Done: [=================---------------------------------------------------] .
-Done: [==================--------------------------------------------------] .
-Done: [===================-------------------------------------------------] .
-Done: [====================------------------------------------------------] .
-Done: [=====================-----------------------------------------------] .
-Done: [======================----------------------------------------------] .
-Done: [=======================---------------------------------------------] .
-Done: [========================--------------------------------------------] .
-Done: [=========================-------------------------------------------] .
-Done: [==========================------------------------------------------] .
-Done: [===========================-----------------------------------------] .
-Done: [============================----------------------------------------] .
-Done: [=============================---------------------------------------] .
-Done: [==============================--------------------------------------] .
-Done: [===============================-------------------------------------] .
-Done: [================================------------------------------------] .
-Done: [=================================-----------------------------------] .
-Done: [==================================----------------------------------] .
-Done: [===================================---------------------------------] .
-Done: [====================================--------------------------------] .
-Done: [=====================================-------------------------------] .
-Done: [======================================------------------------------] .
-Done: [=======================================-----------------------------] .
-Done: [========================================----------------------------] .
-Done: [=========================================---------------------------] .
-Done: [==========================================--------------------------] .
-Done: [===========================================-------------------------] .
-Done: [============================================------------------------] .
-Done: [=============================================-----------------------] .
-Done: [==============================================----------------------] .
-Done: [===============================================---------------------] .
-Done: [================================================--------------------] .
-Done: [=================================================-------------------] .
-Done: [==================================================------------------] .
-Done: [===================================================-----------------] .
-Done: [====================================================----------------] .
-Done: [=====================================================---------------] .
-Done: [======================================================--------------] .
-Done: [=======================================================-------------] .
-Done: [========================================================------------] .
-Done: [=========================================================-----------] .
-Done: [==========================================================----------] .
-Done: [===========================================================---------] .
-Done: [============================================================--------] .
-Done: [=============================================================-------] .
-Done: [==============================================================------] .
-Done: [===============================================================-----] .
-Done: [================================================================----] .
-Done: [=================================================================---] .
-Done: [==================================================================--] .
-Done: [===================================================================-] .
-Done: [====================================================================] .
-                                                                              </code></pre>
-</div>
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>kde_raster <span class="ot">&lt;-</span> violencia <span class="sc">%&gt;%</span></span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">kde</span>(<span class="at">band_width =</span> band_width, <span class="at">kernel =</span> <span class="st">"quartic"</span>, </span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>      <span class="at">grid =</span> raster_base, <span class="at">quiet =</span> <span class="cn">TRUE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>Histograma de valores de Densidad</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="fu">hist</span>(kde_raster, <span class="at">col=</span><span class="st">"springgreen4"</span>, <span class="at">main=</span><span class="st">"Histograma KDE"</span>,</span>
-<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>  <span class="at">ylab=</span><span class="st">"Número de Pixeles"</span>, <span class="at">xlab=</span><span class="st">"valor KDE"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Diagnóstico simple</span></span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a><span class="fu">hist</span>(kde_raster, <span class="at">col=</span><span class="st">"springgreen4"</span>, <span class="at">main=</span><span class="st">"Histograma KDE"</span>,</span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">ylab=</span><span class="st">"Número de Pixeles"</span>, <span class="at">xlab=</span><span class="st">"valor KDE"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="inferencia_files/figure-html/unnamed-chunk-7-1.png" class="img-fluid figure-img" width="672"></p>
-</figure>
-</div>
-</div>
-<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="co"># writeRaster(kde_raster, "data/delitos/kde_delvio_LC.tif")</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<p>Visualizar Raster KDE con ggplot</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="co"># rastero to df (na omit)</span></span>
-<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>kde_raster_df <span class="ot">&lt;-</span> raster<span class="sc">::</span><span class="fu">as.data.frame</span>(kde_raster, <span class="at">xy =</span> <span class="cn">TRUE</span>) <span class="sc">%&gt;%</span> <span class="fu">na.omit</span>()</span>
-<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a>umbral <span class="ot">&lt;-</span> <span class="dv">1</span></span>
-<span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a>kde_raster_df <span class="ot">&lt;-</span> kde_raster_df <span class="sc">%&gt;%</span> </span>
-<span id="cb11-6"><a href="#cb11-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">layer =</span> <span class="fu">ifelse</span>(layer <span class="sc">&lt;</span> umbral, <span class="cn">NA</span>, layer))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>() <span class="sc">+</span></span>
-<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_raster</span>(<span class="at">data =</span> kde_raster_df <span class="sc">%&gt;%</span> <span class="fu">na.omit</span>() , </span>
-<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a>             <span class="fu">aes</span>(<span class="at">x =</span> x, <span class="at">y =</span> y, </span>
-<span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a>                  <span class="at">fill =</span> layer)) <span class="sc">+</span> </span>
-<span id="cb12-5"><a href="#cb12-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_fill_gradientn</span>(<span class="at">name =</span> <span class="st">"KDE"</span>, </span>
-<span id="cb12-6"><a href="#cb12-6" aria-hidden="true" tabindex="-1"></a>                       <span class="at">colors =</span> (viridis<span class="sc">::</span><span class="fu">magma</span>(<span class="dv">100</span>)), <span class="at">na.value =</span> <span class="cn">NA</span>)<span class="sc">+</span></span>
-<span id="cb12-7"><a href="#cb12-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">coord_fixed</span>()<span class="sc">+</span></span>
-<span id="cb12-8"><a href="#cb12-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggtitle</span>(<span class="fu">paste0</span>(<span class="st">"KDE Raster de Delitos"</span>) ) <span class="sc">+</span></span>
-<span id="cb12-9"><a href="#cb12-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_bw</span>() <span class="sc">+</span></span>
-<span id="cb12-10"><a href="#cb12-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">panel.grid.major =</span> <span class="fu">element_line</span>(<span class="at">colour =</span> <span class="st">"gray80"</span>), </span>
-<span id="cb12-11"><a href="#cb12-11" aria-hidden="true" tabindex="-1"></a>        <span class="at">panel.grid.minor =</span> <span class="fu">element_line</span>(<span class="at">colour =</span> <span class="st">"gray80"</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output-display">
-<div>
-<figure class="figure">
-<p><img src="inferencia_files/figure-html/unnamed-chunk-9-1.png" class="img-fluid figure-img" width="672"></p>
+<p><img src="inferencia_files/figure-html/unnamed-chunk-8-1.png" class="img-fluid figure-img" width="672"></p>
 </figure>
 </div>
 </div>
 </div>
-<p>Función Para filtrar Raster (solo para tener en cuenta)</p>
+</section>
+<section id="mapa-de-densidad-raster" class="level4">
+<h4 class="anchored" data-anchor-id="mapa-de-densidad-raster">Mapa de densidad (raster)</h4>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>na_menor <span class="ot">&lt;-</span> <span class="cf">function</span>(x){</span>
-<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>  x[x <span class="sc">&lt;</span> <span class="dv">10</span>] <span class="ot">&lt;-</span> <span class="cn">NA</span></span>
-<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">return</span>(x)</span>
-<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a>}</span>
-<span id="cb13-5"><a href="#cb13-5" aria-hidden="true" tabindex="-1"></a>kde_raster2 <span class="ot">&lt;-</span> <span class="fu">calc</span>(kde_raster, <span class="at">fun =</span> na_menor)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Data frame para ggplot</span></span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>kde_raster_df <span class="ot">&lt;-</span> raster<span class="sc">::</span><span class="fu">as.data.frame</span>(kde_raster, <span class="at">xy =</span> <span class="cn">TRUE</span>) </span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a><span class="co"># eliminar los valores menores a 1 (na omit)</span></span>
+<span id="cb10-6"><a href="#cb10-6" aria-hidden="true" tabindex="-1"></a>umbral <span class="ot">&lt;-</span> <span class="dv">1</span></span>
+<span id="cb10-7"><a href="#cb10-7" aria-hidden="true" tabindex="-1"></a>kde_raster_df <span class="ot">&lt;-</span> kde_raster_df <span class="sc">%&gt;%</span> </span>
+<span id="cb10-8"><a href="#cb10-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">layer =</span> <span class="fu">ifelse</span>(layer <span class="sc">&lt;</span> umbral, <span class="cn">NA</span>, layer))<span class="sc">%&gt;%</span> </span>
+<span id="cb10-9"><a href="#cb10-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">na.omit</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<p>KDE a Indicador Territorial</p>
-<p>Leer manzanas del Censo</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a>mi_comuna <span class="ot">&lt;-</span>  <span class="st">"LAS CONDES"</span></span>
-<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a>mz_comuna <span class="ot">&lt;-</span> <span class="fu">readRDS</span>(<span class="st">"data/censo/manzanas.rds"</span>) <span class="sc">%&gt;%</span> </span>
-<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(NOM_COM <span class="sc">==</span> mi_comuna) <span class="sc">%&gt;%</span> </span>
-<span id="cb14-4"><a href="#cb14-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">st_transform</span>(<span class="dv">32719</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<p>Cálculo de Indicador de Delitos Violentos</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(exactextractr)</span>
-<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a>mz_comuna  <span class="ot">&lt;-</span> mz_comuna <span class="sc">%&gt;%</span> </span>
-<span id="cb15-4"><a href="#cb15-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">idelv =</span> <span class="fu">exact_extract</span>(kde_raster,<span class="at">y =</span> ., <span class="st">'mean'</span>, </span>
-<span id="cb15-5"><a href="#cb15-5" aria-hidden="true" tabindex="-1"></a>                               <span class="at">progress =</span> <span class="cn">FALSE</span>))</span>
-<span id="cb15-6"><a href="#cb15-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb15-7"><a href="#cb15-7" aria-hidden="true" tabindex="-1"></a><span class="co"># saveRDS(mz_comuna, "data/delitos/idel_violentos_LC.rds")</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<p>Visualización del Indicador</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="co"># pal_idelv&lt;- colorRampPalette(c("white",  "red"))( 100 )</span></span>
-<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>() <span class="sc">+</span></span>
-<span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_sf</span>(<span class="at">data =</span> mz_comuna, <span class="fu">aes</span>(<span class="at">fill =</span> idelv), <span class="at">color =</span><span class="st">"gray80"</span>, </span>
-<span id="cb16-4"><a href="#cb16-4" aria-hidden="true" tabindex="-1"></a>          <span class="at">alpha=</span><span class="fl">0.8</span>,  <span class="at">size=</span> <span class="fl">0.1</span>)<span class="sc">+</span></span>
-<span id="cb16-5"><a href="#cb16-5" aria-hidden="true" tabindex="-1"></a>  <span class="co"># scale_fill_gradientn(colors = pal_idelv)+</span></span>
-<span id="cb16-6"><a href="#cb16-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_fill_distiller</span>(<span class="at">palette=</span> <span class="st">"Reds"</span>, <span class="at">direction =</span> <span class="dv">1</span>)<span class="sc">+</span></span>
-<span id="cb16-7"><a href="#cb16-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggtitle</span>(<span class="st">"Indicador de Delitos Violentos"</span>) <span class="sc">+</span></span>
-<span id="cb16-8"><a href="#cb16-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_bw</span>() <span class="sc">+</span></span>
-<span id="cb16-9"><a href="#cb16-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">panel.grid.major =</span> <span class="fu">element_line</span>(<span class="at">colour =</span> <span class="st">"gray80"</span>), </span>
-<span id="cb16-10"><a href="#cb16-10" aria-hidden="true" tabindex="-1"></a>        <span class="at">panel.grid.minor =</span> <span class="fu">element_line</span>(<span class="at">colour =</span> <span class="st">"gray80"</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>kde_delitos_map <span class="ot">&lt;-</span> <span class="fu">ggplot</span>() <span class="sc">+</span></span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_raster</span>(<span class="at">data =</span> kde_raster_df <span class="sc">%&gt;%</span> <span class="fu">na.omit</span>() , </span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a>              <span class="fu">aes</span>(<span class="at">x =</span> x, <span class="at">y =</span> y, </span>
+<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a>                  <span class="at">fill =</span> layer)) <span class="sc">+</span> </span>
+<span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_fill_gradientn</span>(<span class="at">name =</span> <span class="st">"KDE"</span>, </span>
+<span id="cb11-6"><a href="#cb11-6" aria-hidden="true" tabindex="-1"></a>                       <span class="at">colors =</span> (viridis<span class="sc">::</span><span class="fu">magma</span>(<span class="dv">100</span>)), <span class="at">na.value =</span> <span class="cn">NA</span>)<span class="sc">+</span></span>
+<span id="cb11-7"><a href="#cb11-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">coord_fixed</span>()<span class="sc">+</span></span>
+<span id="cb11-8"><a href="#cb11-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">"KDE Raster de Delitos"</span>,</span>
+<span id="cb11-9"><a href="#cb11-9" aria-hidden="true" tabindex="-1"></a>       <span class="at">subtitle =</span>  <span class="st">"Comuna de Las Condes"</span>) <span class="sc">+</span></span>
+<span id="cb11-10"><a href="#cb11-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_bw</span>() <span class="sc">+</span></span>
+<span id="cb11-11"><a href="#cb11-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">panel.grid.major =</span> <span class="fu">element_line</span>(<span class="at">colour =</span> <span class="st">"gray80"</span>), </span>
+<span id="cb11-12"><a href="#cb11-12" aria-hidden="true" tabindex="-1"></a>        <span class="at">panel.grid.minor =</span> <span class="fu">element_line</span>(<span class="at">colour =</span> <span class="st">"gray80"</span>))</span>
+<span id="cb11-13"><a href="#cb11-13" aria-hidden="true" tabindex="-1"></a>kde_delitos_map</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="inferencia_files/figure-html/unnamed-chunk-13-1.png" class="img-fluid figure-img" width="672"></p>
+<p><img src="inferencia_files/figure-html/unnamed-chunk-10-1.png" class="img-fluid figure-img" width="672"></p>
 </figure>
 </div>
 </div>
+</div>
+</section>
+<section id="indicador-por-manzana" class="level4">
+<h4 class="anchored" data-anchor-id="indicador-por-manzana">Indicador por manzana</h4>
+<p>Calculamos el promedio del raster KDE dentro de cada manzana (puedes probar mediana para robustez).</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Leer manzanas de la comuna</span></span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>mi_comuna <span class="ot">&lt;-</span> <span class="st">"LAS CONDES"</span></span>
+<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a>mz_comuna <span class="ot">&lt;-</span> <span class="fu">readRDS</span>(<span class="st">"data/censo/manzanas.rds"</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(NOM_COM <span class="sc">==</span> mi_comuna) <span class="sc">%&gt;%</span></span>
+<span id="cb12-5"><a href="#cb12-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">st_transform</span>(<span class="fu">st_crs</span>(violencia))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Se debe extraer los valores de Raster por los polígonos de las manzanas, a estos valores se le aplica una medida estadística como el promedio siendo este el valor representativo de la manzana, lo anterior lo haremos con la funición <code>exact_extract</code>.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(exactextractr)</span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a><span class="co"># Extraer estadístico (mean)</span></span>
+<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a>mz_comuna  <span class="ot">&lt;-</span> mz_comuna <span class="sc">%&gt;%</span> </span>
+<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">idelv =</span> <span class="fu">exact_extract</span>(kde_raster,<span class="at">y =</span> ., <span class="st">'mean'</span>, </span>
+<span id="cb13-5"><a href="#cb13-5" aria-hidden="true" tabindex="-1"></a>                               <span class="at">progress =</span> <span class="cn">FALSE</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="normalización-de-indicador" class="level4">
+<h4 class="anchored" data-anchor-id="normalización-de-indicador">Normalización de Indicador</h4>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a>minmax <span class="ot">&lt;-</span> <span class="cf">function</span>(x) {</span>
+<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a>  x <span class="ot">&lt;-</span> (x <span class="sc">-</span> <span class="fu">min</span>(x, <span class="at">na.rm =</span> <span class="cn">TRUE</span>)) <span class="sc">/</span> </span>
+<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a>    (<span class="fu">max</span>(x, <span class="at">na.rm =</span> <span class="cn">TRUE</span>) <span class="sc">-</span> <span class="fu">min</span>(x, <span class="at">na.rm =</span> <span class="cn">TRUE</span>))</span>
+<span id="cb14-4"><a href="#cb14-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">return</span>(x)</span>
+<span id="cb14-5"><a href="#cb14-5" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb14-6"><a href="#cb14-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-7"><a href="#cb14-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-8"><a href="#cb14-8" aria-hidden="true" tabindex="-1"></a>mz_comuna  <span class="ot">&lt;-</span> mz_comuna <span class="sc">%&gt;%</span> </span>
+<span id="cb14-9"><a href="#cb14-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">imp =</span> <span class="fu">minmax</span>(idelv)<span class="sc">*</span> <span class="dv">100</span>) <span class="co">#normalización</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="visualización-del-indicador-de-delitos-violentos" class="level4">
+<h4 class="anchored" data-anchor-id="visualización-del-indicador-de-delitos-violentos">Visualización del Indicador de Delitos Violentos</h4>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a>ind_delitos <span class="ot">&lt;-</span> <span class="fu">ggplot</span>() <span class="sc">+</span></span>
+<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_sf</span>(<span class="at">data =</span> mz_comuna, <span class="fu">aes</span>(<span class="at">fill =</span> idelv), <span class="at">color =</span><span class="st">"gray80"</span>, </span>
+<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a>          <span class="at">alpha=</span><span class="fl">0.8</span>,  <span class="at">size=</span> <span class="fl">0.1</span>)<span class="sc">+</span></span>
+<span id="cb15-4"><a href="#cb15-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_fill_distiller</span>(<span class="at">palette=</span> <span class="st">"Reds"</span>, <span class="at">direction =</span> <span class="dv">1</span>)<span class="sc">+</span></span>
+<span id="cb15-5"><a href="#cb15-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">"Indicador de Delitos Violentos"</span>,</span>
+<span id="cb15-6"><a href="#cb15-6" aria-hidden="true" tabindex="-1"></a>       <span class="at">subtitle =</span>  <span class="st">"Comuna de Las Condes"</span>) <span class="sc">+</span></span>
+<span id="cb15-7"><a href="#cb15-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_bw</span>() <span class="sc">+</span></span>
+<span id="cb15-8"><a href="#cb15-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">panel.grid.major =</span> <span class="fu">element_line</span>(<span class="at">colour =</span> <span class="st">"gray80"</span>), </span>
+<span id="cb15-9"><a href="#cb15-9" aria-hidden="true" tabindex="-1"></a>        <span class="at">panel.grid.minor =</span> <span class="fu">element_line</span>(<span class="at">colour =</span> <span class="st">"gray80"</span>))</span>
+<span id="cb15-10"><a href="#cb15-10" aria-hidden="true" tabindex="-1"></a>ind_delitos</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="inferencia_files/figure-html/unnamed-chunk-14-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>Visualización dinámica con <code>mapview</code></p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Visualización Dinámica</span></span>
+<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a>pal_idelv <span class="ot">&lt;-</span> <span class="fu">colorRampPalette</span>(<span class="fu">c</span>(<span class="st">"white"</span>,  <span class="st">"red"</span>))( <span class="dv">100</span> )</span>
+<span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a><span class="fu">mapview</span>(mz_comuna, <span class="at">zcol =</span> <span class="st">"idelv"</span>, <span class="at">col.regions =</span> pal_idelv)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>Guardar Resultados</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="fu">st_write</span>(mz_comuna, <span class="st">"data/delitos/LC_idel.shp"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Raster y vector</span></span>
+<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a>raster<span class="sc">::</span><span class="fu">writeRaster</span>(kde_raster, <span class="st">"data/delitos/kde_delvio_LC.tif"</span>,</span>
+<span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a>                    <span class="at">overwrite =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb17-4"><a href="#cb17-4" aria-hidden="true" tabindex="-1"></a>sf<span class="sc">::</span><span class="fu">st_write</span>(mz_comuna, <span class="st">"data/delitos/LC_idel.shp"</span>,</span>
+<span id="cb17-5"><a href="#cb17-5" aria-hidden="true" tabindex="-1"></a>             <span class="at">delete_dsn =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb17-6"><a href="#cb17-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-7"><a href="#cb17-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Gráficos</span></span>
+<span id="cb17-8"><a href="#cb17-8" aria-hidden="true" tabindex="-1"></a><span class="fu">ggsave</span>(<span class="st">"mapas/kde_delitos_map_las_condes.png"</span>, kde_map, </span>
+<span id="cb17-9"><a href="#cb17-9" aria-hidden="true" tabindex="-1"></a>       <span class="at">width =</span> <span class="dv">8</span>, <span class="at">height =</span> <span class="dv">6</span>, <span class="at">dpi =</span> <span class="dv">300</span>)</span>
+<span id="cb17-10"><a href="#cb17-10" aria-hidden="true" tabindex="-1"></a><span class="fu">ggsave</span>(<span class="st">"mapas/indicador_delitos_las_condes.png"</span>, ind_delitos,</span>
+<span id="cb17-11"><a href="#cb17-11" aria-hidden="true" tabindex="-1"></a>       <span class="at">width =</span> <span class="dv">8</span>, <span class="at">height =</span> <span class="dv">6</span>, <span class="at">dpi =</span> <span class="dv">300</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 </section>
-<section id="sec-IDW" class="level2 page-columns page-full" data-number="3.3">
-<h2 data-number="3.3" class="anchored" data-anchor-id="sec-IDW"><span class="header-section-number">3.3</span> Interpolación Inverso a Distancia Ponderada IDW</h2>
-<section id="definiciones" class="level3 page-columns page-full" data-number="3.3.1">
-<h3 data-number="3.3.1" class="anchored" data-anchor-id="definiciones"><span class="header-section-number">3.3.1</span> Definiciones</h3>
+</section>
+<section id="sec-IDW" class="level2 page-columns page-full" data-number="9.3">
+<h2 data-number="9.3" class="anchored" data-anchor-id="sec-IDW"><span class="header-section-number">9.3</span> Interpolación Inversa a la Distancia Ponderada (IDW)</h2>
+<section id="qué-es-idw" class="level3" data-number="9.3.1">
+<h3 data-number="9.3.1" class="anchored" data-anchor-id="qué-es-idw"><span class="header-section-number">9.3.1</span> ¿Qué es IDW?</h3>
+<p>La <strong>Interpolación Inversa a la Distancia</strong> estima valores en lugares donde <strong>no hay datos medidos</strong>.<br>
+La idea es simple:</p>
+<ul>
+<li>Cada punto conocido influye en el punto a estimar.<br>
+</li>
+<li>Cuanto <strong>más cerca</strong> está, <strong>mayor es su peso</strong> en el cálculo.<br>
+</li>
+<li>Cuanto <strong>más lejos</strong>, <strong>menor es su peso</strong>.</li>
+</ul>
+<p>Así, los valores estimados son un <strong>promedio ponderado por la distancia</strong>.</p>
+</section>
+<section id="ejemplo-intuitivo" class="level3 page-columns page-full" data-number="9.3.2">
+<h3 data-number="9.3.2" class="anchored" data-anchor-id="ejemplo-intuitivo"><span class="header-section-number">9.3.2</span> Ejemplo intuitivo</h3>
+<p>Imagina un mapa con puntos rojos donde conocemos la elevación.<br>
+Si queremos estimar la altura en un punto púrpura, usamos los puntos cercanos, pero damos <strong>más peso a los más próximos</strong>.</p>
+<div class="quarto-figure quarto-figure-center page-columns page-full">
+<figure class="figure page-columns page-full">
+<p><img src="images/values_idw.png" class="img-fluid figure-img"></p>
+<figcaption class="margin-caption">Estimación de valores por interpolación</figcaption>
+</figure>
+</div>
+<p>En este ejemplo:<br>
+- Se usan los 3 puntos más cercanos.<br>
+- Los más próximos tienen mayor peso.</p>
+<hr>
+</section>
+<section id="características-principales" class="level3 page-columns page-full" data-number="9.3.3">
+<h3 data-number="9.3.3" class="anchored" data-anchor-id="características-principales"><span class="header-section-number">9.3.3</span> Características principales</h3>
+<ul>
+<li><strong>Suaviza valores</strong>: el resultado siempre estará entre el mínimo y máximo de los datos originales.<br>
+</li>
+<li><strong>No crea picos ni valles artificiales</strong>: si no hay datos extremos, no aparecerán en la interpolación.<br>
+</li>
+<li><strong>Sencillo y rápido</strong>: no requiere supuestos complejos.</li>
+</ul>
+<div class="quarto-figure quarto-figure-center page-columns page-full">
+<figure class="figure page-columns page-full">
+<p><img src="images/exp_idw.png" class="img-fluid figure-img"></p>
+<figcaption class="margin-caption">Resultados de IDW</figcaption>
+</figure>
+</div>
+<hr>
+</section>
+<section id="fórmula-general-1" class="level3" data-number="9.3.4">
+<h3 data-number="9.3.4" class="anchored" data-anchor-id="fórmula-general-1"><span class="header-section-number">9.3.4</span> Fórmula general</h3>
+<p>La estimación para un punto <span class="math inline">x_0</span> se calcula así:</p>
+<p><span class="math display">
+\hat{z}(x_0) = \frac{\sum_{i=1}^n w_i z(x_i)}{\sum_{i=1}^n w_i}
+\qquad \text{donde } w_i = \frac{1}{d(x_0,x_i)^p}
+</span></p>
+<ul>
+<li><span class="math inline">z(x_i)</span> = valor en el punto <span class="math inline">i</span><br>
+</li>
+<li><span class="math inline">d(x_0,x_i)</span> = distancia entre <span class="math inline">x_0</span> y <span class="math inline">x_i</span><br>
+</li>
+<li><span class="math inline">p</span> = parámetro que controla la influencia de la distancia</li>
+</ul>
+<hr>
+</section>
+<section id="parámetro-de-potencia" class="level3" data-number="9.3.5">
+<h3 data-number="9.3.5" class="anchored" data-anchor-id="parámetro-de-potencia"><span class="header-section-number">9.3.5</span> Parámetro de potencia</h3>
+<ul>
+<li><strong><span class="math inline">p</span> alto →</strong> solo puntos muy cercanos influyen.<br>
+</li>
+<li><strong><span class="math inline">p</span> bajo →</strong> puntos lejanos también tienen peso.</li>
+</ul>
+<p>Un valor típico es <span class="math inline">p = 2</span>.</p>
+<hr>
+</section>
+<section id="resumen-1" class="level3" data-number="9.3.6">
+<h3 data-number="9.3.6" class="anchored" data-anchor-id="resumen-1"><span class="header-section-number">9.3.6</span> Resumen</h3>
+<ul>
+<li>IDW es fácil de entender y aplicar.<br>
+</li>
+<li>Funciona bien cuando los puntos están bien distribuidos.<br>
+</li>
+<li>No predice valores fuera del rango original.</li>
+</ul>
+</section>
+</section>
+<section id="sec-IDW" class="level2 page-columns page-full" data-number="9.4">
+<h2 data-number="9.4" class="anchored" data-anchor-id="sec-IDW"><span class="header-section-number">9.4</span> Interpolación Inverso a Distancia Ponderada IDW</h2>
+<section id="definiciones" class="level3 page-columns page-full" data-number="9.4.1">
+<h3 data-number="9.4.1" class="anchored" data-anchor-id="definiciones"><span class="header-section-number">9.4.1</span> Definiciones</h3>
 <p>Este tipo de interpolación, determina los valores de celda a través de una combinación ponderada linealmente de un conjunto de datos de puntos de muestra. Esto significa que los puntos de muestreo se ponderan de tal manera que la influencia de un punto frente a otro, disminuye con la distancia.</p>
 <p>Cuanto más cerca está un punto del centro de la celda que se está estimando, más influencia o peso tendrá en el proceso de cálculo del promedio.</p>
 <div class="quarto-figure quarto-figure-center page-columns page-full">
@@ -763,80 +850,73 @@ Done: [====================================================================] .
 </div>
 <p>Dado que la IDW es un promedio de distancia ponderada, el promedio no puede ser mayor que la entrada máxima o inferior que la entrada mínima. Por lo tanto, no puede crear crestas o valles si estos extremos aún no se han muestreado (Watson y Philip 1985).</p>
 </section>
-<section id="usos-prácticos" class="level3" data-number="3.3.2">
-<h3 data-number="3.3.2" class="anchored" data-anchor-id="usos-prácticos"><span class="header-section-number">3.3.2</span> Usos prácticos</h3>
-<p><strong>Pasos</strong></p>
-<ul>
-<li>Definición de Área de Estudio</li>
-<li>Interpolación de información Comercio y Oficina</li>
-<li>Crear Indicador de Atractor de Comercios y Oficina</li>
-</ul>
-<p><strong>Desarrollo</strong></p>
-<p>Definición de Área de Estudio</p>
-<p>Para efectos de este ejemplo práctico se utilizará el área urbana de la comuna de Las Condes.</p>
+<section id="caso-práctico-indicador-de-exposición-a-pm2.5-con-idw" class="level3" data-number="9.4.2">
+<h3 data-number="9.4.2" class="anchored" data-anchor-id="caso-práctico-indicador-de-exposición-a-pm2.5-con-idw"><span class="header-section-number">9.4.2</span> Caso Práctico: Indicador de exposición a PM2.5 con IDW</h3>
+<p><strong>Objetivo</strong>. Estimar una superficie continua de PM2.5 a partir de estaciones de monitoreo (IDW) y derivar un indicador por manzana.</p>
+<p><strong>Idea</strong>. En IDW, cada estación pesa según su distancia al punto a estimar: más cerca → más peso. Dos parámetros controlan el resultado:</p>
+<pre><code>* `p` (potencia): local vs. suave.
+* `nmax` (vecinos): número máximo de estaciones por celda.</code></pre>
+<p><strong>Fuente de datos:</strong> Los datos provienen de la red de estaciones de monitoreo de calidad del aire del <a href="https://sinca.mma.gob.cl/">Sistema Nacional de Información de Calidad del Aire</a> (<a href="https://sinca.mma.gob.cl/">SINCA</a>), dependiente del <a href="https://mma.gob.cl/">Ministerio del Medio Ambiente</a> ( <a href="https://mma.gob.cl/">MMA</a>) de Chile. Se utilizaron promedios anuales de PM2.5 entre 2019 y 2023 para la Región Metropolitana, con énfasis en la provincia de Santiago.</p>
+<blockquote class="blockquote">
+<p>PM2.5 corresponde a material particulado fino (diámetro ≤ 2.5 μm), altamente dañino porque puede penetrar profundamente en el sistema respiratorio y la sangre. Sus fuentes principales incluyen combustión de motores, procesos industriales e incendios.</p>
+</blockquote>
+<section id="librarías" class="level4">
+<h4 class="anchored" data-anchor-id="librarías">Librarías</h4>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a>mi_comuna <span class="ot">&lt;-</span>  <span class="st">"LAS CONDES"</span></span>
-<span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a>zonas <span class="ot">&lt;-</span>  <span class="fu">readRDS</span>(<span class="st">"data/censo/zonas_urb_consolidadas.rds"</span>)</span>
-<span id="cb18-3"><a href="#cb18-3" aria-hidden="true" tabindex="-1"></a>comuna <span class="ot">&lt;-</span>  zonas <span class="sc">%&gt;%</span> <span class="fu">filter</span>(NOM_COMUNA <span class="sc">==</span> mi_comuna)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Paquetes</span></span>
+<span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(sf)</span>
+<span id="cb19-3"><a href="#cb19-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dplyr)</span>
+<span id="cb19-4"><a href="#cb19-4" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
+<span id="cb19-5"><a href="#cb19-5" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(viridis)</span>
+<span id="cb19-6"><a href="#cb19-6" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(terra)</span>
+<span id="cb19-7"><a href="#cb19-7" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(gstat)</span>
+<span id="cb19-8"><a href="#cb19-8" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(exactextractr)</span>
+<span id="cb19-9"><a href="#cb19-9" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(janitor)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<p>Visualizaciíon de Área de Estudio</p>
+</section>
+<section id="lectura-de-insumos-de-contaminación" class="level4">
+<h4 class="anchored" data-anchor-id="lectura-de-insumos-de-contaminación">Lectura de Insumos de contaminación</h4>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>() <span class="sc">+</span></span>
-<span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_sf</span>(<span class="at">data =</span> comuna, <span class="fu">aes</span>(<span class="at">fill =</span> ESC_JH), <span class="at">color =</span><span class="cn">NA</span>, </span>
-<span id="cb19-3"><a href="#cb19-3" aria-hidden="true" tabindex="-1"></a>          <span class="at">alpha=</span><span class="fl">0.8</span>,  <span class="at">size=</span> <span class="fl">0.1</span>)<span class="sc">+</span></span>
-<span id="cb19-4"><a href="#cb19-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_fill_distiller</span>(<span class="at">palette=</span> <span class="st">"YlGnBu"</span>, <span class="at">direction =</span> <span class="dv">1</span>)<span class="sc">+</span></span>
-<span id="cb19-5"><a href="#cb19-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggtitle</span>(<span class="st">"Población Zonas Censales - Urbano"</span> ) <span class="sc">+</span></span>
-<span id="cb19-6"><a href="#cb19-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_bw</span>() <span class="sc">+</span></span>
-<span id="cb19-7"><a href="#cb19-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">panel.grid.major =</span> <span class="fu">element_line</span>(<span class="at">colour =</span> <span class="st">"gray80"</span>), </span>
-<span id="cb19-8"><a href="#cb19-8" aria-hidden="true" tabindex="-1"></a>        <span class="at">panel.grid.minor =</span> <span class="fu">element_line</span>(<span class="at">colour =</span> <span class="st">"gray80"</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output-display">
-<div>
-<figure class="figure">
-<p><img src="inferencia_files/figure-html/unnamed-chunk-16-1.png" class="img-fluid figure-img" width="672"></p>
-</figure>
+<div class="sourceCode cell-code" id="cb20"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Lectura de la base de datos de estaciones</span></span>
+<span id="cb20-2"><a href="#cb20-2" aria-hidden="true" tabindex="-1"></a>mat_particulado <span class="ot">&lt;-</span>  <span class="fu">readRDS</span>(<span class="st">"data/contaminacion/material_particulado.rds"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-</div>
-</div>
-<p>Obtener el Borde comunal</p>
+<p>Posteriormente, se procede a filtrar a la provincia de Santiago y convertir la tabla de datos en un objeto espacial ya que cuenta con las coordenadas utilizando la función <code>st_as_sf()</code>.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb20"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a>comuna_border <span class="ot">&lt;-</span> comuna <span class="sc">%&gt;%</span> <span class="fu">st_union</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb21"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a>pts_mp_stgo <span class="ot">&lt;-</span>  mat_particulado <span class="sc">%&gt;%</span> </span>
+<span id="cb21-2"><a href="#cb21-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(provincia <span class="sc">==</span> <span class="st">"Santiago"</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb21-3"><a href="#cb21-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">st_as_sf</span>(<span class="at">coords =</span> <span class="fu">c</span>(<span class="st">"longitud"</span>, <span class="st">"latitud"</span>), <span class="at">crs =</span> <span class="dv">4326</span>) <span class="sc">%&gt;%</span> </span>
+<span id="cb21-4"><a href="#cb21-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">st_transform</span>(<span class="dv">32719</span>) <span class="sc">%&gt;%</span> </span>
+<span id="cb21-5"><a href="#cb21-5" aria-hidden="true" tabindex="-1"></a>  janitor<span class="sc">::</span><span class="fu">clean_names</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
+</section>
+<section id="control-de-outliers" class="level4">
+<h4 class="anchored" data-anchor-id="control-de-outliers">Control de Outliers</h4>
+<p>Recortamos valores extremos usando percentiles 5% y 95%. Esto reduce la influencia de outliers sin eliminar datos.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb21"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>() <span class="sc">+</span></span>
-<span id="cb21-2"><a href="#cb21-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_sf</span>(<span class="at">data =</span> comuna_border, <span class="at">fill =</span> <span class="st">"gray90"</span>, <span class="at">color =</span><span class="st">"gray30"</span>, </span>
-<span id="cb21-3"><a href="#cb21-3" aria-hidden="true" tabindex="-1"></a>          <span class="at">alpha=</span><span class="fl">0.8</span>,  <span class="at">size=</span> <span class="fl">0.8</span>)<span class="sc">+</span></span>
-<span id="cb21-4"><a href="#cb21-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggtitle</span>(<span class="st">"Borde Zonas Censales - Urbano"</span> ) <span class="sc">+</span></span>
-<span id="cb21-5"><a href="#cb21-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_bw</span>() <span class="sc">+</span></span>
-<span id="cb21-6"><a href="#cb21-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">panel.grid.major =</span> <span class="fu">element_line</span>(<span class="at">colour =</span> <span class="st">"gray80"</span>), </span>
-<span id="cb21-7"><a href="#cb21-7" aria-hidden="true" tabindex="-1"></a>        <span class="at">panel.grid.minor =</span> <span class="fu">element_line</span>(<span class="at">colour =</span> <span class="st">"gray80"</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output-display">
-<div>
-<figure class="figure">
-<p><img src="inferencia_files/figure-html/unnamed-chunk-18-1.png" class="img-fluid figure-img" width="672"></p>
-</figure>
+<div class="sourceCode cell-code" id="cb22"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a>p <span class="ot">&lt;-</span> <span class="fu">quantile</span>(pts_mp_stgo<span class="sc">$</span>mp2_5, <span class="at">probs =</span> <span class="fu">c</span>(<span class="fl">0.05</span>, <span class="fl">0.95</span>), </span>
+<span id="cb22-2"><a href="#cb22-2" aria-hidden="true" tabindex="-1"></a>              <span class="at">na.rm =</span> <span class="cn">TRUE</span>, <span class="at">type =</span> <span class="dv">7</span>)</span>
+<span id="cb22-3"><a href="#cb22-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-4"><a href="#cb22-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-5"><a href="#cb22-5" aria-hidden="true" tabindex="-1"></a>pts_mp_stgo <span class="ot">&lt;-</span> pts_mp_stgo <span class="sc">%&gt;%</span></span>
+<span id="cb22-6"><a href="#cb22-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">pm25_win =</span> <span class="fu">pmax</span>(p[<span class="dv">1</span>], <span class="fu">pmin</span>(mp2_5, p[<span class="dv">2</span>])))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-</div>
-</div>
-<p><strong>Imputar información SII a zonas censales</strong></p>
-<p>Lectura de datos de SII (puntos)</p>
+<p>Visualización rápida</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb22"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a>sii_ptos <span class="ot">&lt;-</span> <span class="fu">st_read</span>(<span class="st">"data/sii/urbes.shp"</span>, <span class="at">quiet =</span> T)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<p>Selección de Comuna</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb23"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a>comuna_sii <span class="ot">&lt;-</span>  sii_ptos <span class="sc">%&gt;%</span> <span class="fu">filter</span>(n_com <span class="sc">==</span> mi_comuna) <span class="sc">%&gt;%</span> </span>
-<span id="cb23-2"><a href="#cb23-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">st_transform</span>(<span class="dv">32719</span>)</span>
-<span id="cb23-3"><a href="#cb23-3" aria-hidden="true" tabindex="-1"></a><span class="co"># comuna_sii</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<p>Visualización de los Puntos del SII</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb24"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>() <span class="sc">+</span></span>
-<span id="cb24-2"><a href="#cb24-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_sf</span>(<span class="at">data =</span> comuna_sii,  <span class="at">color =</span><span class="st">"orange"</span>, </span>
-<span id="cb24-3"><a href="#cb24-3" aria-hidden="true" tabindex="-1"></a>          <span class="at">alpha=</span><span class="fl">0.8</span>,  <span class="at">size=</span> <span class="fl">0.5</span>)<span class="sc">+</span></span>
-<span id="cb24-4"><a href="#cb24-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggtitle</span>(<span class="st">"Predios SII - Urbano"</span> ) <span class="sc">+</span></span>
-<span id="cb24-5"><a href="#cb24-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_bw</span>() <span class="sc">+</span></span>
-<span id="cb24-6"><a href="#cb24-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">panel.grid.major =</span> <span class="fu">element_line</span>(<span class="at">colour =</span> <span class="st">"gray80"</span>), </span>
-<span id="cb24-7"><a href="#cb24-7" aria-hidden="true" tabindex="-1"></a>        <span class="at">panel.grid.minor =</span> <span class="fu">element_line</span>(<span class="at">colour =</span> <span class="st">"gray80"</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb23"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a>pal_pm2<span class="fl">.5</span> <span class="ot">&lt;-</span> <span class="fu">colorRampPalette</span>(</span>
+<span id="cb23-2"><a href="#cb23-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">c</span>(<span class="st">'#fcc5c0'</span>,<span class="st">'#fa9fb5'</span>,<span class="st">'#f768a1'</span>,<span class="st">'#dd3497'</span>,<span class="st">'#ae017e'</span>,<span class="st">'#7a0177'</span>))(<span class="dv">100</span>)</span>
+<span id="cb23-3"><a href="#cb23-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb23-4"><a href="#cb23-4" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>() <span class="sc">+</span></span>
+<span id="cb23-5"><a href="#cb23-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_sf</span>(<span class="at">data =</span> pts_mp_stgo, <span class="fu">aes</span>(<span class="at">color =</span>pm25_win),</span>
+<span id="cb23-6"><a href="#cb23-6" aria-hidden="true" tabindex="-1"></a>    <span class="at">linewidth =</span> <span class="dv">0</span>, <span class="at">alpha=</span><span class="fl">0.8</span>,  <span class="at">size=</span> <span class="fl">0.8</span>) <span class="sc">+</span></span>
+<span id="cb23-7"><a href="#cb23-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_color_gradientn</span>(<span class="at">colors =</span> pal_pm2<span class="fl">.5</span>) <span class="sc">+</span></span>
+<span id="cb23-8"><a href="#cb23-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">"Estaciones Monitoreo"</span>, </span>
+<span id="cb23-9"><a href="#cb23-9" aria-hidden="true" tabindex="-1"></a>       <span class="at">subtitle =</span> <span class="st">"Valores se le aplicó Winsorización"</span>,</span>
+<span id="cb23-10"><a href="#cb23-10" aria-hidden="true" tabindex="-1"></a>       <span class="at">fill =</span> <span class="st">"PM 2.5"</span>) <span class="sc">+</span></span>
+<span id="cb23-11"><a href="#cb23-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_bw</span>() <span class="sc">+</span></span>
+<span id="cb23-12"><a href="#cb23-12" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(</span>
+<span id="cb23-13"><a href="#cb23-13" aria-hidden="true" tabindex="-1"></a>    <span class="at">panel.grid.major =</span> <span class="fu">element_line</span>(<span class="at">colour =</span> <span class="st">"gray80"</span>),</span>
+<span id="cb23-14"><a href="#cb23-14" aria-hidden="true" tabindex="-1"></a>    <span class="at">panel.grid.minor =</span> <span class="fu">element_line</span>(<span class="at">colour =</span> <span class="st">"gray80"</span>)</span>
+<span id="cb23-15"><a href="#cb23-15" aria-hidden="true" tabindex="-1"></a>  )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <div>
 <figure class="figure">
@@ -844,168 +924,256 @@ Done: [====================================================================] .
 </figure>
 </div>
 </div>
+<div class="sourceCode cell-code" id="cb24"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a><span class="co"># mapview(pts_mp_stgo, zcol = "pm25_win", color = "gray",</span></span>
+<span id="cb24-2"><a href="#cb24-2" aria-hidden="true" tabindex="-1"></a>        <span class="co"># col.regions = pal_pm2.5, cex =3)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<p><strong>Interpolación de Inverso a la Distancia ponderada por Atractores (SII)</strong></p>
-<p>Definción ventana de trabajo</p>
+</section>
+<section id="definir-ventana-de-trabajo-y-grilla" class="level4">
+<h4 class="anchored" data-anchor-id="definir-ventana-de-trabajo-y-grilla">Definir ventana de trabajo y grilla</h4>
+<p>Creamos un raster plantilla con resolución en metros y extraemos puntos-centro de cada celda para la interpolación.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb25"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a>crs_utm <span class="ot">&lt;-</span> <span class="st">"+proj=utm +zone=19 +south +datum=WGS84 +units=m +no_defs"</span> <span class="co"># 32719</span></span>
-<span id="cb25-2"><a href="#cb25-2" aria-hidden="true" tabindex="-1"></a><span class="fu">suppressMessages</span>(<span class="fu">library</span>(raster))</span>
-<span id="cb25-3"><a href="#cb25-3" aria-hidden="true" tabindex="-1"></a><span class="co"># grilla desde mancha comuna</span></span>
-<span id="cb25-4"><a href="#cb25-4" aria-hidden="true" tabindex="-1"></a>urbano_utm <span class="ot">&lt;-</span> <span class="fu">st_transform</span>(comuna, crs_utm)</span>
-<span id="cb25-5"><a href="#cb25-5" aria-hidden="true" tabindex="-1"></a>urbano_sp <span class="ot">&lt;-</span> <span class="fu">as</span>(urbano_utm, <span class="st">"Spatial"</span>)</span>
-<span id="cb25-6"><a href="#cb25-6" aria-hidden="true" tabindex="-1"></a>ext <span class="ot">&lt;-</span> raster<span class="sc">::</span><span class="fu">extent</span>(urbano_sp)</span>
-<span id="cb25-7"><a href="#cb25-7" aria-hidden="true" tabindex="-1"></a>x_min <span class="ot">&lt;-</span> ext[<span class="dv">1</span>] <span class="sc">-</span> <span class="dv">100</span></span>
-<span id="cb25-8"><a href="#cb25-8" aria-hidden="true" tabindex="-1"></a>x_max <span class="ot">&lt;-</span> ext[<span class="dv">2</span>] <span class="sc">+</span> <span class="dv">100</span></span>
-<span id="cb25-9"><a href="#cb25-9" aria-hidden="true" tabindex="-1"></a>y_min <span class="ot">&lt;-</span> ext[<span class="dv">3</span>] <span class="sc">-</span> <span class="dv">100</span></span>
-<span id="cb25-10"><a href="#cb25-10" aria-hidden="true" tabindex="-1"></a>y_max <span class="ot">&lt;-</span> ext[<span class="dv">4</span>] <span class="sc">+</span> <span class="dv">100</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb25"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Parámetros IDW</span></span>
+<span id="cb25-2"><a href="#cb25-2" aria-hidden="true" tabindex="-1"></a>resolution <span class="ot">&lt;-</span> <span class="dv">100</span>   <span class="co"># tamaño de celda (m)</span></span>
+<span id="cb25-3"><a href="#cb25-3" aria-hidden="true" tabindex="-1"></a>p_power    <span class="ot">&lt;-</span> <span class="dv">2</span>     <span class="co"># potencia IDW (p=2 típico)</span></span>
+<span id="cb25-4"><a href="#cb25-4" aria-hidden="true" tabindex="-1"></a>nmax_k     <span class="ot">&lt;-</span> <span class="dv">8</span>     <span class="co"># vecinos máximos por celda</span></span>
+<span id="cb25-5"><a href="#cb25-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb25-6"><a href="#cb25-6" aria-hidden="true" tabindex="-1"></a><span class="co"># Plantilla base</span></span>
+<span id="cb25-7"><a href="#cb25-7" aria-hidden="true" tabindex="-1"></a>pts_v   <span class="ot">&lt;-</span> <span class="fu">vect</span>(pts_mp_stgo)</span>
+<span id="cb25-8"><a href="#cb25-8" aria-hidden="true" tabindex="-1"></a>r       <span class="ot">&lt;-</span> <span class="fu">rast</span>(<span class="fu">ext</span>(pts_v), <span class="at">resolution =</span> resolution, <span class="at">crs =</span> <span class="fu">crs</span>(pts_v))</span>
+<span id="cb25-9"><a href="#cb25-9" aria-hidden="true" tabindex="-1"></a>centros <span class="ot">&lt;-</span> <span class="fu">st_as_sf</span>(<span class="fu">as.points</span>(r))   <span class="co"># puntos-centro de cada celda</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<p>Definción grilla de interpolación**</p>
-<div class="cell" data-layout-align="center">
-<div class="sourceCode cell-code" id="cb26"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a><span class="do">## Definir espaciado de interpolacion</span></span>
-<span id="cb26-2"><a href="#cb26-2" aria-hidden="true" tabindex="-1"></a>grd<span class="ot">=</span><span class="fu">expand.grid</span>(<span class="at">x =</span> <span class="fu">seq</span>(<span class="at">from =</span> x_min,<span class="at">to =</span> x_max, <span class="at">by=</span><span class="dv">100</span>),</span>
-<span id="cb26-3"><a href="#cb26-3" aria-hidden="true" tabindex="-1"></a>                <span class="at">y =</span> <span class="fu">seq</span>(<span class="at">from =</span> y_min,<span class="at">to =</span> y_max, <span class="at">by=</span><span class="dv">100</span>))</span>
-<span id="cb26-4"><a href="#cb26-4" aria-hidden="true" tabindex="-1"></a><span class="fu">coordinates</span>(grd)<span class="ot">=</span><span class="er">~</span>x<span class="sc">+</span>y</span>
-<span id="cb26-5"><a href="#cb26-5" aria-hidden="true" tabindex="-1"></a><span class="fu">gridded</span>(grd)<span class="ot">=</span>T</span>
-<span id="cb26-6"><a href="#cb26-6" aria-hidden="true" tabindex="-1"></a><span class="fu">proj4string</span>(grd)<span class="ot">=</span> <span class="st">"+proj=utm +zone=19 +south +datum=WGS84 +units=m +no_defs"</span> <span class="co"># 32719</span></span>
-<span id="cb26-7"><a href="#cb26-7" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(grd)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="inferencia_files/figure-html/unnamed-chunk-23-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="672"></p>
-</figure>
-</div>
-</div>
-</div>
-<p>Cálculo de Interpolación de Inverso a la Distancia</p>
+</section>
+<section id="interpolación-idw" class="level4">
+<h4 class="anchored" data-anchor-id="interpolación-idw">Interpolación IDW</h4>
+<p>Ajustamos el modelo y predecimos en cada celda del raster.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb27"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Decsar Valores NA</span></span>
-<span id="cb27-2"><a href="#cb27-2" aria-hidden="true" tabindex="-1"></a>sii_sp <span class="ot">&lt;-</span> comuna_sii<span class="sc">%&gt;%</span></span>
-<span id="cb27-3"><a href="#cb27-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">st_transform</span>(crs_utm) <span class="sc">%&gt;%</span> </span>
-<span id="cb27-4"><a href="#cb27-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(<span class="sc">!</span><span class="fu">is.na</span>(atractor))<span class="sc">%&gt;%</span></span>
-<span id="cb27-5"><a href="#cb27-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">as</span>(<span class="st">"Spatial"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb28"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true" tabindex="-1"></a>interp_sii<span class="ot">=</span>gstat<span class="sc">::</span><span class="fu">idw</span>(<span class="at">formula =</span> sii_sp<span class="sc">@</span>data<span class="sc">$</span>atractor <span class="sc">~</span> <span class="dv">1</span>, </span>
-<span id="cb28-2"><a href="#cb28-2" aria-hidden="true" tabindex="-1"></a>                 <span class="at">locations =</span> sii_sp, </span>
-<span id="cb28-3"><a href="#cb28-3" aria-hidden="true" tabindex="-1"></a>                 <span class="at">newdata =</span> grd, <span class="at">idp =</span> <span class="dv">1</span>,</span>
-<span id="cb28-4"><a href="#cb28-4" aria-hidden="true" tabindex="-1"></a>                 <span class="at">na.action =</span> na.omit, <span class="at">nmax =</span> <span class="dv">4</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb26"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a>idw_fit <span class="ot">&lt;-</span> gstat<span class="sc">::</span><span class="fu">gstat</span>(</span>
+<span id="cb26-2"><a href="#cb26-2" aria-hidden="true" tabindex="-1"></a>  <span class="at">formula =</span> pm25_win <span class="sc">~</span> <span class="dv">1</span>,</span>
+<span id="cb26-3"><a href="#cb26-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">data    =</span> <span class="fu">st_as_sf</span>(pts_v),</span>
+<span id="cb26-4"><a href="#cb26-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">nmax    =</span> nmax_k,</span>
+<span id="cb26-5"><a href="#cb26-5" aria-hidden="true" tabindex="-1"></a>  <span class="at">set     =</span> <span class="fu">list</span>(<span class="at">idp =</span> p_power)</span>
+<span id="cb26-6"><a href="#cb26-6" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb26-7"><a href="#cb26-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb26-8"><a href="#cb26-8" aria-hidden="true" tabindex="-1"></a><span class="co"># Predicción en los centros de celda</span></span>
+<span id="cb26-9"><a href="#cb26-9" aria-hidden="true" tabindex="-1"></a>pred <span class="ot">&lt;-</span> <span class="fu">predict</span>(idw_fit, <span class="at">newdata =</span> centros)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[inverse distance weighted interpolation]</code></pre>
 </div>
+<div class="sourceCode cell-code" id="cb28"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true" tabindex="-1"></a>centros<span class="sc">$</span>pm25_idw <span class="ot">&lt;-</span> pred<span class="sc">$</span>var1.pred</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<p>Ajustes del Resultado</p>
-<ul>
-<li>Asiganar CRS</li>
-<li>Tranformar valores NA a 0</li>
-<li>Transformar raster y cortar por contorno urbano</li>
-</ul>
+</section>
+<section id="rasterizar-y-recortar-al-área-de-estudio" class="level4">
+<h4 class="anchored" data-anchor-id="rasterizar-y-recortar-al-área-de-estudio">Rasterizar y recortar al área de estudio</h4>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb30"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb30-1"><a href="#cb30-1" aria-hidden="true" tabindex="-1"></a><span class="fu">proj4string</span>(interp_sii) <span class="ot">=</span> <span class="fu">proj4string</span>(sii_sp) <span class="co"># Asignar crs</span></span>
-<span id="cb30-2"><a href="#cb30-2" aria-hidden="true" tabindex="-1"></a>interp_sii<span class="sc">@</span>data[<span class="fu">is.na</span>(interp_sii<span class="sc">@</span>data)] <span class="ot">=</span> <span class="dv">0</span> <span class="co"># trasnformar los valores 0 en NA</span></span>
-<span id="cb30-3"><a href="#cb30-3" aria-hidden="true" tabindex="-1"></a>interp_sii <span class="ot">&lt;-</span> <span class="fu">mask</span>(<span class="fu">raster</span>(interp_sii, <span class="at">values =</span> T), urbano_sp) <span class="co"># cortar por borde comunal</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb29"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Convertir a raster</span></span>
+<span id="cb29-2"><a href="#cb29-2" aria-hidden="true" tabindex="-1"></a>r_idw <span class="ot">&lt;-</span> <span class="fu">rasterize</span>(<span class="fu">vect</span>(centros), r, <span class="at">field =</span> <span class="st">"pm25_idw"</span>)</span>
+<span id="cb29-3"><a href="#cb29-3" aria-hidden="true" tabindex="-1"></a><span class="fu">names</span>(r_idw) <span class="ot">&lt;-</span> <span class="st">"pm25_idw"</span></span>
+<span id="cb29-4"><a href="#cb29-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-5"><a href="#cb29-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Recorte por comuna</span></span>
+<span id="cb29-6"><a href="#cb29-6" aria-hidden="true" tabindex="-1"></a>zonas <span class="ot">&lt;-</span> <span class="fu">readRDS</span>(<span class="st">"data/censo/zonas_urb_consolidadas.rds"</span>)</span>
+<span id="cb29-7"><a href="#cb29-7" aria-hidden="true" tabindex="-1"></a>mi_comuna <span class="ot">&lt;-</span> <span class="st">"LAS CONDES"</span></span>
+<span id="cb29-8"><a href="#cb29-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-9"><a href="#cb29-9" aria-hidden="true" tabindex="-1"></a>comuna <span class="ot">&lt;-</span> zonas <span class="sc">%&gt;%</span></span>
+<span id="cb29-10"><a href="#cb29-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(NOM_COMUNA <span class="sc">==</span> mi_comuna) <span class="sc">%&gt;%</span></span>
+<span id="cb29-11"><a href="#cb29-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">st_transform</span>(<span class="dv">32719</span>)</span>
+<span id="cb29-12"><a href="#cb29-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-13"><a href="#cb29-13" aria-hidden="true" tabindex="-1"></a>r_idw_masked <span class="ot">&lt;-</span> <span class="fu">mask</span>(r_idw, <span class="at">mask =</span> <span class="fu">vect</span>(<span class="fu">st_union</span>(comuna)))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<p>Visualización</p>
+</section>
+<section id="visualización-de-idw" class="level4">
+<h4 class="anchored" data-anchor-id="visualización-de-idw">Visualización de IDW</h4>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb31"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb31-1"><a href="#cb31-1" aria-hidden="true" tabindex="-1"></a>interp_sii_df <span class="ot">&lt;-</span> raster<span class="sc">::</span><span class="fu">as.data.frame</span>(interp_sii, <span class="at">xy =</span> <span class="cn">TRUE</span>) <span class="sc">%&gt;%</span> <span class="fu">na.omit</span>()</span>
-<span id="cb31-2"><a href="#cb31-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb31-3"><a href="#cb31-3" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>() <span class="sc">+</span></span>
-<span id="cb31-4"><a href="#cb31-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_raster</span>(<span class="at">data =</span> interp_sii_df , </span>
-<span id="cb31-5"><a href="#cb31-5" aria-hidden="true" tabindex="-1"></a>             <span class="fu">aes</span>(<span class="at">x =</span> x, <span class="at">y =</span> y, </span>
-<span id="cb31-6"><a href="#cb31-6" aria-hidden="true" tabindex="-1"></a>                  <span class="at">fill =</span> var1.pred)) <span class="sc">+</span> </span>
-<span id="cb31-7"><a href="#cb31-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_fill_gradientn</span>(<span class="at">name =</span> <span class="st">"IDW"</span>, </span>
-<span id="cb31-8"><a href="#cb31-8" aria-hidden="true" tabindex="-1"></a>                       <span class="at">colors =</span> (viridis<span class="sc">::</span><span class="fu">viridis</span>(<span class="dv">100</span>)), <span class="at">na.value =</span> <span class="cn">NA</span>)<span class="sc">+</span></span>
-<span id="cb31-9"><a href="#cb31-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">coord_fixed</span>()<span class="sc">+</span></span>
-<span id="cb31-10"><a href="#cb31-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggtitle</span>(<span class="fu">paste0</span>(<span class="st">"IDW Atractores de Comercio y Oficina"</span>) ) <span class="sc">+</span></span>
-<span id="cb31-11"><a href="#cb31-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_bw</span>() <span class="sc">+</span></span>
-<span id="cb31-12"><a href="#cb31-12" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">panel.grid.major =</span> <span class="fu">element_line</span>(<span class="at">colour =</span> <span class="st">"gray80"</span>), </span>
-<span id="cb31-13"><a href="#cb31-13" aria-hidden="true" tabindex="-1"></a>        <span class="at">panel.grid.minor =</span> <span class="fu">element_line</span>(<span class="at">colour =</span> <span class="st">"gray80"</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb30"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb30-1"><a href="#cb30-1" aria-hidden="true" tabindex="-1"></a>idw_df <span class="ot">&lt;-</span> raster<span class="sc">::</span><span class="fu">as.data.frame</span>(r_idw_masked, <span class="at">xy =</span> <span class="cn">TRUE</span>) <span class="sc">%&gt;%</span> </span>
+<span id="cb30-2"><a href="#cb30-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">na.omit</span>()</span>
+<span id="cb30-3"><a href="#cb30-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb30-4"><a href="#cb30-4" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>() <span class="sc">+</span></span>
+<span id="cb30-5"><a href="#cb30-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_raster</span>(<span class="at">data =</span> idw_df , <span class="fu">aes</span>(<span class="at">x =</span> x, <span class="at">y =</span> y,  <span class="at">fill =</span> pm25_idw)) <span class="sc">+</span> </span>
+<span id="cb30-6"><a href="#cb30-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_fill_gradientn</span>(<span class="at">name =</span> <span class="st">"IDW"</span>, </span>
+<span id="cb30-7"><a href="#cb30-7" aria-hidden="true" tabindex="-1"></a>                       <span class="at">colors =</span> pal_pm2<span class="fl">.5</span>, <span class="at">na.value =</span> <span class="cn">NA</span>)<span class="sc">+</span></span>
+<span id="cb30-8"><a href="#cb30-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">coord_fixed</span>()<span class="sc">+</span></span>
+<span id="cb30-9"><a href="#cb30-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">"IDW de Material particulado"</span>, </span>
+<span id="cb30-10"><a href="#cb30-10" aria-hidden="true" tabindex="-1"></a>       <span class="at">subtitle =</span> <span class="st">"Comuna de Las Condes"</span>,</span>
+<span id="cb30-11"><a href="#cb30-11" aria-hidden="true" tabindex="-1"></a>       <span class="at">fill =</span> <span class="st">"PM 2.5"</span>) <span class="sc">+</span></span>
+<span id="cb30-12"><a href="#cb30-12" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_bw</span>() <span class="sc">+</span></span>
+<span id="cb30-13"><a href="#cb30-13" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">panel.grid.major =</span> <span class="fu">element_line</span>(<span class="at">colour =</span> <span class="st">"gray80"</span>), </span>
+<span id="cb30-14"><a href="#cb30-14" aria-hidden="true" tabindex="-1"></a>        <span class="at">panel.grid.minor =</span> <span class="fu">element_line</span>(<span class="at">colour =</span> <span class="st">"gray80"</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="inferencia_files/figure-html/unnamed-chunk-27-1.png" class="img-fluid figure-img" width="672"></p>
+<p><img src="inferencia_files/figure-html/unnamed-chunk-25-1.png" class="img-fluid figure-img" width="672"></p>
 </figure>
 </div>
 </div>
+<div class="sourceCode cell-code" id="cb31"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb31-1"><a href="#cb31-1" aria-hidden="true" tabindex="-1"></a><span class="co"># mapview(r_idw_masked, zcol = "imp2.5", col.regions = pal_pm2.5)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<p>Cálculo de Indicador de Atractor IDW</p>
+</section>
+<section id="indicador-por-manzana-1" class="level4">
+<h4 class="anchored" data-anchor-id="indicador-por-manzana-1">Indicador por manzana</h4>
+<p>Construcción de Indicador de Exposición a Material Particulado fino PM2.5 Calculamos la media del raster IDW en cada polígono y normalizamos 0–100 para comparabilidad.</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb32"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb32-1"><a href="#cb32-1" aria-hidden="true" tabindex="-1"></a>mz_comuna  <span class="ot">&lt;-</span> mz_comuna <span class="sc">%&gt;%</span> </span>
-<span id="cb32-2"><a href="#cb32-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">atractor_sii =</span> <span class="fu">exact_extract</span>(interp_sii,<span class="at">y =</span> ., <span class="st">'mean'</span>, </span>
-<span id="cb32-3"><a href="#cb32-3" aria-hidden="true" tabindex="-1"></a>                               <span class="at">progress =</span> <span class="cn">FALSE</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb32-2"><a href="#cb32-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">imp =</span> <span class="fu">exact_extract</span>(r_idw_masked,<span class="at">y =</span> ., <span class="st">'mean'</span>, </span>
+<span id="cb32-3"><a href="#cb32-3" aria-hidden="true" tabindex="-1"></a>                                      <span class="at">progress =</span> <span class="cn">FALSE</span>)) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<p>Visualización del Indicador <code>atractor_sii</code></p>
+<p>Normalización de los valores</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb33"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb33-1"><a href="#cb33-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>() <span class="sc">+</span></span>
-<span id="cb33-2"><a href="#cb33-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_sf</span>(<span class="at">data =</span> mz_comuna, <span class="fu">aes</span>(<span class="at">fill =</span> atractor_sii), <span class="at">color =</span><span class="cn">NA</span>, </span>
-<span id="cb33-3"><a href="#cb33-3" aria-hidden="true" tabindex="-1"></a>          <span class="at">alpha=</span><span class="fl">0.8</span>,  <span class="at">size=</span> <span class="fl">0.1</span>)<span class="sc">+</span></span>
-<span id="cb33-4"><a href="#cb33-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_fill_viridis_c</span>()<span class="sc">+</span></span>
-<span id="cb33-5"><a href="#cb33-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggtitle</span>(<span class="st">"Indicador de Atractor de Comercio y Oficinas"</span>) <span class="sc">+</span></span>
-<span id="cb33-6"><a href="#cb33-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_bw</span>() <span class="sc">+</span></span>
-<span id="cb33-7"><a href="#cb33-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">panel.grid.major =</span> <span class="fu">element_line</span>(<span class="at">colour =</span> <span class="st">"gray80"</span>), </span>
-<span id="cb33-8"><a href="#cb33-8" aria-hidden="true" tabindex="-1"></a>        <span class="at">panel.grid.minor =</span> <span class="fu">element_line</span>(<span class="at">colour =</span> <span class="st">"gray80"</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb33"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb33-1"><a href="#cb33-1" aria-hidden="true" tabindex="-1"></a><span class="co"># función de normalización</span></span>
+<span id="cb33-2"><a href="#cb33-2" aria-hidden="true" tabindex="-1"></a>minmax <span class="ot">&lt;-</span> <span class="cf">function</span>(x) {</span>
+<span id="cb33-3"><a href="#cb33-3" aria-hidden="true" tabindex="-1"></a>  x <span class="ot">&lt;-</span> (x <span class="sc">-</span> <span class="fu">min</span>(x, <span class="at">na.rm =</span> <span class="cn">TRUE</span>)) <span class="sc">/</span> </span>
+<span id="cb33-4"><a href="#cb33-4" aria-hidden="true" tabindex="-1"></a>    (<span class="fu">max</span>(x, <span class="at">na.rm =</span> <span class="cn">TRUE</span>) <span class="sc">-</span> <span class="fu">min</span>(x, <span class="at">na.rm =</span> <span class="cn">TRUE</span>))</span>
+<span id="cb33-5"><a href="#cb33-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">return</span>(x)</span>
+<span id="cb33-6"><a href="#cb33-6" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb33-7"><a href="#cb33-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb33-8"><a href="#cb33-8" aria-hidden="true" tabindex="-1"></a><span class="co"># se convierte en un indicador de exposición</span></span>
+<span id="cb33-9"><a href="#cb33-9" aria-hidden="true" tabindex="-1"></a>mz_comuna  <span class="ot">&lt;-</span> mz_comuna <span class="sc">%&gt;%</span> </span>
+<span id="cb33-10"><a href="#cb33-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">imp =</span> <span class="fu">minmax</span>(imp)<span class="sc">*</span> <span class="dv">100</span>) <span class="co">#normlización</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="visualización-del-indicador" class="level4">
+<h4 class="anchored" data-anchor-id="visualización-del-indicador">Visualización del Indicador</h4>
+<p>Mapa del indicador (0–100):</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb34"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb34-1"><a href="#cb34-1" aria-hidden="true" tabindex="-1"></a>ind_exsposicion <span class="ot">&lt;-</span> <span class="fu">ggplot</span>() <span class="sc">+</span></span>
+<span id="cb34-2"><a href="#cb34-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_sf</span>(<span class="at">data =</span> mz_comuna, <span class="fu">aes</span>(<span class="at">fill =</span> imp), <span class="at">color =</span><span class="st">"transparent"</span>, </span>
+<span id="cb34-3"><a href="#cb34-3" aria-hidden="true" tabindex="-1"></a>          <span class="at">alpha=</span><span class="fl">0.8</span>,  <span class="at">size=</span> <span class="fl">0.1</span>)<span class="sc">+</span></span>
+<span id="cb34-4"><a href="#cb34-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_fill_distiller</span>(<span class="at">palette=</span> <span class="st">"YlOrRd"</span>, <span class="at">direction =</span> <span class="dv">1</span>)<span class="sc">+</span></span>
+<span id="cb34-5"><a href="#cb34-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">"Indicador de Exposición Material Particulado (MP2.5)"</span>,</span>
+<span id="cb34-6"><a href="#cb34-6" aria-hidden="true" tabindex="-1"></a>       <span class="at">subtitle =</span>  <span class="st">"Comuna de Las Condes"</span>, <span class="at">fill =</span> <span class="st">"Exposición </span><span class="sc">\n</span><span class="st">MP2.5"</span>) <span class="sc">+</span></span>
+<span id="cb34-7"><a href="#cb34-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_bw</span>() <span class="sc">+</span></span>
+<span id="cb34-8"><a href="#cb34-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">panel.grid.major =</span> <span class="fu">element_line</span>(<span class="at">colour =</span> <span class="st">"gray80"</span>), </span>
+<span id="cb34-9"><a href="#cb34-9" aria-hidden="true" tabindex="-1"></a>        <span class="at">panel.grid.minor =</span> <span class="fu">element_line</span>(<span class="at">colour =</span> <span class="st">"gray80"</span>))</span>
+<span id="cb34-10"><a href="#cb34-10" aria-hidden="true" tabindex="-1"></a>ind_exsposicion</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="inferencia_files/figure-html/unnamed-chunk-29-1.png" class="img-fluid figure-img" width="672"></p>
+<p><img src="inferencia_files/figure-html/unnamed-chunk-28-1.png" class="img-fluid figure-img" width="672"></p>
 </figure>
 </div>
 </div>
 </div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb35"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb35-1"><a href="#cb35-1" aria-hidden="true" tabindex="-1"></a><span class="co">#guardar mapa</span></span>
+<span id="cb35-2"><a href="#cb35-2" aria-hidden="true" tabindex="-1"></a><span class="fu">ggsave</span>(<span class="at">filename =</span> <span class="st">"mapas/indicador_mp2.5_las_condes.png"</span>, </span>
+<span id="cb35-3"><a href="#cb35-3" aria-hidden="true" tabindex="-1"></a>       <span class="at">plot =</span> ind_exsposicion, <span class="at">width =</span> <span class="dv">8</span>, <span class="at">height =</span> <span class="dv">6</span>, <span class="at">dpi =</span> <span class="dv">300</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb36"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb36-1"><a href="#cb36-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Visualización Dinámica</span></span>
+<span id="cb36-2"><a href="#cb36-2" aria-hidden="true" tabindex="-1"></a>colores <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">'#ffffcc'</span>,<span class="st">'#ffeda0'</span>,<span class="st">'#fed976'</span>,<span class="st">'#feb24c'</span>,<span class="st">'#fd8d3c'</span>,</span>
+<span id="cb36-3"><a href="#cb36-3" aria-hidden="true" tabindex="-1"></a>             <span class="st">'#fc4e2a'</span>,<span class="st">'#e31a1c'</span>,<span class="st">'#bd0026'</span>,<span class="st">'#800026'</span>) </span>
+<span id="cb36-4"><a href="#cb36-4" aria-hidden="true" tabindex="-1"></a>pal_imp <span class="ot">&lt;-</span> <span class="fu">colorRampPalette</span>(<span class="at">colors =</span> colores)(<span class="dv">100</span>)</span>
+<span id="cb36-5"><a href="#cb36-5" aria-hidden="true" tabindex="-1"></a><span class="fu">mapview</span>(mz_comuna, <span class="at">zcol =</span> <span class="st">"imp"</span>, <span class="at">col.regions =</span> pal_imp)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="guardar-los-resultados" class="level4">
+<h4 class="anchored" data-anchor-id="guardar-los-resultados">Guardar los Resultados</h4>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb37"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb37-1"><a href="#cb37-1" aria-hidden="true" tabindex="-1"></a>out_dir <span class="ot">&lt;-</span>  <span class="st">"data/contaminacion"</span></span>
+<span id="cb37-2"><a href="#cb37-2" aria-hidden="true" tabindex="-1"></a><span class="co"># Guardar raster GeoTIFF</span></span>
+<span id="cb37-3"><a href="#cb37-3" aria-hidden="true" tabindex="-1"></a><span class="fu">writeRaster</span>(r_idw_masked,</span>
+<span id="cb37-4"><a href="#cb37-4" aria-hidden="true" tabindex="-1"></a>            <span class="at">filename =</span> <span class="fu">file.path</span>(out_dir, <span class="st">"idw_pm25_las_condes.tif"</span>),</span>
+<span id="cb37-5"><a href="#cb37-5" aria-hidden="true" tabindex="-1"></a>            <span class="at">overwrite =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb37-6"><a href="#cb37-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb37-7"><a href="#cb37-7" aria-hidden="true" tabindex="-1"></a><span class="co"># También puedes guardar la versión completa (sin recorte)</span></span>
+<span id="cb37-8"><a href="#cb37-8" aria-hidden="true" tabindex="-1"></a><span class="fu">writeRaster</span>(r_idw,</span>
+<span id="cb37-9"><a href="#cb37-9" aria-hidden="true" tabindex="-1"></a>            <span class="at">filename =</span> <span class="fu">file.path</span>(out_dir, <span class="st">"idw_pm25_rm.tif"</span>),</span>
+<span id="cb37-10"><a href="#cb37-10" aria-hidden="true" tabindex="-1"></a>            <span class="at">overwrite =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb37-11"><a href="#cb37-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb37-12"><a href="#cb37-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb37-13"><a href="#cb37-13" aria-hidden="true" tabindex="-1"></a><span class="co"># Shapefile (para compatibilidad antigua)</span></span>
+<span id="cb37-14"><a href="#cb37-14" aria-hidden="true" tabindex="-1"></a><span class="fu">st_write</span>(mz_comuna,</span>
+<span id="cb37-15"><a href="#cb37-15" aria-hidden="true" tabindex="-1"></a>         <span class="at">dsn =</span> <span class="fu">file.path</span>(out_dir, <span class="st">"indicador_pm25_las_condes.shp"</span>),</span>
+<span id="cb37-16"><a href="#cb37-16" aria-hidden="true" tabindex="-1"></a>         <span class="at">delete_layer =</span> <span class="cn">TRUE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
 </section>
 </section>
-<section id="referencias" class="level2" data-number="3.4">
-<h2 data-number="3.4" class="anchored" data-anchor-id="referencias"><span class="header-section-number">3.4</span> Referencias</h2>
+</section>
+<section id="referencias" class="level2" data-number="9.5">
+<h2 data-number="9.5" class="anchored" data-anchor-id="referencias"><span class="header-section-number">9.5</span> Referencias</h2>
 <ul>
+<li><p><span class="citation" data-cites="FixHodges1951">Fix and Hodges (<a href="references.html#ref-FixHodges1951" role="doc-biblioref">1951</a>)</span> . <em>Discriminatory Analysis, Nonparametric Estimation: Consistency Properties</em>.<br>
+</p></li>
+<li><p><span class="citation" data-cites="Rosenblatt1956">Rosenblatt (<a href="references.html#ref-Rosenblatt1956" role="doc-biblioref">1956</a>)</span> . <em>Remarks on Some Nonparametric Estimates of a Density Function</em>.<br>
+</p></li>
+<li><p><span class="citation" data-cites="Silverman1986">Silverman (<a href="references.html#ref-Silverman1986" role="doc-biblioref">1986</a>)</span> . <em>Density Estimation for Statistics and Data Analysis</em>.</p></li>
+<li><p><span class="citation" data-cites="Eck2005">Eck and Wilson (<a href="references.html#ref-Eck2005" role="doc-biblioref">2005</a>)</span> . <em>Mapping Crime: Understanding Hot Spots</em>.<br>
+</p></li>
+<li><p><span class="citation" data-cites="WatsonPhilip1985">Watson and Philip (<a href="references.html#ref-WatsonPhilip1985" role="doc-biblioref">1985</a>)</span> <em>A Refinement of Inverse Distance Weighted Interpolation</em>.</p></li>
 <li><p><a href="https://www.cienciadedatos.net/documentos/pystats02-kernel-density-estimation-kde-python.html">Ajuste de distribuciones con kernel density estimation y Python</a></p></li>
 <li><p><a href="https://www.mdpi.com/2079-9292/9/5/837/htm">Role of Big Data in the Development of Smart City by Analyzing the Density of Residents in Shanghai</a></p></li>
 <li><p><a href="https://www.mdpi.com/2220-9964/8/12/544/htm">How Is the Confidentiality of Crime Locations Affected by Parameters in Kernel Density Estimation?</a></p></li>
 <li><p><a href="https://pro.arcgis.com/es/pro-app/latest/tool-reference/spatial-analyst/idw.htm">IDW (Spatial Analyst)</a></p></li>
 <li><p><a href="http://ru.iiec.unam.mx/4646/1/4-114-Navarrete-Lopez.pdf">IMPORTANCIA DE LOS ESPACIOS COMUNES: UNA ADAPTACIÓN DE LA TÉCNICA DE INTERPOLACIÓN ESPACIAL INVERSE DISTANCE WEIGHTED (IDW) EN LA PREDICCIÓN DE DATOS SOCIOECONÓMICOS AUSENTES</a></p></li>
 </ul>
-<!-- legacy -->
-<!-- #### KDE con Polígonos (grilla regular) -->
-<!-- Crear Grilla -->
+<!-- ### Validación IDW -->
 <!-- ```{r} -->
-<!-- # Crear una grilla de Delitos de Violencia -->
-<!-- grid_violencia <- violencia %>%  -->
-<!--   create_grid_rectangular(cell_size = cell_size, side_offset = band_width) -->
-<!-- plot(grid_violencia) -->
+<!-- library(gstat) -->
+<!-- library(dplyr) -->
+<!-- library(sf) -->
+<!-- # pts_mp_stgo: sf con columna pm25_win y CRS en metros -->
+<!-- stopifnot("pm25_win" %in% names(pts_mp_stgo), !sf::st_is_longlat(pts_mp_stgo)) -->
+<!-- loo_idw_once <- function(pts_sf, value = "pm25_win", p = 2, nmax = 8) { -->
+<!--   f <- stats::as.formula(paste(value, "~ 1")) -->
+<!--   cv <- gstat::krige.cv(f, pts_sf, nmax = nmax, set = list(idp = p)) -->
+<!--   # cv$residual = observado - predicho -->
+<!--   out <- tibble( -->
+<!--     p = p, nmax = nmax, -->
+<!--     rmse = sqrt(mean(cv$residual^2, na.rm = TRUE)), -->
+<!--     mae  = mean(abs(cv$residual), na.rm = TRUE), -->
+<!--     me   = mean(cv$residual, na.rm = TRUE), -->
+<!--     n    = nrow(cv), -->
+<!--     y_mean = mean(cv$observed, na.rm = TRUE), -->
+<!--     nrmse_mean = rmse / y_mean -->
+<!--   ) -->
+<!--   return(out) -->
+<!-- } -->
+<!-- # ejemplo con p=2, nmax=8 -->
+<!-- loo_idw_once(pts_mp_stgo, "pm25_win", p = 2, nmax = 8) -->
 <!-- ``` -->
+<!--  Búsqueda de parámetros (grid) y elección “mejor” -->
 <!-- ```{r} -->
-<!-- # Calcular kde quartic -->
-<!-- kde_quartic <- violencia %>%  -->
-<!--   kde(band_width = band_width, kernel = "quartic", grid = grid_violencia) -->
-<!-- # as.numeric(object.size(kde_quartic))/1e6 # calcular peso del resultado -->
+<!-- library(purrr) -->
+<!-- params <- expand.grid(p = c(1, 1.5, 2, 2.5, 3), -->
+<!--                       nmax = c(5, 8, 12), -->
+<!--                       KEEP.OUT.ATTRS = FALSE) -->
+<!-- res <- pmap_dfr(params, ~ loo_idw_once(pts_mp_stgo, "pm25_win", p = ..1, nmax = ..2)) %>% -->
+<!--   arrange(rmse, abs(me)) -->
+<!-- res  # tabla ordenada por rmse asc -->
+<!-- res %>% slice(1)  # tu configuración recomendada -->
 <!-- ``` -->
-<!-- Visualziar Resultados de KDE `quartic` -->
+<!-- Diagnóstico adicional (muy útil) -->
 <!-- ```{r} -->
-<!-- kde_q <- ggplot(data = kde_quartic) + -->
-<!--   geom_sf(aes(fill= kde_value), color = NA, alpha = 0.9)+  -->
-<!--   scale_fill_gradientn(colors = (viridis::magma(100)), na.value = NA)+ -->
-<!--   # scale_color_viridis()+ -->
-<!--   ggtitle(paste0("Kernel Density Estimation (Kernel quartic)")) + -->
-<!--   theme_bw() + -->
-<!--   theme(panel.grid.major = element_line(colour = "gray90"),  -->
-<!--         panel.grid.minor = element_line(colour = "gray90")) -->
-<!-- kde_q -->
-<!-- ``` -->
-<!-- ```{r} -->
-<!-- # reemplazar valores 0 po NA -->
-<!-- umbral <- 10 -->
-<!-- kde_quartic <- kde_quartic %>%  -->
-<!--   mutate(kde_value = ifelse(kde_value <= umbral, NA, kde_value)) -->
-<!-- kde_q <- ggplot(data = kde_quartic) + -->
-<!--   geom_sf(aes(fill= kde_value), color = NA, alpha = 0.9)+  -->
-<!--   scale_fill_gradientn(colors = (viridis::magma(100)), na.value = NA)+ -->
-<!--   # scale_color_viridis()+ -->
-<!--   ggtitle(paste0("Kernel Density Estimation (Kernel quartic)")) + -->
-<!--   theme_bw() + -->
-<!--   theme(panel.grid.major = element_line(colour = "gray90"),  -->
-<!--         panel.grid.minor = element_line(colour = "gray90")) -->
-<!-- kde_q -->
+<!-- # Errores espaciales para la mejor config -->
+<!-- best <- res %>% slice(1) -->
+<!-- cv_best <- gstat::krige.cv(pm25_win ~ 1, pts_mp_stgo, -->
+<!--                            nmax = best$nmax, set = list(idp = best$p)) -->
+<!-- pts_err <- pts_mp_stgo %>% mutate(resid = cv_best$residual) -->
+<!-- # Mapa de residuales -->
+<!-- library(ggplot2) -->
+<!-- ggplot(pts_err) + -->
+<!--   geom_sf(aes(color = resid)) + -->
+<!--   scale_color_gradient2(low = "blue", mid = "white", high = "red") + -->
+<!--   labs(title = "Residuales LOO (observado - predicho)") + -->
+<!--   theme_bw() -->
 <!-- ``` -->
 
 
+<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list" style="display: none">
+<div id="ref-Eck2005" class="csl-entry" role="listitem">
+Eck, Chainey, J., and R. Wilson. 2005. <span>“Mapping Crime: Understanding Hot Spots.”</span> National Institute of Justice Report.
+</div>
+<div id="ref-FixHodges1951" class="csl-entry" role="listitem">
+Fix, E., and Jr. Hodges J. L. 1951. <span>“Discriminatory Analysis, Nonparametric Estimation: Consistency Properties.”</span> Technical Report No. 4, Project No. 21-49-004. USAF School of Aviation Medicine, Randolph Field, Texas.
+</div>
+<div id="ref-Rosenblatt1956" class="csl-entry" role="listitem">
+Rosenblatt, M. 1956. <span>“Remarks on Some Nonparametric Estimates of a Density Function.”</span> <em>The Annals of Mathematical Statistics</em>.
+</div>
+<div id="ref-Silverman1986" class="csl-entry" role="listitem">
+Silverman, B. W. 1986. <em>Density Estimation for Statistics and Data Analysis</em>. Chapman &amp; Hall.
+</div>
+<div id="ref-WatsonPhilip1985" class="csl-entry" role="listitem">
+Watson, D. F., and G. M. Philip. 1985. <span>“A Refinement of Inverse Distance Weighted Interpolation.”</span> <em>Geoprocessing</em> 2 (4): 315–27.
+</div>
+</div>
 </section>
 
 </main> <!-- /main -->
@@ -1410,13 +1578,13 @@ Done: [====================================================================] .
   </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./analisis_esp.html" class="pagination-link" aria-label="Análisis Espacial">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Análisis Espacial</span></span>
+      <a href="./geocode.html" class="pagination-link" aria-label="Geocoding">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Geocoding</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./construccion_inds.html" class="pagination-link" aria-label="Indicadores Territoriales">
-        <span class="nav-page-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Indicadores Territoriales</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./tarea_1.html" class="pagination-link" aria-label="Tarea 1">
+        <span class="nav-page-text">Tarea 1</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
