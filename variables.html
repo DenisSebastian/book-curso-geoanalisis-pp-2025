@@ -205,8 +205,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
+  <a href="./datos_rasters.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Datos Espaciales: Raster</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
   <a href="./inferencia.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Inferencia Espacial</span></span></a>
+ <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Inferencia Espacial</span></span></a>
   </div>
 </li>
         <li class="sidebar-item sidebar-item-section">
@@ -229,7 +235,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./references.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">References</span></a>
+ <span class="menu-text">Referencias Bibliográficas</span></a>
   </div>
 </li>
         <li class="sidebar-item sidebar-item-section">
@@ -257,6 +263,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <div class="sidebar-item-container"> 
   <a href="./crs.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">C</span>&nbsp; <span class="chapter-title">CRS en R</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./john_snow.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">D</span>&nbsp; <span class="chapter-title">Mapa de Cólera</span></span></a>
   </div>
 </li>
       </ul>
@@ -364,19 +376,19 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>ru <span class="ot">&lt;-</span> <span class="fu">runif</span>(<span class="at">n =</span> <span class="dv">100</span>, <span class="at">min =</span> <span class="dv">1</span>, <span class="at">max =</span> <span class="dv">10</span>)</span>
 <span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>ru</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>  [1] 1.063586 7.077689 9.960496 7.377253 8.432867 1.328074 5.802993 4.620940
-  [9] 1.722692 2.722135 3.944183 8.910177 3.804125 3.567762 3.517340 8.882097
- [17] 2.281764 9.207350 8.806929 3.663408 8.678394 7.792963 8.523740 1.525134
- [25] 6.813722 9.300784 8.487055 7.513392 8.518038 2.979044 1.236689 6.573062
- [33] 6.496191 6.575369 3.836990 4.268931 3.435412 4.347415 3.735279 2.498044
- [41] 9.050178 6.405145 3.512493 2.233888 6.062593 5.382916 8.676918 2.020929
- [49] 5.698944 3.029044 4.089679 1.129548 4.958555 1.602425 9.170113 5.143365
- [57] 2.828579 3.009347 9.860231 6.430618 3.932504 1.457220 2.160545 7.014475
- [65] 7.683909 7.744830 3.197723 5.724420 7.544354 6.465388 1.786284 2.774262
- [73] 3.064117 3.908266 7.575577 5.363434 1.507853 5.570917 2.325279 1.115321
- [81] 8.494653 3.632855 5.731696 4.339650 6.386898 8.809240 7.970178 4.722911
- [89] 9.178498 5.499299 5.613581 8.302430 5.255881 7.990405 3.346188 9.455189
- [97] 1.748524 3.373443 1.851657 9.043229</code></pre>
+<pre><code>  [1] 9.234181 4.578521 5.867012 4.069300 3.954376 3.250536 5.517799 7.732726
+  [9] 7.066406 6.118751 8.945337 9.801285 2.561967 4.294987 9.682979 1.353757
+ [17] 9.398350 6.955815 6.439343 6.499334 8.245572 4.389822 8.760852 7.845353
+ [25] 6.502220 4.280242 9.723657 6.306615 5.132085 3.380676 1.348080 2.474934
+ [33] 3.578051 4.351728 2.419171 8.032942 2.715079 2.695626 4.983353 8.660344
+ [41] 8.846526 7.199494 8.067594 9.528970 3.663768 9.829487 6.665955 8.712826
+ [49] 3.182969 8.169882 8.164070 4.072854 4.671869 5.648259 9.192042 1.967725
+ [57] 6.190414 3.067221 8.664935 4.433987 2.990185 8.253742 4.112599 7.486229
+ [65] 7.906655 1.325755 3.940839 5.518254 5.487917 4.085351 6.496207 8.185538
+ [73] 7.406258 6.509197 7.872075 5.713412 2.012674 5.536527 5.126262 5.905779
+ [81] 6.125276 1.623083 8.958769 8.399137 7.805053 3.366551 4.847198 4.969728
+ [89] 9.234721 4.492612 6.907466 6.091150 9.127652 3.615732 4.594713 1.470910
+ [97] 8.122434 5.626869 1.750964 8.178405</code></pre>
 </div>
 </div>
 <div class="cell" data-layout-align="center">
@@ -395,7 +407,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="cell">
 <div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sample.int</span>(<span class="at">n =</span> <span class="dv">6</span>, <span class="at">size =</span> <span class="dv">10</span>, <span class="at">replace =</span> T)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code> [1] 5 6 6 2 1 5 4 1 1 1</code></pre>
+<pre><code> [1] 4 2 4 6 1 5 4 4 2 2</code></pre>
 </div>
 </div>
 </section>

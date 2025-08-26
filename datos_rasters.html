@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Appendix B — Estructuras en R – Curso de Geoanálisis</title>
+<title>9&nbsp; Datos Espaciales: Raster – Curso de Geoanálisis</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -65,8 +65,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./crs.html" rel="next">
-<link href="./recursos.html" rel="prev">
+<link href="./inferencia.html" rel="next">
+<link href="./geocode.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
@@ -109,7 +109,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <link rel="stylesheet" href="styles/style.css">
 </head>
 
-<body class="nav-sidebar floating quarto-light">
+<body class="nav-sidebar floating slimcontent quarto-light">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -118,7 +118,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./recursos.html">Appendices</a></li><li class="breadcrumb-item"><a href="./control_r.html"><span class="chapter-number">B</span>&nbsp; <span class="chapter-title">Estructuras en R</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./datos_rasters.html"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Datos Espaciales: Raster</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -205,7 +205,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./datos_rasters.html" class="sidebar-item-text sidebar-link">
+  <a href="./datos_rasters.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Datos Espaciales: Raster</span></span></a>
   </div>
 </li>
@@ -255,7 +255,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./control_r.html" class="sidebar-item-text sidebar-link active">
+  <a href="./control_r.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">B</span>&nbsp; <span class="chapter-title">Estructuras en R</span></span></a>
   </div>
 </li>
@@ -283,29 +283,32 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">Contenidos</h2>
    
   <ul>
-  <li><a href="#estructuras-condicionales" id="toc-estructuras-condicionales" class="nav-link active" data-scroll-target="#estructuras-condicionales"><span class="header-section-number">B.1</span> Estructuras condicionales</a></li>
-  <li><a href="#sec-bucles" id="toc-sec-bucles" class="nav-link" data-scroll-target="#sec-bucles"><span class="header-section-number">B.2</span> Estructuras de bucles</a>
+  <li><a href="#objetivos-del-módulo" id="toc-objetivos-del-módulo" class="nav-link active" data-scroll-target="#objetivos-del-módulo"><span class="header-section-number">9.1</span> Objetivos del Módulo</a></li>
+  <li><a href="#definición-de-raster" id="toc-definición-de-raster" class="nav-link" data-scroll-target="#definición-de-raster"><span class="header-section-number">9.2</span> Definición de Raster</a></li>
+  <li><a href="#características-de-un-raster" id="toc-características-de-un-raster" class="nav-link" data-scroll-target="#características-de-un-raster"><span class="header-section-number">9.3</span> Características de un Raster</a></li>
+  <li><a href="#imágenes-satelitales-ejemplo-landsat-8" id="toc-imágenes-satelitales-ejemplo-landsat-8" class="nav-link" data-scroll-target="#imágenes-satelitales-ejemplo-landsat-8"><span class="header-section-number">9.4</span> Imágenes Satelitales (ejemplo: Landsat 8)</a></li>
+  <li><a href="#ejemplo-práctico" id="toc-ejemplo-práctico" class="nav-link" data-scroll-target="#ejemplo-práctico"><span class="header-section-number">9.5</span> Ejemplo Práctico</a>
   <ul class="collapse">
-  <li><a href="#estructura-de-bucle-for" id="toc-estructura-de-bucle-for" class="nav-link" data-scroll-target="#estructura-de-bucle-for"><span class="header-section-number">B.2.1</span> Estructura de bucle “<code>for</code>”:</a></li>
-  <li><a href="#estructura-de-bucle-while" id="toc-estructura-de-bucle-while" class="nav-link" data-scroll-target="#estructura-de-bucle-while"><span class="header-section-number">B.2.2</span> Estructura de bucle “while”:</a></li>
-  <li><a href="#estructura-de-bucle-repeat" id="toc-estructura-de-bucle-repeat" class="nav-link" data-scroll-target="#estructura-de-bucle-repeat"><span class="header-section-number">B.2.3</span> Estructura de bucle “repeat”:</a></li>
+  <li><a href="#librerías" id="toc-librerías" class="nav-link" data-scroll-target="#librerías"><span class="header-section-number">9.5.1</span> Librerías</a></li>
+  <li><a href="#lectura-de-imagen-raster." id="toc-lectura-de-imagen-raster." class="nav-link" data-scroll-target="#lectura-de-imagen-raster."><span class="header-section-number">9.5.2</span> lectura de imagen Raster.</a></li>
+  <li><a href="#visualización-raster" id="toc-visualización-raster" class="nav-link" data-scroll-target="#visualización-raster"><span class="header-section-number">9.5.3</span> Visualización Raster</a></li>
   </ul></li>
-  <li><a href="#estructuras-de-control-de-flujo" id="toc-estructuras-de-control-de-flujo" class="nav-link" data-scroll-target="#estructuras-de-control-de-flujo"><span class="header-section-number">B.3</span> Estructuras de control de flujo</a>
+  <li><a href="#anexo-compatibilidad-con-librería-raster" id="toc-anexo-compatibilidad-con-librería-raster" class="nav-link" data-scroll-target="#anexo-compatibilidad-con-librería-raster"><span class="header-section-number">9.6</span> Anexo: Compatibilidad con librería <code>raster</code></a>
   <ul class="collapse">
-  <li><a href="#estructuras-de-control-next" id="toc-estructuras-de-control-next" class="nav-link" data-scroll-target="#estructuras-de-control-next"><span class="header-section-number">B.3.1</span> Estructuras de control “next”:</a></li>
-  <li><a href="#estructuras-de-control-break" id="toc-estructuras-de-control-break" class="nav-link" data-scroll-target="#estructuras-de-control-break"><span class="header-section-number">B.3.2</span> Estructuras de control “break”:</a></li>
+  <li><a href="#lectura-e-inspección" id="toc-lectura-e-inspección" class="nav-link" data-scroll-target="#lectura-e-inspección"><span class="header-section-number">9.6.1</span> Lectura e inspección</a></li>
+  <li><a href="#visualización-de-rgb" id="toc-visualización-de-rgb" class="nav-link" data-scroll-target="#visualización-de-rgb"><span class="header-section-number">9.6.2</span> Visualización de RGB</a></li>
   </ul></li>
-  <li><a href="#referencias" id="toc-referencias" class="nav-link" data-scroll-target="#referencias"><span class="header-section-number">B.4</span> Referencias</a></li>
+  <li><a href="#referencias" id="toc-referencias" class="nav-link" data-scroll-target="#referencias"><span class="header-section-number">9.7</span> Referencias:</a></li>
   </ul>
 </nav>
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content">
+<main class="content page-columns page-full" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./recursos.html">Appendices</a></li><li class="breadcrumb-item"><a href="./control_r.html"><span class="chapter-number">B</span>&nbsp; <span class="chapter-title">Estructuras en R</span></a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Appendix B — Estructuras en R</h1>
-<p class="subtitle lead">Estructuras de Control y Bucles en R</p>
+<h1 class="title"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Datos Espaciales: Raster</span></h1>
+<p class="subtitle lead">Manipulación de Raster</p>
 </div>
 
 
@@ -322,225 +325,272 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
-<p>Las estructuras de control en R son herramientas que permiten controlar el flujo de ejecución de un programa. Las estructuras de control son esenciales para cualquier lenguaje de programación, ya que permiten que el programa tome decisiones y realice acciones en función de ciertas condiciones.</p>
-<p>Estas estructuras de control son muy útiles para crear programas que respondan a diferentes situaciones y condiciones, y permiten que los programadores puedan crear soluciones más eficientes y complejas.</p>
-<p>En R, existen tres estructuras de control principales:</p>
-<ol type="1">
-<li><p>Estructuras condicionales: Permiten ejecutar un bloque de código solo si se cumple una condición determinada. Las estructuras condicionales más comunes en R son “<code>if</code>” y “<code>ifelse</code>”.</p></li>
-<li><p>Estructuras de bucles: Permiten ejecutar un bloque de código repetidamente, mientras se cumpla una condición determinada. Las estructuras de bucles más comunes en R son “<code>while</code>”, “<code>for</code>” y “<code>repeat</code>”.</p></li>
-<li><p>Estructuras de control de flujo: Permiten cambiar el flujo de ejecución del programa en función de ciertas condiciones. Las estructuras de control de flujo más comunes en R son “<code>break</code>” y “<code>next</code>”.</p></li>
-</ol>
-<section id="estructuras-condicionales" class="level2" data-number="B.1">
-<h2 data-number="B.1" class="anchored" data-anchor-id="estructuras-condicionales"><span class="header-section-number">B.1</span> Estructuras condicionales</h2>
-<p>Las estructuras condicionales son una de las tres estructuras de control principales en R. Estas estructuras permiten ejecutar un bloque de código solo si se cumple una condición determinada.</p>
-<p>La estructura condicional más común en R es “<code>if</code>”. La sintaxis básica de la estructura “<code>if</code>” es la siguiente:</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span>(Condición) {</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>  operaciones_si_la_condición_es_TRUE</span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<p>La “condición” es una expresión lógica que evalúa a verdadero o falso. Si la condición es verdadera, el bloque de código dentro del “if” se ejecutará. Si la condición es falsa, el bloque de código dentro del “if” se ignorará.</p>
-<p>Por ejemplo, le pedimos a R que nos muestre el texto “Verdadero” si la condición se cumple.</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Se cumple la condición y se muestra "verdadero"</span></span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span>(<span class="dv">4</span> <span class="sc">&gt;</span> <span class="dv">3</span>) {</span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>  <span class="st">"Verdadero"</span></span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] "Verdadero"</code></pre>
-</div>
-</div>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co"># No se cumple la condición y no pasa nada</span></span>
-<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span>(<span class="dv">4</span> <span class="sc">&gt;</span> <span class="dv">5</span>) {</span>
-<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>  <span class="st">"Verdadero"</span></span>
-<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<p>También se puede agregar un bloque de código opcional para el caso en que la condición sea falsa utilizando la estructura “<code>else</code>”. La sintaxis básica de la estructura “<code>if</code>” con “<code>else</code>” es la siguie</p>
-<p><em>SI esta condición es es cierta, ENTONCES</em> haz estas operaciones, DE OTRO MODO haz estas otras operaciones.</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span>(condición) {</span>
-<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>  operaciones_si_la_condición_es_TRUE</span>
-<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>} <span class="cf">else</span> {</span>
-<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>  operaciones_si_la_condición_es_FALSE</span>
-<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<p>Usando los ejemplos anteriores, podemos mostrar “Falso” si no se cumple la condición, en lugar de que no ocurra nada</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Se cumple la condición y se muestra "Verdadero"</span></span>
-<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span>(<span class="dv">4</span> <span class="sc">&gt;</span> <span class="dv">3</span>) {</span>
-<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>  <span class="st">"Verdadero"</span></span>
-<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>} <span class="cf">else</span> {</span>
-<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>  <span class="st">"Falso"</span></span>
-<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] "Verdadero"</code></pre>
-</div>
-</div>
-<p>La estructura “<code>ifelse</code>” es otra forma de estructura condicional que permite ejecutar diferentes bloques de código en función de la condición. La sintaxis básica de la estructura “<code>ifelse</code>” es la siguiente:</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ifelse</span>(condición, expresión1, expresión2)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<p>Si la “condición” es verdadera, se ejecutará “expresión1”. Si la “condición” es falsa, se ejecutará “expresión2”.</p>
-<p>Además, se pueden anidar varias estructuras condicionales utilizando la sintaxis de “if” y “else”. Por ejemplo:</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> (condición1) {</span>
-<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Código a ejecutar si la condición1 es verdadera</span></span>
-<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>} <span class="cf">else</span> <span class="cf">if</span> (condición2) {</span>
-<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Código a ejecutar si la condición1 es falsa y la condición2 es verdadera</span></span>
-<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a>} <span class="cf">else</span> {</span>
-<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Código a ejecutar si todas las condiciones son falsas</span></span>
-<span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<p>En resumen, las estructuras condicionales en R son herramientas muy útiles para controlar el flujo de ejecución de un programa en función de ciertas condiciones. Estas estructuras permiten crear soluciones más eficientes y complejas al permitir que los programas tomen decisiones y realicen acciones en función de las condiciones que se presenten.</p>
-</section>
-<section id="sec-bucles" class="level2" data-number="B.2">
-<h2 data-number="B.2" class="anchored" data-anchor-id="sec-bucles"><span class="header-section-number">B.2</span> Estructuras de bucles</h2>
-<p>Las estructuras de bucles son una de las tres estructuras de control principales en R. Estas estructuras permiten ejecutar un bloque de código repetidamente mientras se cumpla una condición determinada. En R, existen tres estructuras de bucles principales: “<code>while</code>”, “<code>for</code>” y “<code>repeat</code>”.</p>
-<p><strong>Beneficios</strong></p>
+<section id="objetivos-del-módulo" class="level2" data-number="9.1">
+<h2 data-number="9.1" class="anchored" data-anchor-id="objetivos-del-módulo"><span class="header-section-number">9.1</span> Objetivos del Módulo</h2>
 <ul>
-<li>Es más fácil ver el objetivo de tu código; lo diferente llama más atención a la vista que aquello que permanece igual.</li>
-<li>Es más sencillo responder a cambios en los requerimientos. A medida que tus necesidades cambian, solo necesitarás realizar cambios en un lugar, en vez de recordar cambiar en cada lugar donde copiaste y pegaste el código.</li>
-<li>Es probable que tengas menos errores porque cada línea de código es utilizada en más lugares.</li>
+<li>Identificar la estructura, propiedades y metadatos de un Raster (resolución, extensión, sistema de referencia).</li>
+<li>Cargar, visualizar e interpretar bandas satelitales (ej.: Landsat 8) y sus combinaciones color.</li>
+<li>Ejecutar un flujo mínimo en R para leer y visualizar imágenes Raster (color natural y falso color).</li>
 </ul>
-<section id="estructura-de-bucle-for" class="level3" data-number="B.2.1">
-<h3 data-number="B.2.1" class="anchored" data-anchor-id="estructura-de-bucle-for"><span class="header-section-number">B.2.1</span> Estructura de bucle “<code>for</code>”:</h3>
-<p>La estructura “for” permite repetir la ejecución de un bloque de código un número determinado de veces. La sintaxis básica de la estructura “for” es la siguiente:</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> (variable <span class="cf">in</span> secuencia) {</span>
-<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Código a ejecutar para cada elemento en la secuencia</span></span>
-<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<p>La “secuencia” es un objeto que contiene una serie de elementos. La “variable” toma el valor de cada elemento de la secuencia en cada iteración del bucle. En cada iteración, se ejecutará el bloque de código dentro del “for” para ese valor de la variable.</p>
-<p>Ejemplo simple: <code>print</code> una secuencia</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> (i <span class="cf">in</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">5</span>){</span>
-<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">print</span>(i)</span>
-<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] 1
-[1] 2
-[1] 3
-[1] 4
-[1] 5</code></pre>
-</div>
-</div>
-<p>Ejemplo 2: Guardando los resultados en un vector</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>dado <span class="ot">&lt;-</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">6</span></span>
-<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>mi_vector <span class="ot">&lt;-</span> <span class="cn">NULL</span></span>
-<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span>(cara <span class="cf">in</span> dado) {</span>
-<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a>  mi_vector[cara] <span class="ot">&lt;-</span> cara <span class="sc">^</span> <span class="dv">2</span></span>
-<span id="cb13-5"><a href="#cb13-5" aria-hidden="true" tabindex="-1"></a>}</span>
-<span id="cb13-6"><a href="#cb13-6" aria-hidden="true" tabindex="-1"></a>mi_vector</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1]  1  4  9 16 25 36</code></pre>
-</div>
-</div>
-<p>Ejemplo 3: Loops con vectores</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a>alumnos <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"Carmen"</span>, <span class="st">"Adriana"</span>, <span class="st">"Marco"</span>, <span class="st">"Fabi"</span>, <span class="st">"Brenda"</span>)</span>
-<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span>(i <span class="cf">in</span> <span class="dv">1</span><span class="sc">:</span><span class="fu">length</span>(alumnos)) {</span>
-<span id="cb15-4"><a href="#cb15-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">print</span>(<span class="fu">paste</span>(<span class="st">"Hola,"</span>, alumnos[i], <span class="at">sep =</span> <span class="st">" "</span>))</span>
-<span id="cb15-5"><a href="#cb15-5" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] "Hola, Carmen"
-[1] "Hola, Adriana"
-[1] "Hola, Marco"
-[1] "Hola, Fabi"
-[1] "Hola, Brenda"</code></pre>
-</div>
-</div>
-<p>Ejemplo 4: loops en Dataframes</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a>df <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="at">a =</span> <span class="fu">rnorm</span>(<span class="dv">10</span>), <span class="at">b =</span> <span class="fu">rnorm</span>(<span class="dv">10</span>),</span>
-<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a>                 <span class="at">c =</span> <span class="fu">rnorm</span>(<span class="dv">10</span>), <span class="at">d =</span> <span class="fu">rnorm</span>(<span class="dv">10</span>))</span>
-<span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb17-4"><a href="#cb17-4" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span>(i <span class="cf">in</span> <span class="dv">1</span><span class="sc">:</span><span class="fu">ncol</span>(df)){</span>
-<span id="cb17-5"><a href="#cb17-5" aria-hidden="true" tabindex="-1"></a>  promedio <span class="ot">=</span> <span class="fu">mean</span>(df[,i])</span>
-<span id="cb17-6"><a href="#cb17-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">print</span>(promedio)</span>
-<span id="cb17-7"><a href="#cb17-7" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] 0.559049
-[1] -0.03913106
-[1] 0.03036015
-[1] 0.2178753</code></pre>
-</div>
+</section>
+<section id="definición-de-raster" class="level2 page-columns page-full" data-number="9.2">
+<h2 data-number="9.2" class="anchored" data-anchor-id="definición-de-raster"><span class="header-section-number">9.2</span> Definición de Raster</h2>
+<dl>
+<dt>Raster</dt>
+<dd>
+<p>Representación del espacio mediante una matriz de celdas (filas × columnas). Cada celda almacena un valor que describe el fenómeno (p.&nbsp;ej., reflectancia en una banda espectral). Un conjunto de capas apiladas (bandas) forma un raster multicapas..</p>
+</dd>
+</dl>
+<div class="quarto-figure quarto-figure-center page-columns page-full">
+<figure class="figure page-columns page-full">
+<p><img src="images/raster_concept.png" class="img-fluid figure-img" style="width:60.0%"></p>
+<figcaption class="margin-caption">Representación Raster</figcaption>
+</figure>
 </div>
 </section>
-<section id="estructura-de-bucle-while" class="level3" data-number="B.2.2">
-<h3 data-number="B.2.2" class="anchored" data-anchor-id="estructura-de-bucle-while"><span class="header-section-number">B.2.2</span> Estructura de bucle “while”:</h3>
-<p>La estructura “<code>while</code>” permite repetir la ejecución de un bloque de código mientras se cumpla una condición determinada. La sintaxis básica de la estructura “<code>while</code>” es la siguiente:</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="cf">while</span> (condición) {</span>
-<span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Código a ejecutar mientras se cumpla la condición</span></span>
-<span id="cb19-3"><a href="#cb19-3" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<p>La “condición” es una expresión lógica que evalúa a verdadero o falso. Si la condición es verdadera, se ejecutará el bloque de código dentro del “while”. Este proceso se repetirá hasta que la condición sea falsa.</p>
-</section>
-<section id="estructura-de-bucle-repeat" class="level3" data-number="B.2.3">
-<h3 data-number="B.2.3" class="anchored" data-anchor-id="estructura-de-bucle-repeat"><span class="header-section-number">B.2.3</span> Estructura de bucle “repeat”:</h3>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb20"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a><span class="cf">repeat</span> {</span>
-<span id="cb20-2"><a href="#cb20-2" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Código a ejecutar de manera indefinida</span></span>
-<span id="cb20-3"><a href="#cb20-3" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> (condición) {</span>
-<span id="cb20-4"><a href="#cb20-4" aria-hidden="true" tabindex="-1"></a>    <span class="cf">break</span></span>
-<span id="cb20-5"><a href="#cb20-5" aria-hidden="true" tabindex="-1"></a>  }</span>
-<span id="cb20-6"><a href="#cb20-6" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<p>El bloque de código dentro del “<code>repeat</code>” se ejecutará de manera indefinida hasta que se encuentre la sentencia “<code>break</code>”, que permite salir del bucle. La “condición” es una expresión lógica que evalúa a verdadero o falso. Si la condición es verdadera, se ejecutará la sentencia “break” y se saldrá del bucle.</p>
-</section>
-</section>
-<section id="estructuras-de-control-de-flujo" class="level2" data-number="B.3">
-<h2 data-number="B.3" class="anchored" data-anchor-id="estructuras-de-control-de-flujo"><span class="header-section-number">B.3</span> Estructuras de control de flujo</h2>
-<p>“<code>next</code>” y “<code>break</code>” son palabras clave importantes en R que se utilizan en las estructuras de control de flujo, específicamente en las estructuras de bucle. “next” se utiliza para saltar a la siguiente iteración del bucle sin ejecutar el resto del código dentro del bucle, mientras que “break” se utiliza para detener el bucle de forma abrupta, incluso si la condición del bucle todavía se cumple.</p>
-<section id="estructuras-de-control-next" class="level3" data-number="B.3.1">
-<h3 data-number="B.3.1" class="anchored" data-anchor-id="estructuras-de-control-next"><span class="header-section-number">B.3.1</span> Estructuras de control “next”:</h3>
-<p>“<code>next</code>” se utiliza en una estructura de bucle para saltar a la siguiente iteración del bucle sin ejecutar el resto del código dentro del bucle. Es decir, si se encuentra la palabra clave “next” dentro de un bucle, se omitirá el código que viene después y el bucle pasará inmediatamente a la siguiente iteración. La palabra clave “next” es útil cuando se desea saltar una iteración específica del bucle, sin afectar el resto del código.</p>
-<p>Por ejemplo, en el siguiente código se utiliza la palabra clave “next” para omitir la impresión del número 3 dentro del bucle “for”:</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb21"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> (i <span class="cf">in</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">5</span>) {</span>
-<span id="cb21-2"><a href="#cb21-2" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> (i <span class="sc">==</span> <span class="dv">3</span>) {</span>
-<span id="cb21-3"><a href="#cb21-3" aria-hidden="true" tabindex="-1"></a>    <span class="cf">next</span></span>
-<span id="cb21-4"><a href="#cb21-4" aria-hidden="true" tabindex="-1"></a>  }</span>
-<span id="cb21-5"><a href="#cb21-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">print</span>(i)</span>
-<span id="cb21-6"><a href="#cb21-6" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] 1
-[1] 2
-[1] 4
-[1] 5</code></pre>
-</div>
-</div>
-</section>
-<section id="estructuras-de-control-break" class="level3" data-number="B.3.2">
-<h3 data-number="B.3.2" class="anchored" data-anchor-id="estructuras-de-control-break"><span class="header-section-number">B.3.2</span> Estructuras de control “break”:</h3>
-<p>“break”, por otro lado, se utiliza en una estructura de bucle para detener el bucle de forma abrupta, incluso si la condición del bucle todavía se cumple. Es decir, si se encuentra la palabra clave “break” dentro de un bucle, se detendrá el bucle de inmediato y se continuará con la ejecución del código que viene después del bucle. La palabra clave “break” es útil cuando se desea detener el bucle en un punto específico sin tener que esperar a que la condición del bucle se deje de cumplir.</p>
-<p>Por ejemplo, en el siguiente código se utiliza la palabra clave “break” para detener el bucle “while” cuando el valor de “i” es mayor que 5:</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb23"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a>i <span class="ot">&lt;-</span> <span class="dv">1</span></span>
-<span id="cb23-2"><a href="#cb23-2" aria-hidden="true" tabindex="-1"></a><span class="cf">while</span> (i <span class="sc">&lt;</span> <span class="dv">10</span>) {</span>
-<span id="cb23-3"><a href="#cb23-3" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> (i <span class="sc">&gt;</span> <span class="dv">5</span>) {</span>
-<span id="cb23-4"><a href="#cb23-4" aria-hidden="true" tabindex="-1"></a>    <span class="cf">break</span></span>
-<span id="cb23-5"><a href="#cb23-5" aria-hidden="true" tabindex="-1"></a>  }</span>
-<span id="cb23-6"><a href="#cb23-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">print</span>(i)</span>
-<span id="cb23-7"><a href="#cb23-7" aria-hidden="true" tabindex="-1"></a>  i <span class="ot">&lt;-</span> i <span class="sc">+</span> <span class="dv">1</span></span>
-<span id="cb23-8"><a href="#cb23-8" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] 1
-[1] 2
-[1] 3
-[1] 4
-[1] 5</code></pre>
-</div>
-</div>
-</section>
-</section>
-<section id="referencias" class="level2" data-number="B.4">
-<h2 data-number="B.4" class="anchored" data-anchor-id="referencias"><span class="header-section-number">B.4</span> Referencias</h2>
+<section id="características-de-un-raster" class="level2 page-columns page-full" data-number="9.3">
+<h2 data-number="9.3" class="anchored" data-anchor-id="características-de-un-raster"><span class="header-section-number">9.3</span> Características de un Raster</h2>
 <ul>
-<li><a href="https://rstudio-pubs-static.s3.amazonaws.com/623888_497a5388a98545c48e9b5b6bec4056f6.html">Loops y funciones en R</a></li>
+<li>Resolución espacial: tamaño de celda en unidades del mapa (p.&nbsp;ej., 30 m).</li>
+</ul>
+<div class="quarto-figure quarto-figure-center page-columns page-full">
+<figure class="figure page-columns page-full">
+<p><img src="images/raster_resolucion.gif" class="img-fluid figure-img"></p>
+<figcaption class="margin-caption">Resolución Raster</figcaption>
+</figure>
+</div>
+<ul>
+<li><p>Extensión (extent): rectángulo mínimo que cubre el raster (xmin, xmax, ymin, ymax).</p></li>
+<li><p>Sistema de referencia (CRS): define cómo se ubican las celdas en la Tierra (p.&nbsp;ej., WGS84, UTM).</p></li>
+<li><p>Tipo de dato / profundidad de bit: rango y precisión de los valores (entero, flotante).</p></li>
+</ul>
+<div class="quarto-figure quarto-figure-center page-columns page-full">
+<figure class="figure page-columns page-full">
+<p><img src="images/r_radiometrica.png" class="img-fluid figure-img"></p>
+<figcaption class="margin-caption">Resolución Radiométrica para imágenes Satelitales</figcaption>
+</figure>
+</div>
+<ul>
+<li>Valores NoData: celdas sin información válida.</li>
+</ul>
+</section>
+<section id="imágenes-satelitales-ejemplo-landsat-8" class="level2 page-columns page-full" data-number="9.4">
+<h2 data-number="9.4" class="anchored" data-anchor-id="imágenes-satelitales-ejemplo-landsat-8"><span class="header-section-number">9.4</span> Imágenes Satelitales (ejemplo: Landsat 8)</h2>
+<p>Para ejemplificar el uso y ver características de Raster vamos a utilizar una imágenes satelital del <a href="https://eos.com/es/find-satellite/landsat-8/">Satelite Landsat 8</a>.</p>
+<div class="quarto-figure quarto-figure-center page-columns page-full">
+<figure class="figure page-columns page-full">
+<p><img src="images/Sentinel-2Poster.jpg" class="img-fluid figure-img"></p>
+<figcaption class="margin-caption">Imágenes Satelitales</figcaption>
+</figure>
+</div>
+<p>Este tipo de productos suele distribuirse como series de bandas (p.&nbsp;ej., coastal/aerosol, azul, verde, rojo, NIR, SWIR1, SWIR2, térmica), que combinamos para visualización y análisis.</p>
+<div class="quarto-figure quarto-figure-center page-columns page-full">
+<figure class="figure page-columns page-full">
+<p><img src="images/bands.jpg" class="img-fluid figure-img" width="500"></p>
+<figcaption class="margin-caption">Ejemplo de configuración de Bandas satelitales</figcaption>
+</figure>
+</div>
+<p>Para este ejemplo de visualización necesitamos conocer las bandas satelitales que componen nuestra imagen satelital.</p>
+</section>
+<section id="ejemplo-práctico" class="level2 page-columns page-full" data-number="9.5">
+<h2 data-number="9.5" class="anchored" data-anchor-id="ejemplo-práctico"><span class="header-section-number">9.5</span> Ejemplo Práctico</h2>
+<section id="librerías" class="level3" data-number="9.5.1">
+<h3 data-number="9.5.1" class="anchored" data-anchor-id="librerías"><span class="header-section-number">9.5.1</span> Librerías</h3>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(terra)</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(raster)</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(mapview)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="lectura-de-imagen-raster." class="level3 page-columns page-full" data-number="9.5.2">
+<h3 data-number="9.5.2" class="anchored" data-anchor-id="lectura-de-imagen-raster."><span class="header-section-number">9.5.2</span> lectura de imagen Raster.</h3>
+<p>Para el ejemplo, necesitaremos reconocer qué bandas incluye nuestro archivo y cómo nombrarlas para facilitar su uso:</p>
+<blockquote class="blockquote">
+<p>la nomenclatura exacta varía según la fuente de datos y el preprocesamiento. En este módulo usaremos nombres legibles que mapean a Landsat 8 OLI/TIRS: <code>aerosol</code>, <code>blue</code>, <code>green</code>, <code>red</code>, <code>nir</code>, <code>swir1</code>, <code>swir2</code>, <code>tirs1</code>.</p>
+</blockquote>
+<div class="callout callout-style-simple callout-note callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Tabla de Bandas de Imagen satelital Landsat 8
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-1" class="callout-1-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure" aria-labelledby="-caption">
+<p><img src="images/bandas_landsat8.png" class="img-fluid figure-img"></p>
+
+</figure>
+</div>
+</div>
+</div>
+</div>
+<div id="-caption" class="margin-figure-caption column-margin callout-1-contents callout-collapse collapse callout-margin-content callout-margin-content-simple">Bandas de Landsat 8</div><p>Para asegurar compatibilidad con material existente, mostramos primero con <code>raster</code> y, luego, la versión recomendada moderna con <code>terra</code>.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># install.packages("terra") # si no lo tienes</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(terra)</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>las_condes_rst <span class="ot">&lt;-</span> <span class="fu">rast</span>(<span class="st">"data/raster/OLI_LC.tif"</span>)</span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="fu">names</span>(las_condes_rst) <span class="ot">&lt;-</span> <span class="fu">c</span>(</span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>  <span class="st">"aerosol"</span>, <span class="st">"blue"</span>, <span class="st">"green"</span>, <span class="st">"red"</span>, <span class="st">"nir"</span>, <span class="st">"swir1"</span>, <span class="st">"swir2"</span>, <span class="st">"tirs1"</span></span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>las_condes_rst</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>class       : SpatRaster 
+size        : 449, 562, 8  (nrow, ncol, nlyr)
+resolution  : 30, 30  (x, y)
+extent      : 350505, 367365, 6293905, 6307375  (xmin, xmax, ymin, ymax)
+coord. ref. : WGS 84 / UTM zone 19S (EPSG:32719) 
+source      : OLI_LC.tif 
+names       : aerosol,  blue, green,   red,   nir, swir1, ... 
+min values  :    8465,  7604,  6500,  5924,  5520,  5191, ... 
+max values  :   19119, 20517, 21248, 23237, 29344, 30012, ... </code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">crs</span>(las_condes_rst)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] "PROJCRS[\"WGS 84 / UTM zone 19S\",\n    BASEGEOGCRS[\"WGS 84\",\n        DATUM[\"World Geodetic System 1984\",\n            ELLIPSOID[\"WGS 84\",6378137,298.257223563,\n                LENGTHUNIT[\"metre\",1]]],\n        PRIMEM[\"Greenwich\",0,\n            ANGLEUNIT[\"degree\",0.0174532925199433]],\n        ID[\"EPSG\",4326]],\n    CONVERSION[\"UTM zone 19S\",\n        METHOD[\"Transverse Mercator\",\n            ID[\"EPSG\",9807]],\n        PARAMETER[\"Latitude of natural origin\",0,\n            ANGLEUNIT[\"degree\",0.0174532925199433],\n            ID[\"EPSG\",8801]],\n        PARAMETER[\"Longitude of natural origin\",-69,\n            ANGLEUNIT[\"degree\",0.0174532925199433],\n            ID[\"EPSG\",8802]],\n        PARAMETER[\"Scale factor at natural origin\",0.9996,\n            SCALEUNIT[\"unity\",1],\n            ID[\"EPSG\",8805]],\n        PARAMETER[\"False easting\",500000,\n            LENGTHUNIT[\"metre\",1],\n            ID[\"EPSG\",8806]],\n        PARAMETER[\"False northing\",10000000,\n            LENGTHUNIT[\"metre\",1],\n            ID[\"EPSG\",8807]]],\n    CS[Cartesian,2],\n        AXIS[\"(E)\",east,\n            ORDER[1],\n            LENGTHUNIT[\"metre\",1]],\n        AXIS[\"(N)\",north,\n            ORDER[2],\n            LENGTHUNIT[\"metre\",1]],\n    USAGE[\n        SCOPE[\"Navigation and medium accuracy spatial referencing.\"],\n        AREA[\"Between 72°W and 66°W, southern hemisphere between 80°S and equator, onshore and offshore. Argentina. Bolivia. Brazil. Chile. Colombia. Peru.\"],\n        BBOX[-80,-72,0,-66]],\n    ID[\"EPSG\",32719]]"</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu">res</span>(las_condes_rst)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 30 30</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ext</span>(las_condes_rst)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>SpatExtent : 350504.999999999, 367364.999999999, 6293905, 6307375 (xmin, xmax, ymin, ymax)</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="fu">nlyr</span>(las_condes_rst)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 8</code></pre>
+</div>
+</div>
+</section>
+<section id="visualización-raster" class="level3" data-number="9.5.3">
+<h3 data-number="9.5.3" class="anchored" data-anchor-id="visualización-raster"><span class="header-section-number">9.5.3</span> Visualización Raster</h3>
+<p>Color natural (RGB = 4–3–2): rojo, verde y azul aproximan cómo “veríamos” la escena.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="co"># # Visualización de imagen recortada de Las Condes en Color Natural</span></span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a><span class="fu">plotRGB</span>(las_condes_rst, <span class="at">r =</span> <span class="dv">4</span>, <span class="at">g =</span> <span class="dv">3</span>, <span class="at">b =</span> <span class="dv">2</span>, <span class="at">stretch =</span> <span class="st">"lin"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="datos_rasters_files/figure-html/unnamed-chunk-3-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="co"># # mapview::viewRGB(raster::brick(las_condes_rst), r = 4, g = 3, b = 2)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="callout callout-style-simple callout-note callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Actividad 1 — Explora combinaciones de bandas
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-2" class="callout-2-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>Ensaya falso color vegetación (NIR–Red–Green → 5–4–3 en Landsat 8 clásico; aquí nir=5, red=4, green=3):</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plotRGB</span>(las_condes_rst, <span class="at">r =</span> <span class="dv">5</span>, <span class="at">g =</span> <span class="dv">4</span>, <span class="at">b =</span> <span class="dv">3</span>, <span class="at">stretch =</span> <span class="st">"lin"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p><img src="images/l8-band-combinations.png" class="img-fluid" alt="Visualización de Bandas"> Referencias: <a href="https://mappinggis.com/2019/05/combinaciones-de-bandas-en-imagenes-de-satelite-landsat-y-sentinel/" class="uri">https://mappinggis.com/2019/05/combinaciones-de-bandas-en-imagenes-de-satelite-landsat-y-sentinel/</a></p>
+</div>
+</div>
+</div>
+<div class="callout callout-style-simple callout-note callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-3-contents" aria-controls="callout-3" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Actividad 2 — Falso color SWIR (realce de suelos/urbano)
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-3" class="callout-3-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>Prueba una combinación que realce zonas urbanas/sequedad (SWIR2–SWIR1–Red → 7–6–4):</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plotRGB</span>(las_condes_rst, <span class="at">r =</span> <span class="dv">7</span>, <span class="at">g =</span> <span class="dv">6</span>, <span class="at">b =</span> <span class="dv">4</span>, <span class="at">stretch =</span> <span class="st">"lin"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="datos_rasters_files/figure-html/unnamed-chunk-5-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>¿Qué patrones cambian respecto del color natural? Describe brevemente.</p>
+</div>
+</div>
+</div>
+<div class="callout callout-style-simple callout-note callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-4-contents" aria-controls="callout-4" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Actividad 3 — Chequeos rápidos de metadatos
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-4" class="callout-4-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<ul>
+<li>¿Cuál es la resolución de tu raster?</li>
+<li>¿Qué CRS utiliza? ¿Es geográfico (lat/long) o proyectado (p.&nbsp;ej., UTM)?</li>
+<li>¿Hay NoData? ¿Cómo se representan?</li>
+</ul>
+<p>Usa: <code>res(r)</code>, <code>crs(r)</code>, `is.na(values(r))```.</p>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="anexo-compatibilidad-con-librería-raster" class="level2" data-number="9.6">
+<h2 data-number="9.6" class="anchored" data-anchor-id="anexo-compatibilidad-con-librería-raster"><span class="header-section-number">9.6</span> Anexo: Compatibilidad con librería <code>raster</code></h2>
+<p>Para asegurar compatibilidad con material existente, mostramos también con {<code>raster</code>} aunque la librería recomendada para el futuro es {<code>terra</code>}.</p>
+<blockquote class="blockquote">
+<p><em><code>terra</code> replaces the <code>raster</code> package. The interfaces of <code>terra</code> and <code>raster</code> are similar, but <code>terra</code> is simpler, faster and can do more</em>. Fuente: <a href="https://rspatial.github.io/terra/" class="uri">https://rspatial.github.io/terra/</a></p>
+</blockquote>
+<section id="lectura-e-inspección" class="level3" data-number="9.6.1">
+<h3 data-number="9.6.1" class="anchored" data-anchor-id="lectura-e-inspección"><span class="header-section-number">9.6.1</span> Lectura e inspección</h3>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(raster)</span>
+<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a>las_condes_raster <span class="ot">&lt;-</span> <span class="fu">brick</span>(<span class="st">"data/raster/OLI_LC.tif"</span>)</span>
+<span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a><span class="fu">names</span>(las_condes_raster) <span class="ot">&lt;-</span> </span>
+<span id="cb16-4"><a href="#cb16-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">c</span>(<span class="st">"aerosol"</span>, <span class="st">"blue"</span>, <span class="st">"green"</span>, <span class="st">"red"</span> , <span class="st">"nir"</span>, <span class="st">"swir1"</span>, <span class="st">"swir2"</span>, <span class="st">"tirs1"</span>)</span>
+<span id="cb16-5"><a href="#cb16-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-6"><a href="#cb16-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-7"><a href="#cb16-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Inspección básica</span></span>
+<span id="cb16-8"><a href="#cb16-8" aria-hidden="true" tabindex="-1"></a>las_condes_raster</span>
+<span id="cb16-9"><a href="#cb16-9" aria-hidden="true" tabindex="-1"></a><span class="fu">crs</span>(las_condes_raster)<span class="co"># sistema de referencia de coordenadas</span></span>
+<span id="cb16-10"><a href="#cb16-10" aria-hidden="true" tabindex="-1"></a><span class="fu">res</span>(las_condes_raster)   <span class="co"># tamaño de celda</span></span>
+<span id="cb16-11"><a href="#cb16-11" aria-hidden="true" tabindex="-1"></a><span class="fu">extent</span>(las_condes_raster) <span class="co"># extensión de la imagen</span></span>
+<span id="cb16-12"><a href="#cb16-12" aria-hidden="true" tabindex="-1"></a><span class="fu">nlayers</span>(las_condes_raster) <span class="co"># cantidad de capas</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="visualización-de-rgb" class="level3" data-number="9.6.2">
+<h3 data-number="9.6.2" class="anchored" data-anchor-id="visualización-de-rgb"><span class="header-section-number">9.6.2</span> Visualización de RGB</h3>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Visualización de Las Condes en color natural</span></span>
+<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a><span class="fu">plotRGB</span>(las_condes_raster, <span class="at">r =</span> <span class="dv">4</span>, <span class="at">g =</span> <span class="dv">3</span>, <span class="at">b =</span> <span class="dv">2</span>, <span class="at">stretch =</span> <span class="st">"lin"</span>)</span>
+<span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Alternativa interactiva (si la tienes instalada):</span></span>
+<span id="cb17-4"><a href="#cb17-4" aria-hidden="true" tabindex="-1"></a><span class="co"># mapview::viewRGB(las_condes_raster, r = 4, g = 3, b = 2)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+</section>
+<section id="referencias" class="level2" data-number="9.7">
+<h2 data-number="9.7" class="anchored" data-anchor-id="referencias"><span class="header-section-number">9.7</span> Referencias:</h2>
+<ul>
+<li><a href="https://rspatial.org/">Spatial Data Science with R and “terra”</a></li>
 </ul>
 
 
@@ -948,13 +998,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./recursos.html" class="pagination-link" aria-label="Instalación de Recursos">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">A</span>&nbsp; <span class="chapter-title">Instalación de Recursos</span></span>
+      <a href="./geocode.html" class="pagination-link" aria-label="Geocoding">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Geocoding</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./crs.html" class="pagination-link" aria-label="CRS en R">
-        <span class="nav-page-text"><span class="chapter-number">C</span>&nbsp; <span class="chapter-title">CRS en R</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./inferencia.html" class="pagination-link" aria-label="Inferencia Espacial">
+        <span class="nav-page-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Inferencia Espacial</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
