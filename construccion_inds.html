@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>4&nbsp; Indicadores Territoriales – Curso de Geoanálisis</title>
+<title>12&nbsp; Indicador de Delincuencia – Curso de Geoanálisis</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -31,7 +31,7 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
 <link href="./indicadores.html" rel="next">
-<link href="./inferencia.html" rel="prev">
+<link href="./intro_inds.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
@@ -83,7 +83,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./construccion_inds.html"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Indicadores Territoriales</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./construccion_inds.html"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Indicador de Delincuencia</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -111,49 +111,97 @@ ul.task-list li input[type="checkbox"] {
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Antecedentes</span></a>
+ <span class="menu-text">Syllabus</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./intro_inds.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Introducción a Indicadores Territoriales</span></span></a>
+  <a href="./geoanalisis.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Introducción al Geoanálisis</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./analisis_esp.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Análisis Espacial</span></span></a>
+  <a href="./intro_r.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Introducción a R Project</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./variables.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Variables en R</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./funciones.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Funciones en R</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./tidyverse.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Manipulación de tablas en r</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./visualizaciones.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Visualizaciones en R</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./datos_vectores.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Datos Espaciales: Vectores</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./dataframes.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Dataframes y Delitos en R</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./geocode.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Geocoding</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./datos_rasters.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Datos Espaciales: Raster</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./inferencia.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Inferencia Espacial</span></span></a>
+ <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Inferencia Espacial</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./intro_inds.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Introducción a Indicadores Territoriales</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./construccion_inds.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Indicadores Territoriales</span></span></a>
+ <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Indicador de Delincuencia</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./indicadores.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Inds. Socioeconómicos</span></span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./proyecto.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Proyecto Final</span></span></a>
+ <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Inds. Socioeconómicos</span></span></a>
   </div>
 </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
- <span class="menu-text">R Project</span></a>
+ <span class="menu-text">Tareas</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
@@ -161,32 +209,8 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./intro_r.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Introducción a R Project</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./variables.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Variables en R</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./funciones.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Funciones en R</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./datos_espaciales.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Datos Espaciales</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./dataframes.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Dataframes y Delitos en R</span></span></a>
+  <a href="./tarea_1.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Tarea 1: Programación en R</span></a>
   </div>
 </li>
       </ul>
@@ -194,7 +218,7 @@ ul.task-list li input[type="checkbox"] {
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./references.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">References</span></a>
+ <span class="menu-text">Referencias Bibliográficas</span></a>
   </div>
 </li>
         <li class="sidebar-item sidebar-item-section">
@@ -220,20 +244,14 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./tidyverse.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">C</span>&nbsp; <span class="chapter-title">Tidyverse en R</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./espacial_r.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Objetos Espaciales en R</span></a>
+  <a href="./crs.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">C</span>&nbsp; <span class="chapter-title">CRS en R</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./john_snow.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Mapa de Cólera</span></a>
+ <span class="menu-text"><span class="chapter-number">D</span>&nbsp; <span class="chapter-title">Mapa de Cólera</span></span></a>
   </div>
 </li>
       </ul>
@@ -248,32 +266,32 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">Contenidos</h2>
    
   <ul>
-  <li><a href="#problema-territorial" id="toc-problema-territorial" class="nav-link active" data-scroll-target="#problema-territorial"><span class="header-section-number">4.1</span> Problema Territorial</a>
+  <li><a href="#problema-territorial" id="toc-problema-territorial" class="nav-link active" data-scroll-target="#problema-territorial"><span class="header-section-number">12.1</span> Problema Territorial</a>
   <ul class="collapse">
   <li><a href="#ejemplo-delincuencia-rural" id="toc-ejemplo-delincuencia-rural" class="nav-link" data-scroll-target="#ejemplo-delincuencia-rural">Ejemplo Delincuencia Rural</a></li>
   </ul></li>
-  <li><a href="#marco-de-referencia" id="toc-marco-de-referencia" class="nav-link" data-scroll-target="#marco-de-referencia"><span class="header-section-number">4.2</span> Marco de Referencia</a>
+  <li><a href="#marco-de-referencia" id="toc-marco-de-referencia" class="nav-link" data-scroll-target="#marco-de-referencia"><span class="header-section-number">12.2</span> Marco de Referencia</a>
   <ul class="collapse">
   <li><a href="#ejemplo-delincuencia-rural-1" id="toc-ejemplo-delincuencia-rural-1" class="nav-link" data-scroll-target="#ejemplo-delincuencia-rural-1">Ejemplo Delincuencia Rural</a></li>
   </ul></li>
-  <li><a href="#definición-de-objetivos" id="toc-definición-de-objetivos" class="nav-link" data-scroll-target="#definición-de-objetivos"><span class="header-section-number">4.3</span> Definición de Objetivos</a>
+  <li><a href="#definición-de-objetivos" id="toc-definición-de-objetivos" class="nav-link" data-scroll-target="#definición-de-objetivos"><span class="header-section-number">12.3</span> Definición de Objetivos</a>
   <ul class="collapse">
   <li><a href="#ejemplo-delincuencia-rural-2" id="toc-ejemplo-delincuencia-rural-2" class="nav-link" data-scroll-target="#ejemplo-delincuencia-rural-2">Ejemplo Delincuencia Rural</a></li>
   </ul></li>
-  <li><a href="#recolección-de-datos" id="toc-recolección-de-datos" class="nav-link" data-scroll-target="#recolección-de-datos"><span class="header-section-number">4.4</span> Recolección de Datos</a>
+  <li><a href="#recolección-de-datos" id="toc-recolección-de-datos" class="nav-link" data-scroll-target="#recolección-de-datos"><span class="header-section-number">12.4</span> Recolección de Datos</a>
   <ul class="collapse">
   <li><a href="#ejemplo-delincuencia-rural-3" id="toc-ejemplo-delincuencia-rural-3" class="nav-link" data-scroll-target="#ejemplo-delincuencia-rural-3">Ejemplo Delincuencia Rural</a></li>
   <li><a href="#actividad" id="toc-actividad" class="nav-link" data-scroll-target="#actividad">Actividad:</a></li>
   </ul></li>
-  <li><a href="#cálculo-de-indicadores" id="toc-cálculo-de-indicadores" class="nav-link" data-scroll-target="#cálculo-de-indicadores"><span class="header-section-number">4.5</span> Cálculo de Indicadores</a>
+  <li><a href="#cálculo-de-indicadores" id="toc-cálculo-de-indicadores" class="nav-link" data-scroll-target="#cálculo-de-indicadores"><span class="header-section-number">12.5</span> Cálculo de Indicadores</a>
   <ul class="collapse">
   <li><a href="#ejemplo-delincuencia" id="toc-ejemplo-delincuencia" class="nav-link" data-scroll-target="#ejemplo-delincuencia">Ejemplo Delincuencia</a></li>
   </ul></li>
-  <li><a href="#representación-espacial" id="toc-representación-espacial" class="nav-link" data-scroll-target="#representación-espacial"><span class="header-section-number">4.6</span> Representación Espacial</a>
+  <li><a href="#representación-espacial" id="toc-representación-espacial" class="nav-link" data-scroll-target="#representación-espacial"><span class="header-section-number">12.6</span> Representación Espacial</a>
   <ul class="collapse">
   <li><a href="#ejemplo-delincuencia-1" id="toc-ejemplo-delincuencia-1" class="nav-link" data-scroll-target="#ejemplo-delincuencia-1">Ejemplo Delincuencia</a></li>
   </ul></li>
-  <li><a href="#análisis-de-resultados" id="toc-análisis-de-resultados" class="nav-link" data-scroll-target="#análisis-de-resultados"><span class="header-section-number">4.7</span> Análisis de Resultados</a></li>
+  <li><a href="#análisis-de-resultados" id="toc-análisis-de-resultados" class="nav-link" data-scroll-target="#análisis-de-resultados"><span class="header-section-number">12.7</span> Análisis de Resultados</a></li>
   </ul>
 </nav>
     </div>
@@ -282,8 +300,8 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Indicadores Territoriales</span></h1>
-<p class="subtitle lead">Parte 1</p>
+<h1 class="title"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Indicador de Delincuencia</span></h1>
+<p class="subtitle lead">Ejemplo de Indicador de Delincuencia Rural</p>
 </div>
 
 
@@ -300,19 +318,14 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="images/S2.png" class="img-fluid quarto-figure quarto-figure-center figure-img"></p>
-</figure>
-</div>
 <p><strong>Etapas para la construcción de indicadores territoriales</strong></p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="images/pasos.png" class="img-fluid quarto-figure quarto-figure-center figure-img"></p>
 </figure>
 </div>
-<section id="problema-territorial" class="level2 page-columns page-full" data-number="4.1">
-<h2 data-number="4.1" class="anchored" data-anchor-id="problema-territorial"><span class="header-section-number">4.1</span> Problema Territorial</h2>
+<section id="problema-territorial" class="level2 page-columns page-full" data-number="12.1">
+<h2 data-number="12.1" class="anchored" data-anchor-id="problema-territorial"><span class="header-section-number">12.1</span> Problema Territorial</h2>
 <p>En esta etapa se debe explicar claramente el problema específico relacionado con el territorio que se quiere analizar. Esto puede involucrar desafíos sociales, económicos, ambientales, seguridad, o de planificación urbana.</p>
 <p>Es importante explicar explicar porque el problema es significativo para la comunidad y cómo los indicadores territoriales pueden ayudar a entenderlo y eventualmente a resolverlo.</p>
 <section id="ejemplo-delincuencia-rural" class="level3 unnumbered page-columns page-full">
@@ -335,8 +348,8 @@ ul.task-list li input[type="checkbox"] {
 </ul>
 </section>
 </section>
-<section id="marco-de-referencia" class="level2" data-number="4.2">
-<h2 data-number="4.2" class="anchored" data-anchor-id="marco-de-referencia"><span class="header-section-number">4.2</span> Marco de Referencia</h2>
+<section id="marco-de-referencia" class="level2" data-number="12.2">
+<h2 data-number="12.2" class="anchored" data-anchor-id="marco-de-referencia"><span class="header-section-number">12.2</span> Marco de Referencia</h2>
 <p>Establecer las teorías, conceptos y estudios previos que guiarán el análisis y la construcción de indicadores. El marco teórico proporciona la base conceptual y metodológica para entender el problema y justificar las decisiones tomadas en el proceso de investigación.</p>
 <p>Este incluye la revisión de literatura relevante, teorías geográficas, modelos de análisis espacial, y estudios previos que han abordado problemas similares.</p>
 <section id="ejemplo-delincuencia-rural-1" class="level3 unnumbered">
@@ -354,8 +367,8 @@ ul.task-list li input[type="checkbox"] {
 <p>Utilizar metodologías probadas para recolectar y analizar datos espaciales y socioeconómicos, asegurando que nuestro enfoque esté alineado con las mejores prácticas en el campo.</p>
 </section>
 </section>
-<section id="definición-de-objetivos" class="level2" data-number="4.3">
-<h2 data-number="4.3" class="anchored" data-anchor-id="definición-de-objetivos"><span class="header-section-number">4.3</span> Definición de Objetivos</h2>
+<section id="definición-de-objetivos" class="level2" data-number="12.3">
+<h2 data-number="12.3" class="anchored" data-anchor-id="definición-de-objetivos"><span class="header-section-number">12.3</span> Definición de Objetivos</h2>
 <p>Proporcionan clarificación de lo que se espera lograr con el estudio y la construcción de indicadores territoriales. Los objetivos proporcionan una guía clara y concisa para todo el proceso de investigación, asegurando que todas las actividades estén alineadas con el propósito del estudio.</p>
 <p>Se puede usar el framework de definición de objetivos <strong>SMART</strong> (Specific, Measurable, Achievable, Relevant, Time-bound) ayudan a estructurar el trabajo de manera que los resultados sean tangibles y evaluables.</p>
 <section id="ejemplo-delincuencia-rural-2" class="level3 unnumbered">
@@ -402,8 +415,8 @@ ul.task-list li input[type="checkbox"] {
 </ul>
 </section>
 </section>
-<section id="recolección-de-datos" class="level2" data-number="4.4">
-<h2 data-number="4.4" class="anchored" data-anchor-id="recolección-de-datos"><span class="header-section-number">4.4</span> Recolección de Datos</h2>
+<section id="recolección-de-datos" class="level2" data-number="12.4">
+<h2 data-number="12.4" class="anchored" data-anchor-id="recolección-de-datos"><span class="header-section-number">12.4</span> Recolección de Datos</h2>
 <p>Identificación y recopilación de los datos necesarios para calcular los indicadores territoriales. Esta etapa es crucial para asegurar que los datos utilizados sean de alta calidad y adecuados para el análisis.</p>
 <p>La recolección de datos implica la identificación de fuentes de datos abiertas y cerradas, así como la evaluación de diversas características que determinan la calidad de los datos. Estas características incluyen representatividad, pertinencia, precisión, actualidad, accesibilidad, y consistencia.</p>
 <section id="ejemplo-delincuencia-rural-3" class="level3 unnumbered">
@@ -499,8 +512,8 @@ ul.task-list li input[type="checkbox"] {
 </section>
 </section>
 </section>
-<section id="cálculo-de-indicadores" class="level2 page-columns page-full" data-number="4.5">
-<h2 data-number="4.5" class="anchored" data-anchor-id="cálculo-de-indicadores"><span class="header-section-number">4.5</span> Cálculo de Indicadores</h2>
+<section id="cálculo-de-indicadores" class="level2 page-columns page-full" data-number="12.5">
+<h2 data-number="12.5" class="anchored" data-anchor-id="cálculo-de-indicadores"><span class="header-section-number">12.5</span> Cálculo de Indicadores</h2>
 <p>El cálculo de indicadores territoriales es un proceso fundamental en la geografía y el análisis espacial, ya que permite transformar datos brutos en información específica que describe una condición, situación, actividad o resultado dentro de un área geográfica delimitada. Este proceso es crucial para modelar y entender el comportamiento de las personas en un territorio, ya que los indicadores territoriales sintetizan complejas interacciones espaciales en métricas que pueden ser fácilmente interpretadas y utilizadas en la toma de decisiones.</p>
 <p>Este proceso no solo proporciona una visión cuantitativa del territorio, sino que también resalta patrones espaciales que pueden no ser evidentes a simple vista. La importancia de los indicadores territoriales radica en su capacidad para ofrecer una representación concisa y útil de realidades complejas, facilitando la identificación de problemas y oportunidades a nivel local o regional.</p>
 <section id="ejemplo-delincuencia" class="level3 unnumbered page-columns page-full">
@@ -508,14 +521,14 @@ ul.task-list li input[type="checkbox"] {
 <div class="quarto-figure quarto-figure-center page-columns page-full">
 <figure class="figure page-columns page-full">
 <p><img src="images/del_violentos_R09.png" class="img-fluid figure-img" width="500"></p>
-<figcaption class="margin-caption">Ejemplo de cálculo de indicadores de delincuencia visto en <a href="#sec-dataframes" class="quarto-xref"><span class="quarto-unresolved-ref">sec-dataframes</span></a></figcaption>
+<figcaption class="margin-caption">Ejemplo de cálculo de indicadores de delincuencia visto en <a href="dataframes.html" class="quarto-xref"><span>Chapter 7</span></a></figcaption>
 </figure>
 </div>
-<p>Revisar el capítulo <a href="#sec-dataframes" class="quarto-xref"><span class="quarto-unresolved-ref">sec-dataframes</span></a> que contiene el flujo de trabajo para construcción de un indicador territorial de delitos a nivel comuna utilizando R. Que contempla desde la lectura de la base de información (excel de delitos), agregar información de categorías, hacer filtros, resúmenes estadísticos (tablas dinámicas) y finalmente visualizaciones gráficas y espaciales.</p>
+<p>Revisar el capítulo <a href="dataframes.html" class="quarto-xref"><span>Chapter 7</span></a> que contiene el flujo de trabajo para construcción de un indicador territorial de delitos a nivel comuna utilizando R. Que contempla desde la lectura de la base de información (excel de delitos), agregar información de categorías, hacer filtros, resúmenes estadísticos (tablas dinámicas) y finalmente visualizaciones gráficas y espaciales.</p>
 </section>
 </section>
-<section id="representación-espacial" class="level2 page-columns page-full" data-number="4.6">
-<h2 data-number="4.6" class="anchored" data-anchor-id="representación-espacial"><span class="header-section-number">4.6</span> Representación Espacial</h2>
+<section id="representación-espacial" class="level2 page-columns page-full" data-number="12.6">
+<h2 data-number="12.6" class="anchored" data-anchor-id="representación-espacial"><span class="header-section-number">12.6</span> Representación Espacial</h2>
 <p>La representación espacial es el proceso de visualización de datos geográficos en mapas, gráficos o modelos que permiten comprender la distribución y relación de fenómenos en un territorio. Este paso es crucial en el análisis de indicadores territoriales, ya que transforma datos abstractos en representaciones visuales claras y accesibles, facilitando así la interpretación y comunicación de información compleja.</p>
 <p>Una comunicación visual clara y precisa no solo mejora la comprensión de los resultados, sino que también facilita el diagnóstico de situaciones problemáticas y la identificación de oportunidades.</p>
 <section id="ejemplo-delincuencia-1" class="level3 unnumbered page-columns page-full">
@@ -523,14 +536,14 @@ ul.task-list li input[type="checkbox"] {
 <div class="quarto-figure quarto-figure-center page-columns page-full">
 <figure class="figure page-columns page-full">
 <p><img src="images/map_del_violentos_R09.png" class="img-fluid figure-img" width="500"></p>
-<figcaption class="margin-caption">Ejemplo de representación espacial del indicadores de violencia visto en <a href="#sec-dataframes" class="quarto-xref"><span class="quarto-unresolved-ref">sec-dataframes</span></a></figcaption>
+<figcaption class="margin-caption">Ejemplo de representación espacial del indicadores de violencia visto en <a href="dataframes.html" class="quarto-xref"><span>Chapter 7</span></a></figcaption>
 </figure>
 </div>
-<p>Revisar el capítulo <a href="#sec-dataframes" class="quarto-xref"><span class="quarto-unresolved-ref">sec-dataframes</span></a> que contiene el flujo de trabajo para construcción de un indicador territorial de delitos a nivel comuna utilizando R.</p>
+<p>Revisar el capítulo <a href="dataframes.html" class="quarto-xref"><span>Chapter 7</span></a> que contiene el flujo de trabajo para construcción de un indicador territorial de delitos a nivel comuna utilizando R.</p>
 </section>
 </section>
-<section id="análisis-de-resultados" class="level2" data-number="4.7">
-<h2 data-number="4.7" class="anchored" data-anchor-id="análisis-de-resultados"><span class="header-section-number">4.7</span> Análisis de Resultados</h2>
+<section id="análisis-de-resultados" class="level2" data-number="12.7">
+<h2 data-number="12.7" class="anchored" data-anchor-id="análisis-de-resultados"><span class="header-section-number">12.7</span> Análisis de Resultados</h2>
 <p>La etapa de análisis de resultados en la construcción de indicadores territoriales es crucial, ya que conecta directamente con la definición inicial del problema territorial y los objetivos planteados. Durante este análisis, se examinan los patrones y tendencias revelados por los indicadores para evaluar si se han cumplido los objetivos propuestos y para extraer información relevante sobre el territorio. Este proceso implica no solo la interpretación de los valores numéricos y visuales, sino también la comprensión profunda de las dinámicas espaciales y cómo estas reflejan la realidad del territorio. Al comparar los resultados obtenidos con la situación planteada en el problema, se pueden identificar áreas de alta prioridad, desigualdades territoriales o comportamientos inesperados que requieren una atención particular.</p>
 <p>El análisis de resultados proporciona una base sólida para la toma de decisiones informadas. Al evidenciar información relevante sobre el territorio, los responsables de la planificación y gestión pueden proponer soluciones focalizadas y basadas en evidencia. Además, este análisis puede ayudar a explicar y entender fenómenos complejos, permitiendo no solo descartar hipótesis iniciales, sino también crear nuevas que reflejen de manera más precisa la realidad observada.</p>
 
@@ -939,13 +952,13 @@ ul.task-list li input[type="checkbox"] {
   </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./inferencia.html" class="pagination-link" aria-label="Inferencia Espacial">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Inferencia Espacial</span></span>
+      <a href="./intro_inds.html" class="pagination-link" aria-label="Introducción a Indicadores Territoriales">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Introducción a Indicadores Territoriales</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
       <a href="./indicadores.html" class="pagination-link" aria-label="Inds. Socioeconómicos">
-        <span class="nav-page-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Inds. Socioeconómicos</span></span> <i class="bi bi-arrow-right-short"></i>
+        <span class="nav-page-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Inds. Socioeconómicos</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
