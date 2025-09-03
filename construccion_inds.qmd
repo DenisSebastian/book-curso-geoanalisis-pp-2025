@@ -1,10 +1,8 @@
 ---
-subtitle: "Parte 1"
+subtitle: "Ejemplo de Indicador de Delincuencia Rural"
 ---
 
-# Indicadores Territoriales
-
-![](images/S2.png){fig-align="center"}
+# Indicador de Delincuencia
 
 **Etapas para la construcción de indicadores territoriales**
 

@@ -26,13 +26,15 @@ book:
     - geocode.qmd
     - datos_rasters.qmd
     - inferencia.qmd
-    # - intro_inds.qmd
-    # - construccion_inds.qmd
-    # - indicadores.qmd
+    - intro_inds.qmd
+    # - indicadores_territoriales.qmd
+    - construccion_inds.qmd
+    - indicadores.qmd
     # - proyecto.qmd
     - part: "Tareas"
       chapters:
         - tarea_1.qmd
+        - tarea_2.qmd
     - references.qmd
   appendices:
     - recursos.qmd

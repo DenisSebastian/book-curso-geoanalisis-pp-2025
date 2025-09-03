@@ -18,7 +18,6 @@ suppressPackageStartupMessages(library(viridis))
 suppressPackageStartupMessages(library(tidyr))
 ```
 
-![Objetivos](images/m4_geoanalisis.png)
 
 ## Definiciones
 

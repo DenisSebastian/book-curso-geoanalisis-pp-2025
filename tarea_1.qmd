@@ -4,7 +4,7 @@ editor_options:
   chunk_output_type: console
 ---
 
-# Tarea 1 {.unnumbered}
+# Tarea 1: Programación en R {.unnumbered}
 
 ## Antecedentes
 
