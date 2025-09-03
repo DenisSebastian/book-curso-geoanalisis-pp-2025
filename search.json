@@ -244,7 +244,7 @@
     "href": "variables.html#tipos-de-objetos-en-r",
     "title": "2  Variables en R",
     "section": "",
-    "text": "Dimensiones\nHomogéneos\nHeterogéneos\n\n\n\n\n1d\nAtomic vector\nList\n\n\n2d\nMatrix\nData frame\n\n\nnd\nArray\n\n\n\n\n\n\n\n2.1.1 Variables Numéricas\n\n# La asignación en R son válidos 2 métodos '&lt;-' o '='\nx &lt;- 7 # Definir variable (escalar) x que sea igual a 7\nx # Mostrar que es x\n\n[1] 7\n\ny &lt;- 3 + 2 * x # Crear y como funcion de x \ny\n\n[1] 17\n\nclass(y)\n\n[1] \"numeric\"\n\n\nNúmeros Random con decimales\n\nru &lt;- runif(n = 100, min = 1, max = 10)\nru\n\n  [1] 1.689409 6.044929 6.965926 5.758810 1.830180 5.126965 1.366605 5.851437\n  [9] 4.522939 1.471205 7.304914 4.902749 5.523171 2.285933 2.122335 5.431788\n [17] 4.604396 4.642487 3.243558 1.443361 5.331553 9.951176 2.438776 1.209377\n [25] 7.950903 2.303595 2.310379 4.180274 9.697736 5.362686 6.055252 9.887186\n [33] 4.854682 8.786141 6.970215 6.144644 5.118421 8.683620 3.227614 5.549304\n [41] 6.365546 6.711025 8.540408 6.280289 4.722516 2.273072 4.962473 2.193461\n [49] 1.486700 3.792900 6.360250 5.084822 8.295755 9.730910 2.292853 9.158748\n [57] 9.697440 5.149584 8.009579 1.776086 4.544714 6.761104 9.767075 6.686654\n [65] 1.300378 4.946933 1.804011 1.121045 1.327005 3.191390 7.172149 6.361239\n [73] 9.610582 3.738294 1.623643 6.044581 5.352924 5.989331 6.208016 2.316971\n [81] 7.491524 5.093252 4.921943 6.254836 1.597021 2.249638 3.972179 8.259148\n [89] 8.206798 9.671604 4.166953 3.181101 2.642444 6.751519 6.584104 3.000943\n [97] 1.030315 7.440322 8.818843 7.981683\n\n\n\nhist(ru, breaks = 20, col = \"orange\", border = \"gray60\", \n     main = \"Histograma de valores Random\")\n\n\n\n\n\n\n\n\nNúmeros Random Enteros\nSimular los lanzamientos de un dado\n\nsample.int(n = 6, size = 10, replace = T)\n\n [1] 1 5 1 3 5 2 3 2 2 4\n\n\n\n\n2.1.2 Variables de Caracter\n\nch &lt;- \"Chile\" # Definir variable (objeto) ch que sea la palabra \"Chile\"\nsn &lt;- \"Santiago\"\nch # Mostrar ch\n\n[1] \"Chile\"\n\nsn\n\n[1] \"Santiago\"\n\n\nUnir variables de texto con paste()\n\nch &lt;- \"Chile\" # Definir variable (objeto) ch que sea la palabra \"Chile\"\nsn &lt;- \"Santiago\"\nunion &lt;- paste(sn,ch, sep = \", \")\nunion\n\n[1] \"Santiago, Chile\"\n\n\nUtilizar paste0()\n\nunion &lt;- paste(\"Provincia de \", sn,ch, sep = \", \")\nunion\n\n[1] \"Provincia de , Santiago, Chile\"\n\nunion0 &lt;- paste0(\"Provincia de \", sn, \", \", ch)\nunion0\n\n[1] \"Provincia de Santiago, Chile\"\n\n\nBuscar y reemplazar con gsub\n\nav &lt;- \"Av. Apoquindo\"\ncomuna &lt;- \"comuna de Las Condes\"\ncalle &lt;- paste(av, comuna, union0, sep = \", \")\ncalle\n\n[1] \"Av. Apoquindo, comuna de Las Condes, Provincia de Santiago, Chile\"\n\n# reemplazar Av. por Avenida\ncalle_new &lt;- gsub(pattern = \"Av.\", replacement = \"Avenida\", x = calle)\ncalle_new\n\n[1] \"Avenida Apoquindo, comuna de Las Condes, Provincia de Santiago, Chile\"",
+    "text": "Dimensiones\nHomogéneos\nHeterogéneos\n\n\n\n\n1d\nAtomic vector\nList\n\n\n2d\nMatrix\nData frame\n\n\nnd\nArray\n\n\n\n\n\n\n\n2.1.1 Variables Numéricas\n\n# La asignación en R son válidos 2 métodos '&lt;-' o '='\nx &lt;- 7 # Definir variable (escalar) x que sea igual a 7\nx # Mostrar que es x\n\n[1] 7\n\ny &lt;- 3 + 2 * x # Crear y como funcion de x \ny\n\n[1] 17\n\nclass(y)\n\n[1] \"numeric\"\n\n\nNúmeros Random con decimales\n\nru &lt;- runif(n = 100, min = 1, max = 10)\nru\n\n  [1] 1.682748 9.331227 8.357773 7.362038 5.123784 8.223979 6.864700 2.002317\n  [9] 3.412015 3.927097 6.524355 5.397703 8.868572 7.242043 1.302551 8.763646\n [17] 9.578982 3.597805 1.568554 4.928779 6.808249 8.973596 6.570114 1.367897\n [25] 5.572292 1.707576 2.004879 1.031240 7.463945 3.904557 8.536101 1.602503\n [33] 3.681762 6.097748 2.235236 5.234869 6.357066 9.091839 9.901852 1.888109\n [41] 5.984827 5.695544 3.375437 7.754032 2.019761 6.875722 6.706595 1.374293\n [49] 2.651010 4.150613 7.857024 8.960010 1.321805 6.221687 9.661284 2.528847\n [57] 5.836086 7.106145 4.881588 8.376986 2.288933 2.353931 2.649977 4.817679\n [65] 4.444807 8.234483 9.342892 2.126387 6.848704 7.672753 3.601536 9.569986\n [73] 7.168071 4.294595 8.371673 3.927401 8.935998 9.765565 4.541379 2.470235\n [81] 8.823119 4.906933 6.818310 3.467292 2.079665 8.351730 8.217129 8.116980\n [89] 1.769678 5.603680 7.833276 1.702429 3.359405 5.887817 8.221605 4.866090\n [97] 6.368099 4.683974 8.178415 8.212948\n\n\n\nhist(ru, breaks = 20, col = \"orange\", border = \"gray60\", \n     main = \"Histograma de valores Random\")\n\n\n\n\n\n\n\n\nNúmeros Random Enteros\nSimular los lanzamientos de un dado\n\nsample.int(n = 6, size = 10, replace = T)\n\n [1] 6 4 3 6 4 2 3 5 4 2\n\n\n\n\n2.1.2 Variables de Caracter\n\nch &lt;- \"Chile\" # Definir variable (objeto) ch que sea la palabra \"Chile\"\nsn &lt;- \"Santiago\"\nch # Mostrar ch\n\n[1] \"Chile\"\n\nsn\n\n[1] \"Santiago\"\n\n\nUnir variables de texto con paste()\n\nch &lt;- \"Chile\" # Definir variable (objeto) ch que sea la palabra \"Chile\"\nsn &lt;- \"Santiago\"\nunion &lt;- paste(sn,ch, sep = \", \")\nunion\n\n[1] \"Santiago, Chile\"\n\n\nUtilizar paste0()\n\nunion &lt;- paste(\"Provincia de \", sn,ch, sep = \", \")\nunion\n\n[1] \"Provincia de , Santiago, Chile\"\n\nunion0 &lt;- paste0(\"Provincia de \", sn, \", \", ch)\nunion0\n\n[1] \"Provincia de Santiago, Chile\"\n\n\nBuscar y reemplazar con gsub\n\nav &lt;- \"Av. Apoquindo\"\ncomuna &lt;- \"comuna de Las Condes\"\ncalle &lt;- paste(av, comuna, union0, sep = \", \")\ncalle\n\n[1] \"Av. Apoquindo, comuna de Las Condes, Provincia de Santiago, Chile\"\n\n# reemplazar Av. por Avenida\ncalle_new &lt;- gsub(pattern = \"Av.\", replacement = \"Avenida\", x = calle)\ncalle_new\n\n[1] \"Avenida Apoquindo, comuna de Las Condes, Provincia de Santiago, Chile\"",
     "crumbs": [
       "<span class='chapter-number'>2</span>  <span class='chapter-title'>Variables en R</span>"
     ]
@@ -1173,6 +1173,105 @@
     ]
   },
   {
+    "objectID": "tarea_2.html",
+    "href": "tarea_2.html",
+    "title": "Tarea 2: Proyecto Final",
+    "section": "",
+    "text": "Antecedentes",
+    "crumbs": [
+      "Tareas",
+      "Tarea 2: Proyecto Final"
+    ]
+  },
+  {
+    "objectID": "tarea_2.html#antecedentes",
+    "href": "tarea_2.html#antecedentes",
+    "title": "Tarea 2: Proyecto Final",
+    "section": "",
+    "text": "Fecha de entrega: 16 de Septiembre 20245\nFormato: Informe (ppt, word o pdf) + Código (sript .r)\nIntegrantes: Individual o Grupal (máximo 2)",
+    "crumbs": [
+      "Tareas",
+      "Tarea 2: Proyecto Final"
+    ]
+  },
+  {
+    "objectID": "tarea_2.html#enunciado",
+    "href": "tarea_2.html#enunciado",
+    "title": "Tarea 2: Proyecto Final",
+    "section": "Enunciado",
+    "text": "Enunciado\nEn este proyecto final, su grupo se pondrá en el rol de investigadores territoriales encargados de diseñar y construir un indicador territorial que aborde un problema específico dentro de un área geográfica delimitada.\nA lo largo del proyecto, deberán pasar por todas las etapas del proceso de construcción de indicadores territoriales: desde la presentación del problema y la definición del marco teórico, hasta la recolección de datos, cálculo del indicador, representación espacial y análisis de resultados. Se espera que su grupo identifique una problemática territorial relevante y desarrolle un indicador que permita evaluar y diagnosticar esta situación con base en evidencia.",
+    "crumbs": [
+      "Tareas",
+      "Tarea 2: Proyecto Final"
+    ]
+  },
+  {
+    "objectID": "tarea_2.html#contenidos-a-evaluar",
+    "href": "tarea_2.html#contenidos-a-evaluar",
+    "title": "Tarea 2: Proyecto Final",
+    "section": "Contenidos a evaluar",
+    "text": "Contenidos a evaluar\n\nPresentación del Problema (0.5 pts.)\nEn esta etapa se debe explicar claramente el problema específico relacionado con el territorio que se quiere analizar. Es importante explicar explicar porque el problema es significativo para la comunidad y cómo los indicadores territoriales pueden ayudar a entenderlo y eventualmente a resolverlo.\nEn esta etapa se necesita tener definir el problema pero también el área de estudio, puede ser una comuna o toda una región.\n\n\nMarco de Referencia (0.5 pts.)\nEstablecer las teorías, conceptos y estudios previos que guiarán el análisis y la construcción de indicadores.\nEs recomendable definir keywords para facilitar la búsqueda de librerías en páginas como google scholar. Se debe dejar constancia de la referencia bibliográfica, citar la fuente.",
+    "crumbs": [
+      "Tareas",
+      "Tarea 2: Proyecto Final"
+    ]
+  },
+  {
+    "objectID": "tarea_2.html#definición-de-objetivos-0.5-pts.",
+    "href": "tarea_2.html#definición-de-objetivos-0.5-pts.",
+    "title": "Tarea 2: Proyecto Final",
+    "section": "Definición de Objetivos (0.5 pts.)",
+    "text": "Definición de Objetivos (0.5 pts.)\nSe debe entregar una definición clara de lo que se espera lograr con el proyecto y la construcción de indicadores territoriales.",
+    "crumbs": [
+      "Tareas",
+      "Tarea 2: Proyecto Final"
+    ]
+  },
+  {
+    "objectID": "tarea_2.html#recolección-de-datos-0.5-pts.",
+    "href": "tarea_2.html#recolección-de-datos-0.5-pts.",
+    "title": "Tarea 2: Proyecto Final",
+    "section": "Recolección de Datos (0.5 pts.)",
+    "text": "Recolección de Datos (0.5 pts.)\nSeñalar fuente utilizada para calcular los indicadores territoriales. Describiendo sus características y elementos relevantes para el cálculo e intepretación de resultados.\nEjemplo:\nCenso de Población y Vivienda : El Censo de Población y Vivienda se realiza cada diez años y ofrece un conteo exhaustivo de la población y sus características demográficas, económicas y de vivienda. Es una fuente crítica de datos para la planificación y desarrollo de políticas a nivel nacional y local. Link Censo.",
+    "crumbs": [
+      "Tareas",
+      "Tarea 2: Proyecto Final"
+    ]
+  },
+  {
+    "objectID": "tarea_2.html#cálculo-de-indicador-1-pts.",
+    "href": "tarea_2.html#cálculo-de-indicador-1-pts.",
+    "title": "Tarea 2: Proyecto Final",
+    "section": "5. Cálculo de Indicador (1 pts.)",
+    "text": "5. Cálculo de Indicador (1 pts.)\nExplicar la metodología de cálculo, la ecuación y una interpretación de los valores bajos y altos.",
+    "crumbs": [
+      "Tareas",
+      "Tarea 2: Proyecto Final"
+    ]
+  },
+  {
+    "objectID": "tarea_2.html#representación-espacial-1-pts.",
+    "href": "tarea_2.html#representación-espacial-1-pts.",
+    "title": "Tarea 2: Proyecto Final",
+    "section": "Representación Espacial (1 pts.)",
+    "text": "Representación Espacial (1 pts.)\nPresentar un mapa de la comuna seleccionada, dar un un contexto para interpretar los valores y los colores. Señalar las zonas donde existen concentraciones o patrones espaciales de niveles altos y bajos.\nTip: Asuma que el público no conoce el área de estudio por lo tanto aproveche de dar un contexto sociodemográfico o económico.",
+    "crumbs": [
+      "Tareas",
+      "Tarea 2: Proyecto Final"
+    ]
+  },
+  {
+    "objectID": "tarea_2.html#análisis-de-resultados-1-pts.",
+    "href": "tarea_2.html#análisis-de-resultados-1-pts.",
+    "title": "Tarea 2: Proyecto Final",
+    "section": "Análisis de Resultados (1 pts.)",
+    "text": "Análisis de Resultados (1 pts.)\nEn estapa presente sus conclusiones generales destacando sus impresiones o hallazgos importantes que le entregó el indicador territorial. Puede proponer medidas, programas o proyectos focalizados que atiendan una necesidad social.",
+    "crumbs": [
+      "Tareas",
+      "Tarea 2: Proyecto Final"
+    ]
+  },
+  {
     "objectID": "references.html",
     "href": "references.html",
     "title": "Referencias Bibliográficas",
@@ -1220,7 +1319,7 @@
     "href": "control_r.html#sec-bucles",
     "title": "Appendix B — Estructuras en R",
     "section": "B.2 Estructuras de bucles",
-    "text": "B.2 Estructuras de bucles\nLas estructuras de bucles son una de las tres estructuras de control principales en R. Estas estructuras permiten ejecutar un bloque de código repetidamente mientras se cumpla una condición determinada. En R, existen tres estructuras de bucles principales: “while”, “for” y “repeat”.\nBeneficios\n\nEs más fácil ver el objetivo de tu código; lo diferente llama más atención a la vista que aquello que permanece igual.\nEs más sencillo responder a cambios en los requerimientos. A medida que tus necesidades cambian, solo necesitarás realizar cambios en un lugar, en vez de recordar cambiar en cada lugar donde copiaste y pegaste el código.\nEs probable que tengas menos errores porque cada línea de código es utilizada en más lugares.\n\n\nB.2.1 Estructura de bucle “for”:\nLa estructura “for” permite repetir la ejecución de un bloque de código un número determinado de veces. La sintaxis básica de la estructura “for” es la siguiente:\n\nfor (variable in secuencia) {\n  # Código a ejecutar para cada elemento en la secuencia\n}\n\nLa “secuencia” es un objeto que contiene una serie de elementos. La “variable” toma el valor de cada elemento de la secuencia en cada iteración del bucle. En cada iteración, se ejecutará el bloque de código dentro del “for” para ese valor de la variable.\nEjemplo simple: print una secuencia\n\nfor (i in 1:5){\n  print(i)\n}\n\n[1] 1\n[1] 2\n[1] 3\n[1] 4\n[1] 5\n\n\nEjemplo 2: Guardando los resultados en un vector\n\ndado &lt;- 1:6\nmi_vector &lt;- NULL\nfor(cara in dado) {\n  mi_vector[cara] &lt;- cara ^ 2\n}\nmi_vector\n\n[1]  1  4  9 16 25 36\n\n\nEjemplo 3: Loops con vectores\n\nalumnos &lt;- c(\"Carmen\", \"Adriana\", \"Marco\", \"Fabi\", \"Brenda\")\n\nfor(i in 1:length(alumnos)) {\n  print(paste(\"Hola,\", alumnos[i], sep = \" \"))\n}\n\n[1] \"Hola, Carmen\"\n[1] \"Hola, Adriana\"\n[1] \"Hola, Marco\"\n[1] \"Hola, Fabi\"\n[1] \"Hola, Brenda\"\n\n\nEjemplo 4: loops en Dataframes\n\ndf &lt;- data.frame(a = rnorm(10), b = rnorm(10),\n                 c = rnorm(10), d = rnorm(10))\n\nfor(i in 1:ncol(df)){\n  promedio = mean(df[,i])\n  print(promedio)\n}\n\n[1] -0.09256224\n[1] -0.2154833\n[1] 0.08729069\n[1] -0.1431432\n\n\n\n\nB.2.2 Estructura de bucle “while”:\nLa estructura “while” permite repetir la ejecución de un bloque de código mientras se cumpla una condición determinada. La sintaxis básica de la estructura “while” es la siguiente:\n\nwhile (condición) {\n  # Código a ejecutar mientras se cumpla la condición\n}\n\nLa “condición” es una expresión lógica que evalúa a verdadero o falso. Si la condición es verdadera, se ejecutará el bloque de código dentro del “while”. Este proceso se repetirá hasta que la condición sea falsa.\n\n\nB.2.3 Estructura de bucle “repeat”:\n\nrepeat {\n  # Código a ejecutar de manera indefinida\n  if (condición) {\n    break\n  }\n}\n\nEl bloque de código dentro del “repeat” se ejecutará de manera indefinida hasta que se encuentre la sentencia “break”, que permite salir del bucle. La “condición” es una expresión lógica que evalúa a verdadero o falso. Si la condición es verdadera, se ejecutará la sentencia “break” y se saldrá del bucle.",
+    "text": "B.2 Estructuras de bucles\nLas estructuras de bucles son una de las tres estructuras de control principales en R. Estas estructuras permiten ejecutar un bloque de código repetidamente mientras se cumpla una condición determinada. En R, existen tres estructuras de bucles principales: “while”, “for” y “repeat”.\nBeneficios\n\nEs más fácil ver el objetivo de tu código; lo diferente llama más atención a la vista que aquello que permanece igual.\nEs más sencillo responder a cambios en los requerimientos. A medida que tus necesidades cambian, solo necesitarás realizar cambios en un lugar, en vez de recordar cambiar en cada lugar donde copiaste y pegaste el código.\nEs probable que tengas menos errores porque cada línea de código es utilizada en más lugares.\n\n\nB.2.1 Estructura de bucle “for”:\nLa estructura “for” permite repetir la ejecución de un bloque de código un número determinado de veces. La sintaxis básica de la estructura “for” es la siguiente:\n\nfor (variable in secuencia) {\n  # Código a ejecutar para cada elemento en la secuencia\n}\n\nLa “secuencia” es un objeto que contiene una serie de elementos. La “variable” toma el valor de cada elemento de la secuencia en cada iteración del bucle. En cada iteración, se ejecutará el bloque de código dentro del “for” para ese valor de la variable.\nEjemplo simple: print una secuencia\n\nfor (i in 1:5){\n  print(i)\n}\n\n[1] 1\n[1] 2\n[1] 3\n[1] 4\n[1] 5\n\n\nEjemplo 2: Guardando los resultados en un vector\n\ndado &lt;- 1:6\nmi_vector &lt;- NULL\nfor(cara in dado) {\n  mi_vector[cara] &lt;- cara ^ 2\n}\nmi_vector\n\n[1]  1  4  9 16 25 36\n\n\nEjemplo 3: Loops con vectores\n\nalumnos &lt;- c(\"Carmen\", \"Adriana\", \"Marco\", \"Fabi\", \"Brenda\")\n\nfor(i in 1:length(alumnos)) {\n  print(paste(\"Hola,\", alumnos[i], sep = \" \"))\n}\n\n[1] \"Hola, Carmen\"\n[1] \"Hola, Adriana\"\n[1] \"Hola, Marco\"\n[1] \"Hola, Fabi\"\n[1] \"Hola, Brenda\"\n\n\nEjemplo 4: loops en Dataframes\n\ndf &lt;- data.frame(a = rnorm(10), b = rnorm(10),\n                 c = rnorm(10), d = rnorm(10))\n\nfor(i in 1:ncol(df)){\n  promedio = mean(df[,i])\n  print(promedio)\n}\n\n[1] 0.2893685\n[1] -0.1255711\n[1] 0.08141838\n[1] -0.1289558\n\n\n\n\nB.2.2 Estructura de bucle “while”:\nLa estructura “while” permite repetir la ejecución de un bloque de código mientras se cumpla una condición determinada. La sintaxis básica de la estructura “while” es la siguiente:\n\nwhile (condición) {\n  # Código a ejecutar mientras se cumpla la condición\n}\n\nLa “condición” es una expresión lógica que evalúa a verdadero o falso. Si la condición es verdadera, se ejecutará el bloque de código dentro del “while”. Este proceso se repetirá hasta que la condición sea falsa.\n\n\nB.2.3 Estructura de bucle “repeat”:\n\nrepeat {\n  # Código a ejecutar de manera indefinida\n  if (condición) {\n    break\n  }\n}\n\nEl bloque de código dentro del “repeat” se ejecutará de manera indefinida hasta que se encuentre la sentencia “break”, que permite salir del bucle. La “condición” es una expresión lógica que evalúa a verdadero o falso. Si la condición es verdadera, se ejecutará la sentencia “break” y se saldrá del bucle.",
     "crumbs": [
       "Appendices",
       "<span class='chapter-number'>B</span>  <span class='chapter-title'>Estructuras en R</span>"
