@@ -41,12 +41,12 @@ Establecer las teorías, **conceptos** y estudios previos que guiarán el análi
 Es recomendable definir _keywords_ para facilitar la búsqueda de librerías en páginas como [google scholar](https://scholar.google.com/). Se debe dejar constancia de la referencia bibliográfica, citar la fuente.
 
 
-## Definición de Objetivos (0.5 pts.)
+### Definición de Objetivos (0.5 pts.)
 
 Se debe entregar una definición clara de lo que se espera lograr con el proyecto y la construcción de indicadores territoriales. 
 
 
-## Recolección de Datos (0.5 pts.)
+### Recolección de Datos (0.5 pts.)
 
 Señalar fuente utilizada para calcular los indicadores territoriales. Describiendo sus características y elementos relevantes para el cálculo e intepretación de resultados.
 
@@ -57,19 +57,19 @@ Ejemplo:
 ![](images/censo_2017.png){fig-align="center" width="100"}
 
 
-## 5. Cálculo de Indicador (1 pts.)
+### Cálculo de Indicador (1 pts.)
 
 Explicar la metodología de cálculo, la ecuación y una interpretación de los valores bajos y altos. 
 
 
-## Representación Espacial (1 pts.)
+### Representación Espacial (1 pts.)
 
 Presentar un mapa de la comuna seleccionada, dar un un contexto para interpretar los valores y los colores. Señalar las zonas donde existen concentraciones o patrones espaciales de niveles altos y bajos.
 
 Tip: Asuma que el público no conoce el área de estudio por lo tanto aproveche de dar un contexto sociodemográfico o económico.
 
 
-## Análisis de Resultados (1 pts.)
+### Análisis de Resultados (1 pts.)
 
 En estapa presente sus conclusiones generales destacando sus impresiones o hallazgos importantes que le entregó el indicador territorial. Puede proponer medidas, programas o proyectos focalizados que atiendan una necesidad social.
 

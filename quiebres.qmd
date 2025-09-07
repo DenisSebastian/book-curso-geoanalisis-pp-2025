@@ -1,0 +1,424 @@
+---
+title: "Mapas y Quiebres"
+subtitle: "Quiebres y Paletas de colores en Mapas"
+---
+
+## Introducción
+
+En cartografía temática, **los quiebres de clase** (cómo segmentamos un continuo numérico en categorías) y **la paleta de colores** (cómo codificamos visualmente esas clases) son decisiones que **moldean la interpretación**. En indicadores territoriales, estos dos elementos determinan **qué patrones de variabilidad espacial se hacen evidentes** y, por tanto, **qué narrativas llegan a tomadores de decisión**.
+
+El mismo dato puede “contar historias distintas” según el esquema de clasificación (p. ej., cuantiles vs. Jenks) y la paleta (p. ej., secuencial vs. divergente). Por eso, esta sección pone el foco en **criterios de elección** y ofrece un **flujo práctico reproducible** para que tus mapas sean consistentes, legibles y éticamente responsables.
+
+
+## Objetivos
+
+- Entender por qué los **quiebres** y las **paletas** afectan la percepción del fenómeno.
+- Conocer las **propiedades** de varios tipos de quiebre (manual, cuantiles, Jenks/Fisher).
+- Aplicar un **pipeline en R** para producir mapas coropléticos robustos:
+  - Manejo de `NA` como “Sin información”.
+  - Etiquetas legibles por clase.
+  - Paletas **consistentes** con el número de clases.
+  - Control de errores (cortes duplicados, valores no finitos).
+
+
+
+## Justificación
+
+- **Riesgo de sesgo visual**: un quiebre inapropiado puede exagerar o esconder cambios, afectando decisiones (priorización de recursos, focalización territorial).
+- **Percepción humana del color**: paletas mal elegidas (e.g., arcoíris) introducen artefactos perceptuales; una paleta **secuencial uniforme** comunica magnitudes de forma estable y comprensible.
+- **Transparencia**: exponer el criterio de quiebre y el tratamiento de `NA` es parte de la **ética de la comunicación** en políticas públicas.
+
+
+## Tipos de quiebre (reseña breve)
+
+- **Manual (fixed)**: Tú defines los cortes (con conocimiento experto, umbrales normativos, metas). Máximo control, pero exige **justificación**.
+- **Cuantiles (quantile)**: Cada clase contiene ~la misma cantidad de unidades espaciales. Resalta **ranks/ordenamientos**, pero los límites dependen de la distribución muestral.
+- **Jenks (jenks)**: También llamado *Natural Breaks*. Minimiza varianza intra-clase y maximiza varianza inter-clase; tiende a generar clases “naturales” según la distribución. Sensible a outliers y al número de clases.
+- **Fisher (fisher)**: Variante/optimización del criterio Jenks para particionar con mínima varianza intra-clase. Suele dar cortes similares a Jenks, con búsqueda óptima global.
+
+---
+
+
+
+## Parte práctica (R): mapas con quiebres
+
+A continuación se construirá mapas con la variable de el indicador de Escolaridad del Jefe de Hogar (EIJ) con diferentes tipos de quiebres para evidenciar las diferencias que existen de forma práctica. Adicionalmente consideraremos lo siguiente:
+
+
+- Controlamos `NA` como “Sin información” (color gris), y damos opción de ocultarlo de la leyenda.
+- Ajustamos la paleta automáticamente si el número de clases cambia.
+
+
+### Preparación
+#### Librerias
+
+```{r}
+
+# Librerías ---------------------------------------------------------------
+library(sf)
+library(dplyr)
+library(ggplot2)
+library(mapview)
+library(classInt)
+library(forcats)
+```
+
+#### Funciones de Ayuda
+
+```{r}
+# Utilidades (helpers) ----------------------------------------------------
+# Asegura que la paleta tenga exactamente K colores
+ensure_palette_length <- function(pal, K) {
+  if (length(pal) == K) return(pal)
+  grDevices::colorRampPalette(pal)(K)
+}
+
+# Crea etiquetas de intervalos legibles [a, b], (a, b]
+labels_from_breaks <- function(brks) {
+  labs <- sprintf("(%s, %s]", head(brks, -1), tail(brks, -1))
+  labs[1] <- sprintf("[%s, %s]", brks[1], brks[2])
+  labs
+}
+
+# Calcula cortes robustos con classInt (evita n > únicos y duplicados)
+robust_breaks <- function(x, n, style = "quantile") {
+  x_ok <- x[is.finite(x)]
+  n_eff <- min(n, max(1, length(unique(x_ok)) - 1))
+  ci <- classIntervals(x_ok, n = n_eff, style = style)
+  sort(unique(ci$brks))
+}
+```
+
+
+#### Datos
+
+```{r}
+# ruta de resultados
+path_resultados <- "data/socioeconomicos/resultados/"
+
+# selección de región
+reg <-  "R04"
+
+# Lectura de insumo espacial
+path_file <- paste0(path_resultados, reg, "_ind_socioeconomicos.shp")
+ind_soc <- st_read(path_file, quiet = TRUE)
+```
+
+
+#### Área de Estudio
+
+```{r}
+
+# Selección de Área de Estudio --------------------------------------------
+la_serena_urb <- ind_soc %>% 
+  mutate(IEJ = ifelse(PERSONAS == 0, NA, IEJ)) %>% 
+  filter(COD_COM == 4101 & MANZ_EN == "URBANO")
+
+```
+
+
+#### Paleta de Colores
+
+```{r}
+# Paleta de Colores (secuencial) ------------------------------------------
+# Referencia: https://colorbrewer2.org/#type=sequential&scheme=GnBu&n=5
+pal_iej <- c('#f0f9e8','#bae4bc','#7bccc4','#43a2ca','#0868ac')
+
+```
+
+
+### Mapa Base (Paleta Continua)
+
+
+```{r}
+# Mapa con Colores Continuo -----------------------------------------------
+map_cont <- ggplot() +
+  geom_sf(data = la_serena_urb, aes(fill = IEJ),
+          color = NA, alpha = 0.9, linewidth = 0.1) +
+  scale_fill_gradientn(colors = pal_iej, name = "IEJ",
+                       na.value = "grey90") +
+  labs(title = "Escolaridad del Jefe de Hogar (IEJ)",
+       subtitle = "Sin quiebres — continuo",
+       x = NULL, y = NULL) +
+  theme_bw() +
+  theme(panel.grid.major = element_line(colour = "gray80"),
+        panel.grid.minor = element_blank())
+
+map_cont
+```
+
+
+### Quiebres manuales (fixed)
+
+- Útiles cuando hay umbrales normativos o cortes con sentido sustantivo (p. ej., metas, percentiles de política).
+- Documenta la justificación de cada punto de corte.
+
+```{r}
+# Exploración rápida
+hist(la_serena_urb$IEJ)
+range(la_serena_urb$IEJ, na.rm = TRUE)
+
+# Definición manual (ejemplo)
+min_iej <- min(la_serena_urb$IEJ, na.rm = TRUE)
+max_iej <- max(la_serena_urb$IEJ, na.rm = TRUE)
+brks <- sort(unique(c(min_iej, 5, 8, 12, 15, max_iej)))
+labs_q <- labels_from_breaks(brks)
+
+# Variable de clases + NA explícito
+la_serena_urb <- la_serena_urb %>%
+  mutate(
+    IEJ_qm = cut(IEJ, breaks = brks, include.lowest = TRUE, labels = labs_q),
+    IEJ_qm = forcats::fct_na_value_to_level(IEJ_qm, level = "Sin información")
+  )
+
+# Paleta nombrada (añade gris para NA)
+niveles_sin_na <- setdiff(levels(la_serena_urb$IEJ_qm), "Sin información")
+pal_m <- ensure_palette_length(pal_iej, length(niveles_sin_na))
+vals_m <- setNames(pal_m, niveles_sin_na)
+vals_m <- c(vals_m, "Sin información" = "#d9d9d9")
+
+map_q_manual <- ggplot() +
+  geom_sf(data = la_serena_urb, aes(fill = IEJ_qm),
+          color = NA, alpha = 0.9, linewidth = 0.1) +
+  scale_fill_manual(values = vals_m, name = "IEJ",
+                    drop = FALSE) +
+  labs(title = "Indicador de Escolaridad del Jefe de Hogar (IEJ)",
+       subtitle = "Quiebres manuales") +
+  theme_bw() +
+  theme(panel.grid.major = element_line(colour = "gray80"),
+        panel.grid.minor = element_blank())
+
+map_q_manual
+```
+
+
+
+
+### Quiebres por cuantiles (quantile)
+
+- Cada clase agrupa ~el mismo número de elemenmtos.
+- Destaca rangos relativos (quién está en el top/bottom) y es estable frente a valores extremos, pero los límites son muestra-dependientes.
+
+
+
+```{r}
+n <- 5  # número de clases
+
+# Generación de Quiebres
+brks <- robust_breaks(la_serena_urb$IEJ, n = n, style = "quantile")
+
+# Etiquetas legibles para la leyenda (incluye el límite inferior cerrado en el primer tramo)
+labs_q <- labels_from_breaks(brks)
+
+# crear variable con clasificación con quiebres 
+la_serena_urb <- la_serena_urb %>%
+  mutate(
+    IEJ_qq = cut(IEJ, breaks = brks, include.lowest = TRUE, labels = labs_q),
+    IEJ_qq = forcats::fct_na_value_to_level(IEJ_qq, level = "Sin información")
+  )
+
+#Construir vector de colores nombrado (añadimos color para "Sin información")
+niveles_sin_na <- setdiff(levels(la_serena_urb$IEJ_qq), "Sin información")
+pal_q <- ensure_palette_length(pal_iej, length(niveles_sin_na))
+vals_qq <- setNames(pal_q, niveles_sin_na)
+vals_qq <- c(vals_qq, "Sin información" = "#d9d9d9")
+
+
+# Mapa 
+map_q_quantile <- ggplot() +
+  geom_sf(data = la_serena_urb, aes(fill = IEJ_qq),
+          color = NA, alpha = 0.9, linewidth = 0.1) +
+  scale_fill_manual(values = vals_qq, name = "IEJ",
+                    drop = FALSE) +
+  labs(title = "Indicador de Escolaridad del Jefe de Hogar (IEJ)",
+       subtitle = "Quiebres por cuantiles") +
+  theme_bw() +
+  theme(panel.grid.major = element_line(colour = "gray80"),
+        panel.grid.minor = element_blank())
+
+map_q_quantile
+```
+
+
+
+### Quiebres de Jenks (jenks / Natural Breaks)
+
+- Busca minimizar la varianza intra-clase y maximizar la varianza inter-clase; “acomoda” cortes donde los datos cambian más.
+- Puede ser sensible a outliers y a la elección de n.
+
+```{r}
+n <- 5
+
+# Generación de Quiebres
+brks <- robust_breaks(la_serena_urb$IEJ, n = n, style = "jenks")
+
+# Etiquetas legibles para la leyenda (incluye el límite inferior cerrado en el primer tramo)
+labs_q <- labels_from_breaks(brks)
+
+# crear variable con clasificación con quiebres
+la_serena_urb <- la_serena_urb %>%
+  mutate(
+    IEJ_qj = cut(IEJ, breaks = brks, include.lowest = TRUE, labels = labs_q),
+    IEJ_qj = fct_explicit_na(IEJ_qj, na_level = "Sin información")
+  )
+
+#Construir vector de colores nombrado (añadimos color para "Sin información")
+niveles_sin_na <- setdiff(levels(la_serena_urb$IEJ_qj), "Sin información")
+pal_j <- ensure_palette_length(pal_iej, length(niveles_sin_na))
+vals_qj <- setNames(pal_j, niveles_sin_na)
+vals_qj <- c(vals_qj, "Sin información" = "#d9d9d9")
+
+# Mapa 
+map_q_jenks <- ggplot() +
+  geom_sf(data = la_serena_urb, aes(fill = IEJ_qj),
+          color = NA, alpha = 0.9, linewidth = 0.1) +
+  scale_fill_manual(values = vals_qj, name = "IEJ",
+                    drop = FALSE ) +
+  labs(title = "Indicador de Escolaridad del Jefe de Hogar (IEJ)",
+       subtitle = "Quiebres de Jenks",
+       x = NULL, y = NULL) +
+  theme_bw()  +
+  theme(panel.grid.major = element_line(colour = "gray80"),
+        panel.grid.minor = element_blank())
+
+map_q_jenks
+```
+
+
+### Quiebres de Fisher (fisher)
+
+- Conocido como Fisher-Jenks; busca la partición óptima que minimiza la suma de varianzas dentro de clases.
+- Suele producir resultados parecidos a Jenks, con énfasis en la optimalidad global.
+
+
+```{r}
+n <- 5
+# Generación de Quiebres
+brks <- robust_breaks(la_serena_urb$IEJ, n = n, style = "fisher")
+
+# Etiquetas legibles para la leyenda (incluye el límite inferior cerrado en el primer tramo)
+labs_q <- labels_from_breaks(brks)
+
+# crear variable con clasificación con quiebres 
+la_serena_urb <- la_serena_urb %>%
+  mutate(
+    IEJ_qf = cut(IEJ, breaks = brks, include.lowest = TRUE, labels = labs_q),
+    IEJ_qf = fct_explicit_na(IEJ_qf, na_level = "Sin información")
+  )
+
+#Construir vector de colores nombrado (añadimos color para "Sin información")
+niveles_sin_na <- setdiff(levels(la_serena_urb$IEJ_qf), "Sin información")
+pal_f <- ensure_palette_length(pal_iej, length(niveles_sin_na))
+vals_qf <- setNames(pal_f, niveles_sin_na)
+vals_qf <- c(vals_qf, "Sin información" = "#d9d9d9")
+
+
+# Mapa 
+map_q_fisher <- ggplot() +
+  geom_sf(data = la_serena_urb, aes(fill = IEJ_qf),
+          color = NA, alpha = 0.9, linewidth = 0.1) +
+  scale_fill_manual(values = vals_qf, name = "IEJ",
+                    drop = FALSE ) +
+  labs(title = "Indicador de Escolaridad del Jefe de Hogar (IEJ)",
+       subtitle = "Quiebres de Fisher",
+       x = NULL, y = NULL) +
+  theme_bw()  +
+  theme(panel.grid.major = element_line(colour = "gray80"),
+        panel.grid.minor = element_blank())
+
+map_q_fisher
+```
+
+## Recomendaciones prácticas
+
+- Decide el “mensaje” antes del método:
+  - ¿Quieres comparar posiciones relativas? → Cuantiles.
+  - ¿Quieres resaltar agrupamientos naturales? → Jenks/Fisher.
+  - ¿Tienes umbrales normativos? → Manual (fixed).
+- Consistencia: conserva el mismo esquema entre mapas comparables (años, comunas).
+- Leyenda honesta: especifica el tipo de quiebre y muestra/explica “Sin información”.
+- Accesibilidad: usa paletas color-blind friendly ([ColorBrewer](https://colorbrewer2.org/#type=sequential&scheme=GnBu&n=5) es una buena base).
+<!-- - MAUP: recuerda que el patrón también depende de la unidad espacial (manzana, zona, comuna). Describe la unidad en el título o pie. -->
+
+## Comparación Visual de los Métodos de Quiebres
+
+```{r}
+# --- Helpers de seguridad -------------------------------------------------
+ensure_palette_length <- function(pal, K) {
+  if (length(pal) == K) return(pal)
+  grDevices::colorRampPalette(pal)(K)
+}
+
+mk_named_pal <- function(levels_vec, base_pal) {
+  base_pal <- ensure_palette_length(base_pal, length(levels_vec))
+  setNames(base_pal, levels_vec)
+}
+
+make_map <- function(df, fill_var, vals_named, subt) {
+  # aserciones útiles
+  stopifnot(is.factor(df[[fill_var]]))
+  stopifnot(all(levels(df[[fill_var]]) %in% names(vals_named)))
+
+  ggplot() +
+    geom_sf(data = df, aes(fill = .data[[fill_var]]),
+            color = NA, alpha = 0.9, linewidth = 0.1) +
+    scale_fill_manual(values = vals_named, name = "IEJ", drop = FALSE) +
+    labs(title = NULL, subtitle = subt, x = NULL, y = NULL) +
+    theme_bw() +
+    theme(panel.grid.major = element_blank(),
+          panel.grid.minor = element_blank(),
+          axis.text = element_blank(),
+          axis.ticks = element_blank(),
+          legend.position = "none")
+}
+
+# --- 1) Asegurar que las variables de clase existen y son factor ----------
+stopifnot(is.factor(la_serena_urb$IEJ_qm),
+          is.factor(la_serena_urb$IEJ_qq),
+          is.factor(la_serena_urb$IEJ_qj),
+          is.factor(la_serena_urb$IEJ_qf))
+
+# --- 2) Paletas nombradas por método (incluye “Sin información”) ----------
+# Base secuencial (ajústala si usas otra)
+pal_base <- c('#f0f9e8','#bae4bc','#7bccc4','#43a2ca','#0868ac')
+
+niv_m  <- setdiff(levels(la_serena_urb$IEJ_qm), "Sin información")
+niv_q  <- setdiff(levels(la_serena_urb$IEJ_qq), "Sin información")
+niv_j  <- setdiff(levels(la_serena_urb$IEJ_qj), "Sin información")
+niv_f  <- setdiff(levels(la_serena_urb$IEJ_qf), "Sin información")
+
+vals_m  <- mk_named_pal(niv_m, pal_base);  vals_m  <- c(vals_m,  "Sin información" = "#d9d9d9")
+vals_qq <- mk_named_pal(niv_q, pal_base);  vals_qq <- c(vals_qq, "Sin información" = "#d9d9d9")
+vals_qj <- mk_named_pal(niv_j, pal_base);  vals_qj <- c(vals_qj, "Sin información" = "#d9d9d9")
+vals_qf <- mk_named_pal(niv_f, pal_base);  vals_qf <- c(vals_qf, "Sin información" = "#d9d9d9")
+
+# --- 3) Construir cada mapa de forma segura --------------------------------
+m1 <- make_map(la_serena_urb, "IEJ_qm", vals_m,  "Manual (fixed)")
+m2 <- make_map(la_serena_urb, "IEJ_qq", vals_qq, "Cuantiles")
+m3 <- make_map(la_serena_urb, "IEJ_qj", vals_qj, "Jenks (Natural)")
+m4 <- make_map(la_serena_urb, "IEJ_qf", vals_qf, "Fisher-Jenks")
+
+# --- 4) Componer 2×2 con patchwork ----------------------------------------
+# install.packages("patchwork") # si hace falta
+library(patchwork)
+
+comparativa_maps <- (m1 + m2) / (m3 + m4) +
+  plot_annotation(
+    title = "IEJ — Comparativa de quiebres",
+    subtitle = "Visualización lado a lado para contrastar patrones espaciales",
+    caption = "Nota: los rangos de clase difieren por método. Ver tabla comparativa para límites numéricos."
+  ) &
+  theme(plot.title = element_text(face = "bold"),
+        plot.caption = element_text(colour = "grey40"))
+
+comparativa_maps
+```
+
+
+
+
+
+
+
+
+

@@ -41,6 +41,7 @@ book:
     - control_r.qmd
     - crs.qmd
     - john_snow.qmd
+    - quiebres.qmd
 
 bibliography: references.bib
 
