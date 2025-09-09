@@ -9,8 +9,8 @@ editor_options:
 
 ## Antecedentes
 
-- Fecha de entrega: **16 de Septiembre 20245**
-- Formato: Informe (ppt, word o pdf) + Código (sript .r)
+- Fecha de entrega: **16 de Septiembre 2025**
+- Formato: Informe (ppt, word o pdf) + Código (script .r)
 - Integrantes: Individual o Grupal (máximo 2)
 
 
